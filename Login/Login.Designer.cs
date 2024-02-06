@@ -50,7 +50,8 @@
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Name = "pnLogo";
             this.pnLogo.Size = new System.Drawing.Size(422, 544);
-            this.pnLogo.TabIndex = 0;
+            this.pnLogo.TabIndex = 1;
+            this.pnLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnLogo_MouseDown);
             // 
             // lblInicio
             // 
@@ -73,7 +74,8 @@
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(701, 46);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabStop = false;
             this.txtUsuario.Text = "USUARIO:";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
@@ -86,6 +88,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(691, 5);
             this.panel2.TabIndex = 9;
+            this.panel2.TabStop = true;
             // 
             // panel3
             // 
@@ -105,9 +108,12 @@
             this.txtContraseña.Location = new System.Drawing.Point(506, 264);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(701, 46);
-            this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.TabStop = false;
             this.txtContraseña.Text = "CONTRASEÑA:";
+            this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
@@ -118,7 +124,8 @@
             this.btnCerrar.Location = new System.Drawing.Point(1240, 9);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(35, 23);
-            this.btnCerrar.TabIndex = 7;
+            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMinimizar
             // 
@@ -127,7 +134,8 @@
             this.btnMinimizar.Location = new System.Drawing.Point(1206, 9);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(26, 23);
-            this.btnMinimizar.TabIndex = 6;
+            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnAcceder
             // 
@@ -140,7 +148,7 @@
             this.btnAcceder.Location = new System.Drawing.Point(516, 383);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(691, 65);
-            this.btnAcceder.TabIndex = 4;
+            this.btnAcceder.TabIndex = 3;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
             // 
@@ -154,7 +162,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(713, 474);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(312, 32);
-            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabIndex = 0;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado la contraseña?";
             // 
@@ -178,6 +186,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
