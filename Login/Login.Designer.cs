@@ -39,6 +39,7 @@
             this.btnMinimizar = new System.Windows.Forms.Panel();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pnLogo
@@ -75,7 +76,6 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(701, 46);
             this.txtUsuario.TabIndex = 1;
-            this.txtUsuario.TabStop = false;
             this.txtUsuario.Text = "USUARIO:";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
@@ -111,7 +111,6 @@
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(701, 46);
             this.txtContraseña.TabIndex = 2;
-            this.txtContraseña.TabStop = false;
             this.txtContraseña.Text = "CONTRASEÑA:";
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -151,6 +150,7 @@
             this.btnAcceder.TabIndex = 3;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // linkLabel1
             // 
@@ -166,12 +166,28 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado la contraseña?";
             // 
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblErrorMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblErrorMessage.Font = new System.Drawing.Font("Sitka Small", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblErrorMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(187)))), ((int)(((byte)(0)))));
+            this.lblErrorMessage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorMessage.Location = new System.Drawing.Point(516, 345);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(142, 26);
+            this.lblErrorMessage.TabIndex = 11;
+            this.lblErrorMessage.Text = "Error Message";
+            this.lblErrorMessage.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1278, 544);
+            this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.btnMinimizar);
@@ -204,5 +220,6 @@
         private Panel btnMinimizar;
         private Button btnAcceder;
         private LinkLabel linkLabel1;
+        private Label lblErrorMessage;
     }
 }

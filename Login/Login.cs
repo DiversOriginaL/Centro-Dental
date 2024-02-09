@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using Login.Domain;
 
 namespace Login
 {
@@ -85,11 +86,49 @@ namespace Login
             SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
         }
 
+
         //  ==================================================================================================
         //  ||============================================DISEÑO============================================||
         //  ==================================================================================================
 
 
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            if(txtUsuario.Text != "USUARIO:")
+            {
+                if(txtContraseña.Text != "CONTRASEÑA:")
+                {
+                    UserModel user = new UserModel();
 
+                    var validLogin = user.LoginUser(txtUsuario.Text, txtContraseña.Text);
+
+                    if (validLogin == true)
+                    {
+                        Form form = new Form();
+                        form.Text = "BIENVENIDO.";
+                        form.ShowDialog();
+
+
+                    }
+                    else
+                    {
+                        msgError("Incorrect username or password entered. Please try again");
+                        txtContraseña.Clear();
+                        txtUsuario.Focus();
+
+                    }
+
+                }
+                else msgError("Please enter password");
+            }
+            else msgError("Please enter username");
+            
+        }
+
+        private void msgError(string msg)
+        {
+            lblErrorMessage.Text = msg;
+            lblErrorMessage.Visible = true;
+        }
     }
 }
