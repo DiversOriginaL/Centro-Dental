@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace Login.DataAccess
+namespace Login.DataAccess.DataAccess
 {
     public abstract class ConnectionToSql
     {

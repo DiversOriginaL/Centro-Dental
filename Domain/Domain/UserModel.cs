@@ -1,13 +1,13 @@
-﻿using Login.DataAccess;
+﻿using Login.DataAccess.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Login.Domain
+namespace Login.Domain.Domain
 {
-    internal class UserModel
+    public class UserModel
     {
         UserData userData = new UserData();
 
@@ -15,9 +15,6 @@ namespace Login.Domain
         {
             return userData.Login(user, pass);
         }
-
-
-
 
     }
 }

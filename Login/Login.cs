@@ -1,5 +1,5 @@
 using System.Runtime.InteropServices;
-using Login.Domain;
+using Login.Domain.Domain;
 
 namespace Login
 {
@@ -9,7 +9,7 @@ namespace Login
         {
             InitializeComponent();
         }
-
+        #region Efecto PlaceHolder, Movilidad de Formulario y Configuracion de controles.
         //=======================================================DISEÑO==========================================
 
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -90,7 +90,7 @@ namespace Login
         //  ==================================================================================================
         //  ||============================================DISEÑO============================================||
         //  ==================================================================================================
-
+        #endregion
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
