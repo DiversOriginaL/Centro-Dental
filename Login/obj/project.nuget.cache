@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+qFEwu0Iqmxdny7TseYzUbfh7RRQYgJPN72EDxwt2MIq5txaRh1s69qAm1n1382Pk0cFiqRz0bACdBXG/gt8Ew==",
+  "dgSpecHash": "/xJMGybjxJ0usOJvW62Y+AeHDTvJjhuu9bHjkhXkKuFUM5QEKZrQdoNw+wArnOVsmrHAOmRwdHsh8rWN47jBSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Login\\Login.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\Login\\Login.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

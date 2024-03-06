@@ -15,8 +15,8 @@ create table Usuarios(
 )
 go
 
-insert into Usuarios values('George', 'admin', 'Esteban', 'Rojas', 'Programador','etbrojas02@gmail.com')
-insert into Usuarios values('Chanlatte', 'admin', 'Chanlatte', 'Rojas', 'administradora','etbrojas02@gmail.com')
+insert into Usuarios values('admin', 'admin', 'Hector', 'Rojas', 'Programador','etbrojas02@gmail.com')
+insert into Usuarios values('Juan', '123456', 'Chanlatte', 'Rojas', 'administrador','etbrojas02@gmail.com')
 insert into Usuarios values('Sierva', '123456', 'Estefanie', 'Corripio', 'Recepcionista','etbrojas02@gmail.com')
 
 go
