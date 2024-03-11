@@ -1,3 +1,4 @@
+using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using Login.Domain.Domain;
 
@@ -15,7 +16,7 @@ namespace Login
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd , int wmsg, IntPtr wParam, IntPtr lParam);
+        private extern static void SendMessage(IntPtr hwnd , int wmsg, IntPtr wParam, IntPtr lParam);
 
 
         private void txtUsuario_Enter(object sender, EventArgs e)
@@ -25,6 +26,8 @@ namespace Login
                 txtUsuario.Text = "";
                 txtUsuario.ForeColor = Color.White;
                 pnLogo.BackColor = Color.WhiteSmoke;
+
+                lblErrorMessage.Visible = false;
             }
         }
 
@@ -34,7 +37,7 @@ namespace Login
             {
                 txtUsuario.Text = "USUARIO:";
                 txtUsuario.ForeColor = Color.LightGray;
-                pnLogo.BackColor = Color.LightGray;
+                pnLogo.BackColor = Color.Silver;
 
             }
         }
@@ -48,6 +51,7 @@ namespace Login
                 txtContraseña.UseSystemPasswordChar = false;
                 pnLogo.BackColor = Color.WhiteSmoke;
 
+                lblErrorMessage.Visible = false;
             }
         }
 
@@ -58,7 +62,7 @@ namespace Login
                 txtContraseña.Text = "CONTRASEÑA:";
                 txtContraseña.ForeColor = Color.LightGray;
                 txtContraseña.UseSystemPasswordChar = true;
-                pnLogo.BackColor = Color.LightGray;
+                pnLogo.BackColor = Color.Silver;
 
             }
 
@@ -78,9 +82,27 @@ namespace Login
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
+
+            if (txtUsuario.Text != "USUARIO:" && txtUsuario.Text == "")
+            {
+                txtUsuario.Text = "USUARIO:";
+                txtUsuario.ForeColor = Color.LightGray;
+
+                pnLogo.BackColor = Color.LightGray;
+                pnLogo.Focus();
+            }
+            if (txtContraseña.Text != "CONTRASEÑA:" && txtContraseña.Text == "")
+            {
+                txtContraseña.Text = "CONTRASEÑA:";
+                txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.UseSystemPasswordChar = true;
+                
+                pnLogo.BackColor = Color.LightGray;
+                pnLogo.Focus();
+            }
         }
 
-        private void pnLogo_MouseDown(object sender, MouseEventArgs e)
+            private void pnLogo_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
@@ -99,29 +121,39 @@ namespace Login
                 if(txtContraseña.Text != "CONTRASEÑA:")
                 {
                     UserModel user = new UserModel();
-
-                    var validLogin = user.LoginUser(txtUsuario.Text, txtContraseña.Text);
-
-                    if (validLogin == true)
+                    try
                     {
-                        Form form = new Form();
-                        form.Text = "BIENVENIDO.";
-                        form.ShowDialog();
+                        var validLogin = user.LoginUser(txtUsuario.Text, txtContraseña.Text);
+
+                        if (validLogin == true)
+                        {
+                            MessageBox.Show("Success.");
 
 
-                    }
-                    else
+                        }
+                        else
+                        {
+                            msgError("Nombre de Usuario o Contraseña Incorrecta, Intente nuevamente.");
+                            
+                            txtContraseña.Text = "CONTRASEÑA:";
+                            txtContraseña.ForeColor = Color.LightGray;
+                            txtContraseña.UseSystemPasswordChar = true;
+
+
+                            txtUsuario.Text = "USUARIO:";
+                            txtUsuario.ForeColor = Color.LightGray;
+
+                            pnLogo.Focus();
+
+                        }
+                    }catch(SqlException ex)
                     {
-                        msgError("Incorrect username or password entered. Please try again");
-                        txtContraseña.Clear();
-                        txtUsuario.Focus();
-
+                        msgError("Error SQL: " + ex.Message);
                     }
-
                 }
-                else msgError("Please enter password");
+                else msgError("Porfavor ingrese la contraseña");
             }
-            else msgError("Please enter username");
+            else msgError("Porfavor ingrese el nombre de usuario.");
             
         }
 

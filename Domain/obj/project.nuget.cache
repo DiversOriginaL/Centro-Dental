@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/+4I+ztQ0KgUkiWS44ENT9kCuPMIMW+vcQCq6lrOqCqhw3lOQvN2F+WCNxp55V27C9DfIdoJCvl1b9jffnJ13w==",
+  "dgSpecHash": "3K/ECYKaDozKsWfYcum+SFD3RnwM0s12sdM4UkuSBsWzHhvIafOJBbiRPk2iWfcRl4nqIoQL4/gURFf4ofnFCw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",

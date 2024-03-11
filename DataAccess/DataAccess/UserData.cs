@@ -12,27 +12,36 @@ namespace Login.DataAccess.DataAccess
     {
         public bool Login (string user, string pass)
         {
-            using (var connection = GetConnection())
+            try
             {
-                connection.Open();
-                using (var command = new SqlCommand())
+                using (var connection = GetConnection())
                 {
-                    command.Connection = connection;
-                    command.CommandText = "select * from Usuarios where Usuario = @user and Contrasena = @pass ";
-                    command.Parameters.AddWithValue("@user", user);
-                    command.Parameters.AddWithValue("@pass", pass);
-                    command.CommandType = CommandType.Text;
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = "ValidarLogin";
+                        command.CommandType = CommandType.StoredProcedure;
 
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
+                        command.Parameters.AddWithValue("@user", user);
+                        command.Parameters.AddWithValue("@pass", pass);
+
+
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 }
+            }catch(SqlException ex)
+            {
+                Console.WriteLine("Error al ejecutar el procedimiento almacenado: " + ex.Message);
+                throw;
             }
         }
     }

@@ -51,7 +51,8 @@
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Name = "pnLogo";
             this.pnLogo.Size = new System.Drawing.Size(422, 544);
-            this.pnLogo.TabIndex = 1;
+            this.pnLogo.TabIndex = 5;
+            this.pnLogo.TabStop = true;
             this.pnLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnLogo_MouseDown);
             // 
             // lblInicio
@@ -75,7 +76,7 @@
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(701, 46);
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 30;
             this.txtUsuario.Text = "USUARIO:";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
@@ -110,7 +111,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(701, 46);
-            this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.TabIndex = 25;
             this.txtContraseña.Text = "CONTRASEÑA:";
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -123,7 +124,8 @@
             this.btnCerrar.Location = new System.Drawing.Point(1240, 9);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(35, 23);
-            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.TabIndex = 30;
+            this.btnCerrar.TabStop = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMinimizar
@@ -133,7 +135,8 @@
             this.btnMinimizar.Location = new System.Drawing.Point(1206, 9);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(26, 23);
-            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = true;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnAcceder
@@ -147,7 +150,7 @@
             this.btnAcceder.Location = new System.Drawing.Point(516, 383);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(691, 65);
-            this.btnAcceder.TabIndex = 3;
+            this.btnAcceder.TabIndex = 15;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
@@ -162,7 +165,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(713, 474);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(312, 32);
-            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado la contraseña?";
             // 
