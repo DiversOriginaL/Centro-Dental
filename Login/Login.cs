@@ -2,7 +2,7 @@ using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using Login.Domain.Domain;
 
-namespace Login
+namespace Presentacion
 {
     public partial class Login : Form
     {
@@ -127,8 +127,9 @@ namespace Login
 
                         if (validLogin == true)
                         {
-                            MessageBox.Show("Success.");
-
+                            FormPrincipal mainMenu = new FormPrincipal();
+                            mainMenu.Show();
+                            this.Hide();
 
                         }
                         else

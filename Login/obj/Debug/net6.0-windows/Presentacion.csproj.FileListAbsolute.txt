@@ -45,7 +45,6 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\De
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.csproj.AssemblyReference.cache
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Login.Login.resources
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.Properties.Resources.resources
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.csproj.GenerateResource.cache
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.GeneratedMSBuildEditorConfig.editorconfig
@@ -62,3 +61,11 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\De
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Domain.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Domain.pdb
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\DataAccess.pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormPrincipal.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Paciente.FormHijos.CrudPaciente.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud.EstadoSalud.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Paciente.Pacientes.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Reporte.Reportes.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Servicios.FormHijos.CrudServicio.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Servicio.Servicios.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.Login.resources
