@@ -1,6 +1,7 @@
 using System;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Presentacion;
 using Presentacion.FormsButton.Servicio;
 using Presentacion.FormsButton.Paciente;
 using Presentacion.FormsButton.Reporte;
@@ -68,7 +69,9 @@ namespace Presentacion
         //----------------------MINIMIXAR-MAXIMIZAR/RESTAURAR-CERRAR----------------------
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if(MessageBox.Show("¿Estas seguro de que deseas cerrar la aplicacion?", "ADVERTENCIA",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
         }
 
         
@@ -199,6 +202,14 @@ namespace Presentacion
             {
                 pnLeft.Width = 309;
             }
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Estas seguro de que deseas cerrar la sesion?", "ADVERTENCIA",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                this.Close();
+
         }
     }
 }

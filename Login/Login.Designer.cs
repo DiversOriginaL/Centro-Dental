@@ -215,14 +215,14 @@
 
         private Panel pnLogo;
         private Label lblInicio;
-        private TextBox txtUsuario;
         private Panel panel2;
         private Panel panel3;
-        private TextBox txtContraseña;
         private Panel btnCerrar;
         private Panel btnMinimizar;
         private Button btnAcceder;
         private LinkLabel linkLabel1;
         private Label lblErrorMessage;
+        private TextBox txtUsuario;
+        private TextBox txtContraseña;
     }
 }
