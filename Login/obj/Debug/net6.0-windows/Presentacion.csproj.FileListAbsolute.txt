@@ -69,3 +69,5 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\De
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Servicios.FormHijos.CrudServicio.resources
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Servicio.Servicios.resources
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.Login.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Common.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Common.pdb

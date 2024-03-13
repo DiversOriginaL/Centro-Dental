@@ -10,3 +10,6 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\DataAccess\o
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\DataAccess\obj\Debug\net6.0\refint\DataAccess.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\DataAccess\bin\Debug\net6.0\Common.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\DataAccess\bin\Debug\net6.0\Common.pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete

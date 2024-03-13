@@ -5,7 +5,7 @@ using Presentacion;
 using Presentacion.FormsButton.Servicio;
 using Presentacion.FormsButton.Paciente;
 using Presentacion.FormsButton.Reporte;
-
+using Common.Cache;
 
 namespace Presentacion
 {
@@ -19,9 +19,15 @@ namespace Presentacion
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
         }
-        private void Form1_Load(object sender, EventArgs e)
+        private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            LoadUserData();
 
+        }
+        private void LoadUserData()
+        {
+            lblUsuario.Text = UserLoginCache.lblUser();
+            lblEmail.Text = UserLoginCache.lblEmail();
         }
 
         #region Funcionalidades del formulario.
@@ -131,7 +137,6 @@ namespace Presentacion
         }
 
 
-
         private void btnServicio_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Servicios>();
@@ -211,5 +216,6 @@ namespace Presentacion
                 this.Close();
 
         }
+
     }
 }

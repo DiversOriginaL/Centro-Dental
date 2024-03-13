@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Presentacion/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.Data.SqlClient": "5.1.5",
           "System.Data.SqlClient": "4.8.6"
@@ -477,8 +478,14 @@
           "System.Drawing.Common": "6.0.0"
         }
       },
+      "Common/1.0.0": {
+        "runtime": {
+          "Common.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "Microsoft.SqlServer.Server": "1.0.0",
           "System.Data.SqlClient": "4.8.6"
         },
@@ -488,6 +495,7 @@
       },
       "Domain/1.0.0": {
         "dependencies": {
+          "Common": "1.0.0",
           "DataAccess": "1.0.0"
         },
         "runtime": {
@@ -844,6 +852,11 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DataAccess/1.0.0": {
       "type": "project",

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using Common.Cache;
 
 namespace Login.DataAccess.DataAccess
 {
@@ -30,6 +31,17 @@ namespace Login.DataAccess.DataAccess
                         SqlDataReader reader = command.ExecuteReader();
                         if (reader.HasRows)
                         {
+                            while (reader.Read())
+                            {
+                                UserLoginCache.SerUserLogin(
+                                    reader.GetInt32(0),
+                                    reader.GetString(1),
+                                    reader.GetString(2),
+                                    reader.GetString(3),
+                                    reader.GetString(4),
+                                    reader.GetInt32(6)
+                                    ) ;
+                            }
                             return true;
                         }
                         else
@@ -41,8 +53,13 @@ namespace Login.DataAccess.DataAccess
             }catch(SqlException ex)
             {
                 Console.WriteLine("Error al ejecutar el procedimiento almacenado: " + ex.Message);
-                throw;
+                return false;
             }
+            
+        }
+        public void LogOut()
+        {
+            UserLoginCache.ClearUserLogin();
         }
     }
 }

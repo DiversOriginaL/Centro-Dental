@@ -747,10 +747,21 @@
           }
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Common": "1.0.0",
           "Microsoft.SqlServer.Server": "1.0.0",
           "System.Data.SqlClient": "4.8.6"
         },
@@ -765,6 +776,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Common": "1.0.0",
           "DataAccess": "1.0.0"
         },
         "compile": {
@@ -2375,6 +2387,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -2388,6 +2405,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Common >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.Data.SqlClient >= 5.1.5",
       "System.Data.SqlClient >= 4.8.6"
@@ -2420,6 +2438,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+            "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj"
+            },
             "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Domain\\Domain.csproj"
             }

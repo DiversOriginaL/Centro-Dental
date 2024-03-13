@@ -33,9 +33,11 @@
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
             this.pnReporte = new System.Windows.Forms.Panel();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.pnPaciente = new System.Windows.Forms.Panel();
             this.pnServicio = new System.Windows.Forms.Panel();
             this.btnReportes = new System.Windows.Forms.Button();
@@ -97,7 +99,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.Diseño_sin_título;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(704, 628);
+            this.pictureBox1.Location = new System.Drawing.Point(704, 631);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(379, 297);
             this.pictureBox1.TabIndex = 0;
@@ -106,9 +108,11 @@
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(34)))));
+            this.pnLeft.Controls.Add(this.lblEmail);
             this.pnLeft.Controls.Add(this.btnCerrarSesion);
             this.pnLeft.Controls.Add(this.pbPerfil);
             this.pnLeft.Controls.Add(this.pnReporte);
+            this.pnLeft.Controls.Add(this.lblUsuario);
             this.pnLeft.Controls.Add(this.pnPaciente);
             this.pnLeft.Controls.Add(this.pnServicio);
             this.pnLeft.Controls.Add(this.btnReportes);
@@ -119,6 +123,18 @@
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(309, 928);
             this.pnLeft.TabIndex = 1;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblEmail.Location = new System.Drawing.Point(3, 273);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(300, 30);
+            this.lblEmail.TabIndex = 7;
+            this.lblEmail.Text = "EMAIL";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCerrarSesion
             // 
@@ -131,13 +147,12 @@
             this.btnCerrarSesion.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = global::Presentacion.Properties.Resources.power_off_solid;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 838);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(3, 840);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 60, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(306, 87);
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(306, 85);
             this.btnCerrarSesion.TabIndex = 5;
-            this.btnCerrarSesion.Text = "Log Out";
-            this.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCerrarSesion.Text = " Log Out";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
@@ -147,9 +162,9 @@
             this.pbPerfil.BackgroundImage = global::Presentacion.Properties.Resources.person_solid2;
             this.pbPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbPerfil.Image = global::Presentacion.Properties.Resources.person_solid1;
-            this.pbPerfil.Location = new System.Drawing.Point(88, 23);
+            this.pbPerfil.Location = new System.Drawing.Point(3, 10);
             this.pbPerfil.Name = "pbPerfil";
-            this.pbPerfil.Size = new System.Drawing.Size(132, 139);
+            this.pbPerfil.Size = new System.Drawing.Size(300, 201);
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
             // 
@@ -161,6 +176,18 @@
             this.pnReporte.Size = new System.Drawing.Size(10, 67);
             this.pnReporte.TabIndex = 3;
             this.pnReporte.Visible = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUsuario.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUsuario.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblUsuario.Location = new System.Drawing.Point(3, 229);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(300, 37);
+            this.lblUsuario.TabIndex = 6;
+            this.lblUsuario.Text = "USUARIO";
+            this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnPaciente
             // 
@@ -313,6 +340,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.pnContainer.ResumeLayout(false);
             this.pnRight.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
@@ -346,5 +374,7 @@
         private PictureBox pbPerfil;
         private PictureBox btnSlide;
         private Button btnCerrarSesion;
+        private Label lblUsuario;
+        private Label lblEmail;
     }
 }

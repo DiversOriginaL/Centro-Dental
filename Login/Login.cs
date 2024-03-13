@@ -167,10 +167,8 @@ namespace Presentacion
 
         private void Logout(object sender, FormClosedEventArgs e)
         {
-            txtUsuario.Clear();
             txtUsuario.Text = "USUARIO:";
 
-            txtContraseña.Clear();
             txtContraseña.Text = "CONTRASEÑA:";
             txtContraseña.UseSystemPasswordChar = true;
 

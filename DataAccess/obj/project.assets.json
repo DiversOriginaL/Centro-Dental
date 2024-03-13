@@ -139,6 +139,16 @@
             "rid": "win"
           }
         }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
       }
     }
   },
@@ -473,10 +483,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Common >= 1.0.0",
       "Microsoft.SqlServer.Server >= 1.0.0",
       "System.Data.SqlClient >= 4.8.6"
     ]
@@ -487,11 +503,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -507,7 +523,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
