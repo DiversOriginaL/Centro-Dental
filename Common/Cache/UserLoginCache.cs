@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Common.Cache
 {
     public static class UserLoginCache
@@ -61,6 +62,11 @@ namespace Common.Cache
             string email = Email;
             return email;
 
+        }
+
+        public static int RolId()
+        {
+            return RolID;
         }
     }
 }

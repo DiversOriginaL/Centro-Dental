@@ -58,6 +58,61 @@ namespace Login.DataAccess.DataAccess
             }
             
         }
+
+        public bool GetRolUser()
+        {
+            try
+            {
+                using (var conn = GetConnection())
+                {
+                    conn.Open();
+                    using (var command = new SqlCommand("ObtenerRol", conn))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                while (reader.HasRows)
+                                {
+                                    RolesCache.GetRol(
+                                        reader.GetInt32(0),
+                                        reader.GetString(1)
+                                        );
+                                }
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            catch(SqlException ex)
+            {
+                Console.WriteLine("Ha habido un fallo en la conexion: " + ex.Message);
+                return false;
+            }
+        }
+
+        public static void AnyMethod()
+        {
+            if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador")
+            {
+
+            }
+            if (UserLoginCache.RolId() == Positions.DoctoraGeneral && RolesCache.RoL() == "Doctora General" ||
+                UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
+                UserLoginCache.RolId() == Positions.Secretaria && RolesCache.RoL() == "Secretaria" ||
+                UserLoginCache.RolId() == Positions.Empleado && RolesCache.RoL() == "Empleado")
+            {
+
+            }
+        }
+
         public void LogOut()
         {
             UserLoginCache.ClearUserLogin();

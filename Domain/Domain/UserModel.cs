@@ -17,6 +17,19 @@ namespace Login.Domain.Domain
             return userData.Login(user, pass);
         }
 
+        public static void AnyMethod()
+        {
+            if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador")
+            {
 
+            }
+            if (UserLoginCache.RolId() == Positions.DoctoraGeneral && RolesCache.RoL() == "Doctora General" ||
+                UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
+                UserLoginCache.RolId() == Positions.Secretaria && RolesCache.RoL() == "Secretaria" ||
+                UserLoginCache.RolId() == Positions.Empleado && RolesCache.RoL() == "Empleado")
+            {
+
+            }
+        }
     }
 }
