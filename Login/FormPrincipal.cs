@@ -5,6 +5,7 @@ using Presentacion;
 using Presentacion.FormsButton.Servicio;
 using Presentacion.FormsButton.Paciente;
 using Presentacion.FormsButton.Reporte;
+using Presentacion.FormsButton.Usuario;
 using Common.Cache;
 
 namespace Presentacion
@@ -177,7 +178,19 @@ namespace Presentacion
 
         }
 
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Usuario>();
+            btnUsuarios.BackColor = Color.FromArgb(00, 111, 44);
+            pnUsuarios.Visible = true;
 
+        }
+        private void btnUsuarios_Leave(object sender, EventArgs e)
+        {
+            btnUsuarios.BackColor = Color.FromArgb(00, 85, 34);
+            pnUsuarios.Visible = false;
+
+        }
 
         private void CloseForms(object sender, FormClosedEventArgs e)
         {

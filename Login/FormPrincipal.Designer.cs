@@ -33,6 +33,8 @@
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
+            this.pnUsuarios = new System.Windows.Forms.Panel();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
@@ -108,6 +110,8 @@
             // pnLeft
             // 
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(34)))));
+            this.pnLeft.Controls.Add(this.pnUsuarios);
+            this.pnLeft.Controls.Add(this.btnUsuarios);
             this.pnLeft.Controls.Add(this.lblEmail);
             this.pnLeft.Controls.Add(this.btnCerrarSesion);
             this.pnLeft.Controls.Add(this.pbPerfil);
@@ -123,6 +127,37 @@
             this.pnLeft.Name = "pnLeft";
             this.pnLeft.Size = new System.Drawing.Size(309, 928);
             this.pnLeft.TabIndex = 1;
+            // 
+            // pnUsuarios
+            // 
+            this.pnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.pnUsuarios.Location = new System.Drawing.Point(1, 595);
+            this.pnUsuarios.Name = "pnUsuarios";
+            this.pnUsuarios.Size = new System.Drawing.Size(10, 67);
+            this.pnUsuarios.TabIndex = 9;
+            this.pnUsuarios.Visible = false;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Image = global::Presentacion.Properties.Resources.Usuarios;
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuarios.Location = new System.Drawing.Point(1, 596);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnUsuarios.Size = new System.Drawing.Size(306, 67);
+            this.btnUsuarios.TabIndex = 8;
+            this.btnUsuarios.Text = " Usuarios";
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            this.btnUsuarios.Leave += new System.EventHandler(this.btnUsuarios_Leave);
             // 
             // lblEmail
             // 
@@ -171,7 +206,7 @@
             // pnReporte
             // 
             this.pnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
-            this.pnReporte.Location = new System.Drawing.Point(1, 563);
+            this.pnReporte.Location = new System.Drawing.Point(1, 508);
             this.pnReporte.Name = "pnReporte";
             this.pnReporte.Size = new System.Drawing.Size(10, 67);
             this.pnReporte.TabIndex = 3;
@@ -192,7 +227,7 @@
             // pnPaciente
             // 
             this.pnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
-            this.pnPaciente.Location = new System.Drawing.Point(0, 448);
+            this.pnPaciente.Location = new System.Drawing.Point(0, 420);
             this.pnPaciente.Name = "pnPaciente";
             this.pnPaciente.Size = new System.Drawing.Size(10, 67);
             this.pnPaciente.TabIndex = 2;
@@ -218,7 +253,7 @@
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = global::Presentacion.Properties.Resources.chart_simple_solid;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(1, 564);
+            this.btnReportes.Location = new System.Drawing.Point(1, 509);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(306, 67);
@@ -239,7 +274,7 @@
             this.btnPaciente.ForeColor = System.Drawing.Color.White;
             this.btnPaciente.Image = global::Presentacion.Properties.Resources.Pacientes;
             this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaciente.Location = new System.Drawing.Point(0, 448);
+            this.btnPaciente.Location = new System.Drawing.Point(0, 420);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnPaciente.Size = new System.Drawing.Size(306, 67);
@@ -376,5 +411,7 @@
         private Button btnCerrarSesion;
         private Label lblUsuario;
         private Label lblEmail;
+        private Panel pnUsuarios;
+        private Button btnUsuarios;
     }
 }
