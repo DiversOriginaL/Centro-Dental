@@ -11,42 +11,43 @@ namespace Login.DataAccess.DataAccess
 {
     public class UserData:ConnectionToSql
     {
-        public bool Login (string user, string pass)
+        public bool Login (string user, string password)
         {
             try
             {
                 using (var connection = GetConnection())
                 {
                     connection.Open();
-                    using (var command = new SqlCommand())
+                    using (var command = new SqlCommand("ValidarLogin", connection))
                     {
-                        command.Connection = connection;
-                        command.CommandText = "ValidarLogin";
                         command.CommandType = CommandType.StoredProcedure;
 
                         command.Parameters.AddWithValue("@user", user);
-                        command.Parameters.AddWithValue("@pass", pass);
+                        command.Parameters.AddWithValue("@pass", password);
 
 
-                        SqlDataReader reader = command.ExecuteReader();
-                        if (reader.HasRows)
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            while (reader.Read())
+                            if (reader.HasRows)
                             {
-                                UserLoginCache.SerUserLogin(
-                                    reader.GetInt32(0),
-                                    reader.GetString(1),
-                                    reader.GetString(2),
-                                    reader.GetString(3),
-                                    reader.GetString(4),
-                                    reader.GetInt32(6)
-                                    ) ;
+                                while (reader.Read())
+                                {
+                                    UserLoginCache.SerUserLogin(
+                                        reader.GetInt32(0),
+                                        reader.GetString(1),
+                                        reader.GetString(2),
+                                        reader.GetString(3),
+                                        reader.GetString(4),
+                                        password,
+                                        reader.GetInt32(6)
+                                        );
+                                }
+                                return true;
                             }
-                            return true;
-                        }
-                        else
-                        {
-                            return false;
+                            else
+                            {
+                                return false;
+                            }
                         }
                     }
                 }

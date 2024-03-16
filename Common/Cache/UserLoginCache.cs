@@ -19,7 +19,7 @@ namespace Common.Cache
 
 
         //METODO PARA ESTABLECER LOS DATOS DE INICIO DE SESION.
-        public static void SerUserLogin(int usuarioID, string nombres, string apellidos, string email, string usuario, int rolID)
+        public static void SerUserLogin(int usuarioID, string nombres, string apellidos, string email, string usuario, string contraseña, int rolID)
         {
             UsuarioID = usuarioID;
             Nombres = nombres;
@@ -27,9 +27,10 @@ namespace Common.Cache
             Email = email;
             Usuario = usuario;
             RolID = rolID;
-
+            Contraseña = contraseña;
             IsLoggedIn = true;
         }
+
 
         // Método para limpiar la caché al cerrar sesión
         public static void ClearUserLogin()
