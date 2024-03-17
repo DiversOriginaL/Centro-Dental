@@ -23,7 +23,11 @@ BEGIN
 END
 go
 
-
+create proc ObtenerRol
+as
+begin
+select * from Roles
+end
 
 
 

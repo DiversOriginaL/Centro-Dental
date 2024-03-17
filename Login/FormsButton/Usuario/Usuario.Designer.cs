@@ -49,7 +49,7 @@
             this.dtgvUsuarios.Name = "dtgvUsuarios";
             this.dtgvUsuarios.RowHeadersWidth = 62;
             this.dtgvUsuarios.RowTemplate.Height = 33;
-            this.dtgvUsuarios.Size = new System.Drawing.Size(1377, 723);
+            this.dtgvUsuarios.Size = new System.Drawing.Size(1361, 779);
             this.dtgvUsuarios.TabIndex = 4;
             // 
             // btnEliminar
@@ -61,7 +61,8 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEliminar.Location = new System.Drawing.Point(1173, 762);
+            this.btnEliminar.Image = global::Presentacion.Properties.Resources.trash_solid;
+            this.btnEliminar.Location = new System.Drawing.Point(1157, 803);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(214, 80);
             this.btnEliminar.TabIndex = 12;
@@ -78,7 +79,8 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEditar.Location = new System.Drawing.Point(953, 762);
+            this.btnEditar.Image = global::Presentacion.Properties.Resources.edit;
+            this.btnEditar.Location = new System.Drawing.Point(937, 802);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(203, 82);
             this.btnEditar.TabIndex = 11;
@@ -95,13 +97,15 @@
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCrear.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCrear.Location = new System.Drawing.Point(733, 762);
+            this.btnCrear.Image = global::Presentacion.Properties.Resources.create;
+            this.btnCrear.Location = new System.Drawing.Point(717, 802);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(203, 81);
             this.btnCrear.TabIndex = 10;
             this.btnCrear.Text = " CREAR";
             this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnCerrar
             // 
@@ -112,9 +116,10 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnCerrar.Location = new System.Drawing.Point(12, 763);
+            this.btnCerrar.Image = global::Presentacion.Properties.Resources.close;
+            this.btnCerrar.Location = new System.Drawing.Point(16, 803);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(218, 81);
+            this.btnCerrar.Size = new System.Drawing.Size(218, 79);
             this.btnCerrar.TabIndex = 9;
             this.btnCerrar.Text = " Cerrar";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -126,7 +131,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(1401, 855);
+            this.ClientSize = new System.Drawing.Size(1385, 890);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCrear);

@@ -214,11 +214,13 @@ namespace Presentacion
         {
             if (pnLeft.Width == 309)
             {
-                pnLeft.Width = 81;
+                pnLeft.Width = 77;
+                btnCerrarSesion.Size = new Size(77,67);
             }
             else
             {
                 pnLeft.Width = 309;
+                btnCerrarSesion.Size = new Size(309, 110);
             }
         }
 

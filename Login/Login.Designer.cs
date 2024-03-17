@@ -76,7 +76,7 @@
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(701, 46);
-            this.txtUsuario.TabIndex = 30;
+            this.txtUsuario.TabIndex = 10;
             this.txtUsuario.Text = "USUARIO:";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
             this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
@@ -111,7 +111,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(701, 46);
-            this.txtContraseña.TabIndex = 25;
+            this.txtContraseña.TabIndex = 20;
             this.txtContraseña.Text = "CONTRASEÑA:";
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
@@ -150,7 +150,7 @@
             this.btnAcceder.Location = new System.Drawing.Point(516, 383);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(691, 65);
-            this.btnAcceder.TabIndex = 15;
+            this.btnAcceder.TabIndex = 30;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
@@ -165,7 +165,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(713, 474);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(312, 32);
-            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabIndex = 40;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado la contraseña?";
             // 
