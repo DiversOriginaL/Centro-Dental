@@ -22,8 +22,8 @@ namespace Login.DataAccess.DataAccess
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.AddWithValue("@user", user);
-                        command.Parameters.AddWithValue("@pass", password);
+                        command.Parameters.AddWithValue("@user", user.Trim());
+                        command.Parameters.AddWithValue("@pass", password.Trim());
 
 
                         using (SqlDataReader reader = command.ExecuteReader())
@@ -100,13 +100,13 @@ namespace Login.DataAccess.DataAccess
 
         public static void AnyMethod()
         {
-            if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador")
+            if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador" ||
+                UserLoginCache.RolId() == Positions.DoctoraGeneral && RolesCache.RoL() == "Doctora General")
             {
 
             }
-            if (UserLoginCache.RolId() == Positions.DoctoraGeneral && RolesCache.RoL() == "Doctora General" ||
-                UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
-                UserLoginCache.RolId() == Positions.Secretaria && RolesCache.RoL() == "Secretaria" ||
+            if (UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
+                UserLoginCache.RolId() == Positions.DoctoraEncagada && RolesCache.RoL() == "Doctora Encagada" ||
                 UserLoginCache.RolId() == Positions.Empleado && RolesCache.RoL() == "Empleado")
             {
 

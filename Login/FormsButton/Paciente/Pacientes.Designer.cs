@@ -287,6 +287,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pacientes";
             this.Text = "Pacientes";
+            this.Load += new System.EventHandler(this.Pacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPacientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

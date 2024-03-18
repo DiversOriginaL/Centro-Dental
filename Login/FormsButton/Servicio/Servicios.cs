@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace Presentacion.FormsButton.Servicio
 {
@@ -17,7 +18,22 @@ namespace Presentacion.FormsButton.Servicio
         {
             InitializeComponent();
         }
+        private void Servicios_Load(object sender, EventArgs e)
+        {
+            Permisos();
+        }
 
+        private void Permisos()
+        {
+            //DELEGANDO PERMISOS
+            if (UserLoginCache.RolId() == Positions.DoctoraEncagada ||
+               UserLoginCache.RolId() == Positions.Recepcionista ||
+               UserLoginCache.RolId() == Positions.Empleado)
+            {
+                btnEliminar.Enabled = false;
+            }
+
+        }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -48,5 +64,6 @@ namespace Presentacion.FormsButton.Servicio
             AbrirFormulario<CrudServicio>();
 
         }
+
     }
 }

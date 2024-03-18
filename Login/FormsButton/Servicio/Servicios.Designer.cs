@@ -260,6 +260,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Servicios";
             this.Text = "Servicios";
+            this.Load += new System.EventHandler(this.Servicios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvServicios)).EndInit();
             this.ResumeLayout(false);
 

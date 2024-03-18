@@ -12,7 +12,6 @@ namespace Common.Cache
         public const int DoctoraGeneral = 2;
         public const int DoctoraEncagada = 3;
         public const int Recepcionista = 4;
-        public const int Secretaria = 5;
-        public const int Empleado = 6;
+        public const int Empleado = 5;
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presentacion.FormsButton.Paciente.FormHijos;
+using Common.Cache;
 
 namespace Presentacion.FormsButton.Paciente
 {
@@ -16,6 +17,21 @@ namespace Presentacion.FormsButton.Paciente
         public Pacientes()
         {
             InitializeComponent();
+        }
+        private void Pacientes_Load(object sender, EventArgs e)
+        {
+            Permisos();
+        }
+        private void Permisos()
+        {
+            //DELEGANDO PERMISOS
+            if (UserLoginCache.RolId() == Positions.DoctoraEncagada ||
+               UserLoginCache.RolId() == Positions.Recepcionista ||
+               UserLoginCache.RolId() == Positions.Empleado)
+            {
+                btnEliminar.Enabled = false;
+            }
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -47,5 +63,6 @@ namespace Presentacion.FormsButton.Paciente
         {
             AbrirFormulario<CrudPaciente>();
         }
+
     }
 }

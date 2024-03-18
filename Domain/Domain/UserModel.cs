@@ -19,13 +19,13 @@ namespace Login.Domain.Domain
 
         public static void AnyMethod()
         {
-            if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador")
+            if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador" ||
+                UserLoginCache.RolId() == Positions.DoctoraGeneral && RolesCache.RoL() == "Doctora General")
             {
-
+                
             }
-            if (UserLoginCache.RolId() == Positions.DoctoraGeneral && RolesCache.RoL() == "Doctora General" ||
-                UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
-                UserLoginCache.RolId() == Positions.Secretaria && RolesCache.RoL() == "Secretaria" ||
+            if (UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
+                UserLoginCache.RolId() == Positions.DoctoraEncagada && RolesCache.RoL() == "Doctora Encargada" ||
                 UserLoginCache.RolId() == Positions.Empleado && RolesCache.RoL() == "Empleado")
             {
 

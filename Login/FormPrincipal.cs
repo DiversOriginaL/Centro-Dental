@@ -23,6 +23,19 @@ namespace Presentacion
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             LoadUserData();
+            Permisos();
+        }
+
+        private void Permisos()
+        {
+            //DELEGANDO PERMISOS
+            if (UserLoginCache.RolId() == Positions.DoctoraEncagada ||
+               UserLoginCache.RolId() == Positions.Recepcionista ||
+               UserLoginCache.RolId() == Positions.Empleado)
+            {
+                btnReportes.Visible = false;
+                btnUsuarios.Visible = false;
+            }
 
         }
         private void LoadUserData()
