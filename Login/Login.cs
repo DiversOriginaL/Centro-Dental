@@ -1,6 +1,7 @@
 using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using Login.Domain.Domain;
+using Presentacion.RecuperarContraseña;
 
 namespace Presentacion
 {
@@ -176,5 +177,10 @@ namespace Presentacion
             pnLogo.Focus();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var resetPassword = new recoverPassword();
+            resetPassword.ShowDialog();
+        }
     }
 }

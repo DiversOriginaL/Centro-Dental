@@ -73,3 +73,4 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\De
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Common.pdb
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Usuario.Usuario.resources
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Usuario.FormHijos.CrudUsuario.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.RecuperarContraseña.recoverPassword.resources

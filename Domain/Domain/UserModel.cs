@@ -16,7 +16,10 @@ namespace Login.Domain.Domain
         {
             return userData.Login(user, pass);
         }
-
+        public string getBackPassword(string userRequesting, string pass)
+        {
+            return userData.recoverPassword(userRequesting, pass);
+        }
         public static void AnyMethod()
         {
             if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador" ||
