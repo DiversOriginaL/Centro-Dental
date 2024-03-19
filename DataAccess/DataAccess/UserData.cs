@@ -106,35 +106,42 @@ namespace Login.DataAccess.DataAccess
                 conn.Open();
                 using (var command = new SqlCommand("RecoverPassword", conn))
                 {
-                    command.Parameters.AddWithValue("@user", userRequesting);
                     command.Parameters.AddWithValue("@mail", userRequesting);
                     command.Parameters.AddWithValue("@pass", pass);
                     command.CommandType = CommandType.StoredProcedure;
 
-                    SqlDataReader reader = command.ExecuteReader();
-
-                    if (reader.Read() == true)
+                    try
                     {
-                        string userName = reader.GetString(1) + ", " + reader.GetString(2);
-                        string userMail = reader.GetString(3);
-                        string accountPassword = pass;
+                        SqlDataReader reader = command.ExecuteReader();
 
-                        var mailService = new SystemSupportMail();
-                        mailService.SendMail(
-                            subject: "SYSTEM: Peticion de recuperacion de contraseña",
-                            body: "Hola " + userName + "\nsolicitaste recuperar tu contraseña\n" +
-                                    "tu contraseña actual es: " + accountPassword +
-                                    "Sin embargo, le pedimos que cambie su contraseña inmediatamente una vez entre al sistema",
-                            recipientMail: new List<string> { userMail }
-                            );
+                        if (reader.Read() == true)
+                        {
+                            string userName = reader.GetString(1) + ", " + reader.GetString(2);
+                            string userMail = reader.GetString(3);
+                            string accountPassword = pass;
 
-                        return "Hola " + userName + "\nsolicitaste recuperar tu contraseña\n" +
-                                    "Porfavor revisa tu correo: " + userMail +
-                                    "Sin embargo, le pedimos que cambie su contraseña inmediatamente una vez entre al sistema";
+                            var mailService = new SystemSupportMail();
+                            mailService.SendMail(
+                                subject: "SYSTEM: Peticion de recuperacion de contraseña",
+                                body: "Hola " + userName + "\nsolicitaste recuperar tu contraseña\n" +
+                                      "tu contraseña actual es: " + accountPassword +
+                                      " Sin embargo, le pedimos que cambie su contraseña inmediatamente una vez entre al sistema",
+                                recipientMail: new List<string> { userMail }
+                                );
+
+                            return "Hola " + userName + "\nsolicitaste recuperar tu contraseña\n" +
+                                        "Porfavor revisa tu correo: " + userMail +
+                                        "Sin embargo, le pedimos que cambie su contraseña inmediatamente una vez entre al sistema";
+                        }
+                        else
+                        {
+                            return "Lo siento, no tienes una cuenta con este nombre de usuario o correo electronico";
+                        }
                     }
-                    else
+                    catch(SqlException ex)
                     {
-                        return "Lo siento, no tienes una cuenta con este nombre de usuario o correo electronico";
+                        Console.WriteLine("ERROR: " + ex.Message);
+                        return "No se pudo extraer los datos.";
                     }
                 }
             }

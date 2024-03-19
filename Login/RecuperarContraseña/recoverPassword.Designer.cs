@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.txtEmailUsuario = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSend = new System.Windows.Forms.Button();
             this.pbSalir = new System.Windows.Forms.PictureBox();
@@ -52,20 +52,20 @@
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
             // 
-            // txtEmailUsuario
+            // txtEmail
             // 
-            this.txtEmailUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.txtEmailUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmailUsuario.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtEmailUsuario.ForeColor = System.Drawing.Color.LightGray;
-            this.txtEmailUsuario.Location = new System.Drawing.Point(439, 132);
-            this.txtEmailUsuario.Multiline = true;
-            this.txtEmailUsuario.Name = "txtEmailUsuario";
-            this.txtEmailUsuario.Size = new System.Drawing.Size(602, 37);
-            this.txtEmailUsuario.TabIndex = 1;
-            this.txtEmailUsuario.Text = "EMAIL O USUARIO:";
-            this.txtEmailUsuario.Enter += new System.EventHandler(this.txtEmailUsuario_Enter);
-            this.txtEmailUsuario.Leave += new System.EventHandler(this.txtEmailUsuario_Leave);
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtEmail.ForeColor = System.Drawing.Color.LightGray;
+            this.txtEmail.Location = new System.Drawing.Point(439, 132);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(602, 37);
+            this.txtEmail.TabIndex = 5;
+            this.txtEmail.Text = "EMAIL:";
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // panel1
             // 
@@ -88,7 +88,7 @@
             this.btnSend.Location = new System.Drawing.Point(439, 363);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(604, 57);
-            this.btnSend.TabIndex = 3;
+            this.btnSend.TabIndex = 15;
             this.btnSend.Text = "ENVIAR";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
@@ -109,7 +109,7 @@
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblResult.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblResult.Location = new System.Drawing.Point(443, 252);
+            this.lblResult.Location = new System.Drawing.Point(443, 274);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(0, 27);
             this.lblResult.TabIndex = 5;
@@ -127,14 +127,16 @@
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContraseña.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtContraseña.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.LightGray;
             this.txtContraseña.Location = new System.Drawing.Point(439, 212);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(602, 37);
-            this.txtContraseña.TabIndex = 6;
+            this.txtContraseña.TabIndex = 10;
             this.txtContraseña.Text = "CONTRASEÑA:";
+            this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
@@ -150,10 +152,11 @@
             this.Controls.Add(this.pbSalir);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtEmailUsuario);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.pbLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "recoverPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "recoverPassword";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSalir)).EndInit();
@@ -165,7 +168,7 @@
         #endregion
 
         private PictureBox pbLogo;
-        private TextBox txtEmailUsuario;
+        private TextBox txtEmail;
         private Panel panel1;
         private Button btnSend;
         private PictureBox pbSalir;

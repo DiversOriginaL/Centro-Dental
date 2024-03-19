@@ -11,7 +11,7 @@ namespace DataAccess.MailServices
         public SystemSupportMail()
         {
             SenderMail = "clinicadentalpopular1a@gmail.com";
-            Password = "cdp1a2024";
+            Password = "qfsqkcduuemferyo";
             Host = "smtp.gmail.com";
             Port = 587;
             ssl = true;

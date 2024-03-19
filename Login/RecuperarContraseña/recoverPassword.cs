@@ -21,40 +21,26 @@ namespace Presentacion.RecuperarContraseña
         private void btnSend_Click(object sender, EventArgs e)
         {
             var user = new UserModel();
-            var result = user.getBackPassword(txtEmailUsuario.Text, txtContraseña.Text);
+            var result = user.getBackPassword(txtEmail.Text, txtContraseña.Text);
             lblResult.Text = result;
+
+
         }
 
         private void pbSalir_Click(object sender, EventArgs e)
         {
-            txtEmailUsuario.Text = "EMAIL O USUARIO:";
+            txtEmail.Text = "EMAIL O USUARIO:";
             this.Close();
         }
 
-        private void txtEmailUsuario_Enter(object sender, EventArgs e)
-        {
-            if(txtEmailUsuario.Text == "EMAIL O USUARIO:")
-            {
-                txtEmailUsuario.Text = "";
-                txtEmailUsuario.ForeColor = Color.White;
-            }
-        }
-
-        private void txtEmailUsuario_Leave(object sender, EventArgs e)
-        {
-            if (txtEmailUsuario.Text == "")
-            {
-                txtEmailUsuario.Text = "EMAIL O USUARIO:";
-                txtEmailUsuario.ForeColor = Color.LightGray;
-            }
-        }
-
+        #region Efecto PlaceHolder
         private void txtContraseña_Enter(object sender, EventArgs e)
         {
             if (txtContraseña.Text == "CONTRASEÑA:")
             {
                 txtContraseña.Text = "";
                 txtContraseña.ForeColor = Color.White;
+                txtContraseña.UseSystemPasswordChar = false;
             }
 
         }
@@ -65,8 +51,30 @@ namespace Presentacion.RecuperarContraseña
             {
                 txtContraseña.Text = "CONTRASEÑA:";
                 txtContraseña.ForeColor = Color.LightGray;
+                txtContraseña.UseSystemPasswordChar = true;
             }
 
         }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                txtEmail.Text = "EMAIL:";
+                txtEmail.ForeColor = Color.LightGray;
+            }
+
+        }
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "EMAIL:")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.White;
+            }
+
+        }
+        #endregion
     }
 }
