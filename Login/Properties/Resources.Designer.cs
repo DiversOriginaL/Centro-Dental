@@ -273,6 +273,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_organ_tooth_cartoon_illustration_png_image_4647365_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-organ-tooth-cartoon-illustration-png-image_4647365-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap power_off_solid {
             get {
                 object obj = ResourceManager.GetObject("power-off-solid", resourceCulture);

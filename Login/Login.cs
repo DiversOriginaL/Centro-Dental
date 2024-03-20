@@ -2,6 +2,7 @@ using System.Data.SqlClient;
 using System.Runtime.InteropServices;
 using Login.Domain.Domain;
 using Presentacion.RecuperarContraseña;
+using Presentacion.FormWelcome;
 
 namespace Presentacion
 {
@@ -128,10 +129,12 @@ namespace Presentacion
 
                         if (validLogin == true)
                         {
+                            this.Hide();
+                            Welcome welcome = new Welcome();
+                            welcome.ShowDialog();
                             FormPrincipal mainMenu = new FormPrincipal();
                             mainMenu.Show();
                             mainMenu.FormClosed += Logout;
-                            this.Hide();
 
                         }
                         else

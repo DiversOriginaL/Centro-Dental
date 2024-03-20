@@ -68,5 +68,10 @@ namespace Common.Cache
         {
             return RolID;
         }
+
+        public static string getUser()
+        {
+            return Nombres + " " + Apellidos;
+        }
     }
 }
