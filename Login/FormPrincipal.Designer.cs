@@ -127,7 +127,7 @@
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuario.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUsuario.Location = new System.Drawing.Point(6, 842);
+            this.lblUsuario.Location = new System.Drawing.Point(6, 849);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(300, 37);
             this.lblUsuario.TabIndex = 6;
@@ -155,7 +155,7 @@
             // pnUsuarios
             // 
             this.pnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
-            this.pnUsuarios.Location = new System.Drawing.Point(1, 420);
+            this.pnUsuarios.Location = new System.Drawing.Point(1, 363);
             this.pnUsuarios.Name = "pnUsuarios";
             this.pnUsuarios.Size = new System.Drawing.Size(5, 67);
             this.pnUsuarios.TabIndex = 9;
@@ -168,11 +168,11 @@
             this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUsuarios.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = global::Presentacion.Properties.Resources.Usuarios2;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(1, 420);
+            this.btnUsuarios.Location = new System.Drawing.Point(1, 363);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnUsuarios.Size = new System.Drawing.Size(306, 67);
@@ -206,7 +206,7 @@
             // pnReporte
             // 
             this.pnReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
-            this.pnReporte.Location = new System.Drawing.Point(1, 320);
+            this.pnReporte.Location = new System.Drawing.Point(1, 263);
             this.pnReporte.Name = "pnReporte";
             this.pnReporte.Size = new System.Drawing.Size(5, 67);
             this.pnReporte.TabIndex = 3;
@@ -215,7 +215,7 @@
             // pnPaciente
             // 
             this.pnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
-            this.pnPaciente.Location = new System.Drawing.Point(0, 220);
+            this.pnPaciente.Location = new System.Drawing.Point(0, 163);
             this.pnPaciente.Name = "pnPaciente";
             this.pnPaciente.Size = new System.Drawing.Size(5, 67);
             this.pnPaciente.TabIndex = 2;
@@ -224,7 +224,7 @@
             // pnServicio
             // 
             this.pnServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
-            this.pnServicio.Location = new System.Drawing.Point(2, 120);
+            this.pnServicio.Location = new System.Drawing.Point(2, 63);
             this.pnServicio.Name = "pnServicio";
             this.pnServicio.Size = new System.Drawing.Size(5, 67);
             this.pnServicio.TabIndex = 1;
@@ -237,11 +237,11 @@
             this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReportes.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = global::Presentacion.Properties.Resources.chart_simple_solid;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(1, 320);
+            this.btnReportes.Location = new System.Drawing.Point(1, 263);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(306, 67);
@@ -258,11 +258,11 @@
             this.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
             this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaciente.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPaciente.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPaciente.ForeColor = System.Drawing.Color.White;
             this.btnPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnPaciente.Image")));
             this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaciente.Location = new System.Drawing.Point(0, 220);
+            this.btnPaciente.Location = new System.Drawing.Point(0, 163);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.btnPaciente.Size = new System.Drawing.Size(306, 67);
@@ -280,11 +280,11 @@
             this.btnServicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnServicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(85)))));
             this.btnServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicio.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnServicio.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnServicio.ForeColor = System.Drawing.Color.White;
             this.btnServicio.Image = global::Presentacion.Properties.Resources.people_arrows_solid;
             this.btnServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServicio.Location = new System.Drawing.Point(2, 120);
+            this.btnServicio.Location = new System.Drawing.Point(2, 63);
             this.btnServicio.Name = "btnServicio";
             this.btnServicio.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnServicio.Size = new System.Drawing.Size(306, 67);

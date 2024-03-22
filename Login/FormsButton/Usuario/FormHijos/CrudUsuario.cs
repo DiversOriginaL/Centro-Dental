@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +8,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentacion.FormsButton.Usuario;
 
 namespace Presentacion.FormsButton.Usuario.FormHijos
 {
     public partial class CrudUsuario : Form
     {
+        public Usuario usuarioForm;
         public CrudUsuario()
         {
             InitializeComponent();
+        }
+         public CrudUsuario(Usuario usuarioForm) : this()
+        {
+            this.usuarioForm = usuarioForm;
         }
 
         #region Efecto PlaceHolder
@@ -111,6 +118,24 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
                 txtContraseña.UseSystemPasswordChar = true;
             }
         }
+        private void cbPuesto_Enter(object sender, EventArgs e)
+        {
+            if(cbPuesto.Text == "PUESTO:")
+            {
+                cbPuesto.Text = "";
+                cbPuesto.ForeColor = Color.Black;
+
+            }
+
+        }
+        private void cbPuesto_Leave(object sender, EventArgs e)
+        {
+            if( cbPuesto.Text == "")
+            {
+                cbPuesto.Text = "PUESTO:";
+                cbPuesto.ForeColor = Color.Silver;
+            }
+        }
 
         #endregion
 
@@ -121,12 +146,45 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             txtEmail.Text = "EMAIL:";
             txtUsuario.Text = "USUARIO:";
             txtContraseña.Text = "CONTRASEÑA:";
+            cbPuesto.Text = "PUESTO:";
             this.Close();
         }
 
         private void CrudUsuario_Load(object sender, EventArgs e)
         {
+            cargarRoles();
+        }
 
+        CnUsuario cnUsuario = new CnUsuario();
+        private void cargarRoles()
+        {
+            cbPuesto.DataSource = cnUsuario.cargarRol();
+            cbPuesto.DisplayMember = "Rol";
+            cbPuesto.ValueMember = "RolID";
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nombres = txtNombres.Text;
+            string apellidos = txtApellidos.Text;
+            string email = txtEmail.Text;
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
+            object rolId = cbPuesto.SelectedValue; 
+
+            try
+            {
+                // Llamar al método InsertarUsuario con los valores obtenidos
+                cnUsuario.InsertarUsuario(nombres, apellidos, email, usuario, contraseña, rolId);
+
+                MessageBox.Show("Insertado Correctamente.");
+                this.Close();
+                usuarioForm.Actualizardtgv();
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error: " + ex.Message);
+            }
         }
     }
 }
