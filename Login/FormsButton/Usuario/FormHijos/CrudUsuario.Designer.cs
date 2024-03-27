@@ -46,7 +46,7 @@
             this.lblPaciente.AutoSize = true;
             this.lblPaciente.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblPaciente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPaciente.Location = new System.Drawing.Point(675, 22);
+            this.lblPaciente.Location = new System.Drawing.Point(730, 16);
             this.lblPaciente.Name = "lblPaciente";
             this.lblPaciente.Size = new System.Drawing.Size(185, 39);
             this.lblPaciente.TabIndex = 22;
@@ -56,7 +56,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEmail.ForeColor = System.Drawing.Color.Silver;
-            this.txtEmail.Location = new System.Drawing.Point(577, 235);
+            this.txtEmail.Location = new System.Drawing.Point(632, 229);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(399, 46);
@@ -69,7 +69,7 @@
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtApellidos.ForeColor = System.Drawing.Color.Silver;
-            this.txtApellidos.Location = new System.Drawing.Point(577, 171);
+            this.txtApellidos.Location = new System.Drawing.Point(632, 165);
             this.txtApellidos.Multiline = true;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(399, 46);
@@ -82,7 +82,7 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
-            this.txtUsuario.Location = new System.Drawing.Point(577, 299);
+            this.txtUsuario.Location = new System.Drawing.Point(632, 293);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(399, 46);
@@ -95,7 +95,7 @@
             // 
             this.txtNombres.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNombres.ForeColor = System.Drawing.Color.Silver;
-            this.txtNombres.Location = new System.Drawing.Point(577, 105);
+            this.txtNombres.Location = new System.Drawing.Point(632, 99);
             this.txtNombres.Multiline = true;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(399, 46);
@@ -108,7 +108,7 @@
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.Silver;
-            this.txtContraseña.Location = new System.Drawing.Point(577, 364);
+            this.txtContraseña.Location = new System.Drawing.Point(632, 358);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
@@ -129,7 +129,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = global::Presentacion.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(789, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(916, 524);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(236, 67);
             this.btnCancelar.TabIndex = 29;
@@ -148,7 +148,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(505, 524);
+            this.btnGuardar.Location = new System.Drawing.Point(632, 524);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(256, 67);
             this.btnGuardar.TabIndex = 28;
@@ -170,12 +170,12 @@
             // 
             // cbPuesto
             // 
-            this.cbPuesto.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbPuesto.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPuesto.ForeColor = System.Drawing.Color.Silver;
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Location = new System.Drawing.Point(577, 431);
+            this.cbPuesto.Location = new System.Drawing.Point(632, 425);
             this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(400, 46);
+            this.cbPuesto.Size = new System.Drawing.Size(400, 42);
             this.cbPuesto.TabIndex = 31;
             this.cbPuesto.Text = "PUESTO:";
             this.cbPuesto.Enter += new System.EventHandler(this.cbPuesto_Enter);
@@ -186,7 +186,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(1040, 603);
+            this.ClientSize = new System.Drawing.Size(1167, 603);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
@@ -211,14 +211,14 @@
         #endregion
 
         private Label lblPaciente;
+        private Button btnCancelar;
+        private Button btnGuardar;
+        private PictureBox pictureBox1;
         private TextBox txtEmail;
         private TextBox txtApellidos;
         private TextBox txtUsuario;
         private TextBox txtNombres;
         private TextBox txtContraseña;
-        private Button btnCancelar;
-        private Button btnGuardar;
-        private PictureBox pictureBox1;
         private ComboBox cbPuesto;
     }
 }

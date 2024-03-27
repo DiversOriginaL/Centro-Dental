@@ -57,7 +57,7 @@ namespace DataAccess.DataAccess
 
         }
 
-        public void Insertar(string nombre, string apellido, string mail, string usuario, string contraseña, int rolid)
+        public void InsertarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, int rolid)
         {
             using (SqlConnection conexion = GetConnection())
             {
@@ -72,9 +72,46 @@ namespace DataAccess.DataAccess
                     command.Parameters.AddWithValue("@contraseña", contraseña);
                     command.Parameters.AddWithValue("@rolid", rolid);
                     command.ExecuteNonQuery();
+                    command.Parameters.Clear();
                 }
             }
         }
 
+        public void editarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, int rolid, int id)
+        {
+            using (SqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                using (SqlCommand command = new SqlCommand("editarUsuarios", conexion))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@nombre", nombre);
+                    command.Parameters.AddWithValue("@apellido", apellido);
+                    command.Parameters.AddWithValue("@mail", mail);
+                    command.Parameters.AddWithValue("@usuario", usuario);
+                    command.Parameters.AddWithValue("@contraseña", contraseña);
+                    command.Parameters.AddWithValue("@rolid", rolid);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.ExecuteNonQuery();
+                    command.Parameters.Clear();
+                }
+            }
+
+        }
+
+        public void eliminarUsuario(int id)
+        {
+            using(SqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                using (SqlCommand command = new SqlCommand("eliminarUsuario", conexion))
+                {
+                    command.CommandType= CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("id", id);
+                    command.ExecuteNonQuery();
+                    command.Parameters.Clear();
+                }
+            }
+        }
     }
 }

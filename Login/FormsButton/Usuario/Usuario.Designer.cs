@@ -41,10 +41,12 @@
             // 
             // dtgvUsuarios
             // 
+            this.dtgvUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvUsuarios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dtgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvUsuarios.GridColor = System.Drawing.SystemColors.Control;
             this.dtgvUsuarios.Location = new System.Drawing.Point(0, 0);
             this.dtgvUsuarios.Name = "dtgvUsuarios";
@@ -52,7 +54,8 @@
             this.dtgvUsuarios.RowHeadersVisible = false;
             this.dtgvUsuarios.RowHeadersWidth = 62;
             this.dtgvUsuarios.RowTemplate.Height = 33;
-            this.dtgvUsuarios.Size = new System.Drawing.Size(1385, 890);
+            this.dtgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvUsuarios.Size = new System.Drawing.Size(1295, 738);
             this.dtgvUsuarios.TabIndex = 4;
             // 
             // btnEliminar
@@ -65,13 +68,14 @@
             this.btnEliminar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.trash_solid;
-            this.btnEliminar.Location = new System.Drawing.Point(1153, 10);
+            this.btnEliminar.Location = new System.Drawing.Point(1063, 10);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(214, 80);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -83,13 +87,14 @@
             this.btnEditar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnEditar.Image = global::Presentacion.Properties.Resources.edit;
-            this.btnEditar.Location = new System.Drawing.Point(933, 9);
+            this.btnEditar.Location = new System.Drawing.Point(843, 9);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(203, 82);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCrear
             // 
@@ -101,7 +106,7 @@
             this.btnCrear.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCrear.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCrear.Image = global::Presentacion.Properties.Resources.create;
-            this.btnCrear.Location = new System.Drawing.Point(713, 9);
+            this.btnCrear.Location = new System.Drawing.Point(623, 9);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(203, 81);
             this.btnCrear.TabIndex = 10;
@@ -136,9 +141,9 @@
             this.panel1.Controls.Add(this.btnCrear);
             this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 796);
+            this.panel1.Location = new System.Drawing.Point(0, 644);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1385, 94);
+            this.panel1.Size = new System.Drawing.Size(1295, 94);
             this.panel1.TabIndex = 13;
             // 
             // panel2
@@ -146,7 +151,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1385, 890);
+            this.panel2.Size = new System.Drawing.Size(1295, 738);
             this.panel2.TabIndex = 14;
             // 
             // Usuario
@@ -154,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(1385, 890);
+            this.ClientSize = new System.Drawing.Size(1295, 738);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvUsuarios);
             this.Controls.Add(this.panel2);

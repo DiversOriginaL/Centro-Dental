@@ -29,9 +29,17 @@ namespace Domain.Domain
 
         public void InsertarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, object rolid)
         {
-            cdUsuario.Insertar(nombre, apellido, mail, usuario, contraseña, Convert.ToInt32(rolid));
+            cdUsuario.InsertarUsuario(nombre, apellido, mail, usuario, contraseña, Convert.ToInt32(rolid));
         }
 
+        public void EditarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, object rolid, string id)
+        {
+            cdUsuario.editarUsuario(nombre, apellido, mail, usuario, contraseña, Convert.ToInt32(rolid), Convert.ToInt32(id));
+        }
 
+        public void EliminarUsuario(string id)
+        {
+            cdUsuario.eliminarUsuario(Convert.ToInt32(id));
+        }
     }
 }

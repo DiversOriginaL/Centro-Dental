@@ -14,12 +14,14 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
 {
     public partial class CrudUsuario : Form
     {
-        public Usuario usuarioForm;
         public CrudUsuario()
         {
             InitializeComponent();
         }
-         public CrudUsuario(Usuario usuarioForm) : this()
+
+
+        public Usuario usuarioForm;
+        public CrudUsuario(Usuario usuarioForm) : this()
         {
             this.usuarioForm = usuarioForm;
         }
@@ -141,13 +143,17 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            LimpiarCampos();
+            this.Close();
+        }
+        private void LimpiarCampos()
+        {
             txtNombres.Text = "NOMBRES:";
             txtApellidos.Text = "APELLIDOS:";
             txtEmail.Text = "EMAIL:";
             txtUsuario.Text = "USUARIO:";
             txtContraseña.Text = "CONTRASEÑA:";
-            cbPuesto.Text = "PUESTO:";
-            this.Close();
+            cbPuesto.SelectedIndex = -1; // Deseleccionar el elemento seleccionado en el ComboBox
         }
 
         private void CrudUsuario_Load(object sender, EventArgs e)
@@ -163,6 +169,9 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             cbPuesto.ValueMember = "RolID";
         }
 
+        //GUARDAR.
+        private string idUsuario;
+        public string operacion = "Insertar";
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string nombres = txtNombres.Text;
@@ -170,21 +179,60 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             string email = txtEmail.Text;
             string usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
-            object rolId = cbPuesto.SelectedValue; 
+            object rolId = cbPuesto.SelectedValue;
 
             try
             {
-                // Llamar al método InsertarUsuario con los valores obtenidos
-                cnUsuario.InsertarUsuario(nombres, apellidos, email, usuario, contraseña, rolId);
+                if (operacion == "Insertar")
+                {
+                    // Llamar al método InsertarUsuario con los valores obtenidos.
+                    cnUsuario.InsertarUsuario(nombres, apellidos, email, usuario, contraseña, rolId);
+                    MessageBox.Show(" Usuario Insertado Correctamente.");
 
-                MessageBox.Show("Insertado Correctamente.");
+
+                }
+                else if (operacion == "Editar")
+                {
+                    if (string.IsNullOrEmpty(idUsuario))
+                    {
+                        MessageBox.Show("No se ha seleccionado ningun usuario para editar.");
+                        return;
+                    }
+
+                    //Llamar al metodo editarUsuario con los valores obtenidos.
+                    cnUsuario.EditarUsuario(nombres, apellidos, email, usuario, contraseña, rolId, idUsuario);
+                    
+                }
+
+                if (usuarioForm != null)
+                {
+                    usuarioForm.Actualizardtgv();
+                }
+
                 this.Close();
-                usuarioForm.Actualizardtgv();
-
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
+        }
+
+        public void CargarValores(string nombres, string apellidos, string email, string usuario, string contraseña, string rolId, string idUsuario)
+        {
+            txtNombres.Text = nombres;
+            txtApellidos.Text = apellidos;
+            txtEmail.Text = email;
+            txtUsuario.Text = usuario;
+            txtContraseña.Text = contraseña;
+            cbPuesto.SelectedValue = rolId;
+            this.idUsuario = idUsuario;
+
+            txtNombres.ForeColor = Color.Black;
+            txtApellidos.ForeColor = Color.Black;
+            txtEmail.ForeColor = Color.Black;
+            txtUsuario.ForeColor = Color.Black;
+            txtContraseña.ForeColor = Color.Black;
+            cbPuesto.ForeColor = Color.Black;
         }
     }
 }
