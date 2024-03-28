@@ -211,6 +211,22 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             }
         }
 
+        private void txtCalle_Enter(object sender, EventArgs e)
+        {
+            if (txtCalle.Text == "CALLE:")
+            {
+                txtCalle.Text = "";
+            }
+        }
+
+        private void txtCalle_Leave(object sender, EventArgs e)
+        {
+            if(txtCalle.Text == "")
+            {
+                txtCalle.Text = "CALLE:";
+            }
+        }
+
         private void txtNumCasa_Enter(object sender, EventArgs e)
         {
             if (txtNumCasa.Text == "NUMERO DE CASA:")
@@ -241,6 +257,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             txtTelefono.Text = "TELEFONO:";
             txtCiudad.Text = "CIUDAD:";
             txtSector.Text = "SECTOR:";
+            txtCalle.Text = "CALLE:";
             txtNumCasa.Text = "NUMERO DE CASA:";
             this.Close();
 
@@ -307,5 +324,6 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         {
 
         }
+
     }
 }

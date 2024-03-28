@@ -85,7 +85,7 @@
             this.dtgvUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvUsuarios.RowTemplate.Height = 40;
             this.dtgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvUsuarios.Size = new System.Drawing.Size(1295, 738);
+            this.dtgvUsuarios.Size = new System.Drawing.Size(1295, 644);
             this.dtgvUsuarios.TabIndex = 4;
             // 
             // btnEliminar
@@ -190,8 +190,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1295, 738);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtgvUsuarios);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Usuario";

@@ -51,6 +51,7 @@
             this.pbMaximizar = new System.Windows.Forms.PictureBox();
             this.pbMinimizar = new System.Windows.Forms.PictureBox();
             this.lblPaciente = new System.Windows.Forms.Label();
+            this.txtCalle = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -210,7 +211,7 @@
             // 
             this.txtNumCasa.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNumCasa.ForeColor = System.Drawing.Color.Silver;
-            this.txtNumCasa.Location = new System.Drawing.Point(140, 803);
+            this.txtNumCasa.Location = new System.Drawing.Point(140, 862);
             this.txtNumCasa.Multiline = true;
             this.txtNumCasa.Name = "txtNumCasa";
             this.txtNumCasa.Size = new System.Drawing.Size(485, 46);
@@ -349,12 +350,26 @@
             this.lblPaciente.TabIndex = 21;
             this.lblPaciente.Text = "INSERTAR";
             // 
+            // txtCalle
+            // 
+            this.txtCalle.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtCalle.ForeColor = System.Drawing.Color.Silver;
+            this.txtCalle.Location = new System.Drawing.Point(140, 803);
+            this.txtCalle.Multiline = true;
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(485, 46);
+            this.txtCalle.TabIndex = 22;
+            this.txtCalle.Text = "CALLE:";
+            this.txtCalle.Enter += new System.EventHandler(this.txtCalle_Enter);
+            this.txtCalle.Leave += new System.EventHandler(this.txtCalle_Leave);
+            // 
             // CrudPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1302, 994);
+            this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.lblPaciente);
             this.Controls.Add(this.pbMinimizar);
             this.Controls.Add(this.pbMaximizar);
@@ -413,5 +428,6 @@
         private PictureBox pbMaximizar;
         private PictureBox pbMinimizar;
         private Label lblPaciente;
+        private TextBox txtCalle;
     }
 }

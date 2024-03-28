@@ -29,24 +29,17 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.dtgvPacientes = new System.Windows.Forms.DataGridView();
-            this.PacienteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sector = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoSalud = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvPacientes = new System.Windows.Forms.DataGridView();
+            this.pnCabecera = new System.Windows.Forms.Panel();
+            this.pnBarra = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,131 +61,6 @@
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // dtgvPacientes
-            // 
-            this.dtgvPacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtgvPacientes.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dtgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(34)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvPacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.PacienteID,
-            this.NombreCompleto,
-            this.Edad,
-            this.Sexo,
-            this.Celular,
-            this.Telefono,
-            this.Ciudad,
-            this.Sector,
-            this.NumeroCalle,
-            this.EstadoSalud,
-            this.Fecha});
-            this.dtgvPacientes.GridColor = System.Drawing.SystemColors.Control;
-            this.dtgvPacientes.Location = new System.Drawing.Point(12, 97);
-            this.dtgvPacientes.Name = "dtgvPacientes";
-            this.dtgvPacientes.RowHeadersVisible = false;
-            this.dtgvPacientes.RowHeadersWidth = 62;
-            this.dtgvPacientes.RowTemplate.Height = 33;
-            this.dtgvPacientes.Size = new System.Drawing.Size(1350, 695);
-            this.dtgvPacientes.TabIndex = 4;
-            // 
-            // PacienteID
-            // 
-            this.PacienteID.HeaderText = "#Paciente";
-            this.PacienteID.MinimumWidth = 8;
-            this.PacienteID.Name = "PacienteID";
-            this.PacienteID.ReadOnly = true;
-            this.PacienteID.Width = 150;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "Nombre";
-            this.NombreCompleto.MinimumWidth = 8;
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            this.NombreCompleto.Width = 150;
-            // 
-            // Edad
-            // 
-            this.Edad.HeaderText = "Edad";
-            this.Edad.MinimumWidth = 8;
-            this.Edad.Name = "Edad";
-            this.Edad.ReadOnly = true;
-            this.Edad.Width = 150;
-            // 
-            // Sexo
-            // 
-            this.Sexo.HeaderText = "Sexo";
-            this.Sexo.MinimumWidth = 8;
-            this.Sexo.Name = "Sexo";
-            this.Sexo.ReadOnly = true;
-            this.Sexo.Width = 150;
-            // 
-            // Celular
-            // 
-            this.Celular.HeaderText = "Celular";
-            this.Celular.MinimumWidth = 8;
-            this.Celular.Name = "Celular";
-            this.Celular.ReadOnly = true;
-            this.Celular.Width = 150;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.MinimumWidth = 8;
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            this.Telefono.Width = 150;
-            // 
-            // Ciudad
-            // 
-            this.Ciudad.HeaderText = "Ciudad";
-            this.Ciudad.MinimumWidth = 8;
-            this.Ciudad.Name = "Ciudad";
-            this.Ciudad.ReadOnly = true;
-            this.Ciudad.Width = 150;
-            // 
-            // Sector
-            // 
-            this.Sector.HeaderText = "Sector";
-            this.Sector.MinimumWidth = 8;
-            this.Sector.Name = "Sector";
-            this.Sector.ReadOnly = true;
-            this.Sector.Width = 150;
-            // 
-            // NumeroCalle
-            // 
-            this.NumeroCalle.HeaderText = "#Calle";
-            this.NumeroCalle.MinimumWidth = 8;
-            this.NumeroCalle.Name = "NumeroCalle";
-            this.NumeroCalle.ReadOnly = true;
-            this.NumeroCalle.Width = 150;
-            // 
-            // EstadoSalud
-            // 
-            this.EstadoSalud.HeaderText = "Estado de Salud";
-            this.EstadoSalud.MinimumWidth = 8;
-            this.EstadoSalud.Name = "EstadoSalud";
-            this.EstadoSalud.ReadOnly = true;
-            this.EstadoSalud.Width = 150;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 8;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 150;
             // 
             // btnEliminar
             // 
@@ -256,9 +124,9 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(1072, 34);
+            this.textBox1.Location = new System.Drawing.Point(999, 34);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 34);
+            this.textBox1.Size = new System.Drawing.Size(363, 34);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = "BUSCAR:";
             // 
@@ -266,10 +134,72 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(1070, 75);
+            this.panel1.Location = new System.Drawing.Point(997, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 5);
+            this.panel1.Size = new System.Drawing.Size(365, 5);
             this.panel1.TabIndex = 13;
+            // 
+            // dtgvPacientes
+            // 
+            this.dtgvPacientes.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgvPacientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvPacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvPacientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
+            this.dtgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvPacientes.ColumnHeadersHeight = 60;
+            this.dtgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvPacientes.EnableHeadersVisualStyles = false;
+            this.dtgvPacientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.dtgvPacientes.Location = new System.Drawing.Point(0, 93);
+            this.dtgvPacientes.Name = "dtgvPacientes";
+            this.dtgvPacientes.ReadOnly = true;
+            this.dtgvPacientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvPacientes.RowHeadersVisible = false;
+            this.dtgvPacientes.RowHeadersWidth = 62;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgvPacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvPacientes.RowTemplate.Height = 40;
+            this.dtgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvPacientes.Size = new System.Drawing.Size(1374, 695);
+            this.dtgvPacientes.TabIndex = 14;
+            // 
+            // pnCabecera
+            // 
+            this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnCabecera.Location = new System.Drawing.Point(0, 0);
+            this.pnCabecera.Name = "pnCabecera";
+            this.pnCabecera.Size = new System.Drawing.Size(1374, 93);
+            this.pnCabecera.TabIndex = 15;
+            // 
+            // pnBarra
+            // 
+            this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBarra.Location = new System.Drawing.Point(0, 788);
+            this.pnBarra.Name = "pnBarra";
+            this.pnBarra.Size = new System.Drawing.Size(1374, 102);
+            this.pnBarra.TabIndex = 16;
             // 
             // Pacientes
             // 
@@ -277,13 +207,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1374, 890);
+            this.Controls.Add(this.dtgvPacientes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.dtgvPacientes);
             this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.pnCabecera);
+            this.Controls.Add(this.pnBarra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pacientes";
             this.Text = "Pacientes";
@@ -296,22 +228,13 @@
 
         #endregion
         private Button btnCerrar;
-        private DataGridView dtgvPacientes;
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnCrear;
         private TextBox textBox1;
         private Panel panel1;
-        private DataGridViewTextBoxColumn PacienteID;
-        private DataGridViewTextBoxColumn NombreCompleto;
-        private DataGridViewTextBoxColumn Edad;
-        private DataGridViewTextBoxColumn Sexo;
-        private DataGridViewTextBoxColumn Celular;
-        private DataGridViewTextBoxColumn Telefono;
-        private DataGridViewTextBoxColumn Ciudad;
-        private DataGridViewTextBoxColumn Sector;
-        private DataGridViewTextBoxColumn NumeroCalle;
-        private DataGridViewButtonColumn EstadoSalud;
-        private DataGridViewTextBoxColumn Fecha;
+        private DataGridView dtgvPacientes;
+        private Panel pnCabecera;
+        private Panel pnBarra;
     }
 }
