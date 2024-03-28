@@ -223,6 +223,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ocultarContraseña {
+            get {
+                object obj = ResourceManager.GetObject("ocultarContraseña", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pacientes {
             get {
                 object obj = ResourceManager.GetObject("Pacientes", resourceCulture);
@@ -326,6 +336,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap Usuarios2 {
             get {
                 object obj = ResourceManager.GetObject("Usuarios2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap verContraseña {
+            get {
+                object obj = ResourceManager.GetObject("verContraseña", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

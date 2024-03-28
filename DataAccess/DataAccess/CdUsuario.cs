@@ -52,9 +52,7 @@ namespace DataAccess.DataAccess
                 
                 }
             }
-
             return dt;
-
         }
 
         public void InsertarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, int rolid)
@@ -65,18 +63,17 @@ namespace DataAccess.DataAccess
                 using (SqlCommand command = new SqlCommand("insertarUsuarios", conexion))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@nombre", nombre);
-                    command.Parameters.AddWithValue("@apellido", apellido);
-                    command.Parameters.AddWithValue("@mail", mail);
-                    command.Parameters.AddWithValue("@usuario", usuario);
-                    command.Parameters.AddWithValue("@contraseña", contraseña);
+                    command.Parameters.AddWithValue("@nombre", nombre.Trim());
+                    command.Parameters.AddWithValue("@apellido", apellido.Trim());
+                    command.Parameters.AddWithValue("@mail", mail.Trim());
+                    command.Parameters.AddWithValue("@usuario", usuario.Trim());
+                    command.Parameters.AddWithValue("@contraseña", contraseña.Trim());
                     command.Parameters.AddWithValue("@rolid", rolid);
                     command.ExecuteNonQuery();
                     command.Parameters.Clear();
                 }
             }
         }
-
         public void editarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, int rolid, int id)
         {
             using (SqlConnection conexion = GetConnection())
@@ -85,20 +82,18 @@ namespace DataAccess.DataAccess
                 using (SqlCommand command = new SqlCommand("editarUsuarios", conexion))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@nombre", nombre);
-                    command.Parameters.AddWithValue("@apellido", apellido);
-                    command.Parameters.AddWithValue("@mail", mail);
-                    command.Parameters.AddWithValue("@usuario", usuario);
-                    command.Parameters.AddWithValue("@contraseña", contraseña);
+                    command.Parameters.AddWithValue("@nombre", nombre.Trim());
+                    command.Parameters.AddWithValue("@apellido", apellido.Trim());
+                    command.Parameters.AddWithValue("@mail", mail.Trim());
+                    command.Parameters.AddWithValue("@usuario", usuario.Trim());
+                    command.Parameters.AddWithValue("@contraseña", contraseña.Trim());
                     command.Parameters.AddWithValue("@rolid", rolid);
                     command.Parameters.AddWithValue("@id", id);
                     command.ExecuteNonQuery();
                     command.Parameters.Clear();
                 }
             }
-
         }
-
         public void eliminarUsuario(int id)
         {
             using(SqlConnection conexion = GetConnection())

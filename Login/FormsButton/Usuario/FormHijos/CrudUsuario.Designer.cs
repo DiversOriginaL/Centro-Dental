@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPaciente = new System.Windows.Forms.Label();
+            this.lblInsertar = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -38,28 +38,32 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbPuesto = new System.Windows.Forms.ComboBox();
+            this.pbVerContraseña = new System.Windows.Forms.PictureBox();
+            this.pbOcultarContraseña = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultarContraseña)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblPaciente
+            // lblInsertar
             // 
-            this.lblPaciente.AutoSize = true;
-            this.lblPaciente.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPaciente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPaciente.Location = new System.Drawing.Point(730, 16);
-            this.lblPaciente.Name = "lblPaciente";
-            this.lblPaciente.Size = new System.Drawing.Size(185, 39);
-            this.lblPaciente.TabIndex = 22;
-            this.lblPaciente.Text = "INSERTAR";
+            this.lblInsertar.AutoSize = true;
+            this.lblInsertar.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInsertar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblInsertar.Location = new System.Drawing.Point(682, 9);
+            this.lblInsertar.Name = "lblInsertar";
+            this.lblInsertar.Size = new System.Drawing.Size(185, 39);
+            this.lblInsertar.TabIndex = 22;
+            this.lblInsertar.Text = "INSERTAR";
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEmail.ForeColor = System.Drawing.Color.Silver;
-            this.txtEmail.Location = new System.Drawing.Point(632, 229);
+            this.txtEmail.Location = new System.Drawing.Point(534, 229);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(399, 46);
+            this.txtEmail.Size = new System.Drawing.Size(497, 46);
             this.txtEmail.TabIndex = 25;
             this.txtEmail.Text = "EMAIL:";
             this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
@@ -69,10 +73,10 @@
             // 
             this.txtApellidos.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtApellidos.ForeColor = System.Drawing.Color.Silver;
-            this.txtApellidos.Location = new System.Drawing.Point(632, 165);
+            this.txtApellidos.Location = new System.Drawing.Point(534, 165);
             this.txtApellidos.Multiline = true;
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(399, 46);
+            this.txtApellidos.Size = new System.Drawing.Size(497, 46);
             this.txtApellidos.TabIndex = 24;
             this.txtApellidos.Text = "APELLIDOS:";
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
@@ -82,10 +86,10 @@
             // 
             this.txtUsuario.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
-            this.txtUsuario.Location = new System.Drawing.Point(632, 293);
+            this.txtUsuario.Location = new System.Drawing.Point(534, 293);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(399, 46);
+            this.txtUsuario.Size = new System.Drawing.Size(497, 46);
             this.txtUsuario.TabIndex = 26;
             this.txtUsuario.Text = "USUARIO:";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -95,10 +99,10 @@
             // 
             this.txtNombres.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNombres.ForeColor = System.Drawing.Color.Silver;
-            this.txtNombres.Location = new System.Drawing.Point(632, 99);
+            this.txtNombres.Location = new System.Drawing.Point(534, 99);
             this.txtNombres.Multiline = true;
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(399, 46);
+            this.txtNombres.Size = new System.Drawing.Size(497, 46);
             this.txtNombres.TabIndex = 23;
             this.txtNombres.Text = "NOMBRES:";
             this.txtNombres.Enter += new System.EventHandler(this.txtNombres_Enter);
@@ -108,11 +112,11 @@
             // 
             this.txtContraseña.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.Silver;
-            this.txtContraseña.Location = new System.Drawing.Point(632, 358);
+            this.txtContraseña.Location = new System.Drawing.Point(534, 358);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(399, 46);
+            this.txtContraseña.Size = new System.Drawing.Size(497, 46);
             this.txtContraseña.TabIndex = 27;
             this.txtContraseña.Text = "CONTRASEÑA:";
             this.txtContraseña.UseSystemPasswordChar = true;
@@ -129,7 +133,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = global::Presentacion.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(916, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(853, 524);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(236, 67);
             this.btnCancelar.TabIndex = 29;
@@ -148,7 +152,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(632, 524);
+            this.btnGuardar.Location = new System.Drawing.Point(569, 524);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(256, 67);
             this.btnGuardar.TabIndex = 28;
@@ -173,20 +177,45 @@
             this.cbPuesto.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPuesto.ForeColor = System.Drawing.Color.Silver;
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Location = new System.Drawing.Point(632, 425);
+            this.cbPuesto.Location = new System.Drawing.Point(534, 425);
             this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(400, 42);
+            this.cbPuesto.Size = new System.Drawing.Size(498, 42);
             this.cbPuesto.TabIndex = 31;
             this.cbPuesto.Text = "PUESTO:";
             this.cbPuesto.Enter += new System.EventHandler(this.cbPuesto_Enter);
             this.cbPuesto.Leave += new System.EventHandler(this.cbPuesto_Leave);
+            // 
+            // pbVerContraseña
+            // 
+            this.pbVerContraseña.BackgroundImage = global::Presentacion.Properties.Resources.verContraseña;
+            this.pbVerContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbVerContraseña.Location = new System.Drawing.Point(982, 364);
+            this.pbVerContraseña.Name = "pbVerContraseña";
+            this.pbVerContraseña.Size = new System.Drawing.Size(41, 36);
+            this.pbVerContraseña.TabIndex = 32;
+            this.pbVerContraseña.TabStop = false;
+            this.pbVerContraseña.Visible = false;
+            this.pbVerContraseña.Click += new System.EventHandler(this.pbVerContraseña_Click);
+            // 
+            // pbOcultarContraseña
+            // 
+            this.pbOcultarContraseña.BackgroundImage = global::Presentacion.Properties.Resources.ocultarContraseña;
+            this.pbOcultarContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbOcultarContraseña.Location = new System.Drawing.Point(982, 364);
+            this.pbOcultarContraseña.Name = "pbOcultarContraseña";
+            this.pbOcultarContraseña.Size = new System.Drawing.Size(41, 36);
+            this.pbOcultarContraseña.TabIndex = 33;
+            this.pbOcultarContraseña.TabStop = false;
+            this.pbOcultarContraseña.Click += new System.EventHandler(this.pbOcultarContraseña_Click);
             // 
             // CrudUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(1167, 603);
+            this.ClientSize = new System.Drawing.Size(1104, 603);
+            this.Controls.Add(this.pbOcultarContraseña);
+            this.Controls.Add(this.pbVerContraseña);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
@@ -196,13 +225,15 @@
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtNombres);
-            this.Controls.Add(this.lblPaciente);
+            this.Controls.Add(this.lblInsertar);
             this.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrudUsuario";
             this.Text = "CrudUsuario";
             this.Load += new System.EventHandler(this.CrudUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOcultarContraseña)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,7 +241,7 @@
 
         #endregion
 
-        private Label lblPaciente;
+        private Label lblInsertar;
         private Button btnCancelar;
         private Button btnGuardar;
         private PictureBox pictureBox1;
@@ -220,5 +251,7 @@
         private TextBox txtNombres;
         private TextBox txtContraseña;
         private ComboBox cbPuesto;
+        private PictureBox pbVerContraseña;
+        private PictureBox pbOcultarContraseña;
     }
 }

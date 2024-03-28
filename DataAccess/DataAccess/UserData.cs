@@ -147,24 +147,5 @@ namespace Login.DataAccess.DataAccess
             }
         }
 
-        public static void AnyMethod()
-        {
-            if (UserLoginCache.RolId() == Positions.Administrador && RolesCache.RoL() == "Administrador" ||
-                UserLoginCache.RolId() == Positions.DoctoraGeneral && RolesCache.RoL() == "Doctora General")
-            {
-
-            }
-            if (UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
-                UserLoginCache.RolId() == Positions.DoctoraEncagada && RolesCache.RoL() == "Doctora Encagada" ||
-                UserLoginCache.RolId() == Positions.Empleado && RolesCache.RoL() == "Empleado")
-            {
-
-            }
-        }
-
-        public void LogOut()
-        {
-            UserLoginCache.ClearUserLogin();
-        }
     }
 }

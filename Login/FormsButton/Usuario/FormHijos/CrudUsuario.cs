@@ -201,7 +201,7 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
 
                     //Llamar al metodo editarUsuario con los valores obtenidos.
                     cnUsuario.EditarUsuario(nombres, apellidos, email, usuario, contraseña, rolId, idUsuario);
-                    
+                    operacion = "Insertar";
                 }
 
                 if (usuarioForm != null)
@@ -227,12 +227,28 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             cbPuesto.SelectedValue = rolId;
             this.idUsuario = idUsuario;
 
+            lblInsertar.Text = "EDITANDO";
             txtNombres.ForeColor = Color.Black;
             txtApellidos.ForeColor = Color.Black;
             txtEmail.ForeColor = Color.Black;
             txtUsuario.ForeColor = Color.Black;
             txtContraseña.ForeColor = Color.Black;
+            txtContraseña.UseSystemPasswordChar = false;
             cbPuesto.ForeColor = Color.Black;
+        }
+
+        private void pbVerContraseña_Click(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = false;
+            pbVerContraseña.Visible = false;
+            pbOcultarContraseña.Visible = true;
+        }
+
+        private void pbOcultarContraseña_Click(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = true;
+            pbVerContraseña.Visible = true;
+            pbOcultarContraseña.Visible = false;
         }
     }
 }

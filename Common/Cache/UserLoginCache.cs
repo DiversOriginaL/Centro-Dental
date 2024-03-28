@@ -32,25 +32,6 @@ namespace Common.Cache
             IsLoggedIn = true;
         }
 
-
-        // Método para limpiar la caché al cerrar sesión
-        public static void ClearUserLogin()
-        {
-            UsuarioID = 0;
-            Nombres = null;
-            Apellidos = null;
-            Email = null;
-            Usuario = null;
-            RolID = 0;
-            IsLoggedIn = false;
-        }
-
-        // Método para validar si el usuario está logueado
-        public static bool ValidateUserLogin()
-        {
-            return IsLoggedIn;
-        }
-
         public static string lblUser()
         {
             string usuario = Usuario;

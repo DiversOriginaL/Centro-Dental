@@ -36,7 +36,6 @@ namespace Domain.Domain
         {
             cdUsuario.editarUsuario(nombre, apellido, mail, usuario, contraseña, Convert.ToInt32(rolid), Convert.ToInt32(id));
         }
-
         public void EliminarUsuario(string id)
         {
             cdUsuario.eliminarUsuario(Convert.ToInt32(id));
