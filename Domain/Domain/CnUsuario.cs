@@ -27,9 +27,9 @@ namespace Domain.Domain
             return dt;
         }
 
+        Usuario usuario = new Usuario();
         public void InsertarUsuario(string nombre, string apellido, string mail, string nombreusuario, string contraseña, object rolid)
         {
-            Usuario usuario = new Usuario();
             usuario.SetNombre(nombre);
             usuario.SetApellido(apellido);
             usuario.SetEmail(mail);
@@ -40,9 +40,17 @@ namespace Domain.Domain
             cdUsuario.InsertarUsuario(usuario);
         }
 
-        public void EditarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, object rolid, string id)
+        public void EditarUsuario(string nombre, string apellido, string mail, string nombreusuario, string contraseña, object rolid, string id)
         {
-            cdUsuario.editarUsuario(nombre, apellido, mail, usuario, contraseña, Convert.ToInt32(rolid), Convert.ToInt32(id));
+            usuario.SetID(Convert.ToInt32(id));
+            usuario.SetNombre(nombre);
+            usuario.SetApellido(apellido);
+            usuario.SetEmail(mail);
+            usuario.SetNombreUsuario(nombreusuario);
+            usuario.SetContraseña(contraseña);
+            usuario.SetRolID(Convert.ToInt32(rolid));
+
+            cdUsuario.editarUsuario(usuario);
         }
         public void EliminarUsuario(string id)
         {

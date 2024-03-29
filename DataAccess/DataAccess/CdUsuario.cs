@@ -95,21 +95,26 @@ namespace DataAccess.DataAccess
                 }
             }
         }
-        public void editarUsuario(string nombre, string apellido, string mail, string usuario, string contraseña, int rolid, int id)
+        public void editarUsuario(Usuario usuario)
         {
+            if(usuario == null)
+            {
+                throw new ArgumentNullException(nameof(usuario),  "El usuario proporcionado es nulo");
+            }
+
             using (SqlConnection conexion = GetConnection())
             {
                 conexion.Open();
                 using (SqlCommand command = new SqlCommand("editarUsuarios", conexion))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@nombre", nombre.Trim());
-                    command.Parameters.AddWithValue("@apellido", apellido.Trim());
-                    command.Parameters.AddWithValue("@mail", mail.Trim());
-                    command.Parameters.AddWithValue("@usuario", usuario.Trim());
-                    command.Parameters.AddWithValue("@contraseña", contraseña.Trim());
-                    command.Parameters.AddWithValue("@rolid", rolid);
-                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@nombre", usuario.GetNombre().Trim());
+                    command.Parameters.AddWithValue("@apellido", usuario.GetApellido().Trim());
+                    command.Parameters.AddWithValue("@mail", usuario.GetEmail().Trim());
+                    command.Parameters.AddWithValue("@usuario", usuario.GetNombreUsuario().Trim());
+                    command.Parameters.AddWithValue("@contraseña", usuario.GetContraseña().Trim());
+                    command.Parameters.AddWithValue("@rolid", usuario.GetRolID());
+                    command.Parameters.AddWithValue("@id", usuario.GetID());
                     command.ExecuteNonQuery();
                     command.Parameters.Clear();
                 }
