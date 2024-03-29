@@ -174,8 +174,8 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
         public string operacion = "Insertar";
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string nombres = txtNombres.Text;
-            string apellidos = txtApellidos.Text;
+            string nombre = txtNombres.Text;
+            string apellido = txtApellidos.Text;
             string email = txtEmail.Text;
             string usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
@@ -186,7 +186,7 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
                 if (operacion == "Insertar")
                 {
                     // Llamar al método InsertarUsuario con los valores obtenidos.
-                    cnUsuario.InsertarUsuario(nombres, apellidos, email, usuario, contraseña, rolId);
+                    cnUsuario.InsertarUsuario(nombre, apellido, email, usuario, contraseña, rolId);
                     MessageBox.Show(" Usuario Insertado Correctamente.");
 
 
@@ -200,7 +200,7 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
                     }
 
                     //Llamar al metodo editarUsuario con los valores obtenidos.
-                    cnUsuario.EditarUsuario(nombres, apellidos, email, usuario, contraseña, rolId, idUsuario);
+                    cnUsuario.EditarUsuario(nombre, apellido, email, usuario, contraseña, rolId, idUsuario);
                     operacion = "Insertar";
                 }
 
@@ -217,10 +217,10 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             }
         }
 
-        public void CargarValores(string nombres, string apellidos, string email, string usuario, string contraseña, string rolId, string idUsuario)
+        public void CargarValores(string nombre, string apellido, string email, string usuario, string contraseña, string rolId, string idUsuario)
         {
-            txtNombres.Text = nombres;
-            txtApellidos.Text = apellidos;
+            txtNombres.Text = nombre;
+            txtApellidos.Text = apellido;
             txtEmail.Text = email;
             txtUsuario.Text = usuario;
             txtContraseña.Text = contraseña;
