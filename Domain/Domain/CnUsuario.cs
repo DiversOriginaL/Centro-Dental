@@ -30,10 +30,10 @@ namespace Domain.Domain
         Usuario usuario = new Usuario();
         public void InsertarUsuario(string nombre, string apellido, string mail, string nombreusuario, string contraseña, object rolid)
         {
-            usuario.SetNombre(nombre);
-            usuario.SetApellido(apellido);
+            usuario.SetNombres(nombre);
+            usuario.SetApellidos(apellido);
             usuario.SetEmail(mail);
-            usuario.SetNombreUsuario(nombreusuario);
+            usuario.SetUsuario(nombreusuario);
             usuario.SetContraseña(contraseña);
             usuario.SetRolID(Convert.ToInt32(rolid));
 
@@ -42,11 +42,11 @@ namespace Domain.Domain
 
         public void EditarUsuario(string nombre, string apellido, string mail, string nombreusuario, string contraseña, object rolid, string id)
         {
-            usuario.SetID(Convert.ToInt32(id));
-            usuario.SetNombre(nombre);
-            usuario.SetApellido(apellido);
+            usuario.SetUsuarioID(Convert.ToInt32(id));
+            usuario.SetNombres(nombre);
+            usuario.SetApellidos(apellido);
             usuario.SetEmail(mail);
-            usuario.SetNombreUsuario(nombreusuario);
+            usuario.SetUsuario(nombreusuario);
             usuario.SetContraseña(contraseña);
             usuario.SetRolID(Convert.ToInt32(rolid));
 

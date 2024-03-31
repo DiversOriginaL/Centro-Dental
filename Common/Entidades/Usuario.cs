@@ -8,84 +8,87 @@ namespace Common.Entidades
 {
     public class Usuario
     {
-        private int _id { get; set; }
-        private string _nombre { get; set; }
-        private string _apellido { get; set; }
-        private string _email { get; set; }
-        private string _usuario { get; set; }
-        private string _contraseña { get; set; }
-        private int _rolid { get; set; }
+        private int UsuarioID { get; set; }
+        private string Nombres { get; set; }
+        private string Apellidos { get; set; }
+        private string Email { get; set; }
+        private string NombreUsuario { get; set; }
+        private string Contraseña { get; set; }
+        private int RolID { get; set; }
 
-        // Métodos para establecer los valores de las propiedades
-        public void SetID(int id)
+        // Métodos para establecer los valores de las propiedades.
+
+        Paciente paciente = new Paciente();
+        public void SetUsuarioID(int id)
         {
-            _id = id;
+            paciente.SetUsuarioID(id);
+            UsuarioID = id;
         }
 
-        public void SetNombre(string nombre)
+        public void SetNombres(string Nombre)
         {
-            _nombre = nombre;
+            Nombres = Nombre;
         }
 
-        public void SetApellido(string apellido)
+        public void SetApellidos(string apellido)
         {
-            _apellido = apellido;
+            Apellidos = apellido;
         }
 
         public void SetEmail(string email)
         {
-            _email = email;
+            Email = email;
         }
 
-        public void SetNombreUsuario(string nombreUsuario)
+        public void SetUsuario(string Usuario)
         {
-            _usuario = nombreUsuario;
+            NombreUsuario = Usuario;
         }
 
         public void SetContraseña(string contraseña)
         {
-            _contraseña = contraseña;
+            Contraseña = contraseña;
         }
 
-        public void SetRolID(int rolID)
+        public void SetRolID(int rolid)
         {
-            _rolid = rolID;
+            RolID = rolid;
         }
 
         // Métodos para obtener los valores de las propiedades
-        public int GetID()
+        public int GetUsuarioID()
         {
-            return _id;
+            return UsuarioID;
         }
 
-        public string GetNombre()
+        public string GetNombres()
         {
-            return _nombre;
+            return Nombres;
         }
 
-        public string GetApellido()
+        public string GetApellidos()
         {
-            return _apellido;
+            return Apellidos;
         }
 
         public string GetEmail()
         {
-            return _email;
+            return Email;
         }
 
-        public string GetNombreUsuario()
+        public string GetUsuario()
         {
-            return _usuario;
+            return NombreUsuario;
         }
 
         public string GetContraseña()
         {
-            return _contraseña;
+            return Contraseña;
         }
 
         public int GetRolID()
         {
-            return _rolid;
+            return RolID;
         }
     }
 }

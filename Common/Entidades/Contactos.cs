@@ -8,39 +8,42 @@ namespace Common.Entidades
 {
     public class Contactos
     {
-        private int _contactoid { get; set; }
-        private string _celular { get; set; }
-        private string _telefono { get; set; }
+        private int ContactoID { get; set; }
+        private string Celular { get; set; }
+        private string Telefono { get; set; }
 
-        public void Setcontactoid(int id)
+
+        Paciente paciente = new Paciente();
+        public void SetContactoID(int id)
         {
-            _contactoid = id;
+            paciente.SetContactoid(id);
+            ContactoID = id;
         }
 
-        public void Setcelular(string celular)
+        public void SetCelular(string celular)
         {
-            _celular = celular;
+            Celular = celular;
         }
 
-        public void Settelefono(string telefono)
+        public void SetTelefono(string telefono)
         {
-            _telefono = telefono;
+            Telefono = telefono;
         }
 
 
-        public int Getcontactoid()
+        public int GetContactoid()
         {
-            return _contactoid;
+            return ContactoID;
         }
 
-        public string Getcelular()
+        public string GetCelular()
         {
-            return _celular;
+            return Celular;
         }
 
-        public string Gettelefono()
+        public string GetTelefono()
         {
-            return _telefono;
+            return Telefono;
         }
     }
 }

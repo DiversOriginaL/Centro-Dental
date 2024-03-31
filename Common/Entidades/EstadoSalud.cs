@@ -8,60 +8,63 @@ namespace Common.Entidades
 {
     public class EstadoSalud
     {
-        private int _estadosaludid { get; set; }
-        private string? _enfermedad { get; set; }
-        private string? _medicamento { get; set; }
-        private string? _alergia { get; set; }
-        private string? _embarazo { get; set; }
+        private int EstadoSaludID { get; set; }
+        private string? Enfermedad { get; set; }
+        private string? Medicamento { get; set; }
+        private string? Alergia { get; set; }
+        private string? Embarazo { get; set; }
+        
+        Paciente paciente = new Paciente();
 
         #region Acceso a las propiedades
-        public void Setestadosaludid(int id)
+        public void SetEstadoSaludID(int estadosaludid)
         {
-            _estadosaludid = id;
+            paciente.SetEstadoSaludid(estadosaludid);
+            EstadoSaludID = estadosaludid;
         }
 
-        public void Setenfermedad(string enfermedad)
+        public void SetEnfermedad(string enfermedad)
         {
-            _enfermedad = enfermedad;
+            Enfermedad = enfermedad;
         }
-        public void Setmedicamento(string medicamento)
+        public void SetMedicamento(string medicamento)
         {
-            _medicamento = medicamento;
-        }
-
-        public void Setalergia(string alergia)
-        {
-            _alergia = alergia;
+            Medicamento = medicamento;
         }
 
-        public void Setembarazo(string embarazo)
+        public void SetAlergia(string alergia)
         {
-            _embarazo = embarazo;
+            Alergia = alergia;
         }
 
-        public int GetId()
+        public void SetEmbarazo(string embarazo)
         {
-            return _estadosaludid;
+            Embarazo = embarazo;
+        }
+
+        public int GetEstadoSaludID()
+        {
+            return EstadoSaludID;
         }
 
         public string GetEnfermedad()
         {
-            return _enfermedad ?? "";
+            return Enfermedad ?? "";
         }
 
         public string GetMedicamento()
         {
-            return _medicamento ?? "";
+            return Medicamento ?? "";
         }
 
         public string GetAlergia()
         {
-            return _alergia ?? "";
+            return Alergia ?? "";
         }
 
         public string GetEmbarazo()
         {
-            return _embarazo ?? "";
+            return Embarazo ?? "";
         }
         #endregion
     }

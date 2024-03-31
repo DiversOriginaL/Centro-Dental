@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
 using Presentacion.FormsButton.Paciente.FormHijos;
 using Common.Cache;
+using Domain.Domain;
 
 namespace Presentacion.FormsButton.Paciente
 {
     public partial class Pacientes : Form
     {
+        private CnPaciente cnpaciente;
         public Pacientes()
         {
             InitializeComponent();
+            cnpaciente = new CnPaciente();
         }
         private void Pacientes_Load(object sender, EventArgs e)
         {
+            MostrarPacientes();
             Permisos();
         }
         private void Permisos()
@@ -32,6 +37,16 @@ namespace Presentacion.FormsButton.Paciente
                 btnEliminar.Enabled = false;
             }
 
+        }
+
+        private void MostrarPacientes()
+        {
+            // Obtener la lista de pacientes desde la capa de negocio
+            List<Common.Entidades.Paciente> listaPacientes = cnpaciente.ObtenerPacientes();
+
+            // Asignar la lista de pacientes al DataSource del DataGridView
+            dtgvPacientes.AutoGenerateColumns = true;
+            dtgvPacientes.DataSource = listaPacientes;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

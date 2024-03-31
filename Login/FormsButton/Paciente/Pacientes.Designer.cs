@@ -141,7 +141,6 @@
             // 
             // dtgvPacientes
             // 
-            this.dtgvPacientes.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -164,6 +163,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvPacientes.ColumnHeadersHeight = 60;
+            this.dtgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvPacientes.EnableHeadersVisualStyles = false;
             this.dtgvPacientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));

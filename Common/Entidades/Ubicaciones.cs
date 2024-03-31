@@ -15,54 +15,56 @@ namespace Common.Entidades
         private string _calle { get; set; }
         private string _numerocasa { get; set; }
 
+        Paciente paciente = new Paciente();
 
         #region Acceso a las propiedades.
 
-        public void Setubicacionid(int ubucacionid)
+        public void SetUbicacionID(int ubucacionid)
         {
+            paciente.SetUicacionID(ubucacionid);
             _ubicacionid = ubucacionid;
         }
 
-        public void Setciudad(string ciudad)
+        public void SetCiudad(string ciudad)
         {
             _ciudad = ciudad;
         }
-        public void Setsector(string sector)
+        public void SetSector(string sector)
         {
             _sector = sector;
         }
 
-        public void Setcalle(string calle)
+        public void SetCalle(string calle)
         {
             _calle = calle;
         }
 
-        public void Setnumerocasa(string numerocasa)
+        public void SetNumeroCasa(string numerocasa)
         {
             _numerocasa = numerocasa;
         }
 
 
-        public int Getubicacionid()
+        public int GetUbicacionid()
         {
             return _ubicacionid;
         }
 
-        public string Getciudad()
+        public string GetCiudad()
         {
             return _ciudad;
         }
-        public string Getsector()
+        public string GetSector()
         {
             return _sector;
         }
 
-        public string Getcalle()
+        public string GetCalle()
         {
             return _calle;
         }
 
-        public string Getnumerocasa()
+        public string GetNumeroCasa()
         {
             return _numerocasa;
         }
