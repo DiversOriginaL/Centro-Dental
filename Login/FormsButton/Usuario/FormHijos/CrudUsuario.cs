@@ -159,6 +159,7 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
         private void CrudUsuario_Load(object sender, EventArgs e)
         {
             cargarRoles();
+            cbPuesto.Text = "PUESTO:";
         }
 
         CnUsuario cnUsuario = new CnUsuario();

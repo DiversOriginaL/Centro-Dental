@@ -20,7 +20,7 @@ namespace Domain.Domain
             dt = cdUsuario.mostrarUsuario();
             return dt;
         }
-
+       
         public DataTable cargarRol()
         {
             dt = cdUsuario.cargarRoles();

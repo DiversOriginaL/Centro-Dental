@@ -174,6 +174,8 @@
             // 
             // cbPuesto
             // 
+            this.cbPuesto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbPuesto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbPuesto.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPuesto.ForeColor = System.Drawing.Color.Silver;
             this.cbPuesto.FormattingEnabled = true;

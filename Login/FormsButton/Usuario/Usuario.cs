@@ -25,7 +25,12 @@ namespace Presentacion.FormsButton.Usuario
             mostrarUsuarios();
         }
 
-        
+        CnUsuario cnUsuario = new CnUsuario();
+        public void mostrarUsuarios()
+        {
+            dtgvUsuarios.DataSource = cnUsuario.mostrarUsuarios();
+        }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -63,12 +68,7 @@ namespace Presentacion.FormsButton.Usuario
 
         //CRUD A USUARIOS.
 
-        CnUsuario cnUsuario = new CnUsuario();
-        public void mostrarUsuarios()
-        {
-            dtgvUsuarios.DataSource = cnUsuario.mostrarUsuarios();
-
-        }
+        
         public void Actualizardtgv()
         {
             mostrarUsuarios();

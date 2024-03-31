@@ -270,7 +270,7 @@
             this.btnEstadoSalud.Image = global::Presentacion.Properties.Resources.EstadoSalud;
             this.btnEstadoSalud.Location = new System.Drawing.Point(705, 685);
             this.btnEstadoSalud.Name = "btnEstadoSalud";
-            this.btnEstadoSalud.Size = new System.Drawing.Size(499, 164);
+            this.btnEstadoSalud.Size = new System.Drawing.Size(499, 172);
             this.btnEstadoSalud.TabIndex = 14;
             this.btnEstadoSalud.Text = "ESTADO DE SALUD";
             this.btnEstadoSalud.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

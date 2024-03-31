@@ -38,6 +38,31 @@ namespace Common.Entidades
         {
             _embarazo = embarazo;
         }
+
+        public int GetId()
+        {
+            return _estadosaludid;
+        }
+
+        public string GetEnfermedad()
+        {
+            return _enfermedad ?? "";
+        }
+
+        public string GetMedicamento()
+        {
+            return _medicamento ?? "";
+        }
+
+        public string GetAlergia()
+        {
+            return _alergia ?? "";
+        }
+
+        public string GetEmbarazo()
+        {
+            return _embarazo ?? "";
+        }
         #endregion
     }
 }
