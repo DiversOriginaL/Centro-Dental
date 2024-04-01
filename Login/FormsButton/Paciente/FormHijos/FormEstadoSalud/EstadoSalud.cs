@@ -40,14 +40,14 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
 
         private void rbSiAlergia_CheckedChanged(object sender, EventArgs e)
         {
-            txtAlergia.Visible = true;
-            txtAlergia.Enabled = true;
+            txtMedicamento.Visible = true;
+            txtMedicamento.Enabled = true;
         }
 
         private void rdSiMedicamento_CheckedChanged(object sender, EventArgs e)
         {
-            txtMedicamento.Visible = true;
-            txtMedicamento.Enabled = true;
+            txtAlergia.Visible = true;
+            txtAlergia.Enabled = true;
         }
 
         private void rbSiEmbarazada_CheckedChanged(object sender, EventArgs e)
@@ -80,27 +80,6 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
 
         private void txtAlergia_Enter(object sender, EventArgs e)
         {
-            if (txtAlergia.Text == "DESCRIPCION:")
-            {
-                txtAlergia.Text = "";
-                txtAlergia.ForeColor = Color.Black;
-                Font fuente = new Font("Tahoma", 12, FontStyle.Bold);
-                txtAlergia.Font = fuente;
-            }
-        }
-
-        private void txtAlergia_Leave(object sender, EventArgs e)
-        {
-            if (txtAlergia.Text == "")
-            {
-                txtAlergia.Text = "DESCRIPCION:";
-                txtAlergia.ForeColor = Color.Silver;
-                Font fuente = new Font("Tahoma", 16, FontStyle.Bold);
-                txtAlergia.Font = fuente;
-            }
-        }
-        private void txtMedicamento_Enter(object sender, EventArgs e)
-        {
             if (txtMedicamento.Text == "DESCRIPCION:")
             {
                 txtMedicamento.Text = "";
@@ -110,7 +89,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
             }
         }
 
-        private void txtMedicamento_Leave(object sender, EventArgs e)
+        private void txtAlergia_Leave(object sender, EventArgs e)
         {
             if (txtMedicamento.Text == "")
             {
@@ -118,6 +97,27 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
                 txtMedicamento.ForeColor = Color.Silver;
                 Font fuente = new Font("Tahoma", 16, FontStyle.Bold);
                 txtMedicamento.Font = fuente;
+            }
+        }
+        private void txtMedicamento_Enter(object sender, EventArgs e)
+        {
+            if (txtAlergia.Text == "DESCRIPCION:")
+            {
+                txtAlergia.Text = "";
+                txtAlergia.ForeColor = Color.Black;
+                Font fuente = new Font("Tahoma", 12, FontStyle.Bold);
+                txtAlergia.Font = fuente;
+            }
+        }
+
+        private void txtMedicamento_Leave(object sender, EventArgs e)
+        {
+            if (txtAlergia.Text == "")
+            {
+                txtAlergia.Text = "DESCRIPCION:";
+                txtAlergia.ForeColor = Color.Silver;
+                Font fuente = new Font("Tahoma", 16, FontStyle.Bold);
+                txtAlergia.Font = fuente;
             }
         }
 
@@ -145,14 +145,14 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
         }
         private void pnCerrar_Click(object sender, EventArgs e)
         {
-            txtAlergia.Text = "DESCRIPCION:";
-            txtAlergia.ForeColor = Color.Silver;
+            txtMedicamento.Text = "DESCRIPCION:";
+            txtMedicamento.ForeColor = Color.Silver;
 
             txtEnfermedad.Text = "DESCRIPCION:";
             txtEnfermedad.ForeColor = Color.Silver;
 
-            txtMedicamento.Text = "DESCRIPCION:";
-            txtMedicamento.ForeColor = Color.Silver;
+            txtAlergia.Text = "DESCRIPCION:";
+            txtAlergia.ForeColor = Color.Silver;
 
             txtEmbarazo.Text = "DESCRIPCION:";
             txtEmbarazo.ForeColor = Color.Silver;
@@ -183,12 +183,12 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
 
         private void rbNoAlergia_CheckedChanged(object sender, EventArgs e)
         {
-            txtAlergia.Visible = false;
+            txtMedicamento.Visible = false;
         }
 
         private void rdNoMedicamento_CheckedChanged(object sender, EventArgs e)
         {
-            txtMedicamento.Visible = false;
+            txtAlergia.Visible = false;
         }
 
         private void rbNoEmbarazada_CheckedChanged(object sender, EventArgs e)
@@ -200,14 +200,14 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtAlergia.Text = "DESCRIPCION:";
-            txtAlergia.ForeColor = Color.Silver;
+            txtMedicamento.Text = "DESCRIPCION:";
+            txtMedicamento.ForeColor = Color.Silver;
 
             txtEnfermedad.Text = "DESCRIPCION:";
             txtEnfermedad.ForeColor = Color.Silver;
 
-            txtMedicamento.Text = "DESCRIPCION:";
-            txtMedicamento.ForeColor = Color.Silver;
+            txtAlergia.Text = "DESCRIPCION:";
+            txtAlergia.ForeColor = Color.Silver;
 
             txtEmbarazo.Text = "DESCRIPCION:";
             txtEmbarazo.ForeColor = Color.Silver;
@@ -216,5 +216,70 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
 
         }
 
+        public string enfermedad;
+        public string medicamento;
+        public string alergia;
+        public string embarazo;
+
+        public void GetDatos()
+        {
+            if(rbSiEnfermedad.Checked)
+            {
+                enfermedad = txtEnfermedad.Text.Trim();
+            }
+            else if(rbNoEnfermedad.Checked)
+            {
+                enfermedad = "NO TIENE NINGUNA ENFERMEDAD RELEVANTE.".Trim();
+            }
+            
+            if(rbSiMedicamento.Checked)
+            {
+                medicamento = txtMedicamento.Text.Trim();
+            }
+            else if(rbNoMedicamento.Checked)
+            {
+                medicamento = "NO ESTA TOMANDO NINGUN MEDICAMENTO.".Trim();
+            }
+            if(rbSiAlergia.Checked)
+            {
+                alergia = txtAlergia.Text.Trim();
+            }
+            else if(rbNoAlergia.Checked)
+            {
+                alergia = "NO LE GENERA ALERGIA NINGUN MEDICAMENTO.".Trim();
+            }
+            if(rbSiEmbarazada.Checked)
+            {
+                embarazo = txtEmbarazo.Text.Trim();
+            }
+            else if(rbNoEmbarazada.Checked)
+            {
+                embarazo = "NO EXISTE EMBARAZO".Trim();
+            }
+
+            // Manejo de casos no seleccionados
+            if (string.IsNullOrEmpty(enfermedad))
+            {
+                enfermedad = "No se ha seleccionado ninguna opción.";
+            }
+            if (string.IsNullOrEmpty(medicamento))
+            {
+                medicamento = "No se ha seleccionado ninguna opción.";
+            }
+            if (string.IsNullOrEmpty(alergia))
+            {
+                alergia = "No se ha seleccionado ninguna opción.";
+            }
+            if (string.IsNullOrEmpty(embarazo))
+            {
+                embarazo = "No se ha seleccionado ninguna opción.";
+            }
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            GetDatos();
+            this.Close();
+        }
     }
 }

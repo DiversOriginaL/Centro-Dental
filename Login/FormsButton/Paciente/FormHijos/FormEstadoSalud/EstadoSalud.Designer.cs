@@ -32,19 +32,19 @@
             this.rbSiEnfermedad = new System.Windows.Forms.RadioButton();
             this.rbNoEnfermedad = new System.Windows.Forms.RadioButton();
             this.txtEnfermedad = new System.Windows.Forms.TextBox();
-            this.lblMedicamento = new System.Windows.Forms.Label();
-            this.rdNoMedicamento = new System.Windows.Forms.RadioButton();
-            this.rdSiMedicamento = new System.Windows.Forms.RadioButton();
-            this.txtMedicamento = new System.Windows.Forms.TextBox();
             this.lblAlergia = new System.Windows.Forms.Label();
             this.rbNoAlergia = new System.Windows.Forms.RadioButton();
             this.rbSiAlergia = new System.Windows.Forms.RadioButton();
             this.txtAlergia = new System.Windows.Forms.TextBox();
+            this.lbl = new System.Windows.Forms.Label();
+            this.rbNoMedicamento = new System.Windows.Forms.RadioButton();
+            this.rbSiMedicamento = new System.Windows.Forms.RadioButton();
+            this.txtMedicamento = new System.Windows.Forms.TextBox();
             this.lblEmbarazo = new System.Windows.Forms.Label();
             this.txtEmbarazo = new System.Windows.Forms.TextBox();
             this.rbNoEmbarazada = new System.Windows.Forms.RadioButton();
             this.rbSiEmbarazada = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEstadoSalud = new System.Windows.Forms.Label();
             this.pnCerrar = new System.Windows.Forms.Panel();
             this.pnMaximizar = new System.Windows.Forms.Panel();
             this.pnMinimizar = new System.Windows.Forms.Panel();
@@ -58,7 +58,7 @@
             this.lblEnfermedad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEnfermedad.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEnfermedad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEnfermedad.Location = new System.Drawing.Point(63, 199);
+            this.lblEnfermedad.Location = new System.Drawing.Point(80, 199);
             this.lblEnfermedad.Name = "lblEnfermedad";
             this.lblEnfermedad.Size = new System.Drawing.Size(497, 34);
             this.lblEnfermedad.TabIndex = 7;
@@ -69,7 +69,7 @@
             this.rbSiEnfermedad.AutoSize = true;
             this.rbSiEnfermedad.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbSiEnfermedad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbSiEnfermedad.Location = new System.Drawing.Point(221, 247);
+            this.rbSiEnfermedad.Location = new System.Drawing.Point(266, 247);
             this.rbSiEnfermedad.Name = "rbSiEnfermedad";
             this.rbSiEnfermedad.Size = new System.Drawing.Size(53, 28);
             this.rbSiEnfermedad.TabIndex = 8;
@@ -82,7 +82,7 @@
             this.rbNoEnfermedad.AutoSize = true;
             this.rbNoEnfermedad.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbNoEnfermedad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbNoEnfermedad.Location = new System.Drawing.Point(297, 247);
+            this.rbNoEnfermedad.Location = new System.Drawing.Point(342, 247);
             this.rbNoEnfermedad.Name = "rbNoEnfermedad";
             this.rbNoEnfermedad.Size = new System.Drawing.Size(62, 28);
             this.rbNoEnfermedad.TabIndex = 9;
@@ -105,119 +105,119 @@
             this.txtEnfermedad.Enter += new System.EventHandler(this.txtEnfermedad_Enter);
             this.txtEnfermedad.Leave += new System.EventHandler(this.txtEnfermedad_Leave);
             // 
-            // lblMedicamento
-            // 
-            this.lblMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMedicamento.AutoSize = true;
-            this.lblMedicamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMedicamento.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMedicamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMedicamento.Location = new System.Drawing.Point(17, 695);
-            this.lblMedicamento.Name = "lblMedicamento";
-            this.lblMedicamento.Size = new System.Drawing.Size(543, 34);
-            this.lblMedicamento.TabIndex = 11;
-            this.lblMedicamento.Text = "¿Estas tomando algun medicamento?";
-            // 
-            // rdNoMedicamento
-            // 
-            this.rdNoMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.rdNoMedicamento.AutoSize = true;
-            this.rdNoMedicamento.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdNoMedicamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rdNoMedicamento.Location = new System.Drawing.Point(297, 745);
-            this.rdNoMedicamento.Name = "rdNoMedicamento";
-            this.rdNoMedicamento.Size = new System.Drawing.Size(62, 28);
-            this.rdNoMedicamento.TabIndex = 13;
-            this.rdNoMedicamento.Text = "NO";
-            this.rdNoMedicamento.UseVisualStyleBackColor = true;
-            this.rdNoMedicamento.CheckedChanged += new System.EventHandler(this.rdNoMedicamento_CheckedChanged);
-            // 
-            // rdSiMedicamento
-            // 
-            this.rdSiMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.rdSiMedicamento.AutoSize = true;
-            this.rdSiMedicamento.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdSiMedicamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rdSiMedicamento.Location = new System.Drawing.Point(221, 745);
-            this.rdSiMedicamento.Name = "rdSiMedicamento";
-            this.rdSiMedicamento.Size = new System.Drawing.Size(53, 28);
-            this.rdSiMedicamento.TabIndex = 12;
-            this.rdSiMedicamento.Text = "SI";
-            this.rdSiMedicamento.UseVisualStyleBackColor = true;
-            this.rdSiMedicamento.CheckedChanged += new System.EventHandler(this.rdSiMedicamento_CheckedChanged);
-            // 
-            // txtMedicamento
-            // 
-            this.txtMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtMedicamento.Enabled = false;
-            this.txtMedicamento.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtMedicamento.ForeColor = System.Drawing.Color.Silver;
-            this.txtMedicamento.Location = new System.Drawing.Point(12, 790);
-            this.txtMedicamento.Multiline = true;
-            this.txtMedicamento.Name = "txtMedicamento";
-            this.txtMedicamento.Size = new System.Drawing.Size(620, 377);
-            this.txtMedicamento.TabIndex = 14;
-            this.txtMedicamento.Text = "DESCRIPCION:";
-            this.txtMedicamento.Visible = false;
-            this.txtMedicamento.Enter += new System.EventHandler(this.txtMedicamento_Enter);
-            this.txtMedicamento.Leave += new System.EventHandler(this.txtMedicamento_Leave);
-            // 
             // lblAlergia
             // 
-            this.lblAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblAlergia.AutoSize = true;
             this.lblAlergia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblAlergia.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblAlergia.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblAlergia.Location = new System.Drawing.Point(687, 199);
+            this.lblAlergia.Location = new System.Drawing.Point(33, 701);
             this.lblAlergia.Name = "lblAlergia";
             this.lblAlergia.Size = new System.Drawing.Size(580, 34);
-            this.lblAlergia.TabIndex = 15;
+            this.lblAlergia.TabIndex = 11;
             this.lblAlergia.Text = "¿Le genera alergia algun medicamento?";
             // 
             // rbNoAlergia
             // 
-            this.rbNoAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbNoAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbNoAlergia.AutoSize = true;
             this.rbNoAlergia.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbNoAlergia.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbNoAlergia.Location = new System.Drawing.Point(1015, 247);
+            this.rbNoAlergia.Location = new System.Drawing.Point(297, 745);
             this.rbNoAlergia.Name = "rbNoAlergia";
             this.rbNoAlergia.Size = new System.Drawing.Size(62, 28);
-            this.rbNoAlergia.TabIndex = 17;
+            this.rbNoAlergia.TabIndex = 13;
             this.rbNoAlergia.Text = "NO";
             this.rbNoAlergia.UseVisualStyleBackColor = true;
             this.rbNoAlergia.CheckedChanged += new System.EventHandler(this.rbNoAlergia_CheckedChanged);
             // 
             // rbSiAlergia
             // 
-            this.rbSiAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbSiAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.rbSiAlergia.AutoSize = true;
             this.rbSiAlergia.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbSiAlergia.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbSiAlergia.Location = new System.Drawing.Point(941, 247);
+            this.rbSiAlergia.Location = new System.Drawing.Point(221, 745);
             this.rbSiAlergia.Name = "rbSiAlergia";
             this.rbSiAlergia.Size = new System.Drawing.Size(53, 28);
-            this.rbSiAlergia.TabIndex = 16;
+            this.rbSiAlergia.TabIndex = 12;
             this.rbSiAlergia.Text = "SI";
             this.rbSiAlergia.UseVisualStyleBackColor = true;
             this.rbSiAlergia.CheckedChanged += new System.EventHandler(this.rbSiAlergia_CheckedChanged);
             // 
             // txtAlergia
             // 
-            this.txtAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAlergia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtAlergia.Enabled = false;
             this.txtAlergia.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtAlergia.ForeColor = System.Drawing.Color.Silver;
-            this.txtAlergia.Location = new System.Drawing.Point(666, 292);
+            this.txtAlergia.Location = new System.Drawing.Point(12, 790);
             this.txtAlergia.Multiline = true;
             this.txtAlergia.Name = "txtAlergia";
-            this.txtAlergia.Size = new System.Drawing.Size(601, 377);
-            this.txtAlergia.TabIndex = 18;
+            this.txtAlergia.Size = new System.Drawing.Size(620, 377);
+            this.txtAlergia.TabIndex = 14;
             this.txtAlergia.Text = "DESCRIPCION:";
             this.txtAlergia.Visible = false;
-            this.txtAlergia.Enter += new System.EventHandler(this.txtAlergia_Enter);
-            this.txtAlergia.Leave += new System.EventHandler(this.txtAlergia_Leave);
+            this.txtAlergia.Enter += new System.EventHandler(this.txtMedicamento_Enter);
+            this.txtAlergia.Leave += new System.EventHandler(this.txtMedicamento_Leave);
+            // 
+            // lbl
+            // 
+            this.lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl.AutoSize = true;
+            this.lbl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbl.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl.Location = new System.Drawing.Point(687, 199);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(543, 34);
+            this.lbl.TabIndex = 15;
+            this.lbl.Text = "¿Estas tomando algun medicamento?";
+            // 
+            // rbNoMedicamento
+            // 
+            this.rbNoMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbNoMedicamento.AutoSize = true;
+            this.rbNoMedicamento.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbNoMedicamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbNoMedicamento.Location = new System.Drawing.Point(996, 247);
+            this.rbNoMedicamento.Name = "rbNoMedicamento";
+            this.rbNoMedicamento.Size = new System.Drawing.Size(62, 28);
+            this.rbNoMedicamento.TabIndex = 17;
+            this.rbNoMedicamento.Text = "NO";
+            this.rbNoMedicamento.UseVisualStyleBackColor = true;
+            this.rbNoMedicamento.CheckedChanged += new System.EventHandler(this.rdNoMedicamento_CheckedChanged);
+            // 
+            // rbSiMedicamento
+            // 
+            this.rbSiMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbSiMedicamento.AutoSize = true;
+            this.rbSiMedicamento.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbSiMedicamento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.rbSiMedicamento.Location = new System.Drawing.Point(922, 247);
+            this.rbSiMedicamento.Name = "rbSiMedicamento";
+            this.rbSiMedicamento.Size = new System.Drawing.Size(53, 28);
+            this.rbSiMedicamento.TabIndex = 16;
+            this.rbSiMedicamento.Text = "SI";
+            this.rbSiMedicamento.UseVisualStyleBackColor = true;
+            this.rbSiMedicamento.CheckedChanged += new System.EventHandler(this.rdSiMedicamento_CheckedChanged);
+            // 
+            // txtMedicamento
+            // 
+            this.txtMedicamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMedicamento.Enabled = false;
+            this.txtMedicamento.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtMedicamento.ForeColor = System.Drawing.Color.Silver;
+            this.txtMedicamento.Location = new System.Drawing.Point(666, 292);
+            this.txtMedicamento.Multiline = true;
+            this.txtMedicamento.Name = "txtMedicamento";
+            this.txtMedicamento.Size = new System.Drawing.Size(601, 377);
+            this.txtMedicamento.TabIndex = 18;
+            this.txtMedicamento.Text = "DESCRIPCION:";
+            this.txtMedicamento.Visible = false;
+            this.txtMedicamento.Enter += new System.EventHandler(this.txtAlergia_Enter);
+            this.txtMedicamento.Leave += new System.EventHandler(this.txtAlergia_Leave);
             // 
             // lblEmbarazo
             // 
@@ -226,7 +226,7 @@
             this.lblEmbarazo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblEmbarazo.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEmbarazo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEmbarazo.Location = new System.Drawing.Point(854, 695);
+            this.lblEmbarazo.Location = new System.Drawing.Point(835, 701);
             this.lblEmbarazo.Name = "lblEmbarazo";
             this.lblEmbarazo.Size = new System.Drawing.Size(304, 34);
             this.lblEmbarazo.TabIndex = 19;
@@ -254,7 +254,7 @@
             this.rbNoEmbarazada.AutoSize = true;
             this.rbNoEmbarazada.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbNoEmbarazada.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbNoEmbarazada.Location = new System.Drawing.Point(1015, 739);
+            this.rbNoEmbarazada.Location = new System.Drawing.Point(996, 745);
             this.rbNoEmbarazada.Name = "rbNoEmbarazada";
             this.rbNoEmbarazada.Size = new System.Drawing.Size(62, 28);
             this.rbNoEmbarazada.TabIndex = 22;
@@ -268,7 +268,7 @@
             this.rbSiEmbarazada.AutoSize = true;
             this.rbSiEmbarazada.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbSiEmbarazada.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rbSiEmbarazada.Location = new System.Drawing.Point(941, 739);
+            this.rbSiEmbarazada.Location = new System.Drawing.Point(922, 745);
             this.rbSiEmbarazada.Name = "rbSiEmbarazada";
             this.rbSiEmbarazada.Size = new System.Drawing.Size(53, 28);
             this.rbSiEmbarazada.TabIndex = 21;
@@ -276,20 +276,19 @@
             this.rbSiEmbarazada.UseVisualStyleBackColor = true;
             this.rbSiEmbarazada.CheckedChanged += new System.EventHandler(this.rbSiEmbarazada_CheckedChanged);
             // 
-            // label1
+            // lblEstadoSalud
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Image = global::Presentacion.Properties.Resources.EstadoSalud;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(297, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(697, 122);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "        ESTADO DE SALUD";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEstadoSalud.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblEstadoSalud.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEstadoSalud.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEstadoSalud.Image = global::Presentacion.Properties.Resources.EstadoSalud;
+            this.lblEstadoSalud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEstadoSalud.Location = new System.Drawing.Point(297, 9);
+            this.lblEstadoSalud.Name = "lblEstadoSalud";
+            this.lblEstadoSalud.Size = new System.Drawing.Size(697, 122);
+            this.lblEstadoSalud.TabIndex = 23;
+            this.lblEstadoSalud.Text = "        ESTADO DE SALUD";
+            this.lblEstadoSalud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnCerrar
             // 
@@ -360,6 +359,7 @@
             this.btnGuardar.Text = " GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // EstadoSalud
             // 
@@ -372,19 +372,19 @@
             this.Controls.Add(this.pnMinimizar);
             this.Controls.Add(this.pnMaximizar);
             this.Controls.Add(this.pnCerrar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEstadoSalud);
             this.Controls.Add(this.rbNoEmbarazada);
             this.Controls.Add(this.rbSiEmbarazada);
             this.Controls.Add(this.txtEmbarazo);
             this.Controls.Add(this.lblEmbarazo);
+            this.Controls.Add(this.txtMedicamento);
+            this.Controls.Add(this.rbNoMedicamento);
+            this.Controls.Add(this.rbSiMedicamento);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.txtAlergia);
             this.Controls.Add(this.rbNoAlergia);
             this.Controls.Add(this.rbSiAlergia);
             this.Controls.Add(this.lblAlergia);
-            this.Controls.Add(this.txtMedicamento);
-            this.Controls.Add(this.rdNoMedicamento);
-            this.Controls.Add(this.rdSiMedicamento);
-            this.Controls.Add(this.lblMedicamento);
             this.Controls.Add(this.txtEnfermedad);
             this.Controls.Add(this.rbNoEnfermedad);
             this.Controls.Add(this.rbSiEnfermedad);
@@ -404,19 +404,19 @@
         private RadioButton rbSiEnfermedad;
         private RadioButton rbNoEnfermedad;
         private TextBox txtEnfermedad;
-        private Label lblMedicamento;
-        private RadioButton rdNoMedicamento;
-        private RadioButton rdSiMedicamento;
-        private TextBox txtMedicamento;
         private Label lblAlergia;
         private RadioButton rbNoAlergia;
         private RadioButton rbSiAlergia;
         private TextBox txtAlergia;
+        private Label lbl;
+        private RadioButton rbNoMedicamento;
+        private RadioButton rbSiMedicamento;
+        private TextBox txtMedicamento;
         private Label lblEmbarazo;
         private TextBox txtEmbarazo;
         private RadioButton rbNoEmbarazada;
         private RadioButton rbSiEmbarazada;
-        private Label label1;
+        private Label lblEstadoSalud;
         private Panel pnCerrar;
         private Panel pnMaximizar;
         private Panel pnMinimizar;

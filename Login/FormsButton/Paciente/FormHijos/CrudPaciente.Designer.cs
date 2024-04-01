@@ -215,7 +215,7 @@
             this.txtNumCasa.Multiline = true;
             this.txtNumCasa.Name = "txtNumCasa";
             this.txtNumCasa.Size = new System.Drawing.Size(485, 46);
-            this.txtNumCasa.TabIndex = 13;
+            this.txtNumCasa.TabIndex = 14;
             this.txtNumCasa.Text = "NUMERO DE CASA:";
             this.txtNumCasa.Enter += new System.EventHandler(this.txtNumCasa_Enter);
             this.txtNumCasa.Leave += new System.EventHandler(this.txtNumCasa_Leave);
@@ -283,8 +283,8 @@
             this.cbSexo.ForeColor = System.Drawing.Color.Silver;
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
+            "M",
+            "F"});
             this.cbSexo.Location = new System.Drawing.Point(705, 236);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(499, 42);
@@ -358,7 +358,7 @@
             this.txtCalle.Multiline = true;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(485, 46);
-            this.txtCalle.TabIndex = 22;
+            this.txtCalle.TabIndex = 13;
             this.txtCalle.Text = "CALLE:";
             this.txtCalle.Enter += new System.EventHandler(this.txtCalle_Enter);
             this.txtCalle.Leave += new System.EventHandler(this.txtCalle_Leave);

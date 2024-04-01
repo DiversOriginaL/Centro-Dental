@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain.Domain;
 using Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud;
 using System.Runtime.InteropServices;
 
@@ -216,6 +217,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             if (txtCalle.Text == "CALLE:")
             {
                 txtCalle.Text = "";
+                txtCalle.ForeColor = Color.Black;
             }
         }
 
@@ -224,6 +226,8 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             if(txtCalle.Text == "")
             {
                 txtCalle.Text = "CALLE:";
+                txtCalle.ForeColor = Color.Silver;
+
             }
         }
 
@@ -320,9 +324,43 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
 
         }
 
+        CnPaciente cnPaciente = new CnPaciente();
+        EstadoSalud estadosalud = new EstadoSalud();
+
+        public string operacion = "Insertar";
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            string pnombre = txtPnombre.Text;
+            string snombre = txtSnombre.Text;
+            string papellido = txtPapellido.Text;
+            string sapellido = txtSapellido.Text;
+            string edad = txtEdad.Text;
+            object sexo = cbSexo.SelectedItem;
+            string celular = txtCelular.Text;
+            string telefono = txtTelefono.Text;
+            string ciudad = txtCiudad.Text;
+            string sector = txtSector.Text;
+            string calle = txtCalle.Text;
+            string numcasa = txtNumCasa.Text;
 
+            try
+            {
+                if (operacion == "Insertar")
+                {
+                    cnPaciente.insertarPaciente
+                    (
+                        pnombre, snombre, papellido, sapellido, edad, sexo,
+                        celular, telefono, ciudad, sector, calle, numcasa,
+                        estadosalud.enfermedad, estadosalud.medicamento, estadosalud.alergia, estadosalud.embarazo
+                     );
+                    MessageBox.Show("PACIENTE INSERTADO CORRECTAMENTE.");
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("ERROR: " + ex.Message);
+            }
         }
 
     }

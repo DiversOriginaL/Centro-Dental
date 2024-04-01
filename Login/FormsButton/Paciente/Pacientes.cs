@@ -39,7 +39,7 @@ namespace Presentacion.FormsButton.Paciente
         CnPaciente cnPaciente = new CnPaciente();
         private void MostrarPacientes()
         {
-            dtgvPacientes.DataSource = cnPaciente.ObtenerPacientes();
+            dtgvPacientes.DataSource = cnPaciente.mostrarPacientes();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

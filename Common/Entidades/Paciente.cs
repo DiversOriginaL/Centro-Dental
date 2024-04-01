@@ -14,7 +14,7 @@ namespace Common.Entidades
         private string PApellido { get; set; }
         private string SApellido { get; set; }
         private string Edad { get; set; }
-        private string Sexo { get; set; }
+        private char Sexo { get; set; }
 
         public void SetPacienteID(int id)
         {
@@ -40,7 +40,7 @@ namespace Common.Entidades
         {
             Edad = edad;
         }
-        public void SetSexo(string sexo)
+        public void SetSexo(char sexo)
         {
             Sexo = sexo;
         }
@@ -51,7 +51,7 @@ namespace Common.Entidades
         public string GetPApellido() => PApellido;
         public string GetSApellido() => SApellido;
         public string GetEdad() => Edad;
-        public string GetSexo() => Sexo;
+        public char GetSexo() => Sexo;
 
     }
 }
