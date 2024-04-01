@@ -18,10 +18,8 @@ namespace Common.Entidades
 
         // Métodos para establecer los valores de las propiedades.
 
-        Paciente paciente = new Paciente();
         public void SetUsuarioID(int id)
         {
-            paciente.SetUsuarioID(id);
             UsuarioID = id;
         }
 

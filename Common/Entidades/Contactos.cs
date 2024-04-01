@@ -12,11 +12,8 @@ namespace Common.Entidades
         private string Celular { get; set; }
         private string Telefono { get; set; }
 
-
-        Paciente paciente = new Paciente();
         public void SetContactoID(int id)
         {
-            paciente.SetContactoid(id);
             ContactoID = id;
         }
 
@@ -30,20 +27,8 @@ namespace Common.Entidades
             Telefono = telefono;
         }
 
-
-        public int GetContactoid()
-        {
-            return ContactoID;
-        }
-
-        public string GetCelular()
-        {
-            return Celular;
-        }
-
-        public string GetTelefono()
-        {
-            return Telefono;
-        }
+        public int GetContactoID() => ContactoID;
+        public string GetCelular() => Celular;
+        public string GetTelefono() => Telefono;
     }
 }

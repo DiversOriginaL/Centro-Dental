@@ -16,11 +16,9 @@ namespace Presentacion.FormsButton.Paciente
 {
     public partial class Pacientes : Form
     {
-        private CnPaciente cnpaciente;
         public Pacientes()
         {
             InitializeComponent();
-            cnpaciente = new CnPaciente();
         }
         private void Pacientes_Load(object sender, EventArgs e)
         {
@@ -38,15 +36,10 @@ namespace Presentacion.FormsButton.Paciente
             }
 
         }
-
+        CnPaciente cnPaciente = new CnPaciente();
         private void MostrarPacientes()
         {
-            // Obtener la lista de pacientes desde la capa de negocio
-            List<Common.Entidades.Paciente> listaPacientes = cnpaciente.ObtenerPacientes();
-
-            // Asignar la lista de pacientes al DataSource del DataGridView
-            dtgvPacientes.AutoGenerateColumns = true;
-            dtgvPacientes.DataSource = listaPacientes;
+            dtgvPacientes.DataSource = cnPaciente.ObtenerPacientes();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

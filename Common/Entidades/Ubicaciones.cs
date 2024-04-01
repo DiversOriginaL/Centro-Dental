@@ -8,67 +8,38 @@ namespace Common.Entidades
 {
     public class Ubicaciones
     {
-        private int _ubicacionid;
+        private int UbicacionID { get; set; }
+        private string Ciudad { get; set; }
+        private string Sector { get; set; }
+        private string Calle { get; set; }
+        private string NumCasa { get; set; }
 
-        private string _ciudad { get; set; }
-        private string _sector { get; set; }
-        private string _calle { get; set; }
-        private string _numerocasa { get; set; }
-
-        Paciente paciente = new Paciente();
-
-        #region Acceso a las propiedades.
-
-        public void SetUbicacionID(int ubucacionid)
+        public void SetUbicacionID(int id)
         {
-            paciente.SetUicacionID(ubucacionid);
-            _ubicacionid = ubucacionid;
+            UbicacionID = id;
         }
-
         public void SetCiudad(string ciudad)
         {
-            _ciudad = ciudad;
+            Ciudad = ciudad;
         }
+
         public void SetSector(string sector)
         {
-            _sector = sector;
+            Sector = sector;
         }
-
         public void SetCalle(string calle)
         {
-            _calle = calle;
+            Calle = calle;
         }
-
-        public void SetNumeroCasa(string numerocasa)
+        public void SetNumCasa(string numcasa)
         {
-            _numerocasa = numerocasa;
+            NumCasa = numcasa;
         }
 
-
-        public int GetUbicacionid()
-        {
-            return _ubicacionid;
-        }
-
-        public string GetCiudad()
-        {
-            return _ciudad;
-        }
-        public string GetSector()
-        {
-            return _sector;
-        }
-
-        public string GetCalle()
-        {
-            return _calle;
-        }
-
-        public string GetNumeroCasa()
-        {
-            return _numerocasa;
-        }
-
-        #endregion
+        public int GetUbicacionID() => UbicacionID;
+        public string GetCiudad() => Ciudad;
+        public string GetSector() => Sector;
+        public string GetCalle() => Calle;
+        public string GetNumCasa() => NumCasa;
     }
 }

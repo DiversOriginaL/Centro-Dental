@@ -9,20 +9,15 @@ namespace Common.Entidades
     public class EstadoSalud
     {
         private int EstadoSaludID { get; set; }
-        private string? Enfermedad { get; set; }
-        private string? Medicamento { get; set; }
-        private string? Alergia { get; set; }
-        private string? Embarazo { get; set; }
-        
-        Paciente paciente = new Paciente();
+        private string Enfermedad { get; set; }
+        private string Medicamento { get; set; }
+        private string Alergia { get; set; }
+        private string Embarazo { get; set; }
 
-        #region Acceso a las propiedades
-        public void SetEstadoSaludID(int estadosaludid)
+        public void SetEstadoSaludID(int id)
         {
-            paciente.SetEstadoSaludid(estadosaludid);
-            EstadoSaludID = estadosaludid;
+            EstadoSaludID = id;
         }
-
         public void SetEnfermedad(string enfermedad)
         {
             Enfermedad = enfermedad;
@@ -31,41 +26,19 @@ namespace Common.Entidades
         {
             Medicamento = medicamento;
         }
-
         public void SetAlergia(string alergia)
         {
             Alergia = alergia;
         }
-
         public void SetEmbarazo(string embarazo)
         {
             Embarazo = embarazo;
         }
 
-        public int GetEstadoSaludID()
-        {
-            return EstadoSaludID;
-        }
-
-        public string GetEnfermedad()
-        {
-            return Enfermedad ?? "";
-        }
-
-        public string GetMedicamento()
-        {
-            return Medicamento ?? "";
-        }
-
-        public string GetAlergia()
-        {
-            return Alergia ?? "";
-        }
-
-        public string GetEmbarazo()
-        {
-            return Embarazo ?? "";
-        }
-        #endregion
+        public int GetEstadoSaludID() => EstadoSaludID;
+        public string GetEnfermedad() => Enfermedad;
+        public string GetMedicamento() => Medicamento;
+        public string GetAlergia() => Alergia;
+        public string GetEmbarazo() => Embarazo;
     }
 }
