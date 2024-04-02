@@ -83,11 +83,13 @@ namespace Presentacion.FormsButton.Paciente
             AbrirFormulario<CrudPaciente>(this);
         }
 
-        private void dtgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dtgvPacientes.SelectedCells.Count == 15)
+            if(e.RowIndex >= 0 && e.ColumnIndex >= 0 && dtgvPacientes.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
-                MessageBox.Show("+");
+                DataGridViewRow row = dtgvPacientes.Rows[e.RowIndex];
+
+                MessageBox.Show("Se ha presionado el boton en la fila " + e.RowIndex.ToString());
             }
         }
     }

@@ -46,18 +46,18 @@ namespace DataAccess.DataAccess
                             command.CommandType = CommandType.StoredProcedure;
 
                             // Verificar si los valores no son nulos antes de usarlos
-                            string pnombre = paciente.GetPNombre() ?? "";
-                            string snombre = paciente.GetSNombre() ?? "";
-                            string papellido = paciente.GetPApellido() ?? "";
-                            string sapellido = paciente.GetSApellido() ?? "";
-                            string edad = paciente.GetEdad() ?? "";
+                            string pnombre = paciente.GetPNombre() ?? "SIN ESPECIFICAR";
+                            string snombre = paciente.GetSNombre() ?? "SIN ESPECIFICAR";
+                            string papellido = paciente.GetPApellido() ?? "SIN ESPECIFICAR";
+                            string sapellido = paciente.GetSApellido() ?? "SIN ESPECIFICAR";
+                            string edad = paciente.GetEdad() ?? "SIN ESPECIFICAR";
                             char sexo = paciente.GetSexo();
-                            string celular = contacto.GetCelular() ?? "";
-                            string telefono = contacto.GetTelefono() ?? "";
-                            string provincia = ubicacion.GetProvincia() ?? "";
-                            string sector = ubicacion.GetSector() ?? "";
-                            string calle = ubicacion.GetCalle() ?? "";
-                            string numcasa = ubicacion.GetNumCasa() ?? "";
+                            string celular = contacto.GetCelular() ?? "SIN ESPECIFICAR";
+                            string telefono = contacto.GetTelefono() ?? "SIN ESPECIFICAR";
+                            string provincia = ubicacion.GetProvincia() ?? "SIN ESPECIFICAR";
+                            string sector = ubicacion.GetSector() ?? "SIN ESPECIFICAR";
+                            string calle = ubicacion.GetCalle() ?? "SIN ESPECIFICAR";
+                            string numcasa = ubicacion.GetNumCasa() ?? "SIN ESPECIFICAR";
                             int usuario = UserLoginCache.GetID();
                             string enfermedad = estado.GetEnfermedad() ?? "NO TIENE NINGUNA ENFERMEDAD";
                             string medicamento = estado.GetMedicamento() ?? "NO ESTA TOMANDO NINGUN MEDICAMENTO";

@@ -218,7 +218,7 @@
             this.dtgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvPacientes.Size = new System.Drawing.Size(1374, 695);
             this.dtgvPacientes.TabIndex = 14;
-            this.dtgvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPacientes_CellClick);
+            this.dtgvPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPacientes_CellContentClick);
             // 
             // ID
             // 
