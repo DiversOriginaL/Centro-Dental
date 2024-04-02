@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using Presentacion.FormsButton.Paciente.FormHijos;
+using Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud;
 using Common.Cache;
 using Domain.Domain;
 
@@ -42,23 +43,33 @@ namespace Presentacion.FormsButton.Paciente
             dtgvPacientes.DataSource = cnPaciente.mostrarPacientes();
         }
 
+        public void Actualizardtgv()
+        {
+            MostrarPacientes();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         //METODO PARA ABRIR FORMULARIO HIJO
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        private void AbrirFormulario<MiForm>(Pacientes paciente) where MiForm : Form
         {
             Form formulario;
             formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
 
             if (formulario == null)
             {
-                formulario = new MiForm();
+                formulario = Activator.CreateInstance(typeof(MiForm)) as Form;
                 formulario.TopLevel = true;
                 formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.StartPosition = FormStartPosition.CenterParent;
+                formulario.StartPosition = FormStartPosition.CenterScreen;
+
+                if(formulario is CrudPaciente crudPacienteForm)
+                {
+                    crudPacienteForm.pacienteForm = paciente;
+                }
 
                 formulario.ShowDialog();
                 formulario.BringToFront();
@@ -69,8 +80,15 @@ namespace Presentacion.FormsButton.Paciente
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<CrudPaciente>();
+            AbrirFormulario<CrudPaciente>(this);
         }
 
+        private void dtgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgvPacientes.SelectedCells.Count == 15)
+            {
+                MessageBox.Show("+");
+            }
+        }
     }
 }

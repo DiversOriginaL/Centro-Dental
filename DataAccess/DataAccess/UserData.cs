@@ -33,7 +33,7 @@ namespace Login.DataAccess.DataAccess
                             {
                                 while (reader.Read())
                                 {
-                                    UserLoginCache.SerUserLogin(
+                                    UserLoginCache.SetUserLogin(
                                         reader.GetInt32(0),
                                         reader.GetString(1),
                                         reader.GetString(2),

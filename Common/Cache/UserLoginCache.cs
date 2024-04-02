@@ -20,7 +20,7 @@ namespace Common.Cache
 
 
         //METODO PARA ESTABLECER LOS DATOS DE INICIO DE SESION.
-        public static void SerUserLogin(int usuarioID, string nombres, string apellidos, string email, string usuario, string contraseña, int rolID)
+        public static void SetUserLogin(int usuarioID, string nombres, string apellidos, string email, string usuario, string contraseña, int rolID)
         {
             UsuarioID = usuarioID;
             Nombres = nombres;
@@ -54,6 +54,8 @@ namespace Common.Cache
         {
             return Nombres + " " + Apellidos;
         }
+
+        public static int GetID() => UsuarioID;
      
     }
 }

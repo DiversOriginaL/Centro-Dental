@@ -9,7 +9,7 @@ namespace Common.Entidades
     public class Ubicaciones
     {
         private int UbicacionID { get; set; }
-        private string Ciudad { get; set; }
+        private string Provincia { get; set; }
         private string Sector { get; set; }
         private string Calle { get; set; }
         private string NumCasa { get; set; }
@@ -18,9 +18,9 @@ namespace Common.Entidades
         {
             UbicacionID = id;
         }
-        public void SetCiudad(string ciudad)
+        public void SetProvincia(string provincia)
         {
-            Ciudad = ciudad;
+            Provincia = provincia;
         }
 
         public void SetSector(string sector)
@@ -37,7 +37,7 @@ namespace Common.Entidades
         }
 
         public int GetUbicacionID() => UbicacionID;
-        public string GetCiudad() => Ciudad;
+        public string GetProvincia() => Provincia;
         public string GetSector() => Sector;
         public string GetCalle() => Calle;
         public string GetNumCasa() => NumCasa;

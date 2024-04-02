@@ -39,7 +39,6 @@
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.lblUbicacion = new System.Windows.Forms.Label();
             this.txtSector = new System.Windows.Forms.TextBox();
-            this.txtCiudad = new System.Windows.Forms.TextBox();
             this.txtNumCasa = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -52,6 +51,7 @@
             this.pbMinimizar = new System.Windows.Forms.PictureBox();
             this.lblPaciente = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
+            this.cbProvincia = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
@@ -175,7 +175,7 @@
             this.lblUbicacion.AutoSize = true;
             this.lblUbicacion.Font = new System.Drawing.Font("Tahoma", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUbicacion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUbicacion.Location = new System.Drawing.Point(43, 612);
+            this.lblUbicacion.Location = new System.Drawing.Point(43, 601);
             this.lblUbicacion.Name = "lblUbicacion";
             this.lblUbicacion.Size = new System.Drawing.Size(253, 53);
             this.lblUbicacion.TabIndex = 10;
@@ -185,7 +185,7 @@
             // 
             this.txtSector.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtSector.ForeColor = System.Drawing.Color.Silver;
-            this.txtSector.Location = new System.Drawing.Point(140, 744);
+            this.txtSector.Location = new System.Drawing.Point(140, 736);
             this.txtSector.Multiline = true;
             this.txtSector.Name = "txtSector";
             this.txtSector.Size = new System.Drawing.Size(485, 46);
@@ -194,24 +194,11 @@
             this.txtSector.Enter += new System.EventHandler(this.txtSector_Enter);
             this.txtSector.Leave += new System.EventHandler(this.txtSector_Leave);
             // 
-            // txtCiudad
-            // 
-            this.txtCiudad.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtCiudad.ForeColor = System.Drawing.Color.Silver;
-            this.txtCiudad.Location = new System.Drawing.Point(140, 685);
-            this.txtCiudad.Multiline = true;
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(485, 46);
-            this.txtCiudad.TabIndex = 11;
-            this.txtCiudad.Text = "CIUDAD:";
-            this.txtCiudad.Enter += new System.EventHandler(this.txtCiudad_Enter);
-            this.txtCiudad.Leave += new System.EventHandler(this.txtCiudad_Leave);
-            // 
             // txtNumCasa
             // 
             this.txtNumCasa.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNumCasa.ForeColor = System.Drawing.Color.Silver;
-            this.txtNumCasa.Location = new System.Drawing.Point(140, 862);
+            this.txtNumCasa.Location = new System.Drawing.Point(140, 854);
             this.txtNumCasa.Multiline = true;
             this.txtNumCasa.Name = "txtNumCasa";
             this.txtNumCasa.Size = new System.Drawing.Size(485, 46);
@@ -354,7 +341,7 @@
             // 
             this.txtCalle.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCalle.ForeColor = System.Drawing.Color.Silver;
-            this.txtCalle.Location = new System.Drawing.Point(140, 803);
+            this.txtCalle.Location = new System.Drawing.Point(140, 795);
             this.txtCalle.Multiline = true;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(485, 46);
@@ -363,12 +350,63 @@
             this.txtCalle.Enter += new System.EventHandler(this.txtCalle_Enter);
             this.txtCalle.Leave += new System.EventHandler(this.txtCalle_Leave);
             // 
+            // cbProvincia
+            // 
+            this.cbProvincia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbProvincia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbProvincia.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbProvincia.ForeColor = System.Drawing.Color.Silver;
+            this.cbProvincia.FormattingEnabled = true;
+            this.cbProvincia.Items.AddRange(new object[] {
+            "Azua",
+            "Baoruco",
+            "Barahona",
+            "Dajabón",
+            "Distrito Nacional (Municipio)",
+            "Duarte",
+            "Elías Piña",
+            "El Seibo",
+            "Espaillat",
+            "Hato Mayor",
+            "Hermanas Mirabal",
+            "Independencia",
+            "La Altagracia",
+            "La Romana",
+            "La Vega",
+            "María Trinidad Sánchez",
+            "Monseñor Nouel",
+            "Monte Cristi",
+            "Monte Plata",
+            "Pedernales",
+            "Peravia",
+            "Puerto Plata",
+            "Samaná",
+            "Sánchez Ramírez",
+            "San Cristóbal",
+            "San José de Ocoa",
+            "San Juan",
+            "San Pedro de Macorís",
+            "Santiago",
+            "Santiago Rodríguez",
+            "Santo Domingo Este (Municipio)",
+            "Santo Domingo Oeste (Municipio)",
+            "Santo Domingo Norte (Municipio)",
+            "Valverde"});
+            this.cbProvincia.Location = new System.Drawing.Point(140, 679);
+            this.cbProvincia.Name = "cbProvincia";
+            this.cbProvincia.Size = new System.Drawing.Size(485, 42);
+            this.cbProvincia.TabIndex = 22;
+            this.cbProvincia.Text = "PROVINCIA/MUNICIPIO:";
+            this.cbProvincia.Enter += new System.EventHandler(this.cbProvincia_Enter);
+            this.cbProvincia.Leave += new System.EventHandler(this.cbProvincia_Leave);
+            // 
             // CrudPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1302, 994);
+            this.Controls.Add(this.cbProvincia);
             this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.lblPaciente);
             this.Controls.Add(this.pbMinimizar);
@@ -380,7 +418,6 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtNumCasa);
             this.Controls.Add(this.txtSector);
-            this.Controls.Add(this.txtCiudad);
             this.Controls.Add(this.lblUbicacion);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtCelular);
@@ -416,7 +453,6 @@
         private TextBox txtCelular;
         private Label lblUbicacion;
         private TextBox txtSector;
-        private TextBox txtCiudad;
         private TextBox txtNumCasa;
         private Button btnGuardar;
         private Button btnCancelar;
@@ -429,5 +465,6 @@
         private PictureBox pbMinimizar;
         private Label lblPaciente;
         private TextBox txtCalle;
+        private ComboBox cbProvincia;
     }
 }

@@ -26,7 +26,7 @@ namespace Presentacion.FormsButton.Usuario
         }
 
         CnUsuario cnUsuario = new CnUsuario();
-        public void mostrarUsuarios()
+        private void mostrarUsuarios()
         {
             dtgvUsuarios.DataSource = cnUsuario.mostrarUsuarios();
         }

@@ -15,6 +15,7 @@ namespace Common.Entidades
         private string SApellido { get; set; }
         private string Edad { get; set; }
         private char Sexo { get; set; }
+        
 
         public void SetPacienteID(int id)
         {

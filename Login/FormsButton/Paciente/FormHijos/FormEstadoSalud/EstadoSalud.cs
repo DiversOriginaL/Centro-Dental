@@ -225,54 +225,54 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
         {
             if(rbSiEnfermedad.Checked)
             {
-                enfermedad = txtEnfermedad.Text.Trim();
+                enfermedad = txtEnfermedad.Text;
             }
             else if(rbNoEnfermedad.Checked)
             {
-                enfermedad = "NO TIENE NINGUNA ENFERMEDAD RELEVANTE.".Trim();
+                enfermedad = "NO TIENE NINGUNA ENFERMEDAD RELEVANTE.";
             }
             
             if(rbSiMedicamento.Checked)
             {
-                medicamento = txtMedicamento.Text.Trim();
+                medicamento = txtMedicamento.Text;
             }
             else if(rbNoMedicamento.Checked)
             {
-                medicamento = "NO ESTA TOMANDO NINGUN MEDICAMENTO.".Trim();
+                medicamento = "NO ESTA TOMANDO NINGUN MEDICAMENTO.";
             }
             if(rbSiAlergia.Checked)
             {
-                alergia = txtAlergia.Text.Trim();
+                alergia = txtAlergia.Text;
             }
             else if(rbNoAlergia.Checked)
             {
-                alergia = "NO LE GENERA ALERGIA NINGUN MEDICAMENTO.".Trim();
+                alergia = "NO LE GENERA ALERGIA NINGUN MEDICAMENTO.";
             }
             if(rbSiEmbarazada.Checked)
             {
-                embarazo = txtEmbarazo.Text.Trim();
+                embarazo = txtEmbarazo.Text;
             }
             else if(rbNoEmbarazada.Checked)
             {
-                embarazo = "NO EXISTE EMBARAZO".Trim();
+                embarazo = "NO EXISTE EMBARAZO";
             }
 
             // Manejo de casos no seleccionados
             if (string.IsNullOrEmpty(enfermedad))
             {
-                enfermedad = "No se ha seleccionado ninguna opción.";
+                enfermedad = "No se selecciono ninguna opción.";
             }
             if (string.IsNullOrEmpty(medicamento))
             {
-                medicamento = "No se ha seleccionado ninguna opción.";
+                medicamento = "No se selecciono ninguna opción.";
             }
             if (string.IsNullOrEmpty(alergia))
             {
-                alergia = "No se ha seleccionado ninguna opción.";
+                alergia = "No se selecciono ninguna opción.";
             }
             if (string.IsNullOrEmpty(embarazo))
             {
-                embarazo = "No se ha seleccionado ninguna opción.";
+                embarazo = "No se selecciono ninguna opción.";
             }
         }
 

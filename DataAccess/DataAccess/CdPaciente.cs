@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using Common.Cache;
 using Common.Entidades;
 using Login.DataAccess.DataAccess;
 
@@ -53,14 +54,15 @@ namespace DataAccess.DataAccess
                             char sexo = paciente.GetSexo();
                             string celular = contacto.GetCelular() ?? "";
                             string telefono = contacto.GetTelefono() ?? "";
-                            string ciudad = ubicacion.GetCiudad() ?? "";
+                            string provincia = ubicacion.GetProvincia() ?? "";
                             string sector = ubicacion.GetSector() ?? "";
                             string calle = ubicacion.GetCalle() ?? "";
                             string numcasa = ubicacion.GetNumCasa() ?? "";
-                            string enfermedad = estado.GetEnfermedad() ?? "";
-                            string medicamento = estado.GetMedicamento() ?? "";
-                            string alergia = estado.GetAlergia() ?? "";
-                            string embarazo = estado.GetEmbarazo() ?? "";
+                            int usuario = UserLoginCache.GetID();
+                            string enfermedad = estado.GetEnfermedad() ?? "NO TIENE NINGUNA ENFERMEDAD";
+                            string medicamento = estado.GetMedicamento() ?? "NO ESTA TOMANDO NINGUN MEDICAMENTO";
+                            string alergia = estado.GetAlergia() ?? "NO ES ALERGICO A MEDICAMENTOS";
+                            string embarazo = estado.GetEmbarazo() ?? "NO";
 
                             command.Parameters.AddWithValue("@PNombre", pnombre.Trim());
                             command.Parameters.AddWithValue("@SNombre", snombre.Trim());
@@ -70,10 +72,11 @@ namespace DataAccess.DataAccess
                             command.Parameters.AddWithValue("@Sexo", sexo);
                             command.Parameters.AddWithValue("@Celular", celular.Trim());
                             command.Parameters.AddWithValue("@Telefono", telefono.Trim());
-                            command.Parameters.AddWithValue("@Ciudad", ciudad.Trim());
+                            command.Parameters.AddWithValue("@Provincia", provincia.Trim());
                             command.Parameters.AddWithValue("@Sector", sector.Trim());
                             command.Parameters.AddWithValue("@Calle", calle.Trim());
                             command.Parameters.AddWithValue("@NumCasa", numcasa.Trim());
+                            command.Parameters.AddWithValue("@UsuarioID", usuario);
                             command.Parameters.AddWithValue("@Enfermedad", enfermedad.Trim());
                             command.Parameters.AddWithValue("@Medicamento", medicamento.Trim());
                             command.Parameters.AddWithValue("@Alergia", alergia.Trim());

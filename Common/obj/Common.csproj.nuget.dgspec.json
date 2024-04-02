@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\Common\\Common.csproj": {}
+    "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\Common\\Common.csproj": {
+    "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\Login\\Common\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Domain.Domain;
 using Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud;
 using System.Runtime.InteropServices;
+using Presentacion.FormsButton.Paciente;
 
 namespace Presentacion.FormsButton.Paciente.FormHijos
 {
@@ -18,6 +19,11 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         public CrudPaciente()
         {
             InitializeComponent();
+        }
+        public Pacientes pacienteForm;
+        public CrudPaciente(Pacientes pacienteForm) : this()
+        {
+            this.pacienteForm = pacienteForm;
         }
 
         #region MoverFormulario.
@@ -175,22 +181,21 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 txtTelefono.ForeColor = Color.Silver;
             }
         }
-
-        private void txtCiudad_Enter(object sender, EventArgs e)
+        private void cbProvincia_Enter(object sender, EventArgs e)
         {
-            if (txtCiudad.Text == "CIUDAD:")
+            if (cbProvincia.Text == "PROVINCIA/MUNICIPIO:")
             {
-                txtCiudad.Text = "";
-                txtCiudad.ForeColor = Color.Black;
+                cbProvincia.Text = "";
+                cbProvincia.ForeColor = Color.Black;
             }
         }
 
-        private void txtCiudad_Leave(object sender, EventArgs e)
+        private void cbProvincia_Leave(object sender, EventArgs e)
         {
-            if (txtCiudad.Text == "")
+            if (cbProvincia.Text == "")
             {
-                txtCiudad.Text = "CIUDAD:";
-                txtCiudad.ForeColor = Color.Silver;
+                cbProvincia.Text = "PROVINCIA/MUNICIPIO:";
+                cbProvincia.ForeColor = Color.Silver;
             }
         }
 
@@ -259,7 +264,6 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             cbSexo.Text = "SEXO:";
             txtCelular.Text = "CELULAR:";
             txtTelefono.Text = "TELEFONO:";
-            txtCiudad.Text = "CIUDAD:";
             txtSector.Text = "SECTOR:";
             txtCalle.Text = "CALLE:";
             txtNumCasa.Text = "NUMERO DE CASA:";
@@ -317,7 +321,6 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             cbSexo.Text = "SEXO:";
             txtCelular.Text = "CELULAR:";
             txtTelefono.Text = "TELEFONO:";
-            txtCiudad.Text = "CIUDAD:";
             txtSector.Text = "SECTOR:";
             txtNumCasa.Text = "NUMERO DE CASA:";
             this.Close();
@@ -338,7 +341,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             object sexo = cbSexo.SelectedItem;
             string celular = txtCelular.Text;
             string telefono = txtTelefono.Text;
-            string ciudad = txtCiudad.Text;
+            object provincia = cbProvincia.SelectedItem;
             string sector = txtSector.Text;
             string calle = txtCalle.Text;
             string numcasa = txtNumCasa.Text;
@@ -350,12 +353,19 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                     cnPaciente.insertarPaciente
                     (
                         pnombre, snombre, papellido, sapellido, edad, sexo,
-                        celular, telefono, ciudad, sector, calle, numcasa,
+                        celular, telefono, provincia, sector, calle, numcasa,
                         estadosalud.enfermedad, estadosalud.medicamento, estadosalud.alergia, estadosalud.embarazo
-                     );
+                    );
                     MessageBox.Show("PACIENTE INSERTADO CORRECTAMENTE.");
-
+                    
                 }
+
+                if(pacienteForm != null)
+                {
+                    pacienteForm.Actualizardtgv();
+                }
+
+                this.Close();
             }
             catch(Exception ex)
             {

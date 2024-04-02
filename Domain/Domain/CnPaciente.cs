@@ -23,7 +23,6 @@ namespace Domain.Domain
         Paciente paciente = new Paciente();
 
 
-
         public DataTable mostrarPacientes()
         {
             return cdpaciente.mostrarPacientes();
@@ -32,7 +31,7 @@ namespace Domain.Domain
         public void insertarPaciente
             (
             string pnombre, string snombre, string papellido, string sapellido, string edad, object sexo,
-            string celular, string telefono, string ciudad, string sector, string calle, string numcasa, string enfermedad,
+            string celular, string telefono, object provincia, string sector, string calle, string numcasa, string enfermedad,
             string medicamento, string alergia, string embarazo
             )
         {
@@ -44,7 +43,7 @@ namespace Domain.Domain
             paciente.SetSexo(Convert.ToChar(sexo));
             contacto.SetCelular(celular);
             contacto.SetTelefono(telefono);
-            ubicacion.SetCiudad(ciudad);
+            ubicacion.SetProvincia(provincia.ToString());
             ubicacion.SetSector(sector);
             ubicacion.SetCalle(calle);
             ubicacion.SetNumCasa(numcasa);
