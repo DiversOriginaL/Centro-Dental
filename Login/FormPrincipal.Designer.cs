@@ -87,6 +87,7 @@
             // 
             // btnSlide
             // 
+            this.btnSlide.BackColor = System.Drawing.Color.White;
             this.btnSlide.BackgroundImage = global::Presentacion.Properties.Resources.bars_solid;
             this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSlide.Location = new System.Drawing.Point(6, 6);
@@ -136,7 +137,7 @@
             // 
             // pnLeft
             // 
-            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(34)))));
+            this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(51)))));
             this.pnLeft.Controls.Add(this.pnUsuarios);
             this.pnLeft.Controls.Add(this.btnUsuarios);
             this.pnLeft.Controls.Add(this.btnCerrarSesion);
@@ -298,7 +299,7 @@
             // 
             // pnUp
             // 
-            this.pnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.pnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(51)))));
             this.pnUp.Controls.Add(this.btnMaximizar);
             this.pnUp.Controls.Add(this.btnMinimizar);
             this.pnUp.Controls.Add(this.btnCerrar);

@@ -306,9 +306,32 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             else formulario.BringToFront();
 
         }
+
+        private void AbrirFormularioEditar<MiForm>(CrudPaciente crudPaciente) where MiForm : Form
+        {
+            EstadoSalud estadoSaludForm = Application.OpenForms.OfType<EstadoSalud>().FirstOrDefault();
+
+            if(estadoSaludForm == null)
+            {
+                estadoSaludForm = new EstadoSalud(crudPaciente);
+                estadoSaludForm.TopLevel = true;
+                estadoSaludForm.FormBorderStyle = FormBorderStyle.None;
+                estadoSaludForm.StartPosition = FormStartPosition.CenterScreen;
+                estadoSaludForm.cargarValoresSalud(enfermedad, medicamento, alergia, embarazo);
+                estadoSaludForm.ShowDialog();
+                estadoSaludForm.BringToFront();
+            }
+
+        }
         private void btnEstadoSalud_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<EstadoSalud>();
+            if (operacion == "Insertar")
+            {
+                AbrirFormulario<EstadoSalud>();
+            }else if(operacion == "Editar")
+            {
+                AbrirFormularioEditar<EstadoSalud>(this);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -328,9 +351,67 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         }
 
         CnPaciente cnPaciente = new CnPaciente();
-        EstadoSalud estadosalud = new EstadoSalud();
 
+        private string idPaciente;
         public string operacion = "Insertar";
+
+        string enfermedad;
+        string medicamento;
+        string alergia;
+        string embarazo;
+
+        // Agregar este método al formulario CrudPaciente
+        public void EnviarDatosSalud(string enfermedad, string medicamento, string alergia, string embarazo)
+        {
+            this.enfermedad = enfermedad;
+            this.medicamento = medicamento;
+            this.alergia = alergia;
+            this.embarazo = embarazo;
+        }
+
+        public void GetDatosSalud(string enfermedad, string medicamento, string alergia, string embarazo)
+        {
+            this.enfermedad = enfermedad;
+            this.medicamento = medicamento;
+            this.alergia = alergia;
+            this.embarazo = embarazo;
+        }
+
+        public void CargarValores
+        (
+            string id, string pnombre, string snombre, string papellido, string sapellido, string edad, string sexo,
+            string celular, string telefono, string provincia, string sector, string calle, string numcasa
+        )
+        {
+            idPaciente = id;
+            txtPnombre.Text = pnombre;
+            txtSnombre.Text = snombre;
+            txtPapellido.Text = papellido;
+            txtSapellido.Text = sapellido;
+            txtEdad.Text = edad;
+            cbSexo.Text = sexo;
+            txtCelular.Text = celular;
+            txtTelefono.Text = telefono;
+            cbProvincia.Text = provincia;
+            txtSector.Text = sector;
+            txtCalle.Text = calle;
+            txtNumCasa.Text = numcasa;
+
+            #region Diseño
+            txtPnombre.ForeColor = Color.Black;
+            txtSnombre.ForeColor = Color.Black;
+            txtPapellido.ForeColor = Color.Black;
+            txtSapellido.ForeColor = Color.Black;
+            txtEdad.ForeColor = Color.Black;
+            cbSexo.ForeColor = Color.Black;
+            txtCelular.ForeColor = Color.Black;
+            txtTelefono.ForeColor = Color.Black;
+            cbProvincia.ForeColor = Color.Black;
+            txtSector.ForeColor = Color.Black;
+            txtCalle.ForeColor = Color.Black;
+            txtNumCasa.ForeColor = Color.Black;
+            #endregion
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string pnombre = txtPnombre.Text;
@@ -346,6 +427,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             string calle = txtCalle.Text;
             string numcasa = txtNumCasa.Text;
 
+
             try
             {
                 if (operacion == "Insertar")
@@ -354,10 +436,26 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                     (
                         pnombre, snombre, papellido, sapellido, edad, sexo,
                         celular, telefono, provincia, sector, calle, numcasa,
-                        estadosalud.enfermedad, estadosalud.medicamento, estadosalud.alergia, estadosalud.embarazo
+                        enfermedad, medicamento, alergia, embarazo
                     );
                     MessageBox.Show("PACIENTE INSERTADO CORRECTAMENTE.");
                     
+                }
+                else if(operacion == "Editar")
+                {
+                    if (string.IsNullOrEmpty(idPaciente))
+                    {
+                        MessageBox.Show("No se ha seleccionado ningun paciente para editar.");
+                        return;
+                    }
+
+                    cnPaciente.editarPaciente
+                    (
+                        idPaciente, pnombre, snombre, papellido, sapellido, edad, sexo, 
+                        celular, telefono, provincia, sector, calle, numcasa,
+                        enfermedad, medicamento, alergia, embarazo
+                    );
+                    operacion = "Insertar";
                 }
 
                 if(pacienteForm != null)

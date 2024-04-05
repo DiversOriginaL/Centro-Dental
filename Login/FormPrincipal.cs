@@ -239,7 +239,7 @@ namespace Presentacion
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro de que deseas cerrar la sesion?", "ADVERTENCIA",
+            if (MessageBox.Show("¿Estas seguro de que deseas cerrar sesion?", "ADVERTENCIA",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
 

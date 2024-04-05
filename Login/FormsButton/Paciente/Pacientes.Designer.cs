@@ -38,6 +38,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvPacientes = new System.Windows.Forms.DataGridView();
+            this.pnCabecera = new System.Windows.Forms.Panel();
+            this.pnBarra = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,9 +55,11 @@
             this.NumCasa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadosSalud = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Embarazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnCabecera = new System.Windows.Forms.Panel();
-            this.pnBarra = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,6 +117,7 @@
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCrear
             // 
@@ -198,6 +203,10 @@
             this.NumCasa,
             this.Usuario,
             this.EstadosSalud,
+            this.Enfermedad,
+            this.Medicamento,
+            this.Alergia,
+            this.Embarazo,
             this.Fecha});
             this.dtgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvPacientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
@@ -219,6 +228,22 @@
             this.dtgvPacientes.Size = new System.Drawing.Size(1374, 695);
             this.dtgvPacientes.TabIndex = 14;
             this.dtgvPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPacientes_CellContentClick);
+            // 
+            // pnCabecera
+            // 
+            this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnCabecera.Location = new System.Drawing.Point(0, 0);
+            this.pnCabecera.Name = "pnCabecera";
+            this.pnCabecera.Size = new System.Drawing.Size(1374, 93);
+            this.pnCabecera.TabIndex = 15;
+            // 
+            // pnBarra
+            // 
+            this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBarra.Location = new System.Drawing.Point(0, 788);
+            this.pnBarra.Name = "pnBarra";
+            this.pnBarra.Size = new System.Drawing.Size(1374, 102);
+            this.pnBarra.TabIndex = 16;
             // 
             // ID
             // 
@@ -373,6 +398,46 @@
             this.EstadosSalud.UseColumnTextForButtonValue = true;
             this.EstadosSalud.Width = 173;
             // 
+            // Enfermedad
+            // 
+            this.Enfermedad.DataPropertyName = "Enfermedad";
+            this.Enfermedad.HeaderText = "Enfermedad";
+            this.Enfermedad.MinimumWidth = 8;
+            this.Enfermedad.Name = "Enfermedad";
+            this.Enfermedad.ReadOnly = true;
+            this.Enfermedad.Visible = false;
+            this.Enfermedad.Width = 193;
+            // 
+            // Medicamento
+            // 
+            this.Medicamento.DataPropertyName = "Medicamento";
+            this.Medicamento.HeaderText = "Medicamento";
+            this.Medicamento.MinimumWidth = 8;
+            this.Medicamento.Name = "Medicamento";
+            this.Medicamento.ReadOnly = true;
+            this.Medicamento.Visible = false;
+            this.Medicamento.Width = 210;
+            // 
+            // Alergia
+            // 
+            this.Alergia.DataPropertyName = "Alergia";
+            this.Alergia.HeaderText = "Alergia";
+            this.Alergia.MinimumWidth = 8;
+            this.Alergia.Name = "Alergia";
+            this.Alergia.ReadOnly = true;
+            this.Alergia.Visible = false;
+            this.Alergia.Width = 132;
+            // 
+            // Embarazo
+            // 
+            this.Embarazo.DataPropertyName = "Embarazo";
+            this.Embarazo.HeaderText = "Embarazo";
+            this.Embarazo.MinimumWidth = 8;
+            this.Embarazo.Name = "Embarazo";
+            this.Embarazo.ReadOnly = true;
+            this.Embarazo.Visible = false;
+            this.Embarazo.Width = 168;
+            // 
             // Fecha
             // 
             this.Fecha.DataPropertyName = "Fecha";
@@ -382,22 +447,6 @@
             this.Fecha.ReadOnly = true;
             this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Fecha.Width = 119;
-            // 
-            // pnCabecera
-            // 
-            this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnCabecera.Location = new System.Drawing.Point(0, 0);
-            this.pnCabecera.Name = "pnCabecera";
-            this.pnCabecera.Size = new System.Drawing.Size(1374, 93);
-            this.pnCabecera.TabIndex = 15;
-            // 
-            // pnBarra
-            // 
-            this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBarra.Location = new System.Drawing.Point(0, 788);
-            this.pnBarra.Name = "pnBarra";
-            this.pnBarra.Size = new System.Drawing.Size(1374, 102);
-            this.pnBarra.TabIndex = 16;
             // 
             // Pacientes
             // 
@@ -449,6 +498,10 @@
         private DataGridViewTextBoxColumn NumCasa;
         private DataGridViewTextBoxColumn Usuario;
         private DataGridViewButtonColumn EstadosSalud;
+        private DataGridViewTextBoxColumn Enfermedad;
+        private DataGridViewTextBoxColumn Medicamento;
+        private DataGridViewTextBoxColumn Alergia;
+        private DataGridViewTextBoxColumn Embarazo;
         private DataGridViewTextBoxColumn Fecha;
     }
 }

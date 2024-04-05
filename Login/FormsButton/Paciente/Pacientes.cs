@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic;
 using Presentacion.FormsButton.Paciente.FormHijos;
 using Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud;
 using Common.Cache;
@@ -91,6 +90,63 @@ namespace Presentacion.FormsButton.Paciente
 
                 MessageBox.Show("Se ha presionado el boton en la fila " + e.RowIndex.ToString());
             }
+        }
+
+        private void AbrirFormularioEditar<MiForm>(Pacientes paciente) where MiForm : Form
+        {
+            if (dtgvPacientes.SelectedRows.Count > 0)
+            {
+                string idPaciente = dtgvPacientes.CurrentRow.Cells["ID"].Value.ToString();
+
+                // Obtener el formulario CrudUsuario si ya está abierto
+                CrudPaciente crudPacienteForm = Application.OpenForms.OfType<CrudPaciente>().FirstOrDefault();
+
+                if (crudPacienteForm == null)
+                {
+                    crudPacienteForm = new CrudPaciente(paciente);
+                    crudPacienteForm.TopLevel = true;
+                    crudPacienteForm.FormBorderStyle = FormBorderStyle.None;
+                    crudPacienteForm.StartPosition = FormStartPosition.CenterScreen;
+                    crudPacienteForm.operacion = "Editar";
+                }
+
+                // Cargar valores del usuario seleccionado en el formulario CrudUsuario
+                crudPacienteForm.CargarValores(
+                    idPaciente,
+                    dtgvPacientes.CurrentRow.Cells["PNombre"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["SNombre"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["PApellido"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["SApellido"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Edad"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Sexo"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Celular"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Telefono"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Provincia"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Sector"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Calle"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["NumCasa"].Value.ToString()
+
+                );
+
+                crudPacienteForm.EnviarDatosSalud(
+                    dtgvPacientes.CurrentRow.Cells["Enfermedad"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Medicamento"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Alergia"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Embarazo"].Value.ToString()
+                    );
+
+                crudPacienteForm.ShowDialog();
+                crudPacienteForm.BringToFront();
+            }
+            else
+            {
+                MessageBox.Show("SELECCIONE LA FILA A EDITAR.");
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEditar<CrudPaciente>(this);
         }
     }
 }

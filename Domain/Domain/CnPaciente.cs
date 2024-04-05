@@ -55,6 +55,32 @@ namespace Domain.Domain
             cdpaciente.InsertarPaciente(paciente, contacto, ubicacion, estadosalud);
         }
 
-        
+        public void editarPaciente
+            (
+            string id, string pnombre, string snombre, string papellido, string sapellido, string edad, object sexo,
+            string celular, string telefono, object provincia, string sector, string calle, string numcasa, string enfermedad,
+            string medicamento, string alergia, string embarazo
+            )
+        {
+            paciente.SetPacienteID(Convert.ToInt32(id));
+            paciente.SetPNombre(pnombre);
+            paciente.SetSNombre(snombre);
+            paciente.SetPApellido(papellido);
+            paciente.SetSApellido(sapellido);
+            paciente.SetEdad(edad);
+            paciente.SetSexo(Convert.ToChar(sexo));
+            contacto.SetCelular(celular);
+            contacto.SetTelefono(telefono);
+            ubicacion.SetProvincia(provincia.ToString());
+            ubicacion.SetSector(sector);
+            ubicacion.SetCalle(calle);
+            ubicacion.SetNumCasa(numcasa);
+            estadosalud.SetEnfermedad(enfermedad);
+            estadosalud.SetMedicamento(medicamento);
+            estadosalud.SetAlergia(alergia);
+            estadosalud.SetEmbarazo(embarazo);
+
+            cdpaciente.editarPaciente(paciente, contacto, ubicacion, estadosalud);
+        }
     }
 }
