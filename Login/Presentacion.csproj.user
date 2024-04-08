@@ -4,6 +4,9 @@
     <Compile Update="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormsButton\Paciente\FormHijos\AbrirEstadoSalud.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormsButton\Paciente\FormHijos\CrudPaciente.cs">
       <SubType>Form</SubType>
     </Compile>

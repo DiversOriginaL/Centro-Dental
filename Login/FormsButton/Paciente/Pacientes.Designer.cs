@@ -38,8 +38,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvPacientes = new System.Windows.Forms.DataGridView();
-            this.pnCabecera = new System.Windows.Forms.Panel();
-            this.pnBarra = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +58,8 @@
             this.Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Embarazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnCabecera = new System.Windows.Forms.Panel();
+            this.pnBarra = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +99,7 @@
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -228,22 +229,6 @@
             this.dtgvPacientes.Size = new System.Drawing.Size(1374, 695);
             this.dtgvPacientes.TabIndex = 14;
             this.dtgvPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPacientes_CellContentClick);
-            // 
-            // pnCabecera
-            // 
-            this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnCabecera.Location = new System.Drawing.Point(0, 0);
-            this.pnCabecera.Name = "pnCabecera";
-            this.pnCabecera.Size = new System.Drawing.Size(1374, 93);
-            this.pnCabecera.TabIndex = 15;
-            // 
-            // pnBarra
-            // 
-            this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBarra.Location = new System.Drawing.Point(0, 788);
-            this.pnBarra.Name = "pnBarra";
-            this.pnBarra.Size = new System.Drawing.Size(1374, 102);
-            this.pnBarra.TabIndex = 16;
             // 
             // ID
             // 
@@ -447,6 +432,22 @@
             this.Fecha.ReadOnly = true;
             this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Fecha.Width = 119;
+            // 
+            // pnCabecera
+            // 
+            this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnCabecera.Location = new System.Drawing.Point(0, 0);
+            this.pnCabecera.Name = "pnCabecera";
+            this.pnCabecera.Size = new System.Drawing.Size(1374, 93);
+            this.pnCabecera.TabIndex = 15;
+            // 
+            // pnBarra
+            // 
+            this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBarra.Location = new System.Drawing.Point(0, 788);
+            this.pnBarra.Name = "pnBarra";
+            this.pnBarra.Size = new System.Drawing.Size(1374, 102);
+            this.pnBarra.TabIndex = 16;
             // 
             // Pacientes
             // 

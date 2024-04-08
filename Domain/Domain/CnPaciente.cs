@@ -82,5 +82,10 @@ namespace Domain.Domain
 
             cdpaciente.editarPaciente(paciente, contacto, ubicacion, estadosalud);
         }
+
+        public void eliminarPaciente(string PacienteID)
+        {
+            cdpaciente.eliminarPaciente(Convert.ToInt32(PacienteID));
+        }
     }
 }

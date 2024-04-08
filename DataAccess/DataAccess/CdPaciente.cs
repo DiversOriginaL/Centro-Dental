@@ -11,7 +11,7 @@ using Login.DataAccess.DataAccess;
 
 namespace DataAccess.DataAccess
 {
-    public class CdPaciente:ConnectionToSql
+    public class CdPaciente : ConnectionToSql
     {
         public DataTable mostrarPacientes()
         {
@@ -149,6 +149,21 @@ namespace DataAccess.DataAccess
                     command.Parameters.AddWithValue("@Medicamento", medicamento.Trim());
                     command.Parameters.AddWithValue("@Alergia", alergia.Trim());
                     command.Parameters.AddWithValue("@Embarazo", embarazo.Trim());
+                    command.ExecuteNonQuery();
+                    command.Parameters.Clear();
+                }
+            }
+        }
+
+        public void eliminarPaciente(int PacienteID)
+        {
+            using (SqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                using (SqlCommand command = new SqlCommand("eliminarPaciente", conexion))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@PacienteID", PacienteID);
                     command.ExecuteNonQuery();
                     command.Parameters.Clear();
                 }

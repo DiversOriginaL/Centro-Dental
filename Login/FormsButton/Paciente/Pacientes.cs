@@ -76,6 +76,30 @@ namespace Presentacion.FormsButton.Paciente
             }
             else formulario.BringToFront();
         }
+        private void verSalud<MiForm>(Pacientes paciente) where MiForm : Form
+        {
+            AbrirEstadoSalud formulario;
+            formulario = Application.OpenForms.OfType<AbrirEstadoSalud>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                formulario = new AbrirEstadoSalud();
+                formulario.TopLevel = true;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.StartPosition = FormStartPosition.CenterScreen;
+                formulario.verEstadoSalud(
+                    dtgvPacientes.CurrentRow.Cells["Enfermedad"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Medicamento"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Alergia"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Embarazo"].Value.ToString()
+                    );
+
+                formulario.ShowDialog();
+                formulario.BringToFront();
+
+            }
+            else formulario.BringToFront();
+        }
 
         private void btnCrear_Click(object sender, EventArgs e)
         {
@@ -84,11 +108,12 @@ namespace Presentacion.FormsButton.Paciente
 
         private void dtgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0 && e.ColumnIndex >= 0 && dtgvPacientes.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            if (dtgvPacientes.SelectedRows.Count > 0)
             {
-                DataGridViewRow row = dtgvPacientes.Rows[e.RowIndex];
-
-                MessageBox.Show("Se ha presionado el boton en la fila " + e.RowIndex.ToString());
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dtgvPacientes.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+                {
+                    verSalud<AbrirEstadoSalud>(this);
+                }
             }
         }
 
@@ -147,6 +172,20 @@ namespace Presentacion.FormsButton.Paciente
         private void btnEditar_Click(object sender, EventArgs e)
         {
             AbrirFormularioEditar<CrudPaciente>(this);
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dtgvPacientes.SelectedRows.Count > 0)
+            {
+                cnPaciente.eliminarPaciente(dtgvPacientes.CurrentRow.Cells["ID"].Value.ToString());
+                MessageBox.Show("Se elimino correctamente.");
+                Actualizardtgv();
+            }
+            else
+            {
+                MessageBox.Show("Primero debe de seleccionar una fila.");
+            }
         }
     }
 }
