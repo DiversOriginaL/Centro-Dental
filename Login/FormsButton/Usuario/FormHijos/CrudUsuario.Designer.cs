@@ -48,17 +48,17 @@
             // lblInsertar
             // 
             this.lblInsertar.AutoSize = true;
-            this.lblInsertar.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblInsertar.Font = new System.Drawing.Font("Sitka Text", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblInsertar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblInsertar.Location = new System.Drawing.Point(682, 9);
             this.lblInsertar.Name = "lblInsertar";
-            this.lblInsertar.Size = new System.Drawing.Size(185, 39);
+            this.lblInsertar.Size = new System.Drawing.Size(186, 47);
             this.lblInsertar.TabIndex = 22;
             this.lblInsertar.Text = "INSERTAR";
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtEmail.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEmail.ForeColor = System.Drawing.Color.Silver;
             this.txtEmail.Location = new System.Drawing.Point(534, 229);
             this.txtEmail.Multiline = true;
@@ -71,7 +71,7 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtApellidos.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtApellidos.ForeColor = System.Drawing.Color.Silver;
             this.txtApellidos.Location = new System.Drawing.Point(534, 165);
             this.txtApellidos.Multiline = true;
@@ -84,7 +84,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtUsuario.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
             this.txtUsuario.Location = new System.Drawing.Point(534, 293);
             this.txtUsuario.Multiline = true;
@@ -97,7 +97,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtNombres.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNombres.ForeColor = System.Drawing.Color.Silver;
             this.txtNombres.Location = new System.Drawing.Point(534, 99);
             this.txtNombres.Multiline = true;
@@ -110,7 +110,7 @@
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtContraseña.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.Silver;
             this.txtContraseña.Location = new System.Drawing.Point(534, 358);
             this.txtContraseña.Multiline = true;
@@ -127,15 +127,15 @@
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(51)))));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = global::Presentacion.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(853, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(861, 524);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(236, 67);
+            this.btnCancelar.Size = new System.Drawing.Size(228, 67);
             this.btnCancelar.TabIndex = 29;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -146,15 +146,15 @@
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(51)))));
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(569, 524);
+            this.btnGuardar.Location = new System.Drawing.Point(601, 524);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(256, 67);
+            this.btnGuardar.Size = new System.Drawing.Size(224, 67);
             this.btnGuardar.TabIndex = 28;
             this.btnGuardar.Text = " GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -176,12 +176,12 @@
             // 
             this.cbPuesto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbPuesto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbPuesto.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbPuesto.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPuesto.ForeColor = System.Drawing.Color.Silver;
             this.cbPuesto.FormattingEnabled = true;
             this.cbPuesto.Location = new System.Drawing.Point(534, 425);
             this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(498, 42);
+            this.cbPuesto.Size = new System.Drawing.Size(498, 48);
             this.cbPuesto.TabIndex = 31;
             this.cbPuesto.Text = "PUESTO:";
             this.cbPuesto.Enter += new System.EventHandler(this.cbPuesto_Enter);
@@ -214,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1104, 603);
             this.Controls.Add(this.pbOcultarContraseña);
             this.Controls.Add(this.pbVerContraseña);

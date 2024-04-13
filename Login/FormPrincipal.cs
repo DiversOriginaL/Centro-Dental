@@ -93,8 +93,7 @@ namespace Presentacion
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Application.Exit();
         }
-
-        
+                
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
 
@@ -165,14 +164,12 @@ namespace Presentacion
         private void btnPaciente_Click(object sender, EventArgs e)
         {//0; 85; 34
             AbrirFormulario<Pacientes>();
-            btnPaciente.BackColor = Color.FromArgb(00, 111, 44);
             pnPaciente.Visible = true;
 
         }
 
         private void btnPaciente_Leave(object sender, EventArgs e)
         {
-            btnPaciente.BackColor = Color.FromArgb(00, 85, 34);
             pnPaciente.Visible = false;
 
         }
@@ -180,13 +177,11 @@ namespace Presentacion
         private void btnReporte_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Reportes>();
-            btnReportes.BackColor = Color.FromArgb(00, 111, 44);
             pnReporte.Visible = true;
         }
 
         private void btnReportes_Leave(object sender, EventArgs e)
         {
-            btnReportes.BackColor = Color.FromArgb(00, 85, 34);
             pnReporte.Visible = false;
 
         }
@@ -194,13 +189,11 @@ namespace Presentacion
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Usuario>();
-            btnUsuarios.BackColor = Color.FromArgb(00, 111, 44);
             pnUsuarios.Visible = true;
 
         }
         private void btnUsuarios_Leave(object sender, EventArgs e)
         {
-            btnUsuarios.BackColor = Color.FromArgb(00, 85, 34);
             pnUsuarios.Visible = false;
 
         }

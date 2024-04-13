@@ -13,7 +13,7 @@ namespace DataAccess.DataAccess
 {
     public class CdPaciente : ConnectionToSql
     {
-        public DataTable mostrarPacientes()
+        public DataTable mostrarPacientes(string filtro)
         {
             DataTable dt = new DataTable();
             using (SqlConnection conexion = GetConnection())
@@ -22,6 +22,7 @@ namespace DataAccess.DataAccess
                 using (SqlCommand command = new SqlCommand("mostrarPacientes", conexion))
                 {
                     command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@filtro", filtro);
 
                     using (SqlDataReader leer = command.ExecuteReader())
                     {

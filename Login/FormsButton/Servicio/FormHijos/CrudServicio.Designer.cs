@@ -48,7 +48,11 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.cbPaciente = new System.Windows.Forms.ComboBox();
             this.cbServicio = new System.Windows.Forms.ComboBox();
+            this.pnTop = new System.Windows.Forms.Panel();
+            this.pnDown = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCrudServicio)).BeginInit();
+            this.pnTop.SuspendLayout();
+            this.pnDown.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -56,12 +60,12 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = global::Presentacion.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(1097, 811);
+            this.btnCancelar.Location = new System.Drawing.Point(1102, 745);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(226, 67);
             this.btnCancelar.TabIndex = 1;
@@ -75,12 +79,12 @@
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(854, 811);
+            this.btnGuardar.Location = new System.Drawing.Point(854, 745);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(227, 67);
             this.btnGuardar.TabIndex = 2;
@@ -90,9 +94,6 @@
             // 
             // dtgvCrudServicio
             // 
-            this.dtgvCrudServicio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvCrudServicio.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dtgvCrudServicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -112,12 +113,13 @@
             this.Cantidad,
             this.SubTotal,
             this.FechaEmision});
-            this.dtgvCrudServicio.Location = new System.Drawing.Point(12, 169);
+            this.dtgvCrudServicio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvCrudServicio.Location = new System.Drawing.Point(0, 170);
             this.dtgvCrudServicio.Name = "dtgvCrudServicio";
             this.dtgvCrudServicio.RowHeadersVisible = false;
             this.dtgvCrudServicio.RowHeadersWidth = 62;
             this.dtgvCrudServicio.RowTemplate.Height = 33;
-            this.dtgvCrudServicio.Size = new System.Drawing.Size(1311, 554);
+            this.dtgvCrudServicio.Size = new System.Drawing.Size(1340, 532);
             this.dtgvCrudServicio.TabIndex = 4;
             // 
             // ID
@@ -178,9 +180,10 @@
             // 
             // txtCosto
             // 
+            this.txtCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCosto.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCosto.ForeColor = System.Drawing.Color.Silver;
-            this.txtCosto.Location = new System.Drawing.Point(922, 25);
+            this.txtCosto.Location = new System.Drawing.Point(922, 22);
             this.txtCosto.Multiline = true;
             this.txtCosto.Name = "txtCosto";
             this.txtCosto.Size = new System.Drawing.Size(401, 46);
@@ -204,16 +207,16 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnAgregar.Image = global::Presentacion.Properties.Resources.Agregar;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(863, 93);
+            this.btnAgregar.Location = new System.Drawing.Point(868, 101);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(218, 61);
             this.btnAgregar.TabIndex = 9;
@@ -223,16 +226,16 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnLimpiar.Image = global::Presentacion.Properties.Resources.Limpiar;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(1107, 93);
+            this.btnLimpiar.Location = new System.Drawing.Point(1112, 101);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(216, 61);
             this.btnLimpiar.TabIndex = 10;
@@ -258,7 +261,7 @@
             // 
             this.txtDescuento.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtDescuento.ForeColor = System.Drawing.Color.Silver;
-            this.txtDescuento.Location = new System.Drawing.Point(12, 732);
+            this.txtDescuento.Location = new System.Drawing.Point(483, 93);
             this.txtDescuento.Multiline = true;
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(206, 46);
@@ -271,7 +274,7 @@
             // 
             this.txtTotal.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtTotal.ForeColor = System.Drawing.Color.Silver;
-            this.txtTotal.Location = new System.Drawing.Point(232, 732);
+            this.txtTotal.Location = new System.Drawing.Point(12, 21);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(199, 46);
@@ -306,16 +309,32 @@
             this.cbServicio.Enter += new System.EventHandler(this.cbServicio_Enter);
             this.cbServicio.Leave += new System.EventHandler(this.cbServicio_Leave);
             // 
+            // pnTop
+            // 
+            this.pnTop.Controls.Add(this.txtDescuento);
+            this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTop.Location = new System.Drawing.Point(0, 0);
+            this.pnTop.Name = "pnTop";
+            this.pnTop.Size = new System.Drawing.Size(1340, 170);
+            this.pnTop.TabIndex = 16;
+            // 
+            // pnDown
+            // 
+            this.pnDown.Controls.Add(this.txtTotal);
+            this.pnDown.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnDown.Location = new System.Drawing.Point(0, 702);
+            this.pnDown.Name = "pnDown";
+            this.pnDown.Size = new System.Drawing.Size(1340, 122);
+            this.pnDown.TabIndex = 17;
+            // 
             // CrudServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.ClientSize = new System.Drawing.Size(1335, 890);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.ClientSize = new System.Drawing.Size(1340, 824);
             this.Controls.Add(this.cbServicio);
             this.Controls.Add(this.cbPaciente);
-            this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.txtDescuento);
             this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAgregar);
@@ -324,12 +343,18 @@
             this.Controls.Add(this.dtgvCrudServicio);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.pnTop);
+            this.Controls.Add(this.pnDown);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CrudServicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearServicio";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CrudServicio_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCrudServicio)).EndInit();
+            this.pnTop.ResumeLayout(false);
+            this.pnTop.PerformLayout();
+            this.pnDown.ResumeLayout(false);
+            this.pnDown.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +380,7 @@
         private DataGridViewTextBoxColumn SubTotal;
         private DataGridViewTextBoxColumn FechaEmision;
         private ComboBox cbServicio;
+        private Panel pnTop;
+        private Panel pnDown;
     }
 }

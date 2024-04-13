@@ -35,7 +35,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCrear = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvPacientes = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,16 +59,20 @@
             this.Embarazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnCabecera = new System.Windows.Forms.Panel();
+            this.pbFiltrar = new System.Windows.Forms.PictureBox();
             this.pnBarra = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPacientes)).BeginInit();
+            this.pnCabecera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFiltrar)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -79,15 +83,16 @@
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = " Cerrar";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(102)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -98,15 +103,16 @@
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(102)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -117,15 +123,16 @@
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCrear
             // 
             this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(102)))));
+            this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCrear.ForeColor = System.Drawing.SystemColors.HighlightText;
@@ -136,51 +143,52 @@
             this.btnCrear.TabIndex = 9;
             this.btnCrear.Text = " CREAR";
             this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
-            // textBox1
+            // txtBuscar
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.textBox1.Location = new System.Drawing.Point(999, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(363, 34);
-            this.textBox1.TabIndex = 12;
-            this.textBox1.Text = "BUSCAR:";
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtBuscar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.txtBuscar.Location = new System.Drawing.Point(997, 10);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(308, 34);
+            this.txtBuscar.TabIndex = 12;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(997, 75);
+            this.panel1.Location = new System.Drawing.Point(997, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(365, 5);
             this.panel1.TabIndex = 13;
             // 
             // dtgvPacientes
             // 
+            this.dtgvPacientes.AllowUserToAddRows = false;
             this.dtgvPacientes.AllowUserToResizeColumns = false;
             this.dtgvPacientes.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dtgvPacientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgvPacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dtgvPacientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
+            this.dtgvPacientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.dtgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
@@ -211,7 +219,7 @@
             this.Fecha});
             this.dtgvPacientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvPacientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
-            this.dtgvPacientes.Location = new System.Drawing.Point(0, 93);
+            this.dtgvPacientes.Location = new System.Drawing.Point(0, 65);
             this.dtgvPacientes.Name = "dtgvPacientes";
             this.dtgvPacientes.ReadOnly = true;
             this.dtgvPacientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -219,14 +227,14 @@
             this.dtgvPacientes.RowHeadersWidth = 62;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dtgvPacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvPacientes.RowTemplate.Height = 40;
             this.dtgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvPacientes.Size = new System.Drawing.Size(1374, 695);
+            this.dtgvPacientes.Size = new System.Drawing.Size(1374, 723);
             this.dtgvPacientes.TabIndex = 14;
             this.dtgvPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPacientes_CellContentClick);
             // 
@@ -248,7 +256,7 @@
             this.PNombre.Name = "PNombre";
             this.PNombre.ReadOnly = true;
             this.PNombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.PNombre.Width = 169;
+            this.PNombre.Width = 167;
             // 
             // SNombre
             // 
@@ -258,7 +266,7 @@
             this.SNombre.Name = "SNombre";
             this.SNombre.ReadOnly = true;
             this.SNombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.SNombre.Width = 168;
+            this.SNombre.Width = 169;
             // 
             // PApellido
             // 
@@ -278,7 +286,7 @@
             this.SApellido.Name = "SApellido";
             this.SApellido.ReadOnly = true;
             this.SApellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.SApellido.Width = 168;
+            this.SApellido.Width = 171;
             // 
             // Edad
             // 
@@ -288,7 +296,7 @@
             this.Edad.Name = "Edad";
             this.Edad.ReadOnly = true;
             this.Edad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Edad.Width = 108;
+            this.Edad.Width = 111;
             // 
             // Sexo
             // 
@@ -298,7 +306,7 @@
             this.Sexo.Name = "Sexo";
             this.Sexo.ReadOnly = true;
             this.Sexo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Sexo.Width = 108;
+            this.Sexo.Width = 106;
             // 
             // Celular
             // 
@@ -308,7 +316,7 @@
             this.Celular.Name = "Celular";
             this.Celular.ReadOnly = true;
             this.Celular.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Celular.Width = 132;
+            this.Celular.Width = 136;
             // 
             // Telefono
             // 
@@ -318,7 +326,7 @@
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Telefono.Width = 153;
+            this.Telefono.Width = 152;
             // 
             // Provincia
             // 
@@ -328,7 +336,7 @@
             this.Provincia.Name = "Provincia";
             this.Provincia.ReadOnly = true;
             this.Provincia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Provincia.Width = 160;
+            this.Provincia.Width = 165;
             // 
             // Sector
             // 
@@ -348,7 +356,7 @@
             this.Calle.Name = "Calle";
             this.Calle.ReadOnly = true;
             this.Calle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Calle.Width = 107;
+            this.Calle.Width = 109;
             // 
             // NumCasa
             // 
@@ -358,7 +366,7 @@
             this.NumCasa.Name = "NumCasa";
             this.NumCasa.ReadOnly = true;
             this.NumCasa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NumCasa.Width = 125;
+            this.NumCasa.Width = 122;
             // 
             // Usuario
             // 
@@ -368,7 +376,7 @@
             this.Usuario.Name = "Usuario";
             this.Usuario.ReadOnly = true;
             this.Usuario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Usuario.Width = 212;
+            this.Usuario.Width = 215;
             // 
             // EstadosSalud
             // 
@@ -381,7 +389,7 @@
             this.EstadosSalud.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.EstadosSalud.Text = "Estado Salud";
             this.EstadosSalud.UseColumnTextForButtonValue = true;
-            this.EstadosSalud.Width = 173;
+            this.EstadosSalud.Width = 175;
             // 
             // Enfermedad
             // 
@@ -435,15 +443,31 @@
             // 
             // pnCabecera
             // 
+            this.pnCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.pnCabecera.Controls.Add(this.pbFiltrar);
+            this.pnCabecera.Controls.Add(this.txtBuscar);
+            this.pnCabecera.Controls.Add(this.panel1);
             this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnCabecera.Location = new System.Drawing.Point(0, 0);
             this.pnCabecera.Name = "pnCabecera";
-            this.pnCabecera.Size = new System.Drawing.Size(1374, 93);
+            this.pnCabecera.Size = new System.Drawing.Size(1374, 65);
             this.pnCabecera.TabIndex = 15;
+            // 
+            // pbFiltrar
+            // 
+            this.pbFiltrar.BackgroundImage = global::Presentacion.Properties.Resources.filtrar;
+            this.pbFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbFiltrar.Location = new System.Drawing.Point(1311, 12);
+            this.pbFiltrar.Name = "pbFiltrar";
+            this.pbFiltrar.Size = new System.Drawing.Size(51, 37);
+            this.pbFiltrar.TabIndex = 14;
+            this.pbFiltrar.TabStop = false;
             // 
             // pnBarra
             // 
+            this.pnBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBarra.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pnBarra.Location = new System.Drawing.Point(0, 788);
             this.pnBarra.Name = "pnBarra";
             this.pnBarra.Size = new System.Drawing.Size(1374, 102);
@@ -456,8 +480,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1374, 890);
             this.Controls.Add(this.dtgvPacientes);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCrear);
@@ -469,8 +491,10 @@
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.Pacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPacientes)).EndInit();
+            this.pnCabecera.ResumeLayout(false);
+            this.pnCabecera.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFiltrar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -479,7 +503,7 @@
         private Button btnEliminar;
         private Button btnEditar;
         private Button btnCrear;
-        private TextBox textBox1;
+        private TextBox txtBuscar;
         private Panel panel1;
         private DataGridView dtgvPacientes;
         private Panel pnCabecera;
@@ -504,5 +528,6 @@
         private DataGridViewTextBoxColumn Alergia;
         private DataGridViewTextBoxColumn Embarazo;
         private DataGridViewTextBoxColumn Fecha;
+        private PictureBox pbFiltrar;
     }
 }

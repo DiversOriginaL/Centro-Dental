@@ -8,7 +8,6 @@ using System.Collections.Generic;
 using DataAccess.DataAccess;
 using System.Data;
 using Common.Cache;
-using Common.Entidades;
 
 
 namespace Domain.Domain
@@ -23,9 +22,9 @@ namespace Domain.Domain
         Paciente paciente = new Paciente();
 
 
-        public DataTable mostrarPacientes()
+        public DataTable mostrarPacientes(string filtro)
         {
-            return cdpaciente.mostrarPacientes();
+            return cdpaciente.mostrarPacientes(filtro);
         }
 
         public void insertarPaciente

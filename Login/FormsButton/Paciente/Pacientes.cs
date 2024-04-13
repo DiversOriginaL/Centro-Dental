@@ -22,7 +22,7 @@ namespace Presentacion.FormsButton.Paciente
         }
         private void Pacientes_Load(object sender, EventArgs e)
         {
-            MostrarPacientes();
+            MostrarPacientes("");
             Permisos();
         }
         private void Permisos()
@@ -37,14 +37,14 @@ namespace Presentacion.FormsButton.Paciente
 
         }
         CnPaciente cnPaciente = new CnPaciente();
-        private void MostrarPacientes()
+        private void MostrarPacientes(string filtro)
         {
-            dtgvPacientes.DataSource = cnPaciente.mostrarPacientes();
+            dtgvPacientes.DataSource = cnPaciente.mostrarPacientes(filtro);
         }
 
         public void Actualizardtgv()
         {
-            MostrarPacientes();
+            MostrarPacientes("");
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -186,6 +186,11 @@ namespace Presentacion.FormsButton.Paciente
             {
                 MessageBox.Show("Primero debe de seleccionar una fila.");
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            MostrarPacientes(txtBuscar.Text);
         }
     }
 }
