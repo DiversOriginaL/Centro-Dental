@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentacion.FormsButton.Servicio.FormHijos.CargarPaciente;
 
 namespace Presentacion.FormsButton.Servicios.FormHijos
 {
@@ -29,32 +30,36 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             ReleaseCapture();
             SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
         }
+        private void pnTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
+        }
+
+        private void dtgvCrudServicio_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
+        }
+
+        private void pnDown_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
+        }
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
+        }
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, 0x112, (IntPtr)0xf012, (IntPtr)0);
+        }
         #endregion
 
         #region EfectoPlaceHolder
-        private void cbPaciente_Enter(object sender, EventArgs e)
-        {
-            if(cbPaciente.Text == "PACIENTE:")
-            {
-                cbPaciente.Text = "";
-                cbPaciente.ForeColor = Color.Black;
-
-                Font fuente = new Font("Tahoma", 14, FontStyle.Bold);
-                cbPaciente.Font = fuente;
-            }
-        }
-
-        private void cbPaciente_Leave(object sender, EventArgs e)
-        {
-            if( cbPaciente.Text == "")
-            {
-                cbPaciente.Text = "PACIENTE:";
-                cbPaciente.ForeColor = Color.Silver;
-               
-                Font fuente = new Font("Tahoma", 14, FontStyle.Bold);
-                cbPaciente.Font = fuente;
-            }
-        }
 
         private void cbServicio_Enter(object sender, EventArgs e)
         {
@@ -111,24 +116,6 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             }
         }
 
-        private void txtSubTotal_Enter(object sender, EventArgs e)
-        {
-            if (txtSubTotal.Text == "SUBTOTAL:")
-            {
-                txtSubTotal.Text = "";
-                txtSubTotal.ForeColor = Color.Black;
-            }
-        }
-
-        private void txtSubTotal_Leave(object sender, EventArgs e)
-        {
-            if (txtSubTotal.Text == "")
-            {
-                txtSubTotal.Text = "SUBTOTAL:";
-                txtSubTotal.ForeColor = Color.Silver;
-            }
-        }
-
         private void txtDescuento_Enter(object sender, EventArgs e)
         {
             if (txtDescuento.Text == "DESCUENTO:")
@@ -149,50 +136,85 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
         }
 
-        private void txtTotal_Enter(object sender, EventArgs e)
-        {
-            if (txtTotal.Text == "TOTAL:")
-            {
-                txtTotal.Text = "";
-                txtTotal.ForeColor = Color.Black;
-            }
-
-        }
-
-        private void txtTotal_Leave(object sender, EventArgs e)
-        {
-            if (txtTotal.Text == "")
-            {
-                txtTotal.Text = "TOTAL:";
-                txtTotal.ForeColor = Color.Silver;
-            }
-
-        }
-
         #endregion
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            cbPaciente.Text = "";
             cbServicio.Text = "";
             txtCosto.Text = "";
             txtCantidad.Text = "";
-            txtSubTotal.Text = "";
             txtDescuento.Text = "";
-            txtTotal.Text = "";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            cbPaciente.Text = "PACIENTE:";
             cbServicio.Text = "SERVICIO:";
             txtCosto.Text = "PRECIO:";
             txtCantidad.Text = "CANTIDAD:";
-            txtSubTotal.Text = "SUBTOTAL:";
             txtDescuento.Text = "DESCUENTO:";
-            txtTotal.Text = "TOTAL:";
 
             this.Close();
         }
+
+        string id;
+        string pnombre;
+        string papellido;
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            string pnombre = this.pnombre;
+            string papellido = this.papellido;
+            string servicio = cbServicio.Text.Trim();
+            string precio = txtCosto.Text.Trim();
+            string cantidad = txtCantidad.Text.Trim();
+            string descuento = txtDescuento.Text.Trim();
+
+            dtgvCrudServicio.Rows.Add(new object[] {id, pnombre + " " + papellido, servicio, precio, cantidad, "", "", descuento, "Eliminar"});
+            
+            cbServicio.Text = "SERVICIO:";
+            txtCosto.Text = "PRECIO:";
+            txtCantidad.Text = "CANTIDAD:";
+            txtDescuento.Text = "DESCUENTO:";
+
+            dtgvCrudServicio.ClearSelection();
+
+        }
+        private void btnCargarPaciente_Click(object sender, EventArgs e)
+        {
+            AbrirCargarPaciente<CargaPaciente>(this);
+        }
+
+        private void AbrirCargarPaciente<MiForm>(CrudServicio crudservicio) where MiForm : Form
+        {
+            Form formulario;
+            formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
+
+            if(formulario == null)
+            {
+                formulario = Activator.CreateInstance(typeof(MiForm)) as Form;
+                formulario.TopLevel = true;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.StartPosition = FormStartPosition.CenterScreen;
+
+                if(formulario is CargaPaciente crudservicioform)
+                {
+                    crudservicioform.crudServicioForm = crudservicio;
+                }
+
+                formulario.ShowDialog();
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+
+        public void getid(string id, string pnombre, string papellido)
+        {
+            this.id = id;
+            this.pnombre = pnombre;
+            this.papellido = papellido;
+        }
+
     }
 }

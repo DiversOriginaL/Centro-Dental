@@ -19,6 +19,9 @@
     <Compile Update="FormsButton\Reporte\Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormsButton\Servicio\FormHijos\CargarPaciente\CargaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormsButton\Servicio\FormHijos\CrudServicio.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -93,6 +93,26 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cargar {
+            get {
+                object obj = ResourceManager.GetObject("Cargar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cargar1 {
+            get {
+                object obj = ResourceManager.GetObject("Cargar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chart_simple_solid {
             get {
                 object obj = ResourceManager.GetObject("chart-simple-solid", resourceCulture);
@@ -306,6 +326,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap power_off_solid {
             get {
                 object obj = ResourceManager.GetObject("power-off-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Seleccionar {
+            get {
+                object obj = ResourceManager.GetObject("Seleccionar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

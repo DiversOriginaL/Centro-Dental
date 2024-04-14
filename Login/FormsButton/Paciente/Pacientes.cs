@@ -36,6 +36,7 @@ namespace Presentacion.FormsButton.Paciente
             }
 
         }
+
         CnPaciente cnPaciente = new CnPaciente();
         private void MostrarPacientes(string filtro)
         {
@@ -53,29 +54,6 @@ namespace Presentacion.FormsButton.Paciente
         }
 
         //METODO PARA ABRIR FORMULARIO HIJO
-        private void AbrirFormulario<MiForm>(Pacientes paciente) where MiForm : Form
-        {
-            Form formulario;
-            formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
-
-            if (formulario == null)
-            {
-                formulario = Activator.CreateInstance(typeof(MiForm)) as Form;
-                formulario.TopLevel = true;
-                formulario.FormBorderStyle = FormBorderStyle.None;
-                formulario.StartPosition = FormStartPosition.CenterScreen;
-
-                if(formulario is CrudPaciente crudPacienteForm)
-                {
-                    crudPacienteForm.pacienteForm = paciente;
-                }
-
-                formulario.ShowDialog();
-                formulario.BringToFront();
-
-            }
-            else formulario.BringToFront();
-        }
         private void verSalud<MiForm>(Pacientes paciente) where MiForm : Form
         {
             AbrirEstadoSalud formulario;
@@ -101,11 +79,6 @@ namespace Presentacion.FormsButton.Paciente
             else formulario.BringToFront();
         }
 
-        private void btnCrear_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<CrudPaciente>(this);
-        }
-
         private void dtgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgvPacientes.SelectedRows.Count > 0)
@@ -117,6 +90,38 @@ namespace Presentacion.FormsButton.Paciente
             }
         }
 
+        private void btnCrear_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<CrudPaciente>(this);
+        }
+        private void AbrirFormulario<MiForm>(Pacientes paciente) where MiForm : Form
+        {
+            Form formulario;
+            formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                formulario = Activator.CreateInstance(typeof(MiForm)) as Form;
+                formulario.TopLevel = true;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.StartPosition = FormStartPosition.CenterScreen;
+
+                if(formulario is CrudPaciente crudPacienteForm)
+                {
+                    crudPacienteForm.pacienteForm = paciente;
+                }
+
+                formulario.ShowDialog();
+                formulario.BringToFront();
+
+            }
+            else formulario.BringToFront();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEditar<CrudPaciente>(this);
+        }
         private void AbrirFormularioEditar<MiForm>(Pacientes paciente) where MiForm : Form
         {
             if (dtgvPacientes.SelectedRows.Count > 0)
@@ -167,11 +172,6 @@ namespace Presentacion.FormsButton.Paciente
             {
                 MessageBox.Show("SELECCIONE LA FILA A EDITAR.");
             }
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioEditar<CrudPaciente>(this);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

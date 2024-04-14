@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
+using Domain.Domain;
 
 namespace Presentacion.FormsButton.Servicio
 {
@@ -20,7 +21,15 @@ namespace Presentacion.FormsButton.Servicio
         }
         private void Servicios_Load(object sender, EventArgs e)
         {
+            mostrarFacturas();
             Permisos();
+        }
+
+        CnFactura cnFactura = new CnFactura();
+        private void mostrarFacturas()
+        {
+            dtgvServicios.DataSource = cnFactura.mostrarFacturas();
+            dtgvServicios.ClearSelection();
         }
 
         private void Permisos()

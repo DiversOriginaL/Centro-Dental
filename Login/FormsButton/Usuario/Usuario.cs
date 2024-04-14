@@ -29,6 +29,7 @@ namespace Presentacion.FormsButton.Usuario
         private void mostrarUsuarios()
         {
             dtgvUsuarios.DataSource = cnUsuario.mostrarUsuarios();
+            dtgvUsuarios.ClearSelection();
         }
 
 

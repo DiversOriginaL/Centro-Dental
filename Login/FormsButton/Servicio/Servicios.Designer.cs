@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dtgvServicios = new System.Windows.Forms.DataGridView();
             this.FacturaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +40,8 @@
             this.Servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Remitida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,19 +77,33 @@
             // 
             // dtgvServicios
             // 
-            this.dtgvServicios.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dtgvServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dtgvServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvServicios.AllowUserToAddRows = false;
+            this.dtgvServicios.AllowUserToResizeColumns = false;
+            this.dtgvServicios.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(51)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgvServicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dtgvServicios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dtgvServicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.dtgvServicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvServicios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dtgvServicios.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dtgvServicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(51)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvServicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvServicios.ColumnHeadersHeight = 60;
+            this.dtgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dtgvServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FacturaID,
             this.FechaEmision,
@@ -92,86 +111,128 @@
             this.Servicio,
             this.Precio,
             this.Cantidad,
+            this.Importe,
+            this.SubTotal,
             this.Descuento,
             this.Total,
             this.Remitida});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvServicios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvServicios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvServicios.GridColor = System.Drawing.SystemColors.Control;
+            this.dtgvServicios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
             this.dtgvServicios.Location = new System.Drawing.Point(0, 83);
             this.dtgvServicios.Name = "dtgvServicios";
+            this.dtgvServicios.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtgvServicios.RowHeadersVisible = false;
             this.dtgvServicios.RowHeadersWidth = 62;
+            this.dtgvServicios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dtgvServicios.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvServicios.RowTemplate.Height = 33;
+            this.dtgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvServicios.Size = new System.Drawing.Size(1360, 585);
             this.dtgvServicios.TabIndex = 2;
             // 
             // FacturaID
             // 
-            this.FacturaID.HeaderText = "#Factura";
+            this.FacturaID.DataPropertyName = "ID";
+            this.FacturaID.HeaderText = "ID";
             this.FacturaID.MinimumWidth = 8;
             this.FacturaID.Name = "FacturaID";
             this.FacturaID.ReadOnly = true;
-            this.FacturaID.Width = 150;
+            this.FacturaID.Width = 79;
             // 
             // FechaEmision
             // 
+            this.FechaEmision.DataPropertyName = "Fecha";
             this.FechaEmision.HeaderText = "Fecha";
             this.FechaEmision.MinimumWidth = 8;
             this.FechaEmision.Name = "FechaEmision";
             this.FechaEmision.ReadOnly = true;
-            this.FechaEmision.Width = 150;
+            this.FechaEmision.Width = 119;
             // 
             // Cliente
             // 
+            this.Cliente.DataPropertyName = "Nombre";
             this.Cliente.HeaderText = "Cliente";
             this.Cliente.MinimumWidth = 8;
             this.Cliente.Name = "Cliente";
             this.Cliente.ReadOnly = true;
-            this.Cliente.Width = 150;
+            this.Cliente.Width = 134;
             // 
             // Servicio
             // 
+            this.Servicio.DataPropertyName = "Servicio";
             this.Servicio.HeaderText = "Servicio";
             this.Servicio.MinimumWidth = 8;
             this.Servicio.Name = "Servicio";
             this.Servicio.ReadOnly = true;
-            this.Servicio.Width = 150;
+            this.Servicio.Width = 148;
             // 
             // Precio
             // 
+            this.Precio.DataPropertyName = "Precio";
             this.Precio.HeaderText = "Precio";
             this.Precio.MinimumWidth = 8;
             this.Precio.Name = "Precio";
-            this.Precio.Width = 150;
+            this.Precio.Width = 126;
             // 
             // Cantidad
             // 
+            this.Cantidad.DataPropertyName = "Cantidad";
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.MinimumWidth = 8;
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Width = 150;
+            this.Cantidad.Width = 158;
+            // 
+            // Importe
+            // 
+            this.Importe.DataPropertyName = "Importe";
+            this.Importe.HeaderText = "Importe";
+            this.Importe.MinimumWidth = 8;
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            this.Importe.Width = 148;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.DataPropertyName = "SubTotal";
+            this.SubTotal.HeaderText = "SubTotal";
+            this.SubTotal.MinimumWidth = 8;
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Width = 155;
             // 
             // Descuento
             // 
+            this.Descuento.DataPropertyName = "Descuento";
             this.Descuento.HeaderText = "Descuento";
             this.Descuento.MinimumWidth = 8;
             this.Descuento.Name = "Descuento";
-            this.Descuento.Width = 150;
+            this.Descuento.Width = 173;
             // 
             // Total
             // 
+            this.Total.DataPropertyName = "Total";
             this.Total.HeaderText = "Total";
             this.Total.MinimumWidth = 8;
             this.Total.Name = "Total";
-            this.Total.Width = 150;
+            this.Total.Width = 111;
             // 
             // Remitida
             // 
+            this.Remitida.DataPropertyName = "Usuario";
             this.Remitida.HeaderText = "Remitida";
             this.Remitida.MinimumWidth = 8;
             this.Remitida.Name = "Remitida";
             this.Remitida.ReadOnly = true;
-            this.Remitida.Width = 150;
+            this.Remitida.Width = 161;
             // 
             // btnCrear
             // 
@@ -299,16 +360,18 @@
         private Button btnEditar;
         private Button btnEliminar;
         private Button btnImprimir;
+        private Panel panel1;
+        private Panel panel2;
         private DataGridViewTextBoxColumn FacturaID;
         private DataGridViewTextBoxColumn FechaEmision;
         private DataGridViewTextBoxColumn Cliente;
         private DataGridViewTextBoxColumn Servicio;
         private DataGridViewTextBoxColumn Precio;
         private DataGridViewTextBoxColumn Cantidad;
+        private DataGridViewTextBoxColumn Importe;
+        private DataGridViewTextBoxColumn SubTotal;
         private DataGridViewTextBoxColumn Descuento;
         private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn Remitida;
-        private Panel panel1;
-        private Panel panel2;
     }
 }
