@@ -18,6 +18,7 @@ namespace Presentacion.FormsButton.Servicio
         public Servicios()
         {
             InitializeComponent();
+            dtgvServicios.ClearSelection();
         }
         private void Servicios_Load(object sender, EventArgs e)
         {
@@ -29,8 +30,9 @@ namespace Presentacion.FormsButton.Servicio
         private void mostrarFacturas()
         {
             dtgvServicios.DataSource = cnFactura.mostrarFacturas();
-            dtgvServicios.ClearSelection();
+            btnCerrar.Focus();
         }
+
 
         private void Permisos()
         {

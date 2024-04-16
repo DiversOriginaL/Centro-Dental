@@ -168,6 +168,7 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             cbPuesto.DataSource = cnUsuario.cargarRol();
             cbPuesto.DisplayMember = "Rol";
             cbPuesto.ValueMember = "RolID";
+            cbPuesto.SelectedIndex = -1;
         }
 
         //GUARDAR.

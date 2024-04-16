@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain.Domain;
 using Presentacion.FormsButton.Servicio.FormHijos.CargarPaciente;
 
 namespace Presentacion.FormsButton.Servicios.FormHijos
@@ -17,6 +18,10 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
         public CrudServicio()
         {
             InitializeComponent();
+        }
+        private void CrudServicio_Load(object sender, EventArgs e)
+        {
+            cargarServicios();
         }
 
         #region MoverFormulario.
@@ -155,29 +160,6 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
             this.Close();
         }
-
-        string id;
-        string pnombre;
-        string papellido;
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            string pnombre = this.pnombre;
-            string papellido = this.papellido;
-            string servicio = cbServicio.Text.Trim();
-            string precio = txtCosto.Text.Trim();
-            string cantidad = txtCantidad.Text.Trim();
-            string descuento = txtDescuento.Text.Trim();
-
-            dtgvCrudServicio.Rows.Add(new object[] {id, pnombre + " " + papellido, servicio, precio, cantidad, "", "", descuento, "Eliminar"});
-            
-            cbServicio.Text = "SERVICIO:";
-            txtCosto.Text = "PRECIO:";
-            txtCantidad.Text = "CANTIDAD:";
-            txtDescuento.Text = "DESCUENTO:";
-
-            dtgvCrudServicio.ClearSelection();
-
-        }
         private void btnCargarPaciente_Click(object sender, EventArgs e)
         {
             AbrirCargarPaciente<CargaPaciente>(this);
@@ -188,14 +170,14 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             Form formulario;
             formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
 
-            if(formulario == null)
+            if (formulario == null)
             {
                 formulario = Activator.CreateInstance(typeof(MiForm)) as Form;
                 formulario.TopLevel = true;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.StartPosition = FormStartPosition.CenterScreen;
 
-                if(formulario is CargaPaciente crudservicioform)
+                if (formulario is CargaPaciente crudservicioform)
                 {
                     crudservicioform.crudServicioForm = crudservicio;
                 }
@@ -209,6 +191,30 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             }
         }
 
+        CnFactura cnFactura = new CnFactura();
+        private void cargarServicios()
+        {
+            cbServicio.DataSource = cnFactura.cargarServicios();
+            cbServicio.DisplayMember = "Servicio";
+            cbServicio.ValueMember = "ServicioID";
+            cbServicio.SelectedIndex = -1;
+
+        }
+
+        private void cbServicio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbServicio.SelectedIndex != -1)
+            {
+                string servicio = cbServicio.Text;
+
+                string precio = cnFactura.ObtenerPrecio(servicio);
+                txtCosto.Text = precio;
+
+                cbServicio.ForeColor = Color.Black;
+                txtCosto.ForeColor = Color.Black;
+            }
+        }
+
         public void getid(string id, string pnombre, string papellido)
         {
             this.id = id;
@@ -216,5 +222,97 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             this.papellido = papellido;
         }
 
+        string? id;
+        string? pnombre;
+        string? papellido;
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            string servicio = cbServicio.Text.Trim();
+            string precio = txtCosto.Text.Trim();
+            string cantidad = txtCantidad.Text.Trim();
+            string descuento = txtDescuento.Text.Trim();
+            string importe = ""; string subtotal = "";
+
+            if (id == null) id = "#";
+            if (pnombre == null || papellido == null) { pnombre = "SIN"; papellido = "ESPECIFICAR"; }
+            if (cbServicio.Text == "SERVICIO:" || cbServicio.Text == "") servicio = "SIN ESPECIFICAR";
+            if (txtDescuento.Text == "DESCUENTO:" || txtDescuento.Text == "") descuento = "0.00";
+
+            if (txtCosto.Text == "PRECIO:" || txtCosto.Text == "") 
+            { 
+                precio = "0.00"; 
+                if(txtCantidad.Text == "CANTIDAD:" || txtCantidad.Text == "")
+                {
+                    cantidad = "0";
+                    importe = "0";
+                }
+            }
+            else
+            {
+                if(txtCantidad.Text == "CANTIDAD:" || txtCantidad.Text == "") cantidad="1";
+                importe = cnFactura.ObtenerImporte(precio, cantidad);
+
+            }
+
+            subtotal = cnFactura.ObtenerSubTotal(importe, descuento);
+
+
+            dtgvCrudServicio.Rows.Add(new object[] 
+            { 
+                id, pnombre + " " + papellido, servicio, precio, cantidad, importe, descuento, subtotal
+            });
+
+            RestaurarForm();
+            sendDtgvDatos();
+        }
+
+        private void RestaurarForm()
+        {
+            cbServicio.Text = "SERVICIO:";
+            txtCosto.Text = "PRECIO:";
+            txtCantidad.Text = "CANTIDAD:";
+            txtDescuento.Text = "DESCUENTO:";
+
+            dtgvCrudServicio.ClearSelection();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dtgvCrudServicio.SelectedRows.Count >= 0)
+            {
+                try
+                {
+                    dtgvCrudServicio.Rows.Remove(dtgvCrudServicio.CurrentRow);                
+
+                }catch(InvalidOperationException ex)
+                {
+                    MessageBox.Show("NO SELECCIONASTE LA FILA PARA PODER ELIMINARLA O NO EXISTE DICHA FILA... ERROR: " + ex.Message);
+                }
+
+                dtgvCrudServicio.ClearSelection();
+                sendDtgvDatos();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar una fila");
+            }
+        }
+
+        private void sendDtgvDatos()
+        {
+            List<string> Subtotales = new List<string>();
+
+            foreach (DataGridViewRow row in dtgvCrudServicio.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    Subtotales.Add(row.Cells[7].Value.ToString());
+                }
+            }
+
+            string Total = cnFactura.ObtenerTotal(Subtotales);
+            lblResultado.Text = Total;
+        }
     }
 }
