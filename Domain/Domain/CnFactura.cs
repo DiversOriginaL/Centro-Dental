@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using DataAccess.DataAccess;
+using Common.Entidades;
 
 namespace Domain.Domain
 {
@@ -12,6 +13,10 @@ namespace Domain.Domain
     {
         CdFactura cdFactura = new CdFactura();
         DataTable dt = new DataTable();
+
+        Facturas factura = new Facturas();
+        DetallesFacturas detalle = new DetallesFacturas();
+
 
         public DataTable mostrarFacturas()
         {
@@ -70,11 +75,17 @@ namespace Domain.Domain
                 if(decimal.TryParse(subtotalstr, out decimal subtotal))
                 {
                     Total += subtotal;
-
                 }
             }
 
             return Total.ToString();
         }
+        //==================================================INSERTAR=================================================================
+
+        public void insertarFactura(List<DetallesFacturas> detalles, List<int> ServicioID, string total, string pacienteid)
+        {
+            cdFactura.InsertarFacturaConDetalles(detalles, ServicioID, Convert.ToDecimal(total), DateTime.Now, Convert.ToInt32(pacienteid));
+        }
+
     }
 }

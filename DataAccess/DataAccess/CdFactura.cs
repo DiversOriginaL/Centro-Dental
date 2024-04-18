@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using Login.DataAccess.DataAccess;
+using Common.Entidades;
+using Common.Cache;
 
 namespace DataAccess.DataAccess
 {
@@ -76,6 +78,71 @@ namespace DataAccess.DataAccess
 
             return precio;
         }
-        
+
+        public void InsertarFacturaConDetalles(IEnumerable<DetallesFacturas> detalleList, List<int> servicioID, decimal total, DateTime fecha, int pacienteID)
+        {
+            var table = new DataTable();
+            table.Columns.Add("ServicioID", typeof(int));
+            table.Columns.Add("Precio", typeof(decimal));
+            table.Columns.Add("Cantidad", typeof(int));
+            table.Columns.Add("Importe", typeof(decimal));
+            table.Columns.Add("SubTotal", typeof(decimal));
+            table.Columns.Add("Descuento", typeof(decimal));
+            
+            // Verificar que las listas tengan la misma cantidad de elementos
+            if (detalleList.Count() != servicioID.Count())
+            {
+                throw new ArgumentException("La cantidad de detalles de factura no coincide con la cantidad de IDs de servicios.");
+            }
+
+            var detalleEnumerator = detalleList.GetEnumerator();
+            var servicioIDEnumerator = servicioID.GetEnumerator();
+
+            while (detalleEnumerator.MoveNext() && servicioIDEnumerator.MoveNext())
+            {
+                // Obtener el detalle de factura y el ID del servicio actual
+                DetallesFacturas detalle = detalleEnumerator.Current;
+                int idServicio = servicioIDEnumerator.Current;
+
+                // Agregar una fila a la tabla para este detalle de factura
+                table.Rows.Add(new object[]
+                {
+                    idServicio, // Utilizar el ID del servicio actual
+                    detalle.Precio,
+                    detalle.Cantidad,
+                    detalle.Importe,
+                    detalle.SubTotal,
+                    detalle.Descuento
+                });
+            }
+
+            using (SqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+
+                using (SqlCommand cmd = new SqlCommand("InsertarFacturaConDetalles", conexion))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter parameter = cmd.Parameters.AddWithValue("@DetalleTable", table);
+                    parameter.SqlDbType = SqlDbType.Structured;
+
+                    cmd.Parameters.AddWithValue("@Total", total);
+                    cmd.Parameters.AddWithValue("@Fecha", fecha);
+                    cmd.Parameters.AddWithValue("@PacienteID", pacienteID);
+                    cmd.Parameters.AddWithValue("@UsuarioID", UserLoginCache.GetID());
+
+                    try
+                    {
+                        cmd.ExecuteNonQuery();                        
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine("El error es: " + ex.Message);
+                    }
+                }
+            }
+        }
+
     }
 }

@@ -18,7 +18,6 @@ namespace Presentacion.FormsButton.Servicio
         public Servicios()
         {
             InitializeComponent();
-            dtgvServicios.ClearSelection();
         }
         private void Servicios_Load(object sender, EventArgs e)
         {
@@ -30,9 +29,12 @@ namespace Presentacion.FormsButton.Servicio
         private void mostrarFacturas()
         {
             dtgvServicios.DataSource = cnFactura.mostrarFacturas();
-            btnCerrar.Focus();
         }
 
+        public void actualizardtgv()
+        {
+            mostrarFacturas();
+        }
 
         private void Permisos()
         {
@@ -73,8 +75,18 @@ namespace Presentacion.FormsButton.Servicio
         private void btnCrear_Click(object sender, EventArgs e)
         {
             AbrirFormulario<CrudServicio>();
-
         }
 
+        private void dtgvServicios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgvServicios.SelectedRows.Count > 0)
+            {
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dtgvServicios.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+                {
+                    MessageBox.Show("Has presionado el boton de la celda: " + e.RowIndex);
+                }
+            }
+
+        }
     }
 }

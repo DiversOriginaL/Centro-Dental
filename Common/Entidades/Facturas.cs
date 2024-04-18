@@ -8,28 +8,12 @@ namespace Common.Entidades
 {
     public class Facturas
     {
-        private int FacturaID { get; set; }
-        private decimal Total { get; set; }
-        private DateTime Fecha { get; set; }
+        public int FacturaID { get; set; }
+        public decimal Total { get; set; }
+        public DateTime Fecha { get; set; }
 
-        public void SetFacturaID(int FacturaID)
-        {
-            this.FacturaID = FacturaID;
-        }
-
-        public void SetTotal(decimal Total)
-        {
-            this.Total = Total;
-        }
-
-        public void SetFecha(DateTime Fecha)
-        {
-            this.Fecha = Fecha;
-        }
-
-        public int GetFacturaID() => this.FacturaID;
-        public decimal GetTotal() => this.Total;
-        public DateTime GetFecha() => this.Fecha;
+        public int PacienteID { get; set; }
+        public int UsuarioID { get; set; }
 
     }
 }

@@ -8,7 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Entidades;
 using Domain.Domain;
+using Presentacion.FormsButton.Servicio;
 using Presentacion.FormsButton.Servicio.FormHijos.CargarPaciente;
 
 namespace Presentacion.FormsButton.Servicios.FormHijos
@@ -225,6 +227,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
         string? id;
         string? pnombre;
         string? papellido;
+        List<int> servicioID = new List<int>();
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -263,6 +266,11 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
                 id, pnombre + " " + papellido, servicio, precio, cantidad, importe, descuento, subtotal
             });
 
+            if(cbServicio.SelectedValue != null && cbServicio.Text != "SERVICIO:" || cbServicio.Text != "")
+            {
+                servicioID.Add(Convert.ToInt32(cbServicio.SelectedValue.ToString()));
+            }
+
             RestaurarForm();
             sendDtgvDatos();
         }
@@ -283,7 +291,8 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             {
                 try
                 {
-                    dtgvCrudServicio.Rows.Remove(dtgvCrudServicio.CurrentRow);                
+                    dtgvCrudServicio.Rows.Remove(dtgvCrudServicio.CurrentRow);    
+                    
 
                 }catch(InvalidOperationException ex)
                 {
@@ -313,6 +322,49 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
             string Total = cnFactura.ObtenerTotal(Subtotales);
             lblResultado.Text = Total;
+        }
+
+
+        
+        string operacion = "Insertar";
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+            if(operacion == "Insertar")
+            {
+                string PacienteID = dtgvCrudServicio.CurrentRow.Cells["ID"].Value.ToString();
+                string Total = lblResultado.Text;
+
+                List<DetallesFacturas> detalle = new List<DetallesFacturas>();
+
+
+                foreach (DataGridViewRow dtgv in dtgvCrudServicio.Rows)
+                {
+
+                    var datos = new DetallesFacturas()
+                    {
+                        Precio = Convert.ToDecimal(dtgv.Cells["Precio"].Value),
+                        Cantidad = Convert.ToInt32(dtgv.Cells["Cantidad"].Value),
+                        Importe = Convert.ToDecimal(dtgv.Cells["Importe"].Value),
+                        Descuento = Convert.ToDecimal(dtgv.Cells["Descuento"].Value),
+                        SubTotal = Convert.ToDecimal(dtgv.Cells["SubTotal"].Value)
+                    };
+                    detalle.Add(datos);
+                }
+
+                cnFactura.insertarFactura(detalle, servicioID, Total, PacienteID);
+                MessageBox.Show("Factura realizada con exito.");
+
+                var service = new Servicio.Servicios();
+                this.Close();
+
+                service.actualizardtgv();
+            }
+            else if(operacion == "Editar")
+            {
+
+            }
         }
     }
 }
