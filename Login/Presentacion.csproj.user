@@ -28,6 +28,9 @@
     <Compile Update="FormsButton\Servicio\Servicios.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormsButton\Servicio\VerDetalles\VerDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormsButton\Usuario\FormHijos\CrudUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

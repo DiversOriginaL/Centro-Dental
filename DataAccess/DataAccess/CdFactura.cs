@@ -31,6 +31,25 @@ namespace DataAccess.DataAccess
             }
             return dt;
         }
+        public DataTable mostrarDetalles(int FacturaID)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                using (SqlCommand command = new SqlCommand("mostrarDetalles", conexion))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@FacturaID", FacturaID);
+
+                    using (SqlDataReader leer = command.ExecuteReader())
+                    {
+                        dt.Load(leer);
+                    }
+                }
+            }
+            return dt;
+        }
 
         public DataTable cargarServicios()
         {

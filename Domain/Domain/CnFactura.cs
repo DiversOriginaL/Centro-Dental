@@ -14,13 +14,17 @@ namespace Domain.Domain
         CdFactura cdFactura = new CdFactura();
         DataTable dt = new DataTable();
 
-        Facturas factura = new Facturas();
-        DetallesFacturas detalle = new DetallesFacturas();
-
+        //MOSTRAR Y CARGAR DATOS.
 
         public DataTable mostrarFacturas()
         {
             dt = cdFactura.mostrarFacturas();
+            return dt;
+        }
+
+        public DataTable mostrarDetalles(string FacturaID)
+        {
+            dt = cdFactura.mostrarDetalles(Convert.ToInt32(FacturaID));
             return dt;
         }
 

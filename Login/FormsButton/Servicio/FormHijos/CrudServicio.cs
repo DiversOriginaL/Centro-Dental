@@ -289,10 +289,12 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
         {
             if (dtgvCrudServicio.SelectedRows.Count >= 0)
             {
+                int fila = Convert.ToInt32(dtgvCrudServicio.SelectedRows[0].Index.ToString()); 
+
                 try
                 {
-                    dtgvCrudServicio.Rows.Remove(dtgvCrudServicio.CurrentRow);    
-                    
+                    dtgvCrudServicio.Rows.Remove(dtgvCrudServicio.CurrentRow);
+                    servicioID.RemoveAt(fila);
 
                 }catch(InvalidOperationException ex)
                 {

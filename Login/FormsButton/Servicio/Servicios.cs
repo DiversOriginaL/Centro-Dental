@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
 using Domain.Domain;
+using Presentacion.FormsButton.Servicio.VerDetalles;
 
 namespace Presentacion.FormsButton.Servicio
 {
@@ -83,10 +84,32 @@ namespace Presentacion.FormsButton.Servicio
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dtgvServicios.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
                 {
-                    MessageBox.Show("Has presionado el boton de la celda: " + e.RowIndex);
+                    id = dtgvServicios.SelectedRows[0].Cells["FacturaID"].Value.ToString();
+                    verDetalles<VerDetalle>(this);
                 }
             }
 
         }
+        string id;
+        private void verDetalles<MiForm>(Servicios servicio) where MiForm : Form
+        {
+            VerDetalle formulario;
+            formulario = Application.OpenForms.OfType<VerDetalle>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                formulario = new VerDetalle();
+                formulario.TopLevel = true;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.StartPosition = FormStartPosition.CenterScreen;
+                formulario.getFacturaID(id);
+
+                formulario.ShowDialog();
+                formulario.BringToFront();
+
+            }
+            else formulario.BringToFront();
+        }
+
     }
 }
