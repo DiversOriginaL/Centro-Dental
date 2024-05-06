@@ -39,7 +39,6 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         }
         #endregion
 
-
         #region EfectoPlaceHolder y Configuracion de controles
         private void txtPnombre_Enter(object sender, EventArgs e)
         {

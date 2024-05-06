@@ -80,6 +80,7 @@
             // 
             // dtgvVerDetalles
             // 
+            this.dtgvVerDetalles.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtgvVerDetalles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvVerDetalles.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
@@ -116,8 +117,10 @@
             this.dtgvVerDetalles.RowHeadersVisible = false;
             this.dtgvVerDetalles.RowHeadersWidth = 62;
             this.dtgvVerDetalles.RowTemplate.Height = 33;
+            this.dtgvVerDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvVerDetalles.Size = new System.Drawing.Size(1313, 655);
             this.dtgvVerDetalles.TabIndex = 10;
+            this.dtgvVerDetalles.TabStop = false;
             // 
             // Servicio
             // 

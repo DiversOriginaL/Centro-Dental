@@ -90,6 +90,7 @@ namespace Presentacion.FormsButton.Servicio
             }
 
         }
+        
         string id;
         private void verDetalles<MiForm>(Servicios servicio) where MiForm : Form
         {
@@ -109,6 +110,47 @@ namespace Presentacion.FormsButton.Servicio
 
             }
             else formulario.BringToFront();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEditar<CrudServicio>(this);
+        }
+        string pacienteID;
+        string paciente;
+        private void AbrirFormularioEditar<MiForm>(Servicios service) where MiForm : Form
+        {
+            if (dtgvServicios.SelectedRows.Count > 0)
+            {
+                // Obtener el formulario CrudUsuario si ya está abierto
+
+                id = dtgvServicios.CurrentRow.Cells["FacturaID"].Value.ToString();
+                pacienteID = dtgvServicios.CurrentRow.Cells["PacienteID"].Value.ToString();
+                paciente = dtgvServicios.CurrentRow.Cells["Paciente"].Value.ToString();
+
+                VerDetalle valor = new VerDetalle();
+
+                CrudServicio crudServicioForm = Application.OpenForms.OfType<CrudServicio>().FirstOrDefault();
+
+                if (crudServicioForm == null)
+                {
+                    crudServicioForm = new CrudServicio(service);
+                    crudServicioForm.TopLevel = true;
+                    crudServicioForm.FormBorderStyle = FormBorderStyle.None;
+                    crudServicioForm.StartPosition = FormStartPosition.CenterScreen;
+                    crudServicioForm.operacion = "Editar";
+                }
+                
+                valor.cargarDetallesDtgv(crudServicioForm, id, pacienteID, paciente);
+
+                crudServicioForm.ShowDialog();
+                crudServicioForm.BringToFront();
+                
+            }
+            else
+            {
+                MessageBox.Show("SELECCIONE LA FILA A EDITAR.");
+            }
         }
 
     }

@@ -10,16 +10,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Entidades;
 using Domain.Domain;
-using Presentacion.FormsButton.Servicio;
 using Presentacion.FormsButton.Servicio.FormHijos.CargarPaciente;
+using Presentacion.FormsButton.Servicio.VerDetalles;
 
 namespace Presentacion.FormsButton.Servicios.FormHijos
 {
     public partial class CrudServicio : Form
     {
+
         public CrudServicio()
         {
             InitializeComponent();
+        }
+
+        public Servicio.Servicios servicioForm;
+        public CrudServicio(Servicio.Servicios servicioForm) : this()
+        {
+            this.servicioForm = servicioForm;
         }
         private void CrudServicio_Load(object sender, EventArgs e)
         {
@@ -219,12 +226,12 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
         public void getid(string id, string pnombre, string papellido)
         {
-            this.id = id;
+            this.pacienteid = id;
             this.pnombre = pnombre;
             this.papellido = papellido;
         }
 
-        string? id;
+        string? pacienteid;
         string? pnombre;
         string? papellido;
         List<int> servicioID = new List<int>();
@@ -237,11 +244,11 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             string descuento = txtDescuento.Text.Trim();
             string importe = ""; string subtotal = "";
 
-            if (id == null) id = "#";
+            if (pacienteid == null) pacienteid = "#";
             if (pnombre == null || papellido == null) { pnombre = "SIN"; papellido = "ESPECIFICAR"; }
             if (cbServicio.Text == "SERVICIO:" || cbServicio.Text == "") servicio = "SIN ESPECIFICAR";
             if (txtDescuento.Text == "DESCUENTO:" || txtDescuento.Text == "") descuento = "0.00";
-
+            if (operacion == "Editar") pacienteid = this.pacienteID;
             if (txtCosto.Text == "PRECIO:" || txtCosto.Text == "") 
             { 
                 precio = "0.00"; 
@@ -262,17 +269,22 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
 
             dtgvCrudServicio.Rows.Add(new object[] 
-            { 
-                id, pnombre + " " + papellido, servicio, precio, cantidad, importe, descuento, subtotal
+            {
+                pacienteid, pnombre + " " + papellido, servicio, precio, cantidad, importe, descuento, subtotal
             });
 
-            if(cbServicio.SelectedValue != null && cbServicio.Text != "SERVICIO:" || cbServicio.Text != "")
+            if((cbServicio.SelectedValue != null && cbServicio.Text != "SERVICIO:" || cbServicio.Text != "") && (operacion == "Insertar"))
             {
                 servicioID.Add(Convert.ToInt32(cbServicio.SelectedValue.ToString()));
             }
 
+            if (!(servicioID.Count > 0) && (operacion == "Editar"))
+            {
+                valoresCoincidentes.Add(Convert.ToInt32(cbServicio.SelectedValue.ToString()));
+            }
+
             RestaurarForm();
-            sendDtgvDatos();
+            calcularTotal();
         }
 
         private void RestaurarForm()
@@ -287,22 +299,32 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dtgvCrudServicio.SelectedRows.Count >= 0)
+            if (dtgvCrudServicio.SelectedRows.Count > 0)
             {
-                int fila = Convert.ToInt32(dtgvCrudServicio.SelectedRows[0].Index.ToString()); 
-
                 try
                 {
+                    int fila = dtgvCrudServicio.SelectedRows[0].Index;
                     dtgvCrudServicio.Rows.Remove(dtgvCrudServicio.CurrentRow);
-                    servicioID.RemoveAt(fila);
 
-                }catch(InvalidOperationException ex)
+                    // Eliminar el elemento correspondiente en la lista servicioID
+                    if (servicioID.Count > 0 && fila < servicioID.Count)
+                    {
+                        servicioID.RemoveAt(fila);
+                    }
+
+                    // Eliminar el elemento correspondiente en la lista valoresCoincidentes
+                    if (valoresCoincidentes.Count > 0 && fila < valoresCoincidentes.Count)
+                    {
+                        valoresCoincidentes.RemoveAt(fila);
+                    }
+                }
+                catch (ArgumentOutOfRangeException ex)
                 {
                     MessageBox.Show("NO SELECCIONASTE LA FILA PARA PODER ELIMINARLA O NO EXISTE DICHA FILA... ERROR: " + ex.Message);
                 }
 
                 dtgvCrudServicio.ClearSelection();
-                sendDtgvDatos();
+                calcularTotal();
             }
             else
             {
@@ -310,7 +332,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             }
         }
 
-        private void sendDtgvDatos()
+        private void calcularTotal()
         {
             List<string> Subtotales = new List<string>();
 
@@ -328,11 +350,10 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
 
         
-        string operacion = "Insertar";
+        public string operacion = "Insertar";
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
             if(operacion == "Insertar")
             {
                 string PacienteID = dtgvCrudServicio.CurrentRow.Cells["ID"].Value.ToString();
@@ -365,8 +386,82 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             }
             else if(operacion == "Editar")
             {
+                string total = lblResultado.Text;
+
+                List<DetallesFacturas> detalle = new List<DetallesFacturas>();
+
+                foreach (DataGridViewRow dtgv in dtgvCrudServicio.Rows)
+                {
+
+                    var datos = new DetallesFacturas()
+                    {
+                        Precio = Convert.ToDecimal(dtgv.Cells["Precio"].Value),
+                        Cantidad = Convert.ToInt32(dtgv.Cells["Cantidad"].Value),
+                        Importe = Convert.ToDecimal(dtgv.Cells["Importe"].Value),
+                        Descuento = Convert.ToDecimal(dtgv.Cells["Descuento"].Value),
+                        SubTotal = Convert.ToDecimal(dtgv.Cells["SubTotal"].Value)
+                    };
+                    detalle.Add(datos);
+                }
+
+                cnFactura.EditarFactura(facturaid, detalle, valoresCoincidentes, total, pacienteID);
+                MessageBox.Show("Factura editada con exito.");
+                operacion = "Insertar";
+
+                this.Close();
 
             }
         }
+
+        string facturaid;
+        string pacienteID;
+        List<int> valoresCoincidentes = new List<int>();
+
+
+        public void recibirDetalles(string facturaid, List<string> services, List<DetallesFacturas> detalles, string pacienteID, string paciente)
+        {
+            this.facturaid = facturaid;
+            this.pacienteID = pacienteID;
+
+            for (int i = 0; i < services.Count; i++)
+            {
+                string servicio = services[i];
+                DetallesFacturas detalle = detalles[i];
+
+                int rowIndex = dtgvCrudServicio.Rows.Add();
+
+                dtgvCrudServicio.Rows[rowIndex].Cells["ID"].Value = pacienteID;
+                dtgvCrudServicio.Rows[rowIndex].Cells["Paciente"].Value = paciente;
+                dtgvCrudServicio.Rows[rowIndex].Cells["Servicio"].Value = servicio;
+                dtgvCrudServicio.Rows[rowIndex].Cells["Precio"].Value = detalle.Precio;
+                dtgvCrudServicio.Rows[rowIndex].Cells["Cantidad"].Value = detalle.Cantidad;
+                dtgvCrudServicio.Rows[rowIndex].Cells["Importe"].Value = detalle.Importe;
+                dtgvCrudServicio.Rows[rowIndex].Cells["Descuento"].Value = detalle.Descuento;
+                dtgvCrudServicio.Rows[rowIndex].Cells["SubTotal"].Value = detalle.SubTotal;
+            }
+
+            calcularTotal();
+
+
+            //EXTRAYENDO LOS VALORES DE LOS SERVICIOS.
+            for (int i = 0; i < services.Count; i++)
+            {
+                string servicio = services[i].ToString();
+                int contador = 1;
+
+                foreach (var item in cbServicio.Items)
+                {
+                    string textoComboBox = cbServicio.GetItemText(item);
+
+                    if (string.Equals(servicio, textoComboBox, StringComparison.OrdinalIgnoreCase))
+                    {
+                        valoresCoincidentes.Add(contador);
+                        MessageBox.Show("Coincidencia encontrada: " + contador.ToString());
+                    }
+                    contador++;
+                }
+            }
+        }
+
     }
 }

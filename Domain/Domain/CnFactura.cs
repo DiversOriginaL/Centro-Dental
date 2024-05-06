@@ -57,8 +57,6 @@ namespace Domain.Domain
                 Console.WriteLine("Error: " + ex.Message);
                 throw;
             }
-
-
         }
 
         public string ObtenerSubTotal(string importe, string descuento)
@@ -84,12 +82,21 @@ namespace Domain.Domain
 
             return Total.ToString();
         }
+        decimal total;
+
         //==================================================INSERTAR=================================================================
 
         public void insertarFactura(List<DetallesFacturas> detalles, List<int> ServicioID, string total, string pacienteid)
         {
             cdFactura.InsertarFacturaConDetalles(detalles, ServicioID, Convert.ToDecimal(total), DateTime.Now, Convert.ToInt32(pacienteid));
         }
+
+        //==================================================EDITAR=================================================================
+        public void EditarFactura(string FacturaID, List<DetallesFacturas> detalles, List<int> ServicioID, string total, string pacienteid)
+        {
+            cdFactura.EditarFacturaConDetalles(Convert.ToInt32(FacturaID), detalles, ServicioID, Convert.ToDecimal(total), DateTime.Now, Convert.ToInt32(pacienteid));
+        }
+
 
     }
 }

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Domain.Domain;
+using Presentacion.FormsButton.Servicios.FormHijos;
+using Common.Entidades;
 
 namespace Presentacion.FormsButton.Servicio.VerDetalles
 {
@@ -33,11 +35,14 @@ namespace Presentacion.FormsButton.Servicio.VerDetalles
 
         #endregion
 
-
         private void VerDetalle_Load(object sender, EventArgs e)
         {
             mostrarDetalles();
-            sendDtgvDatos();
+            sendDtgvDatoTotal();
+        }
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         CnFactura cnFactura = new CnFactura();
@@ -46,17 +51,7 @@ namespace Presentacion.FormsButton.Servicio.VerDetalles
         {
             dtgvVerDetalles.DataSource = cnFactura.mostrarDetalles(id);
         }
-
-        public void getFacturaID(string id)
-        {
-            this.id = id;
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void sendDtgvDatos()
+        private void sendDtgvDatoTotal()
         {
             List<string> Subtotales = new List<string>();
 
@@ -70,6 +65,42 @@ namespace Presentacion.FormsButton.Servicio.VerDetalles
 
             string Total = cnFactura.ObtenerTotal(Subtotales);
             lblResultado.Text = Total;
+        }
+        public void getFacturaID(string id)
+        {
+            this.id = id;
+        }
+
+        public void cargarDetallesDtgv(CrudServicio crudServicioForm, string id, string pacienteID, string paciente)
+        {
+            dtgvVerDetalles.DataSource = cnFactura.mostrarDetalles(id);
+
+            List<string> valoresExtraidos = new List<string>();
+            List<DetallesFacturas> detalle = new List<DetallesFacturas>();
+
+            foreach (DataGridViewRow fila in dtgvVerDetalles.Rows)
+            {
+                // Verificar si la fila no es la fila de encabezado y si el valor de la celda no es nulo
+                if (!fila.IsNewRow && fila.Cells["Servicio"].Value != null)
+                {
+                    string valorCelda = fila.Cells["Servicio"].Value.ToString();
+                    valoresExtraidos.Add(valorCelda);
+                }
+
+                var datos = new DetallesFacturas()
+                {
+                    Precio = Convert.ToDecimal(fila.Cells["Precio"].Value),
+                    Cantidad = Convert.ToInt32(fila.Cells["Cantidad"].Value),
+                    Importe = Convert.ToDecimal(fila.Cells["Importe"].Value),
+                    Descuento = Convert.ToDecimal(fila.Cells["Descuento"].Value),
+                    SubTotal = Convert.ToDecimal(fila.Cells["SubTotal"].Value)
+                };
+                detalle.Add(datos);
+
+            }
+
+            crudServicioForm.recibirDetalles(id, valoresExtraidos, detalle, pacienteID, paciente);
+
         }
     }
 }
