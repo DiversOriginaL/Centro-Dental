@@ -144,7 +144,6 @@ namespace Presentacion.FormsButton.Servicio
                 valor.cargarDetallesDtgv(crudServicioForm, id, pacienteID, paciente);
 
                 crudServicioForm.ShowDialog();
-                crudServicioForm.BringToFront();
                 
             }
             else
@@ -153,5 +152,19 @@ namespace Presentacion.FormsButton.Servicio
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarFacturaConDetalles();
+        }
+
+        private void EliminarFacturaConDetalles()
+        {
+            if (dtgvServicios.SelectedRows.Count > 0)
+            {
+                string FacturaID = dtgvServicios.SelectedRows[0].Cells["FacturaID"].Value.ToString();
+                cnFactura.EliminarFacturaConDetalles(FacturaID);
+                actualizardtgv();
+            }
+        }
     }
 }

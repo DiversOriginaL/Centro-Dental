@@ -327,6 +327,14 @@
           }
         }
       },
+      "PrinterUtility/1.2.0": {
+        "runtime": {
+          "lib/PrinterUtility.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -681,6 +689,17 @@
           }
         }
       },
+      "WebPrintManager.Epson/1.0.2": {
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebPrintManager.Epson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.2.0"
+          }
+        }
+      },
       "WinFormAnimation/1.6.0.4": {
         "runtime": {
           "lib/net40/WinFormAnimation.dll": {
@@ -845,6 +864,13 @@
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
+    },
+    "PrinterUtility/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ML1Eu6w16wOEPNbHvG4WOok+zrFDpw2TRnUmCUbwzJsDpRm3DZUYF5ujbdg4mcnV6QHOtJhfltTg6dNI7ldMiQ==",
+      "path": "printerutility/1.2.0",
+      "hashPath": "printerutility.1.2.0.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
@@ -1041,6 +1067,13 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "WebPrintManager.Epson/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Q5z9QdYmuEc2WhKY79g6Hij3Ti+JS85TttNgDlcut/gE387ccsyQJuPykRb9T1WH6mAGccVcaPlyPkm6fQviBw==",
+      "path": "webprintmanager.epson/1.0.2",
+      "hashPath": "webprintmanager.epson.1.0.2.nupkg.sha512"
     },
     "WinFormAnimation/1.6.0.4": {
       "type": "package",

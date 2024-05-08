@@ -11,7 +11,8 @@ using System.Windows.Forms;
 using Common.Entidades;
 using Domain.Domain;
 using Presentacion.FormsButton.Servicio.FormHijos.CargarPaciente;
-using Presentacion.FormsButton.Servicio.VerDetalles;
+using System.Drawing.Printing;
+using Common.Cache;
 
 namespace Presentacion.FormsButton.Servicios.FormHijos
 {
@@ -456,11 +457,92 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
                     if (string.Equals(servicio, textoComboBox, StringComparison.OrdinalIgnoreCase))
                     {
                         valoresCoincidentes.Add(contador);
-                        MessageBox.Show("Coincidencia encontrada: " + contador.ToString());
                     }
                     contador++;
                 }
             }
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            pdImprimir = new PrintDocument();
+
+            PrinterSettings ps = new PrinterSettings();
+
+            pdImprimir.PrinterSettings = ps;
+            pdImprimir.PrintPage += Imprimir;
+            pdImprimir.Print();
+            
+        }
+
+        private void Imprimir(object sender, PrintPageEventArgs e)
+        {
+            Font subtitulo = new Font("Times New Roman", 9, FontStyle.Bold, GraphicsUnit.Point);
+            Font cuerpo = new Font("Times New Roman", 9, FontStyle.Regular, GraphicsUnit.Point);
+            Font small = new Font("Times New Roman", 7, FontStyle.Bold, GraphicsUnit.Point);
+
+            int width = 300;
+            int height = 1000;
+            int y = 0;
+            int x = 0;
+
+            string direccion = @"C:\Miguel Ballester, Santo Domingo Este\Republica Dominicana";
+            string contacto = "Contacto: +1(829)-998-8609";
+            string rnc = "RNC: 22300244161";
+            string fecha = "Fecha: " + DateTime.Now.ToString();
+            string remitente = "Remitente: " + UserLoginCache.getUser();
+                        
+            e.Graphics.DrawString(direccion, cuerpo, Brushes.Black, new RectangleF(x, y, width, height));
+            e.Graphics.DrawString(contacto, cuerpo, Brushes.Black, new RectangleF(x, y += 30, width, height));
+            e.Graphics.DrawString(fecha, cuerpo, Brushes.Black, new RectangleF(x, y += 15, width, height));
+
+            if(remitente != null)
+            {
+                e.Graphics.DrawString(remitente, cuerpo, Brushes.Black, new RectangleF(x, y += 15, width, height));
+            }
+
+            e.Graphics.DrawString(rnc, cuerpo, Brushes.Black, new RectangleF(x, y += 15, width, height));
+
+            e.Graphics.DrawString("-----------------------CONSUMO------------------------------", subtitulo, Brushes.Black, new RectangleF(x += 5, y += 30, width, height));
+            e.Graphics.DrawString("Servicio:     Precio:     Cantidad:     Importe:", subtitulo, Brushes.Black, new RectangleF(x += 10, y += 20, width, height));
+            e.Graphics.DrawString("------------------------------------------------------------", subtitulo, Brushes.Black, new RectangleF(x, y += 10, width, height));
+
+            if (dtgvCrudServicio.Rows.Count > 0)
+            {
+                foreach(DataGridViewRow row in dtgvCrudServicio.Rows)
+                { 
+                    string servicio = row.Cells["Servicio"].Value.ToString();
+                    string precio = row.Cells["Precio"].Value.ToString();
+                    string cantidad = row.Cells["Cantidad"].Value.ToString();
+                    string Importe = row.Cells["Importe"].Value.ToString();
+
+                    e.Graphics.DrawString(servicio + "     " + precio + "     " + cantidad + "     " + Importe,
+                        small, Brushes.Black, new RectangleF(x, y += 15, width, height));
+
+                }
+
+            }
+            e.Graphics.DrawString("-------------------------------------------------------", subtitulo, Brushes.Black, new RectangleF(x, y += 20, width, height));
+            e.Graphics.DrawString("SubTotal: DOP$ " + lblResultado.Text, cuerpo, Brushes.Black, new RectangleF(x, y += 15, width, height));
+
+            double sumatoria = 0.00;
+
+            foreach (DataGridViewRow row in dtgvCrudServicio.Rows)
+            {
+                double descuento = 0;
+                if (Convert.ToDouble(row.Cells["Descuento"].Value.ToString()) > 0)
+                {
+                    descuento = Convert.ToDouble(row.Cells["Descuento"].Value.ToString());
+                }
+
+                sumatoria += descuento;
+            }
+
+            e.Graphics.DrawString("Descuento: DOP$ " + sumatoria.ToString(), cuerpo, Brushes.Black, new RectangleF(x, y += 20, width, height));
+            e.Graphics.DrawString("Total: DOP$ " + lblResultado.Text, cuerpo, Brushes.Black, new RectangleF(x, y += 20, width, height));
+
+
+            e.Graphics.DrawString("------UN PLACER HABERLE ASISTIDO------\n\n", subtitulo, Brushes.Black, new RectangleF(x, y += 60, width, height));
         }
 
     }

@@ -11,7 +11,9 @@
   <ItemGroup>
     <PackageReference Include="CircularProgressBar" Version="2.8.0.16" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.5" />
+    <PackageReference Include="PrinterUtility" Version="1.2.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="WebPrintManager.Epson" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>

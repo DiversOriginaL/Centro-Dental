@@ -242,5 +242,19 @@ namespace DataAccess.DataAccess
             }
         }
 
+        public void eliminarFacturaConDetalles(int FacturaID)
+        {
+            using (SqlConnection conexion = GetConnection())
+            {
+                conexion.Open();
+                using (SqlCommand command = new SqlCommand("eliminarFacturaConDetalles", conexion))
+                {
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@FacturaID", FacturaID);
+                    command.ExecuteNonQuery();
+                    command.Parameters.Clear();
+                }
+            }
+        }
     }
 }

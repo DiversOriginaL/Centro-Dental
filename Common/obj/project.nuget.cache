@@ -1,8 +1,24 @@
 {
   "version": 2,
-  "dgSpecHash": "Yx7sjrNNws1z8cu+3c//oNmI10EpDOY4Hj1xIeO7f7WDbNeYHp+ZfTi3WELsTtPAR+f0qK90fjS4UOdAlGtsnw==",
+  "dgSpecHash": "03t+Qbla8XQ78R4GVHPgo7ssLTdUOjBCc/bz2p9v162dELr5b1vt51B9D7lQ9SkBPTLu+zPJlNkS7ZQ9CgNunA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Common\\Common.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\printerutility\\1.2.0\\printerutility.1.2.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\webprintmanager.epson\\1.0.2\\webprintmanager.epson.1.0.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"PrinterUtility 1.2.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "PrinterUtility",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

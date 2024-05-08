@@ -59,9 +59,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnDown = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.pdImprimir = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCrudServicio)).BeginInit();
             this.pnTop.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -475,6 +477,7 @@
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.btnImprimir);
             this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.lblResultado);
             this.panel3.Controls.Add(this.lblTotal);
@@ -483,6 +486,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1314, 91);
             this.panel3.TabIndex = 41;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImprimir.FlatAppearance.BorderSize = 0;
+            this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
+            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImprimir.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnImprimir.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnImprimir.Image = global::Presentacion.Properties.Resources.Imprimir;
+            this.btnImprimir.Location = new System.Drawing.Point(942, 9);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(235, 67);
+            this.btnImprimir.TabIndex = 7;
+            this.btnImprimir.Text = " IMPRIMIR";
+            this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnEliminar
             // 
@@ -580,5 +602,7 @@
         private DataGridViewTextBoxColumn Importe;
         private DataGridViewTextBoxColumn Descuento;
         private DataGridViewTextBoxColumn SubTotal;
+        private Button btnImprimir;
+        private System.Drawing.Printing.PrintDocument pdImprimir;
     }
 }

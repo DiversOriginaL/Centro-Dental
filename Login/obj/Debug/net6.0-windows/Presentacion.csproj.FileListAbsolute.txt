@@ -80,3 +80,5 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\De
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Paciente.FormHijos.AbrirEstadoSalud.resources
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Servicio.FormHijos.CargarPaciente.CargaPaciente.resources
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Presentacion.FormsButton.Servicio.VerDetalles.VerDetalle.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\PrinterUtility.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\WebPrintManager.Epson.dll

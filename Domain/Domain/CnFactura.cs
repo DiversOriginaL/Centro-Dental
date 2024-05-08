@@ -97,6 +97,9 @@ namespace Domain.Domain
             cdFactura.EditarFacturaConDetalles(Convert.ToInt32(FacturaID), detalles, ServicioID, Convert.ToDecimal(total), DateTime.Now, Convert.ToInt32(pacienteid));
         }
 
-
+        public void EliminarFacturaConDetalles(string FacturaID)
+        {
+            cdFactura.eliminarFacturaConDetalles(Convert.ToInt32(FacturaID));
+        }
     }
 }
