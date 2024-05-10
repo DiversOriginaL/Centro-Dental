@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dpaizK7BLtDjHQ9VelNel2/K92B4NqoJz7m//vM4jsO4vCyrji85Cm+r4h/0dlYxOu+kww3fdbF1j3qPFUn/pQ==",
+  "dgSpecHash": "sBakjrVb0XAZozsi1PhqphaAM6caIiaRiVKsMyWX8V+fcNlYHLzPVKPX3O5fMy+T8dS6bTAkUDR4AGeU3ugGTg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\OneDrive\\Escritorio\\Programacion\\C#\\WindowsForm\\login\\Login\\Presentacion.csproj",
   "expectedPackageFiles": [
@@ -56,7 +56,8 @@
     "C:\\Users\\Dell\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\webprintmanager.epson\\1.0.2\\webprintmanager.epson.1.0.2.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512"
+    "C:\\Users\\Dell\\.nuget\\packages\\winformanimation\\1.6.0.4\\winformanimation.1.6.0.4.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\winforms.datavisualization\\1.9.2\\winforms.datavisualization.1.9.2.nupkg.sha512"
   ],
   "logs": [
     {

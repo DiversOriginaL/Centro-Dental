@@ -14,6 +14,7 @@
     <PackageReference Include="PrinterUtility" Version="1.2.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
     <PackageReference Include="WebPrintManager.Epson" Version="1.0.2" />
+    <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
   </ItemGroup>
 
   <ItemGroup>

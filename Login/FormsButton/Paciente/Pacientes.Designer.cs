@@ -177,18 +177,17 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dtgvPacientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvPacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgvPacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvPacientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.dtgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dtgvPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
@@ -229,7 +228,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dtgvPacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvPacientes.RowTemplate.Height = 40;
@@ -246,7 +245,7 @@
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
             this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Width = 79;
+            this.ID.Width = 85;
             // 
             // PNombre
             // 
@@ -256,7 +255,7 @@
             this.PNombre.Name = "PNombre";
             this.PNombre.ReadOnly = true;
             this.PNombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.PNombre.Width = 167;
+            this.PNombre.Width = 188;
             // 
             // SNombre
             // 
@@ -266,7 +265,7 @@
             this.SNombre.Name = "SNombre";
             this.SNombre.ReadOnly = true;
             this.SNombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.SNombre.Width = 169;
+            this.SNombre.Width = 190;
             // 
             // PApellido
             // 
@@ -276,7 +275,7 @@
             this.PApellido.Name = "PApellido";
             this.PApellido.ReadOnly = true;
             this.PApellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.PApellido.Width = 169;
+            this.PApellido.Width = 192;
             // 
             // SApellido
             // 
@@ -286,7 +285,7 @@
             this.SApellido.Name = "SApellido";
             this.SApellido.ReadOnly = true;
             this.SApellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.SApellido.Width = 171;
+            this.SApellido.Width = 194;
             // 
             // Edad
             // 
@@ -296,7 +295,7 @@
             this.Edad.Name = "Edad";
             this.Edad.ReadOnly = true;
             this.Edad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Edad.Width = 111;
+            this.Edad.Width = 122;
             // 
             // Sexo
             // 
@@ -306,7 +305,7 @@
             this.Sexo.Name = "Sexo";
             this.Sexo.ReadOnly = true;
             this.Sexo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Sexo.Width = 106;
+            this.Sexo.Width = 118;
             // 
             // Celular
             // 
@@ -316,7 +315,7 @@
             this.Celular.Name = "Celular";
             this.Celular.ReadOnly = true;
             this.Celular.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Celular.Width = 136;
+            this.Celular.Width = 154;
             // 
             // Telefono
             // 
@@ -326,7 +325,7 @@
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Telefono.Width = 152;
+            this.Telefono.Width = 172;
             // 
             // Provincia
             // 
@@ -336,7 +335,7 @@
             this.Provincia.Name = "Provincia";
             this.Provincia.ReadOnly = true;
             this.Provincia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Provincia.Width = 165;
+            this.Provincia.Width = 186;
             // 
             // Sector
             // 
@@ -346,7 +345,7 @@
             this.Sector.Name = "Sector";
             this.Sector.ReadOnly = true;
             this.Sector.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Sector.Width = 126;
+            this.Sector.Width = 142;
             // 
             // Calle
             // 
@@ -356,7 +355,7 @@
             this.Calle.Name = "Calle";
             this.Calle.ReadOnly = true;
             this.Calle.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Calle.Width = 109;
+            this.Calle.Width = 122;
             // 
             // NumCasa
             // 
@@ -366,7 +365,7 @@
             this.NumCasa.Name = "NumCasa";
             this.NumCasa.ReadOnly = true;
             this.NumCasa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.NumCasa.Width = 122;
+            this.NumCasa.Width = 136;
             // 
             // Usuario
             // 
@@ -376,7 +375,7 @@
             this.Usuario.Name = "Usuario";
             this.Usuario.ReadOnly = true;
             this.Usuario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Usuario.Width = 215;
+            this.Usuario.Width = 245;
             // 
             // EstadosSalud
             // 
@@ -389,7 +388,7 @@
             this.EstadosSalud.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.EstadosSalud.Text = "Estado Salud";
             this.EstadosSalud.UseColumnTextForButtonValue = true;
-            this.EstadosSalud.Width = 175;
+            this.EstadosSalud.Width = 204;
             // 
             // Enfermedad
             // 
@@ -439,7 +438,7 @@
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Fecha.Width = 119;
+            this.Fecha.Width = 132;
             // 
             // pnCabecera
             // 
@@ -455,6 +454,7 @@
             // 
             // pbFiltrar
             // 
+            this.pbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFiltrar.BackgroundImage = global::Presentacion.Properties.Resources.filtrar;
             this.pbFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbFiltrar.Location = new System.Drawing.Point(1311, 12);
