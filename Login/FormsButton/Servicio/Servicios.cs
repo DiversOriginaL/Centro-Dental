@@ -44,7 +44,8 @@ namespace Presentacion.FormsButton.Servicio
                UserLoginCache.RolId() == Positions.Recepcionista ||
                UserLoginCache.RolId() == Positions.Empleado)
             {
-                btnEliminar.Enabled = false;
+                btnEliminar.Enabled = true;
+                btnEditar.Enabled = false;
             }
 
         }

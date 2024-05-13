@@ -68,6 +68,7 @@
             this.txtPnombre.TabIndex = 1;
             this.txtPnombre.Text = "PRIMER NOMBRE:";
             this.txtPnombre.Enter += new System.EventHandler(this.txtPnombre_Enter);
+            this.txtPnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPnombre_KeyPress);
             this.txtPnombre.Leave += new System.EventHandler(this.txtPnombre_Leave);
             // 
             // txtSapellido
@@ -81,6 +82,7 @@
             this.txtSapellido.TabIndex = 4;
             this.txtSapellido.Text = "SEGUNDO APELLIDO:";
             this.txtSapellido.Enter += new System.EventHandler(this.txtSapellido_Enter);
+            this.txtSapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSapellido_KeyPress);
             this.txtSapellido.Leave += new System.EventHandler(this.txtSapellido_Leave);
             // 
             // txtSnombre
@@ -94,6 +96,7 @@
             this.txtSnombre.TabIndex = 2;
             this.txtSnombre.Text = "SEGUNDO NOMBRE:";
             this.txtSnombre.Enter += new System.EventHandler(this.txtSnombre_Enter);
+            this.txtSnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSnombre_KeyPress);
             this.txtSnombre.Leave += new System.EventHandler(this.txtSnombre_Leave);
             // 
             // txtPapellido
@@ -107,6 +110,7 @@
             this.txtPapellido.TabIndex = 3;
             this.txtPapellido.Text = "PRIMER APELLIDO:";
             this.txtPapellido.Enter += new System.EventHandler(this.txtPapellido_Enter);
+            this.txtPapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPapellido_KeyPress);
             this.txtPapellido.Leave += new System.EventHandler(this.txtPapellido_Leave);
             // 
             // txtEdad
@@ -120,6 +124,7 @@
             this.txtEdad.TabIndex = 5;
             this.txtEdad.Text = "EDAD:";
             this.txtEdad.Enter += new System.EventHandler(this.txtEdad_Enter);
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEdad_KeyPress);
             this.txtEdad.Leave += new System.EventHandler(this.txtEdad_Leave);
             // 
             // lblPersona
@@ -155,6 +160,7 @@
             this.txtTelefono.TabIndex = 9;
             this.txtTelefono.Text = "TELEFONO:";
             this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             this.txtTelefono.Leave += new System.EventHandler(this.txtTelefono_Leave);
             // 
             // txtCelular
@@ -168,6 +174,7 @@
             this.txtCelular.TabIndex = 8;
             this.txtCelular.Text = "CELULAR:";
             this.txtCelular.Enter += new System.EventHandler(this.txtCelular_Enter);
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             this.txtCelular.Leave += new System.EventHandler(this.txtCelular_Leave);
             // 
             // lblUbicacion
@@ -192,6 +199,7 @@
             this.txtSector.TabIndex = 12;
             this.txtSector.Text = "SECTOR:";
             this.txtSector.Enter += new System.EventHandler(this.txtSector_Enter);
+            this.txtSector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSector_KeyPress);
             this.txtSector.Leave += new System.EventHandler(this.txtSector_Leave);
             // 
             // txtNumCasa
@@ -281,6 +289,7 @@
             this.cbSexo.Size = new System.Drawing.Size(499, 48);
             this.cbSexo.TabIndex = 17;
             this.cbSexo.Text = "SEXO:";
+            this.cbSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbSexo_KeyPress);
             this.cbSexo.Leave += new System.EventHandler(this.cbSexo_Leave);
             // 
             // pnCerrar

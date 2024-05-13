@@ -469,6 +469,67 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 MessageBox.Show("ERROR: " + ex.Message);
             }
         }
+        #region Cofiguracion de campos (texto o numero)
+        private void soloNumero(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
+        private void soloTexto(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloTexto(sender, e);
+        }
+
+        private void txtSnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloTexto(sender, e);
+        }
+
+        private void txtPapellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloTexto(sender, e);
+        }
+
+        private void txtSapellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloTexto(sender, e);
+        }
+
+        private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumero(sender, e);
+        }
+
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumero(sender, e);
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumero(sender, e);
+        }
+
+        private void txtSector_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloTexto(sender, e);
+        }
+
+        private void cbSexo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloTexto(sender, e);
+        }
+        #endregion
     }
 }

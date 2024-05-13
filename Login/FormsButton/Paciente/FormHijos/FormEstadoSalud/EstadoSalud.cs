@@ -209,7 +209,6 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
             GetActualizaciones();
             this.Close();
         }
-
-
+        
     }
 }

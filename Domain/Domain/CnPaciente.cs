@@ -70,7 +70,7 @@ namespace Domain.Domain
             paciente.SetSexo(Convert.ToChar(sexo));
             contacto.SetCelular(celular);
             contacto.SetTelefono(telefono);
-            ubicacion.SetProvincia(provincia.ToString());
+            ubicacion.SetProvincia(provincia.ToString() ?? "SIN ESPECIFICAR");
             ubicacion.SetSector(sector);
             ubicacion.SetCalle(calle);
             ubicacion.SetNumCasa(numcasa);

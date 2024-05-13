@@ -97,7 +97,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
         private void txtCosto_Enter(object sender, EventArgs e)
         {
-            if(txtCosto.Text == "PRECIO:")
+            if (txtCosto.Text == "PRECIO:")
             {
                 txtCosto.Text = "";
                 txtCosto.ForeColor = Color.Black;
@@ -115,7 +115,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
         private void txtCantidad_Enter(object sender, EventArgs e)
         {
-            if(txtCantidad.Text == "CANTIDAD:")
+            if (txtCantidad.Text == "CANTIDAD:")
             {
                 txtCantidad.Text = "";
                 txtCantidad.ForeColor = Color.Black;
@@ -239,21 +239,36 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (pacienteid == null)
+            {
+                MessageBox.Show("Por favor seleccione un paciente antes de agregar un servicio. ", "Informacion", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (cbServicio.Text == "SERVICIO:" || cbServicio.Text == "")
+            {
+                MessageBox.Show("Por favor seleccione un servicio antes de intentar agregar una fila a la factura. ", "Informacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+
+            }
+
             string servicio = cbServicio.Text.Trim();
             string precio = txtCosto.Text.Trim();
             string cantidad = txtCantidad.Text.Trim();
             string descuento = txtDescuento.Text.Trim();
             string importe = ""; string subtotal = "";
 
-            if (pacienteid == null) pacienteid = "#";
+
             if (pnombre == null || papellido == null) { pnombre = "SIN"; papellido = "ESPECIFICAR"; }
-            if (cbServicio.Text == "SERVICIO:" || cbServicio.Text == "") servicio = "SIN ESPECIFICAR";
             if (txtDescuento.Text == "DESCUENTO:" || txtDescuento.Text == "") descuento = "0.00";
             if (operacion == "Editar") pacienteid = this.pacienteID;
-            if (txtCosto.Text == "PRECIO:" || txtCosto.Text == "") 
-            { 
-                precio = "0.00"; 
-                if(txtCantidad.Text == "CANTIDAD:" || txtCantidad.Text == "")
+            
+            if (txtCosto.Text == "PRECIO:" || txtCosto.Text == "")
+            {
+                precio = "0.00";
+
+                if (txtCantidad.Text == "CANTIDAD:" || txtCantidad.Text == "")
                 {
                     cantidad = "0";
                     importe = "0";
@@ -261,7 +276,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             }
             else
             {
-                if(txtCantidad.Text == "CANTIDAD:" || txtCantidad.Text == "") cantidad="1";
+                if (txtCantidad.Text == "CANTIDAD:" || txtCantidad.Text == "") cantidad = "1";
                 importe = cnFactura.ObtenerImporte(precio, cantidad);
 
             }
@@ -269,12 +284,12 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             subtotal = cnFactura.ObtenerSubTotal(importe, descuento);
 
 
-            dtgvCrudServicio.Rows.Add(new object[] 
+            dtgvCrudServicio.Rows.Add(new object[]
             {
                 pacienteid, pnombre + " " + papellido, servicio, precio, cantidad, importe, descuento, subtotal
             });
 
-            if((cbServicio.SelectedValue != null && cbServicio.Text != "SERVICIO:" || cbServicio.Text != "") && (operacion == "Insertar"))
+            if ((cbServicio.SelectedValue != null && cbServicio.Text != "SERVICIO:" || cbServicio.Text != "") && (operacion == "Insertar"))
             {
                 servicioID.Add(Convert.ToInt32(cbServicio.SelectedValue.ToString()));
             }
@@ -359,7 +374,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             {
                 lblResultado.Text = Total;
             }
-        
+
         }
 
         private void cbItbis_CheckStateChanged(object sender, EventArgs e)
@@ -378,7 +393,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if(operacion == "Insertar")
+            if (operacion == "Insertar")
             {
                 string PacienteID = dtgvCrudServicio.CurrentRow.Cells["ID"].Value.ToString();
                 string Total = lblResultado.Text;
@@ -408,7 +423,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
                 service.actualizardtgv();
             }
-            else if(operacion == "Editar")
+            else if (operacion == "Editar")
             {
                 string total = lblResultado.Text;
 
@@ -495,7 +510,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             pdImprimir.PrinterSettings = ps;
             pdImprimir.PrintPage += Imprimir;
             pdImprimir.Print();
-            
+
         }
 
         private void Imprimir(object sender, PrintPageEventArgs e)
@@ -514,12 +529,12 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             string rnc = "RNC: 22300244161";
             string fecha = "Fecha: " + DateTime.Now.ToString();
             string remitente = "Remitente: " + UserLoginCache.getUser();
-                        
+
             e.Graphics.DrawString(direccion, cuerpo, Brushes.Black, new RectangleF(x, y, width, height));
             e.Graphics.DrawString(contacto, cuerpo, Brushes.Black, new RectangleF(x, y += 30, width, height));
             e.Graphics.DrawString(fecha, cuerpo, Brushes.Black, new RectangleF(x, y += 15, width, height));
 
-            if(remitente != null)
+            if (remitente != null)
             {
                 e.Graphics.DrawString(remitente, cuerpo, Brushes.Black, new RectangleF(x, y += 15, width, height));
             }
@@ -532,8 +547,8 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
             if (dtgvCrudServicio.Rows.Count > 0)
             {
-                foreach(DataGridViewRow row in dtgvCrudServicio.Rows)
-                { 
+                foreach (DataGridViewRow row in dtgvCrudServicio.Rows)
+                {
                     string servicio = row.Cells["Servicio"].Value.ToString();
                     string precio = row.Cells["Precio"].Value.ToString();
                     string cantidad = row.Cells["Cantidad"].Value.ToString();
@@ -566,5 +581,27 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
             e.Graphics.DrawString("------UN PLACER HABERLE ASISTIDO------\n\n", subtitulo, Brushes.Black, new RectangleF(x, y += 60, width, height));
         }
 
+        private void soloNumero(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCosto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumero(sender, e);
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumero(sender, e);
+        }
+
+        private void txtDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumero(sender, e);
+        }
     }
 }

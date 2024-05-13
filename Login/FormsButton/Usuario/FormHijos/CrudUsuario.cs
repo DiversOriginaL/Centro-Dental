@@ -252,5 +252,23 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             pbVerContraseña.Visible = true;
             pbOcultarContraseña.Visible = false;
         }
+
+        private void txtNombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloTexto(sender, e);
+        }
+
+        private void txtApellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloTexto(sender, e);
+        }
+
+        private void SoloTexto(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

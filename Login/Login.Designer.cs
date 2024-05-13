@@ -121,7 +121,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImage = global::Presentacion.Properties.Resources.exit;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrar.Location = new System.Drawing.Point(1240, 9);
             this.btnCerrar.Name = "btnCerrar";
@@ -132,7 +132,7 @@
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimize;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizar.Location = new System.Drawing.Point(1206, 9);
             this.btnMinimizar.Name = "btnMinimizar";

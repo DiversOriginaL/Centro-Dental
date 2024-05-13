@@ -80,6 +80,7 @@
             this.txtApellidos.TabIndex = 24;
             this.txtApellidos.Text = "APELLIDOS:";
             this.txtApellidos.Enter += new System.EventHandler(this.txtApellidos_Enter);
+            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidos_KeyPress);
             this.txtApellidos.Leave += new System.EventHandler(this.txtApellidos_Leave);
             // 
             // txtUsuario
@@ -106,6 +107,7 @@
             this.txtNombres.TabIndex = 23;
             this.txtNombres.Text = "NOMBRES:";
             this.txtNombres.Enter += new System.EventHandler(this.txtNombres_Enter);
+            this.txtNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombres_KeyPress);
             this.txtNombres.Leave += new System.EventHandler(this.txtNombres_Leave);
             // 
             // txtContraseña

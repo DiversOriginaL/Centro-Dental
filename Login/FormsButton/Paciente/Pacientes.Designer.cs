@@ -457,7 +457,7 @@
             this.pbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFiltrar.BackgroundImage = global::Presentacion.Properties.Resources.filtrar;
             this.pbFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbFiltrar.Location = new System.Drawing.Point(1311, 12);
+            this.pbFiltrar.Location = new System.Drawing.Point(1311, 10);
             this.pbFiltrar.Name = "pbFiltrar";
             this.pbFiltrar.Size = new System.Drawing.Size(51, 37);
             this.pbFiltrar.TabIndex = 14;

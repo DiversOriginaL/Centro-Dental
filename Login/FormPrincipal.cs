@@ -122,7 +122,6 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-
         }
         #endregion
 
@@ -147,6 +146,23 @@ namespace Presentacion
                 formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
             else formulario.BringToFront();
+        }
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Servicios"] == null)
+            {
+                btnServicio.BackColor = Color.FromArgb(0, 136, 68);
+            }
+
+            if (Application.OpenForms["Pacientes"] == null)
+            {
+                btnPaciente.BackColor = Color.FromArgb(0, 136, 68);
+            }
+
+            if (Application.OpenForms["Reportes"] == null)
+            {
+                btnReportes.BackColor = Color.FromArgb(0, 136, 68);
+            }
         }
 
 
@@ -198,23 +214,6 @@ namespace Presentacion
 
         }
 
-        private void CloseForms(object sender, FormClosedEventArgs e)
-        {
-            if (Application.OpenForms["Servicios"] == null)
-            {
-                btnServicio.BackColor = Color.FromArgb(0, 85, 34);
-            }
-
-            if (Application.OpenForms["Pacientes"] == null)
-            {
-                btnPaciente.BackColor = Color.FromArgb(0, 85, 34);
-            }
-
-            if (Application.OpenForms["Reportes"] == null)
-            {
-                btnReportes.BackColor = Color.FromArgb(0, 85, 34);
-            }
-        }
 
         private void btnSlide_Click(object sender, EventArgs e)
         {
