@@ -22,6 +22,7 @@ namespace Presentacion
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            areaTrabajo();
             LoadUserData();
             Permisos();
         }
@@ -38,6 +39,19 @@ namespace Presentacion
             }
 
         }
+
+        private void areaTrabajo()
+        {
+            Rectangle areaTrabajo = Screen.PrimaryScreen.WorkingArea;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(areaTrabajo.Left, areaTrabajo.Top);
+            this.Size = new Size(areaTrabajo.Width, areaTrabajo.Height);
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Normal;
+
+        }
+
         private void LoadUserData()
         {
             lblUsuario.Text = UserLoginCache.lblUser();

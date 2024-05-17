@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Presentacion")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Clinica Dental Popular (Dra. Chanllatte)")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Presentacion")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Presentacion")]
+[assembly: System.Reflection.AssemblyProductAttribute("Clinica Dental Popular (Dra. Chanllatte)")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Clinica Dental Popular (Dra. Chanllatte)")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

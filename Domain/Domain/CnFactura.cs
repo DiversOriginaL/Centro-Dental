@@ -80,7 +80,7 @@ namespace Domain.Domain
                 }
             }
 
-            return Total.ToString();
+            return Total.ToString("N2");
         }
 
         //==================================================INSERTAR=================================================================

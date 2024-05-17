@@ -56,7 +56,7 @@ namespace Presentacion.FormsButton.Servicio
 
 
         //METODO PARA ABRIR FORMULARIO HIJO.
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        private void AbrirFormulario<MiForm>(Servicios formServicio) where MiForm : Form, new()
         {
             Form formulario;
             formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
@@ -68,15 +68,21 @@ namespace Presentacion.FormsButton.Servicio
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.StartPosition = FormStartPosition.CenterParent;
 
+                if(formulario is CrudServicio crudServicio)
+                {
+                    crudServicio.FormularioPadre = formServicio;
+                }
+
                 formulario.ShowDialog();
                 formulario.BringToFront();
             }
             else formulario.BringToFront();
         }
 
+
         private void btnCrear_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<CrudServicio>();
+            AbrirFormulario<CrudServicio>(this);
         }
 
         private void dtgvServicios_CellContentClick(object sender, DataGridViewCellEventArgs e)

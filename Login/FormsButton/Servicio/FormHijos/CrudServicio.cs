@@ -364,11 +364,11 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
             if (cbItbis.Checked)
             {
-                double totaldecimal = Convert.ToDouble(Total);
-                double itbis = totaldecimal * 0.18;
-                decimal itbisAplicado = Convert.ToDecimal(totaldecimal) + Convert.ToDecimal(itbis);
+                decimal totaldecimal = Convert.ToDecimal(Total);
+                decimal itbis = totaldecimal * 0.18m;
+                decimal itbisAplicado = totaldecimal + itbis;
 
-                lblResultado.Text = itbisAplicado.ToString();
+                lblResultado.Text = itbisAplicado.ToString("N2");
             }
             else
             {
@@ -390,7 +390,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
         }
 
         public string operacion = "Insertar";
-
+        public Servicio.Servicios FormularioPadre { get; set; }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (operacion == "Insertar")
@@ -450,6 +450,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
                 this.Close();
 
             }
+            FormularioPadre.actualizardtgv();
         }
 
         string facturaid;
@@ -578,7 +579,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
 
             e.Graphics.DrawString("Descuento: DOP$ " + sumatoria.ToString(), cuerpo, Brushes.Black, new RectangleF(x, y += 20, width, height));
             e.Graphics.DrawString("Total: DOP$ " + lblResultado.Text, cuerpo, Brushes.Black, new RectangleF(x, y += 20, width, height));
-            e.Graphics.DrawString("------UN PLACER HABERLE ASISTIDO------\n\n", subtitulo, Brushes.Black, new RectangleF(x, y += 60, width, height));
+            e.Graphics.DrawString("------UN PLACER HABERLE ASISTIDO------\n\n", subtitulo, Brushes.Black, new RectangleF(x, y += 120, width, height));
         }
 
         private void soloNumero(object sender, KeyPressEventArgs e)

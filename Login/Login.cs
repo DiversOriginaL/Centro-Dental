@@ -185,5 +185,14 @@ namespace Presentacion
             var resetPassword = new recoverPassword();
             resetPassword.ShowDialog();
         }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+                btnAcceder_Click(sender, e);
+            }
+        }
     }
 }

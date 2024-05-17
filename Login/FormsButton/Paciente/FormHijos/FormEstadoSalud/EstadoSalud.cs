@@ -157,20 +157,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            txtMedicamento.Text = "DESCRIPCION:";
-            txtMedicamento.ForeColor = Color.Silver;
-
-            txtEnfermedad.Text = "DESCRIPCION:";
-            txtEnfermedad.ForeColor = Color.Silver;
-
-            txtAlergia.Text = "DESCRIPCION:";
-            txtAlergia.ForeColor = Color.Silver;
-
-            txtEmbarazo.Text = "DESCRIPCION:";
-            txtEmbarazo.ForeColor = Color.Silver;
-
             this.Close();
-
         }
 
         public void cargarValoresSalud(string enfermedad, string medicamento, string alergia, string embarazo)
@@ -194,14 +181,13 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
             string alergia = txtAlergia.Text;
             string embarazo = txtEmbarazo.Text;
 
+
             // Verificar si el formulario CrudPaciente está abierto y pasarel los datos de salud
             if (crudPacienteForm != null)
             {
                 crudPacienteForm.GetDatosSalud(enfermedad, medicamento, alergia, embarazo);
             }
 
-            // Cerrar el formulario EstadoSalud
-            this.Close();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

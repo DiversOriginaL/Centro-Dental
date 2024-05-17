@@ -6,7 +6,14 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>icons\icono.ico</ApplicationIcon>
+    <StartupObject>Presentacion.Program</StartupObject>
+    <AssemblyName>Clinica Dental Popular (Dra. Chanllatte)</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="icons\icono.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CircularProgressBar" Version="2.8.0.16" />

@@ -36,17 +36,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.dtgvServicios = new System.Windows.Forms.DataGridView();
-            this.FacturaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Remitida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VerDetalles = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.PacienteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.FacturaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaEmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Remitida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VerDetalles = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PacienteID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvServicios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,10 +98,10 @@
             this.dtgvServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FacturaID,
             this.Paciente,
-            this.Total,
-            this.Remitida,
             this.FechaEmision,
+            this.Remitida,
             this.VerDetalles,
+            this.Total,
             this.PacienteID});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
@@ -131,74 +131,6 @@
             this.dtgvServicios.Size = new System.Drawing.Size(1360, 668);
             this.dtgvServicios.TabIndex = 50;
             this.dtgvServicios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvServicios_CellContentClick);
-            // 
-            // FacturaID
-            // 
-            this.FacturaID.DataPropertyName = "ID";
-            this.FacturaID.FillWeight = 30F;
-            this.FacturaID.HeaderText = "ID";
-            this.FacturaID.MinimumWidth = 8;
-            this.FacturaID.Name = "FacturaID";
-            this.FacturaID.ReadOnly = true;
-            // 
-            // Paciente
-            // 
-            this.Paciente.DataPropertyName = "Nombre";
-            this.Paciente.HeaderText = "Paciente";
-            this.Paciente.MinimumWidth = 8;
-            this.Paciente.Name = "Paciente";
-            this.Paciente.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.DataPropertyName = "Total";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(68)))));
-            this.Total.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 8;
-            this.Total.Name = "Total";
-            // 
-            // Remitida
-            // 
-            this.Remitida.DataPropertyName = "Usuario";
-            this.Remitida.HeaderText = "Remitida";
-            this.Remitida.MinimumWidth = 8;
-            this.Remitida.Name = "Remitida";
-            this.Remitida.ReadOnly = true;
-            // 
-            // FechaEmision
-            // 
-            this.FechaEmision.DataPropertyName = "Fecha";
-            this.FechaEmision.HeaderText = "Fecha";
-            this.FechaEmision.MinimumWidth = 8;
-            this.FechaEmision.Name = "FechaEmision";
-            this.FechaEmision.ReadOnly = true;
-            // 
-            // VerDetalles
-            // 
-            this.VerDetalles.DataPropertyName = "VerDetalles";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.VerDetalles.DefaultCellStyle = dataGridViewCellStyle4;
-            this.VerDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.VerDetalles.HeaderText = "Detalles";
-            this.VerDetalles.MinimumWidth = 8;
-            this.VerDetalles.Name = "VerDetalles";
-            this.VerDetalles.Text = "Ver Detalles";
-            this.VerDetalles.UseColumnTextForButtonValue = true;
-            // 
-            // PacienteID
-            // 
-            this.PacienteID.DataPropertyName = "PacienteID";
-            this.PacienteID.HeaderText = "PacienteID";
-            this.PacienteID.MinimumWidth = 8;
-            this.PacienteID.Name = "PacienteID";
-            this.PacienteID.Visible = false;
             // 
             // btnCrear
             // 
@@ -269,6 +201,79 @@
             this.panel2.Size = new System.Drawing.Size(1360, 88);
             this.panel2.TabIndex = 8;
             // 
+            // FacturaID
+            // 
+            this.FacturaID.DataPropertyName = "ID";
+            this.FacturaID.FillWeight = 25.04432F;
+            this.FacturaID.HeaderText = "ID";
+            this.FacturaID.MinimumWidth = 8;
+            this.FacturaID.Name = "FacturaID";
+            this.FacturaID.ReadOnly = true;
+            // 
+            // Paciente
+            // 
+            this.Paciente.DataPropertyName = "Nombre";
+            this.Paciente.FillWeight = 107.4179F;
+            this.Paciente.HeaderText = "Paciente";
+            this.Paciente.MinimumWidth = 8;
+            this.Paciente.Name = "Paciente";
+            this.Paciente.ReadOnly = true;
+            // 
+            // FechaEmision
+            // 
+            this.FechaEmision.DataPropertyName = "Fecha";
+            this.FechaEmision.FillWeight = 107.4179F;
+            this.FechaEmision.HeaderText = "Fecha";
+            this.FechaEmision.MinimumWidth = 8;
+            this.FechaEmision.Name = "FechaEmision";
+            this.FechaEmision.ReadOnly = true;
+            // 
+            // Remitida
+            // 
+            this.Remitida.DataPropertyName = "Usuario";
+            this.Remitida.FillWeight = 107.4179F;
+            this.Remitida.HeaderText = "Remitida";
+            this.Remitida.MinimumWidth = 8;
+            this.Remitida.Name = "Remitida";
+            this.Remitida.ReadOnly = true;
+            // 
+            // VerDetalles
+            // 
+            this.VerDetalles.DataPropertyName = "VerDetalles";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.VerDetalles.DefaultCellStyle = dataGridViewCellStyle3;
+            this.VerDetalles.FillWeight = 107.4179F;
+            this.VerDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.VerDetalles.HeaderText = "Detalles";
+            this.VerDetalles.MinimumWidth = 8;
+            this.VerDetalles.Name = "VerDetalles";
+            this.VerDetalles.Text = "Ver Detalles";
+            this.VerDetalles.UseColumnTextForButtonValue = true;
+            // 
+            // Total
+            // 
+            this.Total.DataPropertyName = "Total";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.Total.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Total.FillWeight = 75.28408F;
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 8;
+            this.Total.Name = "Total";
+            // 
+            // PacienteID
+            // 
+            this.PacienteID.DataPropertyName = "PacienteID";
+            this.PacienteID.HeaderText = "PacienteID";
+            this.PacienteID.MinimumWidth = 8;
+            this.PacienteID.Name = "PacienteID";
+            this.PacienteID.Visible = false;
+            // 
             // Servicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -300,10 +305,10 @@
         private Panel panel2;
         private DataGridViewTextBoxColumn FacturaID;
         private DataGridViewTextBoxColumn Paciente;
-        private DataGridViewTextBoxColumn Total;
-        private DataGridViewTextBoxColumn Remitida;
         private DataGridViewTextBoxColumn FechaEmision;
+        private DataGridViewTextBoxColumn Remitida;
         private DataGridViewButtonColumn VerDetalles;
+        private DataGridViewTextBoxColumn Total;
         private DataGridViewTextBoxColumn PacienteID;
     }
 }

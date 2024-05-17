@@ -47,23 +47,23 @@ namespace DataAccess.DataAccess
                             command.CommandType = CommandType.StoredProcedure;
 
                             // Verificar si los valores no son nulos antes de usarlos
-                            string pnombre = paciente.GetPNombre() ?? "SIN ESPECIFICAR";
-                            string snombre = paciente.GetSNombre() ?? "SIN ESPECIFICAR";
-                            string papellido = paciente.GetPApellido() ?? "SIN ESPECIFICAR";
-                            string sapellido = paciente.GetSApellido() ?? "SIN ESPECIFICAR";
-                            string edad = paciente.GetEdad() ?? "SIN ESPECIFICAR";
+                            string pnombre = paciente.GetPNombre();
+                            string snombre = paciente.GetSNombre() ?? "-";
+                            string papellido = paciente.GetPApellido();
+                            string sapellido = paciente.GetSApellido() ?? "-";
+                            string edad = paciente.GetEdad();
                             char sexo = paciente.GetSexo();
-                            string celular = contacto.GetCelular() ?? "SIN ESPECIFICAR";
-                            string telefono = contacto.GetTelefono() ?? "SIN ESPECIFICAR";
-                            string provincia = ubicacion.GetProvincia() ?? "SIN ESPECIFICAR";
-                            string sector = ubicacion.GetSector() ?? "SIN ESPECIFICAR";
-                            string calle = ubicacion.GetCalle() ?? "SIN ESPECIFICAR";
-                            string numcasa = ubicacion.GetNumCasa() ?? "SIN ESPECIFICAR";
+                            string celular = contacto.GetCelular() ?? "-";
+                            string telefono = contacto.GetTelefono() ?? "-";
+                            string provincia = ubicacion.GetProvincia();
+                            string sector = ubicacion.GetSector();
+                            string calle = ubicacion.GetCalle();
+                            string numcasa = ubicacion.GetNumCasa();
                             int usuario = UserLoginCache.GetID();
-                            string enfermedad = estado.GetEnfermedad() ?? "SIN ESPECIFICAR";
-                            string medicamento = estado.GetMedicamento() ?? "SIN ESPECIFICAR";
-                            string alergia = estado.GetAlergia() ?? "SIN ESPECIFICAR";
-                            string embarazo = estado.GetEmbarazo() ?? "SIN ESPECIFICAR";
+                            string enfermedad = estado.GetEnfermedad() ?? "-";
+                            string medicamento = estado.GetMedicamento() ?? "-";
+                            string alergia = estado.GetAlergia() ?? "-";
+                            string embarazo = estado.GetEmbarazo() ?? "-";
 
                             command.Parameters.AddWithValue("@PNombre", pnombre.Trim());
                             command.Parameters.AddWithValue("@SNombre", snombre.Trim());
@@ -114,23 +114,23 @@ namespace DataAccess.DataAccess
 
                     // Verificar si los valores no son nulos antes de usarlos
                     int pacienteid = paciente.GetPacienteID();
-                    string pnombre = paciente.GetPNombre() ?? "SIN ESPECIFICAR";
-                    string snombre = paciente.GetSNombre() ?? "SIN ESPECIFICAR";
-                    string papellido = paciente.GetPApellido() ?? "SIN ESPECIFICAR";
-                    string sapellido = paciente.GetSApellido() ?? "SIN ESPECIFICAR";
-                    string edad = paciente.GetEdad() ?? "SIN ESPECIFICAR";
+                    string pnombre = paciente.GetPNombre();
+                    string snombre = paciente.GetSNombre() ?? "-";
+                    string papellido = paciente.GetPApellido();
+                    string sapellido = paciente.GetSApellido() ?? "-";
+                    string edad = paciente.GetEdad();
                     char sexo = paciente.GetSexo();
-                    string celular = contacto.GetCelular() ?? "SIN ESPECIFICAR";
-                    string telefono = contacto.GetTelefono() ?? "SIN ESPECIFICAR";
-                    string provincia = ubicacion.GetProvincia() ?? "SIN ESPECIFICAR";
-                    string sector = ubicacion.GetSector() ?? "SIN ESPECIFICAR";
-                    string calle = ubicacion.GetCalle() ?? "SIN ESPECIFICAR";
-                    string numcasa = ubicacion.GetNumCasa() ?? "SIN ESPECIFICAR";
+                    string celular = contacto.GetCelular() ?? "-";
+                    string telefono = contacto.GetTelefono() ?? "-";
+                    string provincia = ubicacion.GetProvincia();
+                    string sector = ubicacion.GetSector();
+                    string calle = ubicacion.GetCalle();
+                    string numcasa = ubicacion.GetNumCasa();
                     int usuario = UserLoginCache.GetID();
-                    string enfermedad = estado.GetEnfermedad() ?? "SIN ESPECIFICAR";
-                    string medicamento = estado.GetMedicamento() ?? "SIN ESPECIFICAR";
-                    string alergia = estado.GetAlergia() ?? "SIN ESPECIFICAR";
-                    string embarazo = estado.GetEmbarazo() ?? "SIN ESPECIFICAR";
+                    string enfermedad = estado.GetEnfermedad() ?? "-";
+                    string medicamento = estado.GetMedicamento() ?? "-";
+                    string alergia = estado.GetAlergia() ?? "-";
+                    string embarazo = estado.GetEmbarazo() ?? "-";
 
                     command.Parameters.AddWithValue("@PacienteID", pacienteid);
                     command.Parameters.AddWithValue("@PNombre", pnombre.Trim());

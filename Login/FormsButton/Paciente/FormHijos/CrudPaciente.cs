@@ -40,6 +40,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         #endregion
 
         #region EfectoPlaceHolder y Configuracion de controles
+        
         private void txtPnombre_Enter(object sender, EventArgs e)
         {
             if(txtPnombre.Text == "PRIMER NOMBRE:")
@@ -56,6 +57,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 txtPnombre.Text = "PRIMER NOMBRE:";
                 txtPnombre.ForeColor = Color.Silver;
             }
+
         }
 
         private void txtSnombre_Enter(object sender, EventArgs e)
@@ -75,6 +77,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 txtSnombre.Text = "SEGUNDO NOMBRE:";
                 txtSnombre.ForeColor = Color.Silver;
             }
+
         }
 
         private void txtPapellido_Enter(object sender, EventArgs e)
@@ -94,6 +97,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 txtPapellido.Text = "PRIMER APELLIDO:";
                 txtPapellido.ForeColor = Color.Silver;
             }
+
         }
 
         private void txtSapellido_Enter(object sender, EventArgs e)
@@ -133,13 +137,18 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 txtEdad.Text = "EDAD:";
                 txtEdad.ForeColor = Color.Silver;
             }
-
         }
         private void cbSexo_Leave(object sender, EventArgs e)
         {
             if (cbSexo.SelectedIndex >= 0)
                 cbSexo.ForeColor = Color.Black;
 
+            if (string.IsNullOrWhiteSpace(cbSexo.Text) || cbSexo.Text == "SEXO:")
+            {
+                MessageBox.Show("Por favor, Seleccione 1 valor.");
+                cbSexo.Focus();
+                return;
+            }
         }
 
         private void txtCelular_Enter(object sender, EventArgs e)
@@ -196,6 +205,14 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 cbProvincia.Text = "PROVINCIA/MUNICIPIO:";
                 cbProvincia.ForeColor = Color.Silver;
             }
+
+            if (string.IsNullOrWhiteSpace(cbProvincia.Text) || cbProvincia.Text == "PROVINCIA/MUNICIPIO:")
+            {
+                MessageBox.Show("Por favor, Seleccione donde vive.");
+                cbProvincia.Focus();
+                return;
+            }
+
         }
 
         private void txtSector_Enter(object sender, EventArgs e)
@@ -214,6 +231,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 txtSector.Text = "SECTOR:";
                 txtSector.ForeColor = Color.Silver;
             }
+
         }
 
         private void txtCalle_Enter(object sender, EventArgs e)
@@ -231,8 +249,8 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             {
                 txtCalle.Text = "CALLE:";
                 txtCalle.ForeColor = Color.Silver;
-
             }
+
         }
 
         private void txtNumCasa_Enter(object sender, EventArgs e)
@@ -251,6 +269,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 txtNumCasa.Text = "NUMERO DE CASA:";
                 txtNumCasa.ForeColor = Color.Silver;
             }
+
         }
         //Cerra, maximizar y minimizar.
         private void pbCerrar_Click(object sender, EventArgs e)
@@ -287,18 +306,17 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         #endregion
 
         //ABRIR FORMULARIO HIJO
-        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        private void AbrirFormulario<MiForm>(CrudPaciente crudPacienteForm) where MiForm : Form, new()
         {
-            Form formulario;
-            formulario = Application.OpenForms.OfType<MiForm>().FirstOrDefault();
+            EstadoSalud formulario;
+            formulario = Application.OpenForms.OfType<EstadoSalud>().FirstOrDefault();
 
             if(formulario == null)
             {
-                formulario = new MiForm();
+                formulario = new EstadoSalud(crudPacienteForm);
                 formulario.TopLevel = true;
                 formulario.FormBorderStyle = FormBorderStyle.None;
                 formulario.StartPosition = FormStartPosition.CenterParent;
-
                 formulario.ShowDialog();
                 formulario.BringToFront();
             }
@@ -326,7 +344,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         {
             if (operacion == "Insertar")
             {
-                AbrirFormulario<EstadoSalud>();
+                AbrirFormulario<EstadoSalud>(this);
             }else if(operacion == "Editar")
             {
                 AbrirFormularioEditar<EstadoSalud>(this);
@@ -358,17 +376,18 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         string medicamento;
         string alergia;
         string embarazo;
+        
 
-        // Agregar este método al formulario CrudPaciente
-        public void EnviarDatosSalud(string enfermedad, string medicamento, string alergia, string embarazo)
+        public void GetDatosSalud(string enfermedad, string medicamento, string alergia, string embarazo)
         {
             this.enfermedad = enfermedad;
             this.medicamento = medicamento;
             this.alergia = alergia;
             this.embarazo = embarazo;
         }
-
-        public void GetDatosSalud(string enfermedad, string medicamento, string alergia, string embarazo)
+        
+        // Estas dos funciones EnviarDatosSalud y CargarValores es cuando se va editar alguna fila de dtgvPacientes
+        public void EnviarDatosSalud(string enfermedad, string medicamento, string alergia, string embarazo)
         {
             this.enfermedad = enfermedad;
             this.medicamento = medicamento;
@@ -413,6 +432,17 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (
+                !rellenarCampo(txtPnombre, "PRIMER NOMBRE:") || !rellenarCampo(txtSnombre, "SEGUNDO NOMBRE:") ||
+                !rellenarCampo(txtPapellido, "PRIMER APELLIDO:") || !rellenarCampo(txtSapellido, "SEGUNDO APELLIDO:") ||
+                !rellenarCampo(txtEdad, "EDAD:") || !rellenarCampo(cbSexo, "SEXO:") || !rellenarCampo(txtCelular, "CELULAR:") ||
+                !rellenarCampo(cbProvincia, "PROVINCIA / MUNICIPIO:") || !rellenarCampo(txtSector, "SECTOR:") ||
+                !rellenarCampo(txtCalle, "CALLE:") || !rellenarCampo(txtNumCasa, "NUMERO DE CASA:")
+                )
+            {
+                return; // Si la validación de campos falla, salimos del método
+            }
+
             string pnombre = txtPnombre.Text;
             string snombre = txtSnombre.Text;
             string papellido = txtPapellido.Text;
@@ -425,7 +455,6 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             string sector = txtSector.Text;
             string calle = txtCalle.Text;
             string numcasa = txtNumCasa.Text;
-
 
             try
             {
@@ -444,7 +473,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 {
                     if (string.IsNullOrEmpty(idPaciente))
                     {
-                        MessageBox.Show("No se ha seleccionado ningun paciente para editar.");
+                        MessageBox.Show("NO SE HA SELECCIONADO NINGUN PACIENTE PARA EDITAR.");
                         return;
                     }
 
@@ -469,7 +498,33 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 MessageBox.Show("ERROR: " + ex.Message);
             }
         }
+
+
         #region Cofiguracion de campos (texto o numero)
+
+        #region Configuraciones de Funciones del textbox
+        private bool rellenarCampo(TextBox txtBox, string texto)
+        {
+            if (string.IsNullOrWhiteSpace(txtBox.Text) || txtBox.Text == texto)
+            {
+                MessageBox.Show($"POR FAVOR, RELLENE EL CAMPO {texto} CON LA INFORMACION CORRECTA!");
+                txtBox.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        private bool rellenarCampo(ComboBox cbBox, string texto)
+        {
+            if (string.IsNullOrWhiteSpace(cbBox.Text) || cbBox.Text == texto)
+            {
+                MessageBox.Show($"POR FAVOR, RELLENE EL CAMPO {texto} CON LA INFORMACION CORRECTA!");
+                cbBox.Focus();
+                return false;
+            }
+            return true;
+        }
+
         private void soloNumero(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -480,35 +535,55 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
 
         private void soloTexto(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
         }
 
+        private void mayusculaFirst(TextBox txtBox, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar) && (txtBox.Text.Length == 0 || txtBox.SelectionStart == 0))
+            {
+                // Convierte la letra a mayúscula
+                e.KeyChar = char.ToUpper(e.KeyChar);
+            }
+        }
+
+        #endregion
+
         private void txtPnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloTexto(sender, e);
+            mayusculaFirst(txtPnombre, e);
         }
 
         private void txtSnombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloTexto(sender, e);
+            mayusculaFirst(txtSnombre, e);
         }
 
         private void txtPapellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloTexto(sender, e);
+            mayusculaFirst(txtPapellido, e);
         }
 
         private void txtSapellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloTexto(sender, e);
+            mayusculaFirst(txtSapellido, e);
         }
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloNumero(sender, e);
+            mayusculaFirst(txtEdad, e);
+        }
+        private void cbSexo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloTexto(sender, e);
         }
 
         private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
@@ -524,12 +599,28 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         private void txtSector_KeyPress(object sender, KeyPressEventArgs e)
         {
             soloTexto(sender, e);
+            mayusculaFirst(txtSector, e);
         }
 
-        private void cbSexo_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCalle_KeyPress(object sender, KeyPressEventArgs e)
         {
-            soloTexto(sender, e);
+            mayusculaFirst(txtCalle, e);
         }
+
+        private void txtNumCasa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtNumCasa.Text) && e.KeyChar != '#')
+            {
+                // Se establece el carácter deseado
+                txtNumCasa.Text = "#";
+                // Se coloca el cursor al final del TextBox
+                txtNumCasa.SelectionStart = txtNumCasa.Text.Length;
+                // Se indica que se ha manejado el evento
+                e.Handled = true;
+            }
+        }
+
         #endregion
+
     }
 }

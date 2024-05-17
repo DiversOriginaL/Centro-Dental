@@ -35,7 +35,7 @@ namespace Domain.Domain
                 sumatoria += list;
             }
 
-            return sumatoria.ToString();
+            return sumatoria.ToString("N2");
         }
 
         //SEMANAL
@@ -60,7 +60,7 @@ namespace Domain.Domain
                 sumatoria += list;
             }
 
-            return sumatoria.ToString();
+            return sumatoria.ToString("N2");
         }
 
         //MENSUAL
@@ -84,7 +84,7 @@ namespace Domain.Domain
                 sumatoria += list;
             }
 
-            return sumatoria.ToString();
+            return sumatoria.ToString("N2");
         }
 
         //ANUAL
@@ -109,7 +109,7 @@ namespace Domain.Domain
                 sumatoria += list;
             }
 
-            return sumatoria.ToString();
+            return sumatoria.ToString("N2");
         }
 
         //ANUALES.
@@ -133,7 +133,7 @@ namespace Domain.Domain
                 sumatoria += list;
             }
 
-            return sumatoria.ToString();
+            return sumatoria.ToString("N2");
         }
     }
 }

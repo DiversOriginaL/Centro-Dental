@@ -42,7 +42,7 @@ namespace Domain.Domain
             paciente.SetSexo(Convert.ToChar(sexo));
             contacto.SetCelular(celular);
             contacto.SetTelefono(telefono);
-            ubicacion.SetProvincia(provincia.ToString());
+            ubicacion.SetProvincia(provincia.ToString() ?? "NO ESPECIFICADO");
             ubicacion.SetSector(sector);
             ubicacion.SetCalle(calle);
             ubicacion.SetNumCasa(numcasa);

@@ -157,7 +157,7 @@
             this.txtTelefono.Multiline = true;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(499, 46);
-            this.txtTelefono.TabIndex = 9;
+            this.txtTelefono.TabIndex = 8;
             this.txtTelefono.Text = "TELEFONO:";
             this.txtTelefono.Enter += new System.EventHandler(this.txtTelefono_Enter);
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
@@ -171,7 +171,7 @@
             this.txtCelular.Multiline = true;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(485, 46);
-            this.txtCelular.TabIndex = 8;
+            this.txtCelular.TabIndex = 7;
             this.txtCelular.Text = "CELULAR:";
             this.txtCelular.Enter += new System.EventHandler(this.txtCelular_Enter);
             this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
@@ -196,7 +196,7 @@
             this.txtSector.Multiline = true;
             this.txtSector.Name = "txtSector";
             this.txtSector.Size = new System.Drawing.Size(485, 46);
-            this.txtSector.TabIndex = 12;
+            this.txtSector.TabIndex = 10;
             this.txtSector.Text = "SECTOR:";
             this.txtSector.Enter += new System.EventHandler(this.txtSector_Enter);
             this.txtSector.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSector_KeyPress);
@@ -210,9 +210,10 @@
             this.txtNumCasa.Multiline = true;
             this.txtNumCasa.Name = "txtNumCasa";
             this.txtNumCasa.Size = new System.Drawing.Size(485, 46);
-            this.txtNumCasa.TabIndex = 14;
+            this.txtNumCasa.TabIndex = 12;
             this.txtNumCasa.Text = "NUMERO DE CASA:";
             this.txtNumCasa.Enter += new System.EventHandler(this.txtNumCasa_Enter);
+            this.txtNumCasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumCasa_KeyPress);
             this.txtNumCasa.Leave += new System.EventHandler(this.txtNumCasa_Leave);
             // 
             // btnGuardar
@@ -229,7 +230,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(758, 934);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(256, 67);
-            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = " GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -249,7 +250,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(1037, 934);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(236, 67);
-            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -270,7 +271,7 @@
             this.btnEstadoSalud.Name = "btnEstadoSalud";
             this.btnEstadoSalud.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnEstadoSalud.Size = new System.Drawing.Size(499, 162);
-            this.btnEstadoSalud.TabIndex = 14;
+            this.btnEstadoSalud.TabIndex = 13;
             this.btnEstadoSalud.Text = "ESTADO DE SALUD";
             this.btnEstadoSalud.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEstadoSalud.UseVisualStyleBackColor = true;
@@ -287,7 +288,7 @@
             this.cbSexo.Location = new System.Drawing.Point(705, 236);
             this.cbSexo.Name = "cbSexo";
             this.cbSexo.Size = new System.Drawing.Size(499, 48);
-            this.cbSexo.TabIndex = 17;
+            this.cbSexo.TabIndex = 6;
             this.cbSexo.Text = "SEXO:";
             this.cbSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbSexo_KeyPress);
             this.cbSexo.Leave += new System.EventHandler(this.cbSexo_Leave);
@@ -361,9 +362,10 @@
             this.txtCalle.Multiline = true;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(485, 46);
-            this.txtCalle.TabIndex = 13;
+            this.txtCalle.TabIndex = 11;
             this.txtCalle.Text = "CALLE:";
             this.txtCalle.Enter += new System.EventHandler(this.txtCalle_Enter);
+            this.txtCalle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCalle_KeyPress);
             this.txtCalle.Leave += new System.EventHandler(this.txtCalle_Leave);
             // 
             // cbProvincia
@@ -411,7 +413,7 @@
             this.cbProvincia.Location = new System.Drawing.Point(140, 679);
             this.cbProvincia.Name = "cbProvincia";
             this.cbProvincia.Size = new System.Drawing.Size(485, 48);
-            this.cbProvincia.TabIndex = 22;
+            this.cbProvincia.TabIndex = 9;
             this.cbProvincia.Text = "PROVINCIA/MUNICIPIO:";
             this.cbProvincia.Enter += new System.EventHandler(this.cbProvincia_Enter);
             this.cbProvincia.Leave += new System.EventHandler(this.cbProvincia_Leave);

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cIngresosDiarios = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,25 +54,25 @@
             this.cIngresosDiarios.BorderlineColor = System.Drawing.Color.Black;
             this.cIngresosDiarios.BorderSkin.BackColor = System.Drawing.SystemColors.GrayText;
             this.cIngresosDiarios.BorderSkin.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            chartArea2.Name = "ChartArea1";
-            this.cIngresosDiarios.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.cIngresosDiarios.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.cIngresosDiarios.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.cIngresosDiarios.Legends.Add(legend1);
             this.cIngresosDiarios.Location = new System.Drawing.Point(467, 74);
             this.cIngresosDiarios.Name = "cIngresosDiarios";
             this.cIngresosDiarios.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            series2.BorderColor = System.Drawing.Color.ForestGreen;
-            series2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.LightGreen;
-            series2.Legend = "Legend1";
-            series2.Name = "INGRESOS";
-            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series2.ShadowColor = System.Drawing.Color.Black;
-            this.cIngresosDiarios.Series.Add(series2);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            series1.BorderColor = System.Drawing.Color.ForestGreen;
+            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.Color = System.Drawing.Color.LightGreen;
+            series1.Legend = "Legend1";
+            series1.Name = "INGRESOS";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series1.ShadowColor = System.Drawing.Color.Black;
+            this.cIngresosDiarios.Series.Add(series1);
             this.cIngresosDiarios.Size = new System.Drawing.Size(853, 464);
             this.cIngresosDiarios.TabIndex = 0;
             // 
@@ -109,11 +109,11 @@
             // 
             this.lblTotalRecaudado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTotalRecaudado.AutoSize = true;
-            this.lblTotalRecaudado.Font = new System.Drawing.Font("Sitka Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTotalRecaudado.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTotalRecaudado.ForeColor = System.Drawing.Color.White;
-            this.lblTotalRecaudado.Location = new System.Drawing.Point(778, 1);
+            this.lblTotalRecaudado.Location = new System.Drawing.Point(781, 18);
             this.lblTotalRecaudado.Name = "lblTotalRecaudado";
-            this.lblTotalRecaudado.Size = new System.Drawing.Size(205, 104);
+            this.lblTotalRecaudado.Size = new System.Drawing.Size(161, 81);
             this.lblTotalRecaudado.TabIndex = 3;
             this.lblTotalRecaudado.Text = "0.00";
             // 

@@ -1,8 +1,3 @@
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Presentacion.exe
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Presentacion.deps.json
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Presentacion.runtimeconfig.json
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Presentacion.dll
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Presentacion.pdb
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Azure.Core.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Azure.Identity.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
@@ -52,11 +47,7 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\De
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.AssemblyInfo.cs
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.csproj.CopyComplete
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.dll
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\refint\Presentacion.dll
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.pdb
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\Presentacion.genruntimeconfig.cache
-C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\obj\Debug\net6.0-windows\ref\Presentacion.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\DataAccess.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Domain.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\Login\Login\bin\Debug\net6.0-windows\Domain.pdb
@@ -84,3 +75,12 @@ C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\De
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\WebPrintManager.Epson.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
 C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).exe
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).deps.json
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).runtimeconfig.json
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Debug\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\refint\Clinica Dental Popular (Dra. Chanllatte).dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Debug\net6.0-windows\ref\Clinica Dental Popular (Dra. Chanllatte).dll

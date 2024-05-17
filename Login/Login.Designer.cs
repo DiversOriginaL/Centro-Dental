@@ -117,6 +117,7 @@
             this.txtContraseña.Text = "CONTRASEÑA:";
             this.txtContraseña.UseSystemPasswordChar = true;
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
+            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
             // btnCerrar

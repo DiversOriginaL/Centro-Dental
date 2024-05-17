@@ -33,8 +33,8 @@
             this.pnRight = new System.Windows.Forms.Panel();
             this.pnTopTop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblEmail = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSlide = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
@@ -48,6 +48,8 @@
             this.btnServicio = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pnUp = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -58,6 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             this.pnLeft.SuspendLayout();
             this.pnUp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -82,16 +85,16 @@
             this.pnRight.Controls.Add(this.panel1);
             this.pnRight.Controls.Add(this.panel2);
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRight.Location = new System.Drawing.Point(309, 40);
+            this.pnRight.Location = new System.Drawing.Point(309, 55);
             this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(1083, 928);
+            this.pnRight.Size = new System.Drawing.Size(1083, 913);
             this.pnRight.TabIndex = 2;
             // 
             // pnTopTop
             // 
             this.pnTopTop.AutoSize = true;
             this.pnTopTop.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnTopTop.Location = new System.Drawing.Point(0, 928);
+            this.pnTopTop.Location = new System.Drawing.Point(0, 913);
             this.pnTopTop.Name = "pnTopTop";
             this.pnTopTop.Size = new System.Drawing.Size(1083, 0);
             this.pnTopTop.TabIndex = 8;
@@ -100,39 +103,39 @@
             // 
             this.panel1.BackgroundImage = global::Presentacion.Properties.Resources.logo;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Controls.Add(this.lblUsuario);
+            this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 58);
+            this.panel1.Location = new System.Drawing.Point(0, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1083, 870);
+            this.panel1.Size = new System.Drawing.Size(1083, 844);
             this.panel1.TabIndex = 10;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEmail.Location = new System.Drawing.Point(749, 809);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(300, 52);
-            this.lblEmail.TabIndex = 7;
-            this.lblEmail.Text = "EMAIL";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUsuario.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUsuario.Location = new System.Drawing.Point(749, 758);
+            this.lblUsuario.Location = new System.Drawing.Point(0, 718);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(300, 51);
+            this.lblUsuario.Size = new System.Drawing.Size(1083, 63);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "USUARIO";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEmail.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.lblEmail.Location = new System.Drawing.Point(0, 781);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(1083, 63);
+            this.lblEmail.TabIndex = 7;
+            this.lblEmail.Text = "EMAIL";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -140,7 +143,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1083, 58);
+            this.panel2.Size = new System.Drawing.Size(1083, 69);
             this.panel2.TabIndex = 9;
             // 
             // btnSlide
@@ -149,7 +152,7 @@
             this.btnSlide.BackgroundImage = global::Presentacion.Properties.Resources.bars_solid;
             this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSlide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSlide.Location = new System.Drawing.Point(6, 6);
+            this.btnSlide.Location = new System.Drawing.Point(6, 13);
             this.btnSlide.Name = "btnSlide";
             this.btnSlide.Size = new System.Drawing.Size(45, 45);
             this.btnSlide.TabIndex = 1;
@@ -170,9 +173,9 @@
             this.pnLeft.Controls.Add(this.btnServicio);
             this.pnLeft.Controls.Add(this.btnCerrarSesion);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnLeft.Location = new System.Drawing.Point(0, 40);
+            this.pnLeft.Location = new System.Drawing.Point(0, 55);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(309, 928);
+            this.pnLeft.Size = new System.Drawing.Size(309, 913);
             this.pnLeft.TabIndex = 1;
             // 
             // pnUsuarios
@@ -320,11 +323,11 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 764);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 808);
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(305, 160);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(305, 101);
             this.btnCerrarSesion.TabIndex = 5;
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -332,7 +335,10 @@
             // 
             // pnUp
             // 
-            this.pnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(68)))));
+            this.pnUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.pnUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnUp.Controls.Add(this.pictureBox1);
+            this.pnUp.Controls.Add(this.label1);
             this.pnUp.Controls.Add(this.btnMaximizar);
             this.pnUp.Controls.Add(this.btnMinimizar);
             this.pnUp.Controls.Add(this.btnCerrar);
@@ -340,9 +346,30 @@
             this.pnUp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pnUp.Location = new System.Drawing.Point(0, 0);
             this.pnUp.Name = "pnUp";
-            this.pnUp.Size = new System.Drawing.Size(1392, 40);
+            this.pnUp.Size = new System.Drawing.Size(1392, 55);
             this.pnUp.TabIndex = 0;
             this.pnUp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnUp_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.Diseño_sin_título;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 37);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(68, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(554, 45);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "CLINICA DENTAL POPULAR (Dra. Chanllatte)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnMaximizar
             // 
@@ -350,7 +377,7 @@
             this.btnMaximizar.BackgroundImage = global::Presentacion.Properties.Resources.expand_solid;
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.Location = new System.Drawing.Point(1297, 4);
+            this.btnMaximizar.Location = new System.Drawing.Point(1295, 13);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(36, 30);
             this.btnMaximizar.TabIndex = 2;
@@ -363,7 +390,7 @@
             this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimize;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.Location = new System.Drawing.Point(1248, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(1246, 12);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(32, 31);
             this.btnMinimizar.TabIndex = 1;
@@ -376,7 +403,7 @@
             this.btnCerrar.BackgroundImage = global::Presentacion.Properties.Resources.exit;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Location = new System.Drawing.Point(1350, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(1348, 12);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(30, 30);
             this.btnCerrar.TabIndex = 0;
@@ -396,7 +423,6 @@
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.pnContainer.ResumeLayout(false);
             this.pnRight.ResumeLayout(false);
@@ -406,6 +432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             this.pnLeft.ResumeLayout(false);
             this.pnUp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -425,17 +452,19 @@
         private Button btnReportes;
         private Button btnPaciente;
         private Button btnServicio;
-        private Panel pnReporte;
-        private Panel pnPaciente;
-        private Panel pnServicio;
         private PictureBox btnSlide;
         private Button btnCerrarSesion;
-        private Panel pnUsuarios;
         private Button btnUsuarios;
         private Panel panel2;
         private Label lblEmail;
         private Panel pnTopTop;
         private Label lblUsuario;
         private Panel panel1;
+        public Panel pnReporte;
+        public Panel pnPaciente;
+        public Panel pnServicio;
+        public Panel pnUsuarios;
+        private Label label1;
+        private PictureBox pictureBox1;
     }
 }

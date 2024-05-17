@@ -176,6 +176,12 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
         public string operacion = "Insertar";
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if(!rellenarCampo(txtNombres, "NOMBRES:") || !rellenarCampo(txtApellidos, "APELLIDOS:") ||
+               !rellenarCampo(txtEmail, "EMAIL:") || !rellenarCampo(txtUsuario, "USUARIO:") || !rellenarCampo(cbPuesto, "PUESTO:")
+            ){
+                return;
+            }
+
             string nombre = txtNombres.Text;
             string apellido = txtApellidos.Text;
             string email = txtEmail.Text;
@@ -217,6 +223,26 @@ namespace Presentacion.FormsButton.Usuario.FormHijos
             {
                 MessageBox.Show("Ha ocurrido un error: " + ex.Message);
             }
+        }
+        private bool rellenarCampo(TextBox txtBox, string texto)
+        {
+            if (string.IsNullOrWhiteSpace(txtBox.Text) || txtBox.Text == texto)
+            {
+                MessageBox.Show($"POR FAVOR, RELLENE EL CAMPO {texto} CON LA INFORMACION CORRECTA!");
+                txtBox.Focus();
+                return false;
+            }
+            return true;
+        }
+
+        private bool rellenarCampo(ComboBox cbBox, string texto)
+        {
+            if (string.IsNullOrWhiteSpace(cbBox.Text) || cbBox.Text == texto)
+            {
+                MessageBox.Show($"POR FAVOR, RELLENE EL CAMPO {texto} CON LA INFORMACION CORRECTA!");
+                return false;
+            }
+            return true;
         }
 
         public void CargarValores(string nombre, string apellido, string email, string usuario, string contraseña, string rolId, string idUsuario)
