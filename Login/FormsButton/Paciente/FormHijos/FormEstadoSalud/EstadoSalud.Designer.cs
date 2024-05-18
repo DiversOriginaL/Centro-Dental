@@ -42,6 +42,10 @@
             this.pnMinimizar = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.lblMaxCaracteres = new System.Windows.Forms.Label();
+            this.lblMaxCaracteres2 = new System.Windows.Forms.Label();
+            this.lblMaxCaracteres3 = new System.Windows.Forms.Label();
+            this.lblMaxCaracteres4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblEnfermedad
@@ -61,11 +65,13 @@
             this.txtEnfermedad.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEnfermedad.ForeColor = System.Drawing.Color.Silver;
             this.txtEnfermedad.Location = new System.Drawing.Point(17, 295);
+            this.txtEnfermedad.MaxLength = 2000;
             this.txtEnfermedad.Multiline = true;
             this.txtEnfermedad.Name = "txtEnfermedad";
             this.txtEnfermedad.Size = new System.Drawing.Size(620, 277);
             this.txtEnfermedad.TabIndex = 10;
             this.txtEnfermedad.Text = "DESCRIPCION:";
+            this.txtEnfermedad.TextChanged += new System.EventHandler(this.txtEnfermedad_TextChanged);
             this.txtEnfermedad.Enter += new System.EventHandler(this.txtEnfermedad_Enter);
             this.txtEnfermedad.Leave += new System.EventHandler(this.txtEnfermedad_Leave);
             // 
@@ -88,11 +94,13 @@
             this.txtAlergia.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtAlergia.ForeColor = System.Drawing.Color.Silver;
             this.txtAlergia.Location = new System.Drawing.Point(17, 669);
+            this.txtAlergia.MaxLength = 2000;
             this.txtAlergia.Multiline = true;
             this.txtAlergia.Name = "txtAlergia";
             this.txtAlergia.Size = new System.Drawing.Size(620, 299);
             this.txtAlergia.TabIndex = 14;
             this.txtAlergia.Text = "DESCRIPCION:";
+            this.txtAlergia.TextChanged += new System.EventHandler(this.txtAlergia_TextChanged);
             this.txtAlergia.Enter += new System.EventHandler(this.txtMedicamento_Enter);
             this.txtAlergia.Leave += new System.EventHandler(this.txtMedicamento_Leave);
             // 
@@ -115,11 +123,13 @@
             this.txtMedicamento.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtMedicamento.ForeColor = System.Drawing.Color.Silver;
             this.txtMedicamento.Location = new System.Drawing.Point(671, 295);
+            this.txtMedicamento.MaxLength = 2000;
             this.txtMedicamento.Multiline = true;
             this.txtMedicamento.Name = "txtMedicamento";
             this.txtMedicamento.Size = new System.Drawing.Size(604, 277);
             this.txtMedicamento.TabIndex = 18;
             this.txtMedicamento.Text = "DESCRIPCION:";
+            this.txtMedicamento.TextChanged += new System.EventHandler(this.txtMedicamento_TextChanged);
             this.txtMedicamento.Enter += new System.EventHandler(this.txtAlergia_Enter);
             this.txtMedicamento.Leave += new System.EventHandler(this.txtAlergia_Leave);
             // 
@@ -142,11 +152,13 @@
             this.txtEmbarazo.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEmbarazo.ForeColor = System.Drawing.Color.Silver;
             this.txtEmbarazo.Location = new System.Drawing.Point(671, 669);
+            this.txtEmbarazo.MaxLength = 2000;
             this.txtEmbarazo.Multiline = true;
             this.txtEmbarazo.Name = "txtEmbarazo";
             this.txtEmbarazo.Size = new System.Drawing.Size(604, 299);
             this.txtEmbarazo.TabIndex = 20;
             this.txtEmbarazo.Text = "DESCRIPCION:";
+            this.txtEmbarazo.TextChanged += new System.EventHandler(this.txtEmbarazo_TextChanged);
             this.txtEmbarazo.Enter += new System.EventHandler(this.txtEmbarazo_Enter);
             this.txtEmbarazo.Leave += new System.EventHandler(this.txtEmbarazo_Leave);
             // 
@@ -240,6 +252,50 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // lblMaxCaracteres
+            // 
+            this.lblMaxCaracteres.BackColor = System.Drawing.Color.White;
+            this.lblMaxCaracteres.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMaxCaracteres.Location = new System.Drawing.Point(522, 544);
+            this.lblMaxCaracteres.Name = "lblMaxCaracteres";
+            this.lblMaxCaracteres.Size = new System.Drawing.Size(108, 21);
+            this.lblMaxCaracteres.TabIndex = 29;
+            this.lblMaxCaracteres.Text = "2000 / 2000";
+            this.lblMaxCaracteres.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMaxCaracteres2
+            // 
+            this.lblMaxCaracteres2.BackColor = System.Drawing.Color.White;
+            this.lblMaxCaracteres2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMaxCaracteres2.Location = new System.Drawing.Point(1160, 544);
+            this.lblMaxCaracteres2.Name = "lblMaxCaracteres2";
+            this.lblMaxCaracteres2.Size = new System.Drawing.Size(108, 21);
+            this.lblMaxCaracteres2.TabIndex = 30;
+            this.lblMaxCaracteres2.Text = "2000 / 2000";
+            this.lblMaxCaracteres2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMaxCaracteres3
+            // 
+            this.lblMaxCaracteres3.BackColor = System.Drawing.Color.White;
+            this.lblMaxCaracteres3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMaxCaracteres3.Location = new System.Drawing.Point(522, 942);
+            this.lblMaxCaracteres3.Name = "lblMaxCaracteres3";
+            this.lblMaxCaracteres3.Size = new System.Drawing.Size(108, 21);
+            this.lblMaxCaracteres3.TabIndex = 31;
+            this.lblMaxCaracteres3.Text = "2000 / 2000";
+            this.lblMaxCaracteres3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblMaxCaracteres4
+            // 
+            this.lblMaxCaracteres4.BackColor = System.Drawing.Color.White;
+            this.lblMaxCaracteres4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMaxCaracteres4.Location = new System.Drawing.Point(1160, 942);
+            this.lblMaxCaracteres4.Name = "lblMaxCaracteres4";
+            this.lblMaxCaracteres4.Size = new System.Drawing.Size(108, 21);
+            this.lblMaxCaracteres4.TabIndex = 32;
+            this.lblMaxCaracteres4.Text = "2000 / 2000";
+            this.lblMaxCaracteres4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // EstadoSalud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -247,6 +303,10 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1293, 1092);
+            this.Controls.Add(this.lblMaxCaracteres4);
+            this.Controls.Add(this.lblMaxCaracteres3);
+            this.Controls.Add(this.lblMaxCaracteres2);
+            this.Controls.Add(this.lblMaxCaracteres);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pnMinimizar);
@@ -264,6 +324,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EstadoSalud";
             this.Text = "EstadoSalud";
+            this.Load += new System.EventHandler(this.EstadoSalud_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.EstadoSalud_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -286,5 +347,9 @@
         public TextBox txtAlergia;
         public TextBox txtMedicamento;
         public TextBox txtEmbarazo;
+        private Label lblMaxCaracteres;
+        private Label lblMaxCaracteres2;
+        private Label lblMaxCaracteres3;
+        private Label lblMaxCaracteres4;
     }
 }

@@ -393,9 +393,36 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
         public Servicio.Servicios FormularioPadre { get; set; }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            string PacienteID = string.Empty;
+
             if (operacion == "Insertar")
             {
-                string PacienteID = dtgvCrudServicio.CurrentRow.Cells["ID"].Value.ToString();
+                try
+                {
+                    // Verificar si hay una fila seleccionada
+                    if (dtgvCrudServicio.CurrentRow == null)
+                    {
+                        MessageBox.Show("NO EXISTE NINGUNA FILA.");
+                        return;
+                    }
+
+                    // Verificar si la celda "ID" no es nula
+                    var cell = dtgvCrudServicio.CurrentRow.Cells["ID"];
+
+                    if (cell == null || cell.Value == null)
+                    {
+                        MessageBox.Show("NO HAY NINGUN PACIENTE SELECCIONADO.");
+                        return;
+                    }
+
+                    PacienteID = cell.Value.ToString();
+                }
+                catch (NullReferenceException ex)
+                {
+                    MessageBox.Show("NINGUN PACIENTE HA SIDO SELECCIONADO: " + ex.Message);
+                    return;
+                }
+
                 string Total = lblResultado.Text;
 
                 List<DetallesFacturas> detalle = new List<DetallesFacturas>();

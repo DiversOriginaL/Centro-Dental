@@ -23,6 +23,10 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
         {
             this.crudPacienteForm = crudPacienteForm;
         }
+        private void EstadoSalud_Load(object sender, EventArgs e)
+        {
+
+        }
 
         #region MoverFormulario.
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
@@ -196,5 +200,30 @@ namespace Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud
             this.Close();
         }
         
+
+        private void txtEnfermedad_TextChanged(object sender, EventArgs e)
+        {
+            int remainingChars = txtEnfermedad.MaxLength - txtEnfermedad.Text.Length;
+            lblMaxCaracteres.Text = $"{remainingChars} / {txtEnfermedad.MaxLength}"; 
+        }
+
+        private void txtMedicamento_TextChanged(object sender, EventArgs e)
+        {
+            int remainingChars = txtMedicamento.MaxLength - txtMedicamento.Text.Length;
+            lblMaxCaracteres2.Text = $"{remainingChars} / {txtMedicamento.MaxLength}";
+        }
+
+        private void txtAlergia_TextChanged(object sender, EventArgs e)
+        {
+            int remainingChars = txtAlergia.MaxLength - txtAlergia.Text.Length;
+            lblMaxCaracteres3.Text = $"{remainingChars} / {txtAlergia.MaxLength}";
+
+        }
+        private void txtEmbarazo_TextChanged(object sender, EventArgs e)
+        {
+            int remainingChars = txtEmbarazo.MaxLength - txtEmbarazo.Text.Length;
+            lblMaxCaracteres4.Text = $"{remainingChars} / {txtEmbarazo.MaxLength}";
+
+        }
     }
 }
