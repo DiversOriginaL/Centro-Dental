@@ -15,8 +15,7 @@ namespace Login.DataAccess.DataAccess
         //CONSTRUCTOR.
         public ConnectionToSql()
         {
-            ConnectionString = "Server=WINDOWS-5BBQ7QJ; DataBase=CentroDental; integrated security=true";
-
+            ConnectionString = "Server=(local); DataBase=CentroDental; integrated security=true";
         }
 
         protected SqlConnection GetConnection()

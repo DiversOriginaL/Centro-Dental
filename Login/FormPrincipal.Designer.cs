@@ -115,11 +115,11 @@
             // 
             this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsuario.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.lblUsuario.Location = new System.Drawing.Point(0, 718);
+            this.lblUsuario.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuario.Location = new System.Drawing.Point(0, 730);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(1083, 63);
+            this.lblUsuario.Size = new System.Drawing.Size(1083, 51);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "USUARIO";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -128,8 +128,8 @@
             // 
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.lblEmail.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(0, 781);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(1083, 63);
@@ -354,19 +354,19 @@
             // 
             this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.Diseño_sin_título;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(6, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 37);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 47);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Sitka Text", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(68, 5);
+            this.label1.Location = new System.Drawing.Point(45, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(554, 45);
+            this.label1.Size = new System.Drawing.Size(466, 45);
             this.label1.TabIndex = 3;
             this.label1.Text = "CLINICA DENTAL POPULAR (Dra. Chanllatte)";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -445,10 +445,9 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
                 cnFactura.insertarFactura(detalle, servicioID, Total, PacienteID);
                 MessageBox.Show("Factura realizada con exito.");
 
-                var service = new Servicio.Servicios();
                 this.Close();
 
-                service.actualizardtgv();
+                FormularioPadre.actualizardtgv();
             }
             else if (operacion == "Editar")
             {
@@ -477,7 +476,7 @@ namespace Presentacion.FormsButton.Servicios.FormHijos
                 this.Close();
 
             }
-            FormularioPadre.actualizardtgv();
+
         }
 
         string facturaid;

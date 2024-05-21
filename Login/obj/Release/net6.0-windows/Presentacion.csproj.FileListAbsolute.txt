@@ -1,0 +1,86 @@
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).exe
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).deps.json
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).runtimeconfig.json
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Azure.Core.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Azure.Identity.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\CircularProgressBar.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Identity.Client.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Identity.Client.NativeInterop.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\PrinterUtility.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\System.Memory.Data.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\System.Runtime.Caching.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\WebPrintManager.Epson.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\WinFormAnimation.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-arm64\native\msalruntime_arm64.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x64\native\msalruntime.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x86\native\msalruntime_x86.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Common.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\DataAccess.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Domain.dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Common.pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\Domain.pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\bin\Release\net6.0-windows\DataAccess.pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormPrincipal.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Paciente.FormHijos.AbrirEstadoSalud.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Paciente.FormHijos.CrudPaciente.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Paciente.FormHijos.FormEstadoSalud.EstadoSalud.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Paciente.Pacientes.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Reporte.Reportes.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Servicio.FormHijos.CargarPaciente.CargaPaciente.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Servicios.FormHijos.CrudServicio.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Servicio.Servicios.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Servicio.VerDetalles.VerDetalle.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Usuario.FormHijos.CrudUsuario.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormsButton.Usuario.Usuario.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.FormWelcome.Welcome.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.Login.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.Properties.Resources.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.RecuperarContraseña.recoverPassword.resources
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.csproj.GenerateResource.cache
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.AssemblyInfoInputs.cache
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.AssemblyInfo.cs
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.csproj.CopyComplete
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\refint\Clinica Dental Popular (Dra. Chanllatte).dll
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Clinica Dental Popular (Dra. Chanllatte).pdb
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\Presentacion.genruntimeconfig.cache
+C:\Users\Dell\OneDrive\Escritorio\Programacion\C#\WindowsForm\login\Login\obj\Release\net6.0-windows\ref\Clinica Dental Popular (Dra. Chanllatte).dll
