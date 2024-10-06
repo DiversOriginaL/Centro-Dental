@@ -40,6 +40,8 @@
             this.btnAcceder = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblErrorMessage = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnLogo
@@ -50,7 +52,7 @@
             this.pnLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLogo.Location = new System.Drawing.Point(0, 0);
             this.pnLogo.Name = "pnLogo";
-            this.pnLogo.Size = new System.Drawing.Size(422, 544);
+            this.pnLogo.Size = new System.Drawing.Size(422, 561);
             this.pnLogo.TabIndex = 5;
             this.pnLogo.TabStop = true;
             this.pnLogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnLogo_MouseDown);
@@ -68,15 +70,17 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtUsuario.Location = new System.Drawing.Point(506, 146);
+            this.txtUsuario.Location = new System.Drawing.Point(506, 160);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(701, 46);
+            this.txtUsuario.Size = new System.Drawing.Size(721, 46);
             this.txtUsuario.TabIndex = 10;
             this.txtUsuario.Text = "USUARIO:";
             this.txtUsuario.Enter += new System.EventHandler(this.txtUsuario_Enter);
@@ -84,35 +88,41 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel2.Enabled = false;
-            this.panel2.Location = new System.Drawing.Point(516, 187);
+            this.panel2.Location = new System.Drawing.Point(516, 201);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(691, 5);
+            this.panel2.Size = new System.Drawing.Size(711, 5);
             this.panel2.TabIndex = 9;
             this.panel2.TabStop = true;
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(516, 305);
+            this.panel3.Location = new System.Drawing.Point(516, 319);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(691, 5);
+            this.panel3.Size = new System.Drawing.Size(711, 5);
             this.panel3.TabIndex = 10;
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtContraseña.Location = new System.Drawing.Point(506, 264);
+            this.txtContraseña.Location = new System.Drawing.Point(506, 278);
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(701, 46);
+            this.txtContraseña.Size = new System.Drawing.Size(721, 46);
             this.txtContraseña.TabIndex = 20;
             this.txtContraseña.Text = "CONTRASEÑA:";
             this.txtContraseña.UseSystemPasswordChar = true;
@@ -122,9 +132,10 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackgroundImage = global::Presentacion.Properties.Resources.exit;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCerrar.Location = new System.Drawing.Point(1240, 9);
+            this.btnCerrar.Location = new System.Drawing.Point(1260, 9);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(35, 23);
             this.btnCerrar.TabIndex = 30;
@@ -133,9 +144,10 @@
             // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.BackgroundImage = global::Presentacion.Properties.Resources.minimize;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMinimizar.Location = new System.Drawing.Point(1206, 9);
+            this.btnMinimizar.Location = new System.Drawing.Point(1226, 9);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(26, 23);
             this.btnMinimizar.TabIndex = 1;
@@ -144,15 +156,17 @@
             // 
             // btnAcceder
             // 
+            this.btnAcceder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnAcceder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(170)))), ((int)(((byte)(68)))));
             this.btnAcceder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAcceder.ForeColor = System.Drawing.Color.White;
-            this.btnAcceder.Location = new System.Drawing.Point(516, 383);
+            this.btnAcceder.Location = new System.Drawing.Point(516, 400);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(691, 65);
+            this.btnAcceder.Size = new System.Drawing.Size(711, 65);
             this.btnAcceder.TabIndex = 30;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
@@ -161,41 +175,55 @@
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.SystemColors.ControlLightLight;
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Sitka Text", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.linkLabel1.Location = new System.Drawing.Point(713, 474);
+            this.linkLabel1.Location = new System.Drawing.Point(302, 486);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(312, 32);
             this.linkLabel1.TabIndex = 40;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado la contraseña?";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // lblErrorMessage
             // 
+            this.lblErrorMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblErrorMessage.AutoSize = true;
             this.lblErrorMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblErrorMessage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblErrorMessage.Font = new System.Drawing.Font("Sitka Small", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.lblErrorMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(102)))));
             this.lblErrorMessage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.lblErrorMessage.Location = new System.Drawing.Point(516, 345);
+            this.lblErrorMessage.Location = new System.Drawing.Point(516, 362);
             this.lblErrorMessage.Name = "lblErrorMessage";
             this.lblErrorMessage.Size = new System.Drawing.Size(173, 33);
             this.lblErrorMessage.TabIndex = 11;
             this.lblErrorMessage.Text = "Error Message";
             this.lblErrorMessage.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(422, 0);
+            this.panel1.MaximumSize = new System.Drawing.Size(900, 600);
+            this.panel1.MinimumSize = new System.Drawing.Size(800, 500);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(876, 561);
+            this.panel1.TabIndex = 41;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1278, 544);
+            this.ClientSize = new System.Drawing.Size(1298, 561);
             this.Controls.Add(this.lblErrorMessage);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
@@ -204,12 +232,16 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.lblInicio);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +260,6 @@
         private Label lblErrorMessage;
         private TextBox txtUsuario;
         private TextBox txtContraseña;
+        private Panel panel1;
     }
 }

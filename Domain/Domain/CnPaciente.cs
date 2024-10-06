@@ -29,7 +29,7 @@ namespace Domain.Domain
 
         public void insertarPaciente
             (
-            string pnombre, string snombre, string papellido, string sapellido, string edad, object sexo,
+            string pnombre, string snombre, string papellido, string sapellido, string cedula, string edad,  object sexo,
             string celular, string telefono, object provincia, string sector, string calle, string numcasa, string enfermedad,
             string medicamento, string alergia, string embarazo
             )
@@ -38,6 +38,7 @@ namespace Domain.Domain
             paciente.SetSNombre(snombre);
             paciente.SetPApellido(papellido);
             paciente.SetSApellido(sapellido);
+            paciente.SetSCedula(cedula);
             paciente.SetEdad(edad);
             paciente.SetSexo(Convert.ToChar(sexo));
             contacto.SetCelular(celular);
@@ -56,7 +57,7 @@ namespace Domain.Domain
 
         public void editarPaciente
             (
-            string id, string pnombre, string snombre, string papellido, string sapellido, string edad, object sexo,
+            string id, string pnombre, string snombre, string papellido, string sapellido, string cedula, string edad, object sexo,
             string celular, string telefono, object provincia, string sector, string calle, string numcasa, string enfermedad,
             string medicamento, string alergia, string embarazo
             )
@@ -66,6 +67,7 @@ namespace Domain.Domain
             paciente.SetSNombre(snombre);
             paciente.SetPApellido(papellido);
             paciente.SetSApellido(sapellido);
+            paciente.SetSCedula(sapellido);
             paciente.SetEdad(edad);
             paciente.SetSexo(Convert.ToChar(sexo));
             contacto.SetCelular(celular);

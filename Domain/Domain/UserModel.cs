@@ -28,8 +28,7 @@ namespace Login.Domain.Domain
                 
             }
             if (UserLoginCache.RolId() == Positions.Recepcionista && RolesCache.RoL() == "Recepcionista" ||
-                UserLoginCache.RolId() == Positions.DoctoraEncagada && RolesCache.RoL() == "Doctora Encargada" ||
-                UserLoginCache.RolId() == Positions.Empleado && RolesCache.RoL() == "Empleado")
+                UserLoginCache.RolId() == Positions.DoctoraEncagada && RolesCache.RoL() == "Doctora Encargada")
             {
 
             }

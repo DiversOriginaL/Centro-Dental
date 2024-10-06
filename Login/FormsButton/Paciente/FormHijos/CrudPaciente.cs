@@ -119,6 +119,22 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             }
 
         }
+        private void txtCedula_Enter(object sender, EventArgs e)
+        {
+            if(txtCedula.Text == "CEDULA:")
+            {
+                txtCedula.Text = "";
+                txtCedula.ForeColor = Color.Black;
+            }
+        }
+        private void txtCedula_Leave(object sender, EventArgs e)
+        {
+            if(txtCedula.Text == "")
+            {
+                txtCedula.Text = "CEDULA:";
+                txtCedula.ForeColor = Color.Silver;
+            }
+        }
 
         private void txtEdad_Enter(object sender, EventArgs e)
         {
@@ -397,7 +413,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
 
         public void CargarValores
         (
-            string id, string pnombre, string snombre, string papellido, string sapellido, string edad, string sexo,
+            string id, string pnombre, string snombre, string papellido, string sapellido, string cedula, string edad, string sexo,
             string celular, string telefono, string provincia, string sector, string calle, string numcasa
         )
         {
@@ -406,6 +422,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             txtSnombre.Text = snombre;
             txtPapellido.Text = papellido;
             txtSapellido.Text = sapellido;
+            txtCedula.Text = cedula;
             txtEdad.Text = edad;
             cbSexo.Text = sexo;
             txtCelular.Text = celular;
@@ -420,6 +437,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             txtSnombre.ForeColor = Color.Black;
             txtPapellido.ForeColor = Color.Black;
             txtSapellido.ForeColor = Color.Black;
+            txtCedula.ForeColor = Color.Silver;
             txtEdad.ForeColor = Color.Black;
             cbSexo.ForeColor = Color.Black;
             txtCelular.ForeColor = Color.Black;
@@ -435,7 +453,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             if (
                 !rellenarCampo(txtPnombre, "PRIMER NOMBRE:") || !rellenarCampo(txtSnombre, "SEGUNDO NOMBRE:") ||
                 !rellenarCampo(txtPapellido, "PRIMER APELLIDO:") || !rellenarCampo(txtSapellido, "SEGUNDO APELLIDO:") ||
-                !rellenarCampo(txtEdad, "EDAD:") || !rellenarCampo(cbSexo, "SEXO:") || !rellenarCampo(txtCelular, "CELULAR:") ||
+                !rellenarCampo(txtCedula, "CEDULA:") || !rellenarCampo(txtEdad, "EDAD:") || !rellenarCampo(cbSexo, "SEXO:") || !rellenarCampo(txtCelular, "CELULAR:") ||
                 !rellenarCampo(cbProvincia, "PROVINCIA / MUNICIPIO:") || !rellenarCampo(txtSector, "SECTOR:") ||
                 !rellenarCampo(txtCalle, "CALLE:") || !rellenarCampo(txtNumCasa, "NUMERO DE CASA:")
                 )
@@ -447,6 +465,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
             string snombre = txtSnombre.Text;
             string papellido = txtPapellido.Text;
             string sapellido = txtSapellido.Text;
+            string cedula = txtCedula.Text;
             string edad = txtEdad.Text;
             object sexo = cbSexo.SelectedItem;
             string celular = txtCelular.Text;
@@ -462,7 +481,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
                 {
                     cnPaciente.insertarPaciente
                     (
-                        pnombre, snombre, papellido, sapellido, edad, sexo,
+                        pnombre, snombre, papellido, sapellido, cedula, edad, sexo,
                         celular, telefono, provincia, sector, calle, numcasa,
                         enfermedad, medicamento, alergia, embarazo
                     );
@@ -479,7 +498,7 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
 
                     cnPaciente.editarPaciente
                     (
-                        idPaciente, pnombre, snombre, papellido, sapellido, edad, sexo, 
+                        idPaciente, pnombre, snombre, papellido, sapellido, cedula, edad, sexo, 
                         celular, telefono, provincia, sector, calle, numcasa,
                         enfermedad, medicamento, alergia, embarazo
                     );
@@ -574,6 +593,10 @@ namespace Presentacion.FormsButton.Paciente.FormHijos
         {
             soloTexto(sender, e);
             mayusculaFirst(txtSapellido, e);
+        }
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumero(sender, e);
         }
 
         private void txtEdad_KeyPress(object sender, KeyPressEventArgs e)

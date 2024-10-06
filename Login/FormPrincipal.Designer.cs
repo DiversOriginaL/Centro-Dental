@@ -35,8 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSlide = new System.Windows.Forms.PictureBox();
             this.pnLeft = new System.Windows.Forms.Panel();
             this.pnUsuarios = new System.Windows.Forms.Panel();
             this.pnReporte = new System.Windows.Forms.Panel();
@@ -47,6 +45,8 @@
             this.btnPaciente = new System.Windows.Forms.Button();
             this.btnServicio = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSlide = new System.Windows.Forms.PictureBox();
             this.pnUp = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@
             this.pnContainer.SuspendLayout();
             this.pnRight.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             this.pnLeft.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).BeginInit();
             this.pnUp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
@@ -83,11 +83,10 @@
             this.pnRight.BackColor = System.Drawing.Color.White;
             this.pnRight.Controls.Add(this.pnTopTop);
             this.pnRight.Controls.Add(this.panel1);
-            this.pnRight.Controls.Add(this.panel2);
             this.pnRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnRight.Location = new System.Drawing.Point(309, 55);
+            this.pnRight.Location = new System.Drawing.Point(337, 55);
             this.pnRight.Name = "pnRight";
-            this.pnRight.Size = new System.Drawing.Size(1083, 913);
+            this.pnRight.Size = new System.Drawing.Size(1055, 913);
             this.pnRight.TabIndex = 2;
             // 
             // pnTopTop
@@ -96,7 +95,7 @@
             this.pnTopTop.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnTopTop.Location = new System.Drawing.Point(0, 913);
             this.pnTopTop.Name = "pnTopTop";
-            this.pnTopTop.Size = new System.Drawing.Size(1083, 0);
+            this.pnTopTop.Size = new System.Drawing.Size(1055, 0);
             this.pnTopTop.TabIndex = 8;
             // 
             // panel1
@@ -106,20 +105,20 @@
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.lblEmail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 69);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1083, 844);
+            this.panel1.Size = new System.Drawing.Size(1055, 913);
             this.panel1.TabIndex = 10;
             // 
             // lblUsuario
             // 
             this.lblUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUsuario.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
-            this.lblUsuario.Location = new System.Drawing.Point(0, 730);
+            this.lblUsuario.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblUsuario.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblUsuario.Location = new System.Drawing.Point(0, 832);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(1083, 51);
+            this.lblUsuario.Size = new System.Drawing.Size(1055, 36);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "USUARIO";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -128,39 +127,19 @@
             // 
             this.lblEmail.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.ForeColor = System.Drawing.Color.Black;
-            this.lblEmail.Location = new System.Drawing.Point(0, 781);
+            this.lblEmail.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEmail.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblEmail.Location = new System.Drawing.Point(0, 868);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(1083, 63);
+            this.lblEmail.Size = new System.Drawing.Size(1055, 45);
             this.lblEmail.TabIndex = 7;
             this.lblEmail.Text = "EMAIL";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnSlide);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1083, 69);
-            this.panel2.TabIndex = 9;
-            // 
-            // btnSlide
-            // 
-            this.btnSlide.BackColor = System.Drawing.Color.White;
-            this.btnSlide.BackgroundImage = global::Presentacion.Properties.Resources.bars_solid;
-            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSlide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSlide.Location = new System.Drawing.Point(6, 13);
-            this.btnSlide.Name = "btnSlide";
-            this.btnSlide.Size = new System.Drawing.Size(45, 45);
-            this.btnSlide.TabIndex = 1;
-            this.btnSlide.TabStop = false;
-            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
-            // 
             // pnLeft
             // 
+            this.pnLeft.AutoScrollMargin = new System.Drawing.Size(10, 0);
+            this.pnLeft.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.pnLeft.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnLeft.Controls.Add(this.pnUsuarios);
@@ -172,16 +151,17 @@
             this.pnLeft.Controls.Add(this.btnPaciente);
             this.pnLeft.Controls.Add(this.btnServicio);
             this.pnLeft.Controls.Add(this.btnCerrarSesion);
+            this.pnLeft.Controls.Add(this.panel3);
             this.pnLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnLeft.Location = new System.Drawing.Point(0, 55);
             this.pnLeft.Name = "pnLeft";
-            this.pnLeft.Size = new System.Drawing.Size(309, 913);
+            this.pnLeft.Size = new System.Drawing.Size(337, 913);
             this.pnLeft.TabIndex = 1;
             // 
             // pnUsuarios
             // 
             this.pnUsuarios.BackColor = System.Drawing.Color.White;
-            this.pnUsuarios.Location = new System.Drawing.Point(1, 309);
+            this.pnUsuarios.Location = new System.Drawing.Point(-1, 336);
             this.pnUsuarios.Name = "pnUsuarios";
             this.pnUsuarios.Size = new System.Drawing.Size(7, 67);
             this.pnUsuarios.TabIndex = 9;
@@ -190,7 +170,7 @@
             // pnReporte
             // 
             this.pnReporte.BackColor = System.Drawing.Color.White;
-            this.pnReporte.Location = new System.Drawing.Point(1, 230);
+            this.pnReporte.Location = new System.Drawing.Point(-1, 255);
             this.pnReporte.Name = "pnReporte";
             this.pnReporte.Size = new System.Drawing.Size(7, 67);
             this.pnReporte.TabIndex = 3;
@@ -199,7 +179,7 @@
             // pnPaciente
             // 
             this.pnPaciente.BackColor = System.Drawing.Color.White;
-            this.pnPaciente.Location = new System.Drawing.Point(0, 153);
+            this.pnPaciente.Location = new System.Drawing.Point(-1, 173);
             this.pnPaciente.Name = "pnPaciente";
             this.pnPaciente.Size = new System.Drawing.Size(7, 65);
             this.pnPaciente.TabIndex = 2;
@@ -207,32 +187,32 @@
             // 
             // btnUsuarios
             // 
+            this.btnUsuarios.AutoSize = true;
             this.btnUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUsuarios.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = global::Presentacion.Properties.Resources.Usuarios2;
             this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuarios.Location = new System.Drawing.Point(0, 309);
+            this.btnUsuarios.Location = new System.Drawing.Point(0, 337);
             this.btnUsuarios.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Padding = new System.Windows.Forms.Padding(7, 0, 0, 0);
-            this.btnUsuarios.Size = new System.Drawing.Size(309, 67);
+            this.btnUsuarios.Size = new System.Drawing.Size(336, 68);
             this.btnUsuarios.TabIndex = 8;
             this.btnUsuarios.Text = " Usuarios";
             this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuarios.UseVisualStyleBackColor = true;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            this.btnUsuarios.Leave += new System.EventHandler(this.btnUsuarios_Leave);
             // 
             // pnServicio
             // 
             this.pnServicio.BackColor = System.Drawing.Color.White;
-            this.pnServicio.Location = new System.Drawing.Point(1, 75);
+            this.pnServicio.Location = new System.Drawing.Point(-1, 89);
             this.pnServicio.Name = "pnServicio";
             this.pnServicio.Size = new System.Drawing.Size(7, 67);
             this.pnServicio.TabIndex = 1;
@@ -240,75 +220,75 @@
             // 
             // btnReportes
             // 
+            this.btnReportes.AutoSize = true;
             this.btnReportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnReportes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReportes.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnReportes.ForeColor = System.Drawing.Color.White;
             this.btnReportes.Image = global::Presentacion.Properties.Resources.chart_simple_solid;
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 229);
+            this.btnReportes.Location = new System.Drawing.Point(0, 254);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(309, 68);
+            this.btnReportes.Size = new System.Drawing.Size(336, 68);
             this.btnReportes.TabIndex = 2;
             this.btnReportes.Text = " Reportes";
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReporte_Click);
-            this.btnReportes.Leave += new System.EventHandler(this.btnReportes_Leave);
             // 
             // btnPaciente
             // 
+            this.btnPaciente.AutoSize = true;
             this.btnPaciente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPaciente.FlatAppearance.BorderSize = 0;
             this.btnPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.btnPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaciente.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPaciente.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPaciente.ForeColor = System.Drawing.Color.White;
             this.btnPaciente.Image = ((System.Drawing.Image)(resources.GetObject("btnPaciente.Image")));
             this.btnPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaciente.Location = new System.Drawing.Point(0, 152);
+            this.btnPaciente.Location = new System.Drawing.Point(0, 171);
             this.btnPaciente.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPaciente.Name = "btnPaciente";
             this.btnPaciente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPaciente.Size = new System.Drawing.Size(309, 66);
+            this.btnPaciente.Size = new System.Drawing.Size(336, 68);
             this.btnPaciente.TabIndex = 1;
             this.btnPaciente.Text = " Pacientes";
             this.btnPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPaciente.UseVisualStyleBackColor = true;
             this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
-            this.btnPaciente.Leave += new System.EventHandler(this.btnPaciente_Leave);
             // 
             // btnServicio
             // 
+            this.btnServicio.AutoSize = true;
             this.btnServicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnServicio.FlatAppearance.BorderSize = 0;
             this.btnServicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.btnServicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnServicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServicio.Font = new System.Drawing.Font("Sitka Text", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnServicio.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnServicio.ForeColor = System.Drawing.Color.White;
             this.btnServicio.Image = global::Presentacion.Properties.Resources.people_arrows_solid;
             this.btnServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnServicio.Location = new System.Drawing.Point(0, 70);
+            this.btnServicio.Location = new System.Drawing.Point(0, 88);
             this.btnServicio.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnServicio.Name = "btnServicio";
             this.btnServicio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnServicio.Size = new System.Drawing.Size(309, 72);
+            this.btnServicio.Size = new System.Drawing.Size(336, 68);
             this.btnServicio.TabIndex = 0;
             this.btnServicio.Text = " Servicios";
             this.btnServicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnServicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnServicio.UseVisualStyleBackColor = true;
             this.btnServicio.Click += new System.EventHandler(this.btnServicio_Click);
-            this.btnServicio.Leave += new System.EventHandler(this.btnServicio_Leave);
             // 
             // btnCerrarSesion
             // 
@@ -327,11 +307,35 @@
             this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 8, 3, 3);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(305, 101);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(333, 101);
             this.btnCerrarSesion.TabIndex = 5;
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.btnSlide);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(333, 69);
+            this.panel3.TabIndex = 10;
+            // 
+            // btnSlide
+            // 
+            this.btnSlide.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSlide.BackColor = System.Drawing.Color.Transparent;
+            this.btnSlide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSlide.BackgroundImage")));
+            this.btnSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSlide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSlide.Location = new System.Drawing.Point(265, 3);
+            this.btnSlide.Name = "btnSlide";
+            this.btnSlide.Size = new System.Drawing.Size(55, 57);
+            this.btnSlide.TabIndex = 1;
+            this.btnSlide.TabStop = false;
+            this.btnSlide.Click += new System.EventHandler(this.btnSlide_Click);
             // 
             // pnUp
             // 
@@ -412,8 +416,8 @@
             // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1392, 968);
             this.Controls.Add(this.pnContainer);
@@ -428,9 +432,10 @@
             this.pnRight.ResumeLayout(false);
             this.pnRight.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             this.pnLeft.ResumeLayout(false);
+            this.pnLeft.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnSlide)).EndInit();
             this.pnUp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
@@ -455,16 +460,16 @@
         private PictureBox btnSlide;
         private Button btnCerrarSesion;
         private Button btnUsuarios;
-        private Panel panel2;
         private Label lblEmail;
         private Panel pnTopTop;
         private Label lblUsuario;
         private Panel panel1;
         public Panel pnReporte;
         public Panel pnPaciente;
-        public Panel pnServicio;
         public Panel pnUsuarios;
         private Label label1;
         private PictureBox pictureBox1;
+        private Panel panel3;
+        public Panel pnServicio;
     }
 }

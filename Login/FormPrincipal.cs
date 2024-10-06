@@ -12,6 +12,7 @@ namespace Presentacion
 {
     public partial class FormPrincipal : Form
     {
+        private float originalAncho;
         public FormPrincipal()
         {
             InitializeComponent();
@@ -19,6 +20,8 @@ namespace Presentacion
             //Estas lineas eliminan los parpadeos del formulario o controles en la interfaz grafica (Pero no en un 100%)
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
+
+            originalAncho = (float)pnLeft.Width / Screen.PrimaryScreen.Bounds.Width;
         }
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
@@ -30,26 +33,45 @@ namespace Presentacion
         private void Permisos()
         {
             //DELEGANDO PERMISOS
-            if (UserLoginCache.RolId() == Positions.DoctoraEncagada ||
-               UserLoginCache.RolId() == Positions.Recepcionista ||
-               UserLoginCache.RolId() == Positions.Empleado)
+            if (UserLoginCache.RolId() == Positions.DoctoraEncagada)
             {
-                btnReportes.Visible = false;
+                btnServicio.Visible = true;
+                btnPaciente.Visible = true;
+                btnReportes.Visible = true;
                 btnUsuarios.Visible = false;
             }
-
+            if(UserLoginCache.RolId() == Positions.Recepcionista)
+            {
+                btnServicio.Visible = true;
+                btnPaciente.Visible = true;
+                btnReportes.Visible = true;
+                btnUsuarios.Visible = false;
+            }
         }
 
         private void areaTrabajo()
         {
+            // Obtener el área de trabajo de la pantalla principal
             Rectangle areaTrabajo = Screen.PrimaryScreen.WorkingArea;
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point(areaTrabajo.Left, areaTrabajo.Top);
-            this.Size = new Size(areaTrabajo.Width, areaTrabajo.Height);
 
+            // Calcular el tamaño deseado del formulario como un porcentaje del área de trabajo
+            double widthPercentage = 0.8; // 80% del ancho del área de trabajo
+            double heightPercentage = 0.8; // 80% de la altura del área de trabajo
+
+            int formWidth = (int)(areaTrabajo.Width * widthPercentage);
+            int formHeight = (int)(areaTrabajo.Height * heightPercentage);
+
+            // Configurar la posición y el tamaño del formulario
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(
+                areaTrabajo.Left + (areaTrabajo.Width - formWidth) / 2,
+                areaTrabajo.Top + (areaTrabajo.Height - formHeight) / 2
+            );
+            this.Size = new Size(formWidth, formHeight);
+
+            // Opcional: Configurar el borde y el estado de la ventana
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Normal;
-
         }
 
         private void LoadUserData()
@@ -166,16 +188,25 @@ namespace Presentacion
             if (Application.OpenForms["Servicios"] == null)
             {
                 btnServicio.BackColor = Color.FromArgb(0, 136, 68);
+                pnServicio.Visible = false;
             }
 
             if (Application.OpenForms["Pacientes"] == null)
             {
                 btnPaciente.BackColor = Color.FromArgb(0, 136, 68);
+                pnPaciente.Visible = false;
             }
 
             if (Application.OpenForms["Reportes"] == null)
             {
                 btnReportes.BackColor = Color.FromArgb(0, 136, 68);
+                pnReporte.Visible = false;
+            }
+
+            if (Application.OpenForms["Usuario"] == null)
+            {
+                btnUsuarios.BackColor = Color.FromArgb(0, 136, 68);
+                pnUsuarios.Visible = false;
             }
         }
 
@@ -183,63 +214,42 @@ namespace Presentacion
         private void btnServicio_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Servicios>();
+            btnServicio.BackColor = Color.FromArgb(0, 204, 102);
             pnServicio.Visible = true;
         }
 
-        private void btnServicio_Leave(object sender, EventArgs e)
-        {
-            pnServicio.Visible = false;
-        }
-
         private void btnPaciente_Click(object sender, EventArgs e)
-        {//0; 85; 34
-            AbrirFormulario<Pacientes>();
-            pnPaciente.Visible = true;
-
-        }
-
-        private void btnPaciente_Leave(object sender, EventArgs e)
         {
-            pnPaciente.Visible = false;
+            AbrirFormulario<Pacientes>();
+            btnPaciente.BackColor = Color.FromArgb(0, 204, 102);
+            pnPaciente.Visible = true;
 
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Reportes>();
+            btnReportes.BackColor = Color.FromArgb(0, 204, 102);
             pnReporte.Visible = true;
-        }
-
-        private void btnReportes_Leave(object sender, EventArgs e)
-        {
-            pnReporte.Visible = false;
-
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Usuario>();
+            btnUsuarios.BackColor = Color.FromArgb(0, 204, 102);
             pnUsuarios.Visible = true;
 
         }
-        private void btnUsuarios_Leave(object sender, EventArgs e)
-        {
-            pnUsuarios.Visible = false;
-
-        }
-
 
         private void btnSlide_Click(object sender, EventArgs e)
         {
-            if (pnLeft.Width == 309)
+            if (pnLeft.Width != 80)
             {
-                pnLeft.Width = 77;
-                btnCerrarSesion.Size = new Size(77,67);
+                pnLeft.Width = 80;
             }
-            else
+            else if(pnLeft.Width == 80)
             {
-                pnLeft.Width = 309;
-                btnCerrarSesion.Size = new Size(309, 110);
+                pnLeft.Width = (int)(Screen.PrimaryScreen.Bounds.Width * originalAncho);
             }
         }
 

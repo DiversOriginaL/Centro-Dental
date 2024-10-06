@@ -40,9 +40,11 @@
             this.cbPuesto = new System.Windows.Forms.ComboBox();
             this.pbVerContraseña = new System.Windows.Forms.PictureBox();
             this.pbOcultarContraseña = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultarContraseña)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblInsertar
@@ -58,9 +60,12 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtEmail.ForeColor = System.Drawing.Color.Silver;
             this.txtEmail.Location = new System.Drawing.Point(534, 229);
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(497, 46);
@@ -71,9 +76,12 @@
             // 
             // txtApellidos
             // 
+            this.txtApellidos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtApellidos.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtApellidos.ForeColor = System.Drawing.Color.Silver;
             this.txtApellidos.Location = new System.Drawing.Point(534, 165);
+            this.txtApellidos.MaxLength = 50;
             this.txtApellidos.Multiline = true;
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(497, 46);
@@ -85,9 +93,12 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsuario.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtUsuario.ForeColor = System.Drawing.Color.Silver;
             this.txtUsuario.Location = new System.Drawing.Point(534, 293);
+            this.txtUsuario.MaxLength = 50;
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(497, 46);
@@ -98,9 +109,12 @@
             // 
             // txtNombres
             // 
+            this.txtNombres.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombres.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtNombres.ForeColor = System.Drawing.Color.Silver;
             this.txtNombres.Location = new System.Drawing.Point(534, 99);
+            this.txtNombres.MaxLength = 50;
             this.txtNombres.Multiline = true;
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(497, 46);
@@ -112,9 +126,12 @@
             // 
             // txtContraseña
             // 
+            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContraseña.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.Silver;
             this.txtContraseña.Location = new System.Drawing.Point(534, 358);
+            this.txtContraseña.MaxLength = 50;
             this.txtContraseña.Multiline = true;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '*';
@@ -127,7 +144,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.AutoSize = true;
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(51)))));
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -135,9 +153,9 @@
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = global::Presentacion.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(861, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(329, 0);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(228, 67);
+            this.btnCancelar.Size = new System.Drawing.Size(304, 92);
             this.btnCancelar.TabIndex = 29;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -146,7 +164,8 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.AutoSize = true;
+            this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(51)))));
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -154,9 +173,9 @@
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(601, 524);
+            this.btnGuardar.Location = new System.Drawing.Point(6, 0);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(224, 67);
+            this.btnGuardar.Size = new System.Drawing.Size(323, 92);
             this.btnGuardar.TabIndex = 28;
             this.btnGuardar.Text = " GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,15 +186,18 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox1.BackgroundImage = global::Presentacion.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(471, 603);
+            this.pictureBox1.Size = new System.Drawing.Size(471, 643);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
             // cbPuesto
             // 
+            this.cbPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbPuesto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbPuesto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cbPuesto.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -203,6 +225,7 @@
             // 
             // pbOcultarContraseña
             // 
+            this.pbOcultarContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbOcultarContraseña.BackgroundImage = global::Presentacion.Properties.Resources.ocultarContraseña;
             this.pbOcultarContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbOcultarContraseña.Location = new System.Drawing.Point(982, 364);
@@ -212,18 +235,27 @@
             this.pbOcultarContraseña.TabStop = false;
             this.pbOcultarContraseña.Click += new System.EventHandler(this.pbOcultarContraseña_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnGuardar);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(471, 551);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(633, 92);
+            this.panel1.TabIndex = 34;
+            // 
             // CrudUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1104, 603);
+            this.ClientSize = new System.Drawing.Size(1104, 643);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbOcultarContraseña);
             this.Controls.Add(this.pbVerContraseña);
             this.Controls.Add(this.cbPuesto);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtApellidos);
@@ -238,6 +270,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbVerContraseña)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOcultarContraseña)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +291,6 @@
         private ComboBox cbPuesto;
         private PictureBox pbVerContraseña;
         private PictureBox pbOcultarContraseña;
+        private Panel panel1;
     }
 }

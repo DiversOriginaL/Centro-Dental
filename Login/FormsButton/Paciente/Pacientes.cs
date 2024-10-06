@@ -29,8 +29,7 @@ namespace Presentacion.FormsButton.Paciente
         {
             //DELEGANDO PERMISOS
             if (UserLoginCache.RolId() == Positions.DoctoraEncagada ||
-               UserLoginCache.RolId() == Positions.Recepcionista ||
-               UserLoginCache.RolId() == Positions.Empleado)
+               UserLoginCache.RolId() == Positions.Recepcionista)
             {
                 btnEliminar.Enabled = false;
             }
@@ -122,6 +121,7 @@ namespace Presentacion.FormsButton.Paciente
         {
             AbrirFormularioEditar<CrudPaciente>(this);
         }
+
         private void AbrirFormularioEditar<MiForm>(Pacientes paciente) where MiForm : Form
         {
             if (dtgvPacientes.SelectedRows.Count > 0)
@@ -147,6 +147,7 @@ namespace Presentacion.FormsButton.Paciente
                     dtgvPacientes.CurrentRow.Cells["SNombre"].Value.ToString(),
                     dtgvPacientes.CurrentRow.Cells["PApellido"].Value.ToString(),
                     dtgvPacientes.CurrentRow.Cells["SApellido"].Value.ToString(),
+                    dtgvPacientes.CurrentRow.Cells["Cedula"].Value.ToString(),
                     dtgvPacientes.CurrentRow.Cells["Edad"].Value.ToString(),
                     dtgvPacientes.CurrentRow.Cells["Sexo"].Value.ToString(),
                     dtgvPacientes.CurrentRow.Cells["Celular"].Value.ToString(),

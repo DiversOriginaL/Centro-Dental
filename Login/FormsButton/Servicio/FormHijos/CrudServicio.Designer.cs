@@ -54,19 +54,23 @@
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.cbServicio = new System.Windows.Forms.ComboBox();
             this.pnTop = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCargarPaciente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnDown = new System.Windows.Forms.Panel();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbItbis = new System.Windows.Forms.CheckBox();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.lblResultado = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.cbItbis = new System.Windows.Forms.CheckBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.pdImprimir = new System.Drawing.Printing.PrintDocument();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCrudServicio)).BeginInit();
             this.pnTop.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnDown.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -74,7 +78,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -82,9 +86,9 @@
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = global::Presentacion.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(1076, 744);
+            this.btnCancelar.Location = new System.Drawing.Point(1023, 0);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(226, 67);
+            this.btnCancelar.Size = new System.Drawing.Size(287, 92);
             this.btnCancelar.TabIndex = 40;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -93,7 +97,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -101,9 +105,9 @@
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnGuardar.Image = global::Presentacion.Properties.Resources.guardar;
-            this.btnGuardar.Location = new System.Drawing.Point(828, 744);
+            this.btnGuardar.Location = new System.Drawing.Point(727, 0);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(227, 67);
+            this.btnGuardar.Size = new System.Drawing.Size(296, 92);
             this.btnGuardar.TabIndex = 35;
             this.btnGuardar.Text = " GUARDAR";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -151,14 +155,14 @@
             this.dtgvCrudServicio.DefaultCellStyle = dataGridViewCellStyle8;
             this.dtgvCrudServicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvCrudServicio.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(68)))));
-            this.dtgvCrudServicio.Location = new System.Drawing.Point(0, 312);
+            this.dtgvCrudServicio.Location = new System.Drawing.Point(0, 342);
             this.dtgvCrudServicio.Name = "dtgvCrudServicio";
             this.dtgvCrudServicio.RowHeadersVisible = false;
             this.dtgvCrudServicio.RowHeadersWidth = 62;
             this.dtgvCrudServicio.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgvCrudServicio.RowTemplate.Height = 33;
             this.dtgvCrudServicio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvCrudServicio.Size = new System.Drawing.Size(1314, 324);
+            this.dtgvCrudServicio.Size = new System.Drawing.Size(1314, 294);
             this.dtgvCrudServicio.TabIndex = 0;
             this.dtgvCrudServicio.TabStop = false;
             this.dtgvCrudServicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtgvCrudServicio_MouseDown);
@@ -247,13 +251,13 @@
             // 
             // txtCosto
             // 
-            this.txtCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCosto.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtCosto.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCosto.ForeColor = System.Drawing.Color.Silver;
-            this.txtCosto.Location = new System.Drawing.Point(15, 233);
+            this.txtCosto.Location = new System.Drawing.Point(0, 0);
             this.txtCosto.Multiline = true;
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(211, 46);
+            this.txtCosto.Size = new System.Drawing.Size(211, 53);
             this.txtCosto.TabIndex = 10;
             this.txtCosto.Text = "PRECIO:";
             this.txtCosto.Enter += new System.EventHandler(this.txtCosto_Enter);
@@ -262,13 +266,13 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCantidad.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtCantidad.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtCantidad.ForeColor = System.Drawing.Color.Silver;
-            this.txtCantidad.Location = new System.Drawing.Point(232, 233);
+            this.txtCantidad.Location = new System.Drawing.Point(211, 0);
             this.txtCantidad.Multiline = true;
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(211, 46);
+            this.txtCantidad.Size = new System.Drawing.Size(211, 53);
             this.txtCantidad.TabIndex = 15;
             this.txtCantidad.Text = "CANTIDAD:";
             this.txtCantidad.Enter += new System.EventHandler(this.txtCantidad_Enter);
@@ -277,7 +281,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -285,9 +289,9 @@
             this.btnAgregar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnAgregar.Image = global::Presentacion.Properties.Resources.Agregar;
-            this.btnAgregar.Location = new System.Drawing.Point(800, 227);
+            this.btnAgregar.Location = new System.Drawing.Point(748, 255);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(253, 61);
+            this.btnAgregar.Size = new System.Drawing.Size(296, 83);
             this.btnAgregar.TabIndex = 25;
             this.btnAgregar.Text = " ADICIONAR";
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -296,7 +300,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -304,9 +308,9 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLimpiar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnLimpiar.Image = global::Presentacion.Properties.Resources.Limpiar;
-            this.btnLimpiar.Location = new System.Drawing.Point(1074, 224);
+            this.btnLimpiar.Location = new System.Drawing.Point(1044, 255);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(210, 61);
+            this.btnLimpiar.Size = new System.Drawing.Size(266, 83);
             this.btnLimpiar.TabIndex = 30;
             this.btnLimpiar.Text = " LIMPIAR";
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -315,13 +319,13 @@
             // 
             // txtDescuento
             // 
-            this.txtDescuento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDescuento.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtDescuento.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txtDescuento.ForeColor = System.Drawing.Color.Silver;
-            this.txtDescuento.Location = new System.Drawing.Point(449, 233);
+            this.txtDescuento.Location = new System.Drawing.Point(422, 0);
             this.txtDescuento.Multiline = true;
             this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(214, 46);
+            this.txtDescuento.Size = new System.Drawing.Size(214, 53);
             this.txtDescuento.TabIndex = 20;
             this.txtDescuento.Text = "DESCUENTO:";
             this.txtDescuento.Enter += new System.EventHandler(this.txtDescuento_Enter);
@@ -330,7 +334,8 @@
             // 
             // cbServicio
             // 
-            this.cbServicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbServicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbServicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbServicio.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbServicio.ForeColor = System.Drawing.Color.Silver;
             this.cbServicio.FormattingEnabled = true;
@@ -399,9 +404,10 @@
             "REGULARIZACION OSEA",
             "PROTESIS TOTAL SUP E INFE",
             "DESOBTURAR"});
-            this.cbServicio.Location = new System.Drawing.Point(15, 157);
+            this.cbServicio.Location = new System.Drawing.Point(0, 0);
+            this.cbServicio.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
             this.cbServicio.Name = "cbServicio";
-            this.cbServicio.Size = new System.Drawing.Size(867, 48);
+            this.cbServicio.Size = new System.Drawing.Size(1310, 48);
             this.cbServicio.TabIndex = 5;
             this.cbServicio.Text = "SERVICIO:";
             this.cbServicio.SelectedIndexChanged += new System.EventHandler(this.cbServicio_SelectedIndexChanged);
@@ -411,20 +417,39 @@
             // pnTop
             // 
             this.pnTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnTop.Controls.Add(this.panel2);
             this.pnTop.Controls.Add(this.btnAgregar);
-            this.pnTop.Controls.Add(this.cbServicio);
             this.pnTop.Controls.Add(this.btnLimpiar);
+            this.pnTop.Controls.Add(this.panel4);
+            this.pnTop.Controls.Add(this.panel5);
+            this.pnTop.Controls.Add(this.panel2);
             this.pnTop.Controls.Add(this.panel1);
-            this.pnTop.Controls.Add(this.txtCantidad);
-            this.pnTop.Controls.Add(this.txtCosto);
-            this.pnTop.Controls.Add(this.txtDescuento);
             this.pnTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTop.Location = new System.Drawing.Point(0, 0);
             this.pnTop.Name = "pnTop";
-            this.pnTop.Size = new System.Drawing.Size(1314, 312);
+            this.pnTop.Size = new System.Drawing.Size(1314, 342);
             this.pnTop.TabIndex = 16;
             this.pnTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnTop_MouseDown);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtDescuento);
+            this.panel4.Controls.Add(this.txtCantidad);
+            this.panel4.Controls.Add(this.txtCosto);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 202);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1310, 53);
+            this.panel4.TabIndex = 33;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.cbServicio);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 146);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1310, 56);
+            this.panel5.TabIndex = 34;
             // 
             // panel2
             // 
@@ -438,8 +463,8 @@
             // 
             // btnCargarPaciente
             // 
-            this.btnCargarPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCargarPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCargarPaciente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCargarPaciente.FlatAppearance.BorderSize = 5;
             this.btnCargarPaciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnCargarPaciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -448,11 +473,11 @@
             this.btnCargarPaciente.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCargarPaciente.Image = global::Presentacion.Properties.Resources.Cargar1;
             this.btnCargarPaciente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargarPaciente.Location = new System.Drawing.Point(15, 20);
+            this.btnCargarPaciente.Location = new System.Drawing.Point(0, 0);
             this.btnCargarPaciente.Margin = new System.Windows.Forms.Padding(0);
             this.btnCargarPaciente.Name = "btnCargarPaciente";
             this.btnCargarPaciente.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnCargarPaciente.Size = new System.Drawing.Size(1285, 80);
+            this.btnCargarPaciente.Size = new System.Drawing.Size(1310, 91);
             this.btnCargarPaciente.TabIndex = 1;
             this.btnCargarPaciente.Text = "  CARGAR PACIENTE";
             this.btnCargarPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -473,6 +498,8 @@
             // 
             this.pnDown.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnDown.Controls.Add(this.btnImprimir);
+            this.pnDown.Controls.Add(this.btnGuardar);
+            this.pnDown.Controls.Add(this.btnCancelar);
             this.pnDown.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnDown.Location = new System.Drawing.Point(0, 727);
             this.pnDown.Name = "pnDown";
@@ -482,7 +509,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImprimir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnImprimir.FlatAppearance.BorderSize = 0;
             this.btnImprimir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnImprimir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -490,9 +517,9 @@
             this.btnImprimir.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnImprimir.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnImprimir.Image = global::Presentacion.Properties.Resources.Imprimir;
-            this.btnImprimir.Location = new System.Drawing.Point(566, 15);
+            this.btnImprimir.Location = new System.Drawing.Point(424, 0);
             this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(233, 67);
+            this.btnImprimir.Size = new System.Drawing.Size(303, 92);
             this.btnImprimir.TabIndex = 7;
             this.btnImprimir.Text = " IMPRIMIR";
             this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -503,23 +530,49 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.cbItbis);
-            this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Controls.Add(this.lblResultado);
             this.panel3.Controls.Add(this.lblTotal);
+            this.panel3.Controls.Add(this.btnEliminar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 636);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1314, 91);
             this.panel3.TabIndex = 41;
             // 
+            // lblResultado
+            // 
+            this.lblResultado.AutoSize = true;
+            this.lblResultado.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblResultado.Font = new System.Drawing.Font("Sitka Text", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblResultado.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblResultado.Location = new System.Drawing.Point(294, 0);
+            this.lblResultado.MaximumSize = new System.Drawing.Size(1000, 0);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(196, 98);
+            this.lblResultado.TabIndex = 1;
+            this.lblResultado.Text = "0.00";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblTotal.Font = new System.Drawing.Font("Sitka Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTotal.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTotal.Location = new System.Drawing.Point(0, 0);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(294, 104);
+            this.lblTotal.TabIndex = 0;
+            this.lblTotal.Text = "Total =";
+            // 
             // cbItbis
             // 
             this.cbItbis.AutoSize = true;
+            this.cbItbis.Dock = System.Windows.Forms.DockStyle.Left;
             this.cbItbis.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbItbis.ForeColor = System.Drawing.Color.White;
-            this.cbItbis.Location = new System.Drawing.Point(866, 25);
+            this.cbItbis.Location = new System.Drawing.Point(490, 0);
             this.cbItbis.Name = "cbItbis";
-            this.cbItbis.Size = new System.Drawing.Size(344, 44);
+            this.cbItbis.Size = new System.Drawing.Size(344, 87);
             this.cbItbis.TabIndex = 43;
             this.cbItbis.Text = "APLICAR ITBIS (18%)";
             this.cbItbis.UseVisualStyleBackColor = true;
@@ -527,55 +580,31 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEliminar.BackgroundImage = global::Presentacion.Properties.Resources.trash_solid;
-            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEliminar.Location = new System.Drawing.Point(1239, 9);
+            this.btnEliminar.Location = new System.Drawing.Point(1209, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(45, 67);
+            this.btnEliminar.Size = new System.Drawing.Size(101, 87);
             this.btnEliminar.TabIndex = 42;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // lblResultado
-            // 
-            this.lblResultado.Font = new System.Drawing.Font("Sitka Text", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblResultado.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblResultado.Location = new System.Drawing.Point(274, -6);
-            this.lblResultado.MaximumSize = new System.Drawing.Size(1000, 0);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(400, 98);
-            this.lblResultado.TabIndex = 1;
-            this.lblResultado.Text = "0.00";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Sitka Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTotal.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTotal.Location = new System.Drawing.Point(0, -9);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(294, 104);
-            this.lblTotal.TabIndex = 0;
-            this.lblTotal.Text = "Total =";
-            // 
             // CrudServicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1314, 823);
             this.Controls.Add(this.dtgvCrudServicio);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.pnTop);
             this.Controls.Add(this.pnDown);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -586,7 +615,9 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CrudServicio_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCrudServicio)).EndInit();
             this.pnTop.ResumeLayout(false);
-            this.pnTop.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnDown.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -625,5 +656,7 @@
         private Button btnImprimir;
         private System.Drawing.Printing.PrintDocument pdImprimir;
         private CheckBox cbItbis;
+        private Panel panel4;
+        private Panel panel5;
     }
 }

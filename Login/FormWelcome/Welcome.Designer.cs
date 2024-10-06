@@ -70,7 +70,6 @@
             // 
             // cpbProgreso
             // 
-            this.cpbProgreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cpbProgreso.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.cpbProgreso.AnimationSpeed = 500;
             this.cpbProgreso.BackColor = System.Drawing.Color.Transparent;
@@ -79,7 +78,7 @@
             this.cpbProgreso.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cpbProgreso.InnerMargin = 2;
             this.cpbProgreso.InnerWidth = -1;
-            this.cpbProgreso.Location = new System.Drawing.Point(797, 181);
+            this.cpbProgreso.Location = new System.Drawing.Point(812, 194);
             this.cpbProgreso.MarqueeAnimationSpeed = 2000;
             this.cpbProgreso.Name = "cpbProgreso";
             this.cpbProgreso.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
@@ -104,8 +103,8 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1092, 463);
             this.Controls.Add(this.cpbProgreso);

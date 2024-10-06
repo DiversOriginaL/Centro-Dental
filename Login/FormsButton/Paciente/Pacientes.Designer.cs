@@ -38,11 +38,15 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgvPacientes = new System.Windows.Forms.DataGridView();
+            this.pnCabecera = new System.Windows.Forms.Panel();
+            this.pbFiltrar = new System.Windows.Forms.PictureBox();
+            this.pnBarra = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,18 +62,17 @@
             this.Alergia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Embarazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnCabecera = new System.Windows.Forms.Panel();
-            this.pbFiltrar = new System.Windows.Forms.PictureBox();
-            this.pnBarra = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPacientes)).BeginInit();
             this.pnCabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFiltrar)).BeginInit();
+            this.pnBarra.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCerrar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -77,9 +80,9 @@
             this.btnCerrar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCerrar.Image = global::Presentacion.Properties.Resources.close;
-            this.btnCerrar.Location = new System.Drawing.Point(15, 801);
+            this.btnCerrar.Location = new System.Drawing.Point(0, 0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(218, 81);
+            this.btnCerrar.Size = new System.Drawing.Size(218, 102);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.Text = " Cerrar";
             this.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -88,8 +91,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnEliminar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -97,9 +101,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.trash_solid;
-            this.btnEliminar.Location = new System.Drawing.Point(1124, 801);
+            this.btnEliminar.Location = new System.Drawing.Point(1112, 0);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(214, 81);
+            this.btnEliminar.Size = new System.Drawing.Size(262, 102);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -108,8 +112,9 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnEditar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -117,9 +122,9 @@
             this.btnEditar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnEditar.Image = global::Presentacion.Properties.Resources.edit;
-            this.btnEditar.Location = new System.Drawing.Point(904, 801);
+            this.btnEditar.Location = new System.Drawing.Point(877, 0);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(203, 81);
+            this.btnEditar.Size = new System.Drawing.Size(235, 102);
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -128,8 +133,9 @@
             // 
             // btnCrear
             // 
-            this.btnCrear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.btnCrear.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnCrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -137,9 +143,9 @@
             this.btnCrear.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCrear.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCrear.Image = global::Presentacion.Properties.Resources.create;
-            this.btnCrear.Location = new System.Drawing.Point(684, 801);
+            this.btnCrear.Location = new System.Drawing.Point(674, 0);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(203, 81);
+            this.btnCrear.Size = new System.Drawing.Size(203, 102);
             this.btnCrear.TabIndex = 9;
             this.btnCrear.Text = " CREAR";
             this.btnCrear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,7 +176,6 @@
             // 
             // dtgvPacientes
             // 
-            this.dtgvPacientes.AllowUserToAddRows = false;
             this.dtgvPacientes.AllowUserToResizeColumns = false;
             this.dtgvPacientes.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -201,6 +206,7 @@
             this.SNombre,
             this.PApellido,
             this.SApellido,
+            this.Cedula,
             this.Edad,
             this.Sexo,
             this.Celular,
@@ -236,6 +242,43 @@
             this.dtgvPacientes.Size = new System.Drawing.Size(1374, 723);
             this.dtgvPacientes.TabIndex = 14;
             this.dtgvPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvPacientes_CellContentClick);
+            // 
+            // pnCabecera
+            // 
+            this.pnCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.pnCabecera.Controls.Add(this.pbFiltrar);
+            this.pnCabecera.Controls.Add(this.txtBuscar);
+            this.pnCabecera.Controls.Add(this.panel1);
+            this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnCabecera.Location = new System.Drawing.Point(0, 0);
+            this.pnCabecera.Name = "pnCabecera";
+            this.pnCabecera.Size = new System.Drawing.Size(1374, 65);
+            this.pnCabecera.TabIndex = 15;
+            // 
+            // pbFiltrar
+            // 
+            this.pbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFiltrar.BackgroundImage = global::Presentacion.Properties.Resources.filtrar;
+            this.pbFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbFiltrar.Location = new System.Drawing.Point(1311, 10);
+            this.pbFiltrar.Name = "pbFiltrar";
+            this.pbFiltrar.Size = new System.Drawing.Size(51, 37);
+            this.pbFiltrar.TabIndex = 14;
+            this.pbFiltrar.TabStop = false;
+            // 
+            // pnBarra
+            // 
+            this.pnBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
+            this.pnBarra.Controls.Add(this.btnCerrar);
+            this.pnBarra.Controls.Add(this.btnCrear);
+            this.pnBarra.Controls.Add(this.btnEditar);
+            this.pnBarra.Controls.Add(this.btnEliminar);
+            this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnBarra.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pnBarra.Location = new System.Drawing.Point(0, 788);
+            this.pnBarra.Name = "pnBarra";
+            this.pnBarra.Size = new System.Drawing.Size(1374, 102);
+            this.pnBarra.TabIndex = 16;
             // 
             // ID
             // 
@@ -286,6 +329,15 @@
             this.SApellido.ReadOnly = true;
             this.SApellido.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.SApellido.Width = 194;
+            // 
+            // Cedula
+            // 
+            this.Cedula.DataPropertyName = "Cedula";
+            this.Cedula.HeaderText = "Cedula";
+            this.Cedula.MinimumWidth = 8;
+            this.Cedula.Name = "Cedula";
+            this.Cedula.ReadOnly = true;
+            this.Cedula.Width = 147;
             // 
             // Edad
             // 
@@ -398,7 +450,7 @@
             this.Enfermedad.Name = "Enfermedad";
             this.Enfermedad.ReadOnly = true;
             this.Enfermedad.Visible = false;
-            this.Enfermedad.Width = 193;
+            this.Enfermedad.Width = 221;
             // 
             // Medicamento
             // 
@@ -408,7 +460,7 @@
             this.Medicamento.Name = "Medicamento";
             this.Medicamento.ReadOnly = true;
             this.Medicamento.Visible = false;
-            this.Medicamento.Width = 210;
+            this.Medicamento.Width = 240;
             // 
             // Alergia
             // 
@@ -418,7 +470,7 @@
             this.Alergia.Name = "Alergia";
             this.Alergia.ReadOnly = true;
             this.Alergia.Visible = false;
-            this.Alergia.Width = 132;
+            this.Alergia.Width = 153;
             // 
             // Embarazo
             // 
@@ -428,7 +480,7 @@
             this.Embarazo.Name = "Embarazo";
             this.Embarazo.ReadOnly = true;
             this.Embarazo.Visible = false;
-            this.Embarazo.Width = 168;
+            this.Embarazo.Width = 193;
             // 
             // Fecha
             // 
@@ -440,50 +492,13 @@
             this.Fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Fecha.Width = 132;
             // 
-            // pnCabecera
-            // 
-            this.pnCabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.pnCabecera.Controls.Add(this.pbFiltrar);
-            this.pnCabecera.Controls.Add(this.txtBuscar);
-            this.pnCabecera.Controls.Add(this.panel1);
-            this.pnCabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnCabecera.Location = new System.Drawing.Point(0, 0);
-            this.pnCabecera.Name = "pnCabecera";
-            this.pnCabecera.Size = new System.Drawing.Size(1374, 65);
-            this.pnCabecera.TabIndex = 15;
-            // 
-            // pbFiltrar
-            // 
-            this.pbFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbFiltrar.BackgroundImage = global::Presentacion.Properties.Resources.filtrar;
-            this.pbFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbFiltrar.Location = new System.Drawing.Point(1311, 10);
-            this.pbFiltrar.Name = "pbFiltrar";
-            this.pbFiltrar.Size = new System.Drawing.Size(51, 37);
-            this.pbFiltrar.TabIndex = 14;
-            this.pbFiltrar.TabStop = false;
-            // 
-            // pnBarra
-            // 
-            this.pnBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
-            this.pnBarra.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnBarra.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pnBarra.Location = new System.Drawing.Point(0, 788);
-            this.pnBarra.Name = "pnBarra";
-            this.pnBarra.Size = new System.Drawing.Size(1374, 102);
-            this.pnBarra.TabIndex = 16;
-            // 
             // Pacientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1374, 890);
             this.Controls.Add(this.dtgvPacientes);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pnCabecera);
             this.Controls.Add(this.pnBarra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -494,6 +509,7 @@
             this.pnCabecera.ResumeLayout(false);
             this.pnCabecera.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFiltrar)).EndInit();
+            this.pnBarra.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -508,11 +524,13 @@
         private DataGridView dtgvPacientes;
         private Panel pnCabecera;
         private Panel pnBarra;
+        private PictureBox pbFiltrar;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn PNombre;
         private DataGridViewTextBoxColumn SNombre;
         private DataGridViewTextBoxColumn PApellido;
         private DataGridViewTextBoxColumn SApellido;
+        private DataGridViewTextBoxColumn Cedula;
         private DataGridViewTextBoxColumn Edad;
         private DataGridViewTextBoxColumn Sexo;
         private DataGridViewTextBoxColumn Celular;
@@ -528,6 +546,5 @@
         private DataGridViewTextBoxColumn Alergia;
         private DataGridViewTextBoxColumn Embarazo;
         private DataGridViewTextBoxColumn Fecha;
-        private PictureBox pbFiltrar;
     }
 }

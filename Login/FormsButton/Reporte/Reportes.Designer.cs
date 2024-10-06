@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cIngresosDiarios = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,25 +54,25 @@
             this.cIngresosDiarios.BorderlineColor = System.Drawing.Color.Black;
             this.cIngresosDiarios.BorderSkin.BackColor = System.Drawing.SystemColors.GrayText;
             this.cIngresosDiarios.BorderSkin.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            chartArea1.Name = "ChartArea1";
-            this.cIngresosDiarios.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.cIngresosDiarios.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.cIngresosDiarios.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.cIngresosDiarios.Legends.Add(legend2);
             this.cIngresosDiarios.Location = new System.Drawing.Point(467, 74);
             this.cIngresosDiarios.Name = "cIngresosDiarios";
             this.cIngresosDiarios.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
-            series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            series1.BorderColor = System.Drawing.Color.ForestGreen;
-            series1.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.Color = System.Drawing.Color.LightGreen;
-            series1.Legend = "Legend1";
-            series1.Name = "INGRESOS";
-            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ShadowColor = System.Drawing.Color.Black;
-            this.cIngresosDiarios.Series.Add(series1);
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.TopBottom;
+            series2.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            series2.BorderColor = System.Drawing.Color.ForestGreen;
+            series2.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.LightGreen;
+            series2.Legend = "Legend1";
+            series2.Name = "INGRESOS";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series2.ShadowColor = System.Drawing.Color.Black;
+            this.cIngresosDiarios.Series.Add(series2);
             this.cIngresosDiarios.Size = new System.Drawing.Size(853, 464);
             this.cIngresosDiarios.TabIndex = 0;
             // 
@@ -163,6 +163,8 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button1.AutoSize = true;
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Beige;
             this.button1.FlatAppearance.BorderSize = 2;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(68)))));
@@ -170,9 +172,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(10, 465);
+            this.button1.Location = new System.Drawing.Point(10, 490);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(221, 73);
+            this.button1.Size = new System.Drawing.Size(144, 48);
             this.button1.TabIndex = 2;
             this.button1.Text = "CERRAR";
             this.button1.UseVisualStyleBackColor = true;
@@ -180,8 +182,8 @@
             // 
             // Reportes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1334, 776);
             this.Controls.Add(this.panel3);
@@ -196,6 +198,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

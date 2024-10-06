@@ -194,5 +194,44 @@ namespace Presentacion
                 btnAcceder_Click(sender, e);
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.AutoScaleMode = AutoScaleMode.Dpi;
+        }
+
+        /*private void AdaptableForm()
+        {
+            // Obtener la resolución actual de la pantalla
+            Rectangle pantalla = Screen.PrimaryScreen.Bounds;
+            float pantallaAncho = pantalla.Width;
+            float pantallaAlto = pantalla.Height;
+
+            // Mostrar la resolución actual
+            MessageBox.Show($"Resolución actual: {pantallaAncho}x{pantallaAlto}");
+
+            // Definir la resolución base de diseño (por ejemplo, Full HD: 1920x1080)
+            float baseAncha = 1366f;
+            float baseAlta = 768f;
+
+            // Calcular factores de escala
+            float escalaAncha = pantallaAncho / baseAncha;
+            float escalaAlta = pantallaAlto / baseAlta;
+
+            // Escalar el formulario
+            this.Scale(new SizeF(escalaAncha, escalaAlta));
+
+            // Ajustar el tamaño del formulario al tamaño de la pantalla
+            this.ClientSize = new Size((int)(baseAncha * escalaAncha), (int)(baseAlta * escalaAlta));
+
+            // Ajustar la posición y el tamaño de los controles dentro del formulario
+            foreach (Control control in this.Controls)
+            {
+                control.Left = (int)(control.Left * escalaAncha);
+                control.Top = (int)(control.Top * escalaAlta);
+                control.Width = (int)(control.Width * escalaAncha);
+                control.Height = (int)(control.Height * escalaAlta);
+            }
+        }*/
     }
 }

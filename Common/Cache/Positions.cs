@@ -8,10 +8,9 @@ namespace Common.Cache
 {
     public struct Positions
     {
-        public const int Administrador = 1;
-        public const int DoctoraGeneral = 2;
-        public const int DoctoraEncagada = 3;
-        public const int Recepcionista = 4;
-        public const int Empleado = 5;
+        public const int Administrador = 2;
+        public const int DoctoraGeneral = 3;
+        public const int DoctoraEncagada = 4;
+        public const int Recepcionista = 5;
     }
 }

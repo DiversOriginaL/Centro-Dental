@@ -121,7 +121,7 @@
             this.dtgvCargarPaciente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgvCargarPaciente.RowTemplate.Height = 33;
             this.dtgvCargarPaciente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvCargarPaciente.Size = new System.Drawing.Size(1330, 539);
+            this.dtgvCargarPaciente.Size = new System.Drawing.Size(1330, 528);
             this.dtgvCargarPaciente.TabIndex = 0;
             this.dtgvCargarPaciente.TabStop = false;
             this.dtgvCargarPaciente.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dtgvCargarPaciente_MouseDown);
@@ -319,15 +319,15 @@
             this.panel1.Controls.Add(this.btnSeleccionar);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 584);
+            this.panel1.Location = new System.Drawing.Point(0, 573);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1330, 80);
+            this.panel1.Size = new System.Drawing.Size(1330, 91);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSeleccionar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSeleccionar.FlatAppearance.BorderSize = 4;
             this.btnSeleccionar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnSeleccionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -335,9 +335,9 @@
             this.btnSeleccionar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSeleccionar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnSeleccionar.Image = global::Presentacion.Properties.Resources.Seleccionar;
-            this.btnSeleccionar.Location = new System.Drawing.Point(1062, 4);
+            this.btnSeleccionar.Location = new System.Drawing.Point(923, 0);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(118, 67);
+            this.btnSeleccionar.Size = new System.Drawing.Size(285, 87);
             this.btnSeleccionar.TabIndex = 4;
             this.btnSeleccionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -345,7 +345,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCancelar.FlatAppearance.BorderSize = 4;
             this.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(102)))));
@@ -353,9 +353,9 @@
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCancelar.Image = global::Presentacion.Properties.Resources.Cancelar;
-            this.btnCancelar.Location = new System.Drawing.Point(1195, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(1208, 0);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(118, 67);
+            this.btnCancelar.Size = new System.Drawing.Size(118, 87);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -373,8 +373,9 @@
             // 
             // CargaPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(136)))), ((int)(((byte)(68)))));
             this.ClientSize = new System.Drawing.Size(1330, 664);
             this.Controls.Add(this.dtgvCargarPaciente);
             this.Controls.Add(this.panel1);

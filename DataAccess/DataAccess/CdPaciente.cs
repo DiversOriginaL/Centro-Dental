@@ -51,6 +51,7 @@ namespace DataAccess.DataAccess
                             string snombre = paciente.GetSNombre() ?? "-";
                             string papellido = paciente.GetPApellido();
                             string sapellido = paciente.GetSApellido() ?? "-";
+                            string cedula = paciente.GetCedula() ?? "-";
                             string edad = paciente.GetEdad();
                             char sexo = paciente.GetSexo();
                             string celular = contacto.GetCelular() ?? "-";
@@ -69,6 +70,7 @@ namespace DataAccess.DataAccess
                             command.Parameters.AddWithValue("@SNombre", snombre.Trim());
                             command.Parameters.AddWithValue("@PApellido", papellido.Trim());
                             command.Parameters.AddWithValue("@SApellido", sapellido.Trim());
+                            command.Parameters.AddWithValue("@Cedula", cedula.Trim());
                             command.Parameters.AddWithValue("@Edad", edad.Trim());
                             command.Parameters.AddWithValue("@Sexo", sexo);
                             command.Parameters.AddWithValue("@Celular", celular.Trim());
@@ -118,6 +120,7 @@ namespace DataAccess.DataAccess
                     string snombre = paciente.GetSNombre() ?? "-";
                     string papellido = paciente.GetPApellido();
                     string sapellido = paciente.GetSApellido() ?? "-";
+                    string cedula = paciente.GetCedula();
                     string edad = paciente.GetEdad();
                     char sexo = paciente.GetSexo();
                     string celular = contacto.GetCelular() ?? "-";
@@ -137,6 +140,7 @@ namespace DataAccess.DataAccess
                     command.Parameters.AddWithValue("@SNombre", snombre.Trim());
                     command.Parameters.AddWithValue("@PApellido", papellido.Trim());
                     command.Parameters.AddWithValue("@SApellido", sapellido.Trim());
+                    command.Parameters.AddWithValue("@Cedula", cedula.Trim());
                     command.Parameters.AddWithValue("@Edad", edad.Trim());
                     command.Parameters.AddWithValue("@Sexo", sexo);
                     command.Parameters.AddWithValue("@Celular", celular.Trim());

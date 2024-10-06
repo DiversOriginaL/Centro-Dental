@@ -13,6 +13,7 @@ namespace Common.Entidades
         private string SNombre { get; set; }
         private string PApellido { get; set; }
         private string SApellido { get; set; }
+        private string Cedula { get; set; }
         private string Edad { get; set; }
         private char Sexo { get; set; }
         
@@ -37,6 +38,10 @@ namespace Common.Entidades
         {
             SApellido = sapellido;
         }
+        public void SetSCedula(string cedula)
+        {
+            Cedula = cedula;
+        }
         public void SetEdad(string edad)
         {
             Edad = edad;
@@ -51,6 +56,7 @@ namespace Common.Entidades
         public string GetSNombre() => SNombre;
         public string GetPApellido() => PApellido;
         public string GetSApellido() => SApellido;
+        public string GetCedula() => Cedula;
         public string GetEdad() => Edad;
         public char GetSexo() => Sexo;
 

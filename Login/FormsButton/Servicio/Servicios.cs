@@ -41,8 +41,7 @@ namespace Presentacion.FormsButton.Servicio
         {
             //DELEGANDO PERMISOS
             if (UserLoginCache.RolId() == Positions.DoctoraEncagada ||
-               UserLoginCache.RolId() == Positions.Recepcionista ||
-               UserLoginCache.RolId() == Positions.Empleado)
+               UserLoginCache.RolId() == Positions.Recepcionista)
             {
                 btnEliminar.Enabled = true;
                 btnEditar.Enabled = false;
